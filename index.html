@@ -164,7 +164,7 @@
                     </p>
                     <p>
                         這個relay system，是以「牌組為優先」，然後表示牌型。牌組指的是4張以上的花色，其表示順序除低花有限開叫外以較高的花色優先（而非依照長度）。
-                        在牌型表示的順序上，通常較高花色的短門在較低叫品。
+                        在牌型表示的順序上，通常較高花色的短門在較低叫品。進入relay後，就只要一直叫下一個叫品，就可以問下一個問題（下一個叫品是3NT時要叫4!C）。如果Relay一次即叫出不是relay的叫品，就是邀請的力量。
                         我們待會會仔細介紹這些原則衍生出的各種relays。
                     </p>
                     <h4>一門牌組的表示</h4>
@@ -1761,6 +1761,242 @@
                     </table>
                     <h6 class="backtotop"><a href="#">↑&nbsp;返回頂部&nbsp;↑</a></h6>
                 </div>
+            </div>
+            <div><h2>滿貫叫牌</h2>
+                <p>本制度中滿貫叫品有兩個平行的體系，在此稱為Relay體系與自然體系。Relay體系是在Relay接續中，而繼續透過Relay叫，詢問更多資訊。自然體系則是如同自然叫牌法，以control cue-bid、Roman Keycard Blackwood (KCB) 為主體的滿貫叫牌。</p>
+                <p>Relay體系常搭配不同的大牌計算方法，茲述如下：</p>
+                <ul>
+                    <li>Slam Point (SP)<ul>
+                        <li>A是3點、K是2點、Q是1點。</li>
+                        <li>不計入單張花色中的Q。</li>
+                    </ul></li>
+                    <li>Kontrols (Ks)<ul>
+                        <li>A是2點、K是一點。</li>
+                    </ul></li>
+                </ul>
+                <h6 class="backtotop"><a href="#">↑&nbsp;返回頂部&nbsp;↑</a></h6>
+                <div><h3>Slam Point 詢問叫</h3>
+                    <p>在牌型已經完整問完以後，下一個relay是Slam Point詢問叫。回答的方式是由設計的最低SP開始往上，一格便是一個SP。</p>
+                    <p>計算最低設計SP的方法，是將保證的最低點力除以二，無條件捨去以後再加一。擁有11個SP的牌，除了AAAK可以升級成1!C開叫以外，本來就會超過16個點，所以有限開叫不會有11個以上的SP。</p>
+                    <table>
+                        <tr>
+                            <th>HCP</th>
+                            <th>Slam Point</th>
+                        </tr>
+                        <tr>
+                            <td>10-14(15)</td>
+                            <td>6-10</td>
+                        </tr>
+                        <tr>
+                            <td>11-15</td>
+                            <td>6-10</td>
+                        </tr>
+                        <tr>
+                            <td>12-15</td>
+                            <td>7-10</td>
+                        </tr>
+                        <tr>
+                            <td>8+</td>
+                            <td>5+</td>
+                        </tr>
+                        <tr>
+                            <td>5-7</td>
+                            <td>3-5</td>
+                        </tr>
+                    </table>
+                    <p>有許多種決定是否詢問SP的方法。在經過牌型的考量以後，如果超過21個SP，則幾乎都有滿貫可以打。然而，更好的方法是計算最低設計SP+3的牌型，是否有滿貫的可能。如果有，則應該強烈考慮詢問SP。
+                        在制度的設計中，如果詢問人束叫時，被詢問人如果不是有限開叫的開叫人，拿著最低SP+4以上的SP時，應該要「復活」。在束叫以後，繼續叫牌依序表示最低SP+4、+5……以此類推。
+                        如果是點力無上限的被詢問人，如果曾表示一門6張以上高花或7張以上低花，則這些花色叫品是撤退的合約，「復活」應該要跳過這些叫品。
+                    </p>
+                    <p>接下來，我用一副2024年超級大專盃的牌局，來簡單示範。西家開叫，東家持以下的牌</p>
+                    <table>
+                        <tr>
+                            <td colspan="4" style="text-align: center;">!S 96&emsp; !H QJ965 &emsp; !D Q65 &emsp; !C AK4</td>
+                        </tr>
+                        <tr>
+                            <td style="font-variant: small-caps;">West</td>
+                            <td style="font-variant: small-caps;">East</td>
+                            <td colspan="2"></td>
+                        </tr>
+                        <tr>
+                            <td>1!C</td>
+                            <td>1!S</td>
+                            <td colspan="2">8點以上，4張紅心以上，沒有4張黑桃，不是平坦牌型</td>
+                        </tr>
+                        <tr>
+                            <td>1NT<sup>R</sup></td>
+                            <td>2!S</td>
+                            <td colspan="2">一門紅心牌組，高短門。</td>
+                        </tr>
+                        <tr>
+                            <td>2NT<sup>R</sup></td>
+                            <td>3!D</td>
+                            <td colspan="2">2533</td>
+                        </tr>
+                        <tr>
+                            <td>3!H<sup>SP</sup></td>
+                            <td>4!C</td>
+                            <td colspan="2">7個Slam Point（8點以上時，最低是5個SP）。</td>
+                        </tr>
+                    </table>
+                    <h6 class="backtotop"><a href="#">↑&nbsp;返回頂部&nbsp;↑</a></h6>
+                </div>
+                <div><h3>Denial Cue Bid (DCB)</h3>
+                    <p>這種Cue Bid很像是一般在滿貫叫牌的時候時常使用的Control Cue Bid，然而，這個特約的重點是要叫「沒有大牌」或「AQ以上大牌組合」（0或4+SP）的花色，跳過其他大牌情況的花色。</p>
+                    <p>叫品代表的花色並非是叫品本身的花色，而是由較長的花色優先；相同長度的數門花色由較高的花色優先。單張的牌組則是叫出有大牌（A或K，單張Q則在計算SP與DCB時皆忽略）。
+                        叫牌者應先決定第一門花色要叫或要跳過，如果要跳過時，再決定第二門花色要叫或要跳過，以此類推。如果叫出該門花色，則同伴可以繼續relay問下一個花色。
+                        若非有特別多餘的力量，回答應該停在恰好加一線的叫品。如果有機會第二次問到同一門花色，若第一次已經跳過，則第二次跳過代表有KQ、KJ或QJ。
+                        若第一次停下，除了數學上必然可以確定是0個或2個以上大牌外，停下是0張，跳過一步是2張大牌，跳過兩步是AKQ。
+                    </p>
+                    <p>我們繼續上一個例子的叫牌</p>
+                    <table>
+                        <tr>
+                            <td colspan="4" style="text-align: center;">!S 96&emsp; !H QJ965 &emsp; !D Q65 &emsp; !C AK4</td>
+                        </tr>
+                        <tr>
+                            <td style="font-variant: small-caps;">West</td>
+                            <td style="font-variant: small-caps;">East</td>
+                            <td colspan="2"></td>
+                        </tr>
+                        <tr>
+                            <td>1!C</td>
+                            <td>1!S</td>
+                            <td colspan="2">8點以上，4張紅心以上，沒有4張黑桃，不是平坦牌型</td>
+                        </tr>
+                        <tr>
+                            <td>1NT<sup>R</sup></td>
+                            <td>2!S</td>
+                            <td colspan="2">一門紅心牌組，高短門。</td>
+                        </tr>
+                        <tr>
+                            <td>2NT<sup>R</sup></td>
+                            <td>3!D</td>
+                            <td colspan="2">2533</td>
+                        </tr>
+                        <tr>
+                            <td>3!H<sup>SP</sup></td>
+                            <td>4!C</td>
+                            <td colspan="2">7個Slam Point（8點以上時，最低是5個SP）。</td>
+                        </tr>
+                        <tr>
+                            <td>4!D<sup>DCB</sup></td>
+                            <td>4NT</td>
+                            <td colspan="2">有紅心大牌、有方塊大牌，梅花牌組上有0/4+個SP。</td>
+                        </tr>
+                        <tr>
+                            <td>5!C<sup>DCB</sup></td>
+                            <td>5!D</td>
+                            <td colspan="2">黑桃牌組上有0/4+個SP。</td>
+                        </tr>
+                        <tr>
+                            <td>5!H<sup>DCB</sup></td>
+                            <td>5NT</td>
+                            <td colspan="2">紅心上有KQ、KJ或QJ，方塊只有一張大牌。</td>
+                        </tr>
+                    </table>
+                    <p>我們再示範一個完整的範例。西家開叫，東家手持以下牌型</p>
+                    <table>
+                        <tr>
+                            <td colspan="4" style="text-align: center;">!S AQT94&emsp; !H - &emsp; !D AK &emsp; !C Q86532</td>
+                        </tr>
+                        <tr>
+                            <td style="font-variant: small-caps;">West</td>
+                            <td style="font-variant: small-caps;">East</td>
+                            <td colspan="2"></td>
+                        </tr>
+                        <tr>
+                            <td>1!C</td>
+                            <td>1!H</td>
+                            <td colspan="2">8點以上，4張黑桃以上，不是平坦牌型</td>
+                        </tr>
+                        <tr>
+                            <td>1!S<sup>R</sup></td>
+                            <td>2!D</td>
+                            <td colspan="2">梅花，不是canap&eacute;</td>
+                        </tr>
+                        <tr>
+                            <td>2!H<sup>R</sup></td>
+                            <td>2!S</td>
+                            <td colspan="2">5-5以上牌型</td>
+                        </tr>
+                        <tr>
+                            <td>2NT<sup>R</sup></td>
+                            <td>3!C</td>
+                            <td colspan="2">高短門（紅心短門）</td>
+                        </tr>
+                        <tr>
+                            <td>3!D<sup>R</sup></td>
+                            <td>3NT</td>
+                            <td colspan="2">5026</td>
+                        </tr>
+                        <tr>
+                            <td>4!C<sup>SP</sup></td>
+                            <td>5!D</td>
+                            <td colspan="2">最低是5個SP，所以這裡是10個SP。</td>
+                        </tr>
+                        <tr>
+                            <td>5!H<sup>DCB</sup></td>
+                            <td>5NT</td>
+                            <td colspan="2">梅花有一張大牌，黑桃牌組上有0/4+個SP。</td>
+                        </tr>
+                    </table>
+                    <p>接下來再介紹一副範例。東家開叫。下方的例子要注意5!C的叫品沒有否認紅心的第二張大牌，因為規定最高的回答是加一線。</p>
+                    <table>
+                        <tr>
+                            <td colspan="4" style="text-align: center;">!S Q6 &emsp; !H A8753 &emsp; !D Q83 &emsp; !C A72</td>
+                        </tr>
+                        <tr>
+                            <td style="font-variant: small-caps;">West</td>
+                            <td style="font-variant: small-caps;">East</td>
+                            <td colspan="2"></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>1!H</td>
+                            <td colspan="2">11-15點，4張以上紅心，沒有4張黑桃</td>
+                        </tr>
+                        <tr>
+                            <td>1!S<sup>R</sup></td>
+                            <td>2!C</td>
+                            <td colspan="2">平均牌型。</td>
+                        </tr>
+                        <tr>
+                            <td>2!D<sup>R</sup></td>
+                            <td>2!H</td>
+                            <td colspan="2">5張紅心。</td>
+                        </tr>
+                        <tr>
+                            <td>2!S<sup>R</sup></td>
+                            <td>2NT</td>
+                            <td colspan="2">2533</td>
+                        </tr>
+                        <tr>
+                            <td>3!C<sup>SP</sup></td>
+                            <td>3NT</td>
+                            <td colspan="2">8個SP</td>
+                        </tr>
+                        <tr>
+                            <td>4!C<sup>DCB</sup></td>
+                            <td>5!C</td>
+                            <td colspan="2">有一張紅心大牌，有一張方塊大牌，有一張梅花大牌，有一張黑桃大牌。</td>
+                        </tr>
+                        <tr>
+                            <td>5!D<sup>DCB</sup></td>
+                            <td>5!H</td>
+                            <td colspan="2">沒有第二張紅心大牌。</td>
+                        </tr>
+                        <tr>
+                            <td>5!S<sup>DCB</sup></td>
+                            <td>5NT</td>
+                            <td colspan="2">沒有第二張方塊大牌。</td>
+                        </tr>
+                    </table>
+                    <h6 class="backtotop"><a href="#">↑&nbsp;返回頂部&nbsp;↑</a></h6>
+                </div>
+                <div><h3>Kontrols 詢問叫</h3>
+                    
+                </div>
+                <h6 class="backtotop"><a href="#">↑&nbsp;返回頂部&nbsp;↑</a></h6>
             </div>
             <div><h2>搶先、竄叫或阻塞開叫</h2>
                 <p>

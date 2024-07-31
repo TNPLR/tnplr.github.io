@@ -10,7 +10,7 @@ li {
 nav {
     font-family: "Taipei Sans SC Beta", sans-serif;
     position: sticky;
-    overflow: scroll;
+    overflow-y: scroll;
     top: 0;
     float: left;
     width: 25%;
@@ -72,24 +72,34 @@ h6.backtotop {
 blockquote {
     font-family: cursive;
 }
-table.bidtable {
+table {
     width: 100%;
     text-align: left;
     font-family: sans-serif;
     border-collapse: collapse;
-    border-top: 3px solid #04AA6D;
-    border-bottom: 3px solid #04AA6D;
+    border-top: 3px solid mediumaquamarine;
+    border-bottom: 3px solid mediumaquamarine;
 }
-table.bidtable td {
+table td {
     padding: 3px;
     text-align: left;
     vertical-align: top;
 }
+table th {
+    padding: 3px;
+    text-align: left;
+    background-color: mediumaquamarine;
+    color: white;
+    border-bottom: 3px solid mediumaquamarine;
+}
+table.bidtable {
+    border-top: 3px solid #04AA6D;
+    border-bottom: 3px solid #04AA6D;
+}
+
 table.bidtable th {
     background-color: #04AA6D;
     color: white;
-    padding: 3px;
-    text-align: left;
     border-bottom: 3px solid #04AA6D;
 }
 article {
@@ -142,7 +152,7 @@ section::after {
     }
     nav {
         position: static;
-        overflow: auto;
+        overflow-y: auto;
         float: left;
     }
     body {
