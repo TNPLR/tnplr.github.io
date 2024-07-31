@@ -140,6 +140,14 @@ section::after {
         width: 100%;
         height: auto;
     }
+    nav {
+        position: static;
+        overflow:auto;
+        float: left;
+        width: 25%;
+        padding: 0px;
+        height: 100%;
+    }
     body {
         font-size: 16px;
     }
