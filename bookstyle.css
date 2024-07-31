@@ -9,11 +9,15 @@ li {
 }
 nav {
     font-family: "Taipei Sans SC Beta", sans-serif;
+    position: sticky;
+    overflow: scroll;
+    top: 0;
     float: left;
     width: 25%;
     padding: 0px;
-    height: 100%;
+    height: 100vh;
 }
+
 nav ul {
     list-style-type: none;
     margin: 0;
