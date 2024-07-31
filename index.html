@@ -1839,6 +1839,9 @@
                             <td colspan="2">7個Slam Point（8點以上時，最低是5個SP）。</td>
                         </tr>
                     </table>
+                    <p>如果牌型是Relay中最高的牌型，則在3NT以下，都可以作為SP的回答。3NT匯市不能復活的最高SP，而依序往下排列（如果有空間），直到最低的叫品即是最低的幾個SP的範圍。
+                        如果回答是「平均牌型」或「半平均牌」時，且剩下2種未解析的牌型時，詢問者可以跳過一格，直接詢問SP。而後面的Denial Cue Bid的各門花色牌張數以最大的可能計算。
+                    </p>
                     <h6 class="backtotop"><a href="#">↑&nbsp;返回頂部&nbsp;↑</a></h6>
                 </div>
                 <div><h3>Denial Cue Bid (DCB)</h3>
@@ -1991,10 +1994,141 @@
                             <td colspan="2">沒有第二張方塊大牌。</td>
                         </tr>
                     </table>
+                    <p>接下來再提供一個範例，西家開叫，東家持以下手牌：</p>
+                    <table>
+                        <tr>
+                            <td colspan="4" style="text-align: center;">!S AT98632 &emsp; !H 63 &emsp; !D 2 &emsp; !C 963</td>
+                        </tr>
+                        <tr>
+                            <td style="font-variant: small-caps;">West</td>
+                            <td style="font-variant: small-caps;">East</td>
+                            <td colspan="2"></td>
+                        </tr>
+                        <tr>
+                            <td>1!C</td>
+                            <td>1!D</td>
+                            <td colspan="2">0-7點，負性叫品，迫叫一圈。</td>
+                        </tr>
+                        <tr>
+                            <td>1!H<sup>R</sup></td>
+                            <td>1NT</td>
+                            <td colspan="2">（因升級不叫1!S），四張以上黑桃，不是平坦牌型。</td>
+                        </tr>
+                        <tr>
+                            <td>2!C<sup>R</sup></td>
+                            <td>3!D</td>
+                            <td colspan="2">黑桃單門牌組，中短門（方塊短門）。</td>
+                        </tr>
+                        <tr>
+                            <td>3!H<sup>R</sup></td>
+                            <td>4!C</td>
+                            <td colspan="2">7213</td>
+                        </tr>
+                        <tr>
+                            <td>4!D<sup>SP</sup></td>
+                            <td>4!H</td>
+                            <td colspan="2">3個SP</td>
+                        </tr>
+                        <tr>
+                            <td>4!S<sup>DCB</sup></td>
+                            <td>5!C</td>
+                            <td colspan="2">有一張黑桃大牌，梅花0SP（數學上不可能是4+）。</td>
+                        </tr>
+                        <tr>
+                            <td>5!D<sup>DCB</sup></td>
+                            <td>5!H</td>
+                            <td colspan="2">紅心0SP（數學上不可能是4+）。</td>
+                        </tr>
+                        <tr>
+                            <td>5!S<sup>DCB</sup></td>
+                            <td>6!C</td>
+                            <td colspan="2">方塊沒有A或K，黑桃沒有第二張大牌。</td>
+                        </tr>
+                    </table>
                     <h6 class="backtotop"><a href="#">↑&nbsp;返回頂部&nbsp;↑</a></h6>
                 </div>
                 <div><h3>Kontrols 詢問叫</h3>
-                    
+                    <p>Kontrols(Ks) 適合用在缺少控制的時候，此時比較需要知道的資訊是A或K，而不希望Q加進來干擾對於詢問叫答叫的判斷。</p>
+                    <p>計算最低設計Ks的方法，是將保證的SP除以二，無條件捨去。</p>
+                    <table>
+                        <tr>
+                            <th>HCP</th>
+                            <th>Slam Point</th>
+                            <th>Kontrols</th>
+                        </tr>
+                        <tr>
+                            <td>10-14(15)</td>
+                            <td>6-10</td>
+                            <td>3+</td>
+                        </tr>
+                        <tr>
+                            <td>11-15</td>
+                            <td>6-10</td>
+                            <td>3+</td>
+                        </tr>
+                        <tr>
+                            <td>12-15</td>
+                            <td>7-10</td>
+                            <td>3+</td>
+                        </tr>
+                        <tr>
+                            <td>8+</td>
+                            <td>5+</td>
+                            <td>2+</td>
+                        </tr>
+                        <tr>
+                            <td>5-7</td>
+                            <td>3-5</td>
+                            <td>1+</td>
+                        </tr>
+                    </table>
+                    <p>回答完Kontrol以後，DCB一樣可以使用，而停下來則代表沒有大牌或同時有AK。</p>
+                    <p>Kontrols詢問叫是SP詢問的下一個叫品（不計算3NT），若SP詢問已經在4!D以上的叫品，此時沒有Kontrols詢問。。接下來提供一個範例，西家開叫，東家持以下手牌。下方的Kontrols詢問，因為要跳過3NT束叫，所以是用4!C問。</p>
+                    <table>
+                        <tr>
+                            <td colspan="4" style="text-align: center;">!S K7&emsp; !H 9874 &emsp; !D K874 &emsp; !C AJ9</td>
+                        </tr>
+                        <tr>
+                            <td style="font-variant: small-caps;">West</td>
+                            <td style="font-variant: small-caps;">East</td>
+                            <td colspan="2"></td>
+                        </tr>
+                        <tr>
+                            <td>1!C</td>
+                            <td>2!C</td>
+                            <td colspan="2">8點以上，有4張高花的平坦牌型。</td>
+                        </tr>
+                        <tr>
+                            <td>2!D<sup>R</sup></td>
+                            <td>2!S</td>
+                            <td colspan="2">紅心和一門低花。</td>
+                        </tr>
+                        <tr>
+                            <td>2NT<sup>R</sup></td>
+                            <td>3!C</td>
+                            <td colspan="2">4張方塊</td>
+                        </tr>
+                        <tr>
+                            <td>3!D<sup>R</sup></td>
+                            <td>3!H</td>
+                            <td colspan="2">2443</td>
+                        </tr>
+                        <tr>
+                            <td>4!C<sup>Ks</sup></td>
+                            <td>4!S</td>
+                            <td colspan="2">4個Ks</td>
+                        </tr>
+                        <tr>
+                            <td>4NT<sup>DCB</sup></td>
+                            <td>5!C</td>
+                            <td colspan="2">紅心牌組上有0/3個Ks。</td>
+                        </tr>
+                        <tr>
+                            <td>5!D<sup>DCB</sup></td>
+                            <td>6!C</td>
+                            <td colspan="2">有方塊A/K，有梅花A/K，有黑桃A/K，紅心沒有AK。</td>
+                        </tr>
+                    </table>
                 </div>
                 <h6 class="backtotop"><a href="#">↑&nbsp;返回頂部&nbsp;↑</a></h6>
             </div>
