@@ -1601,39 +1601,6 @@
         不供商業使用。2024年製作。
     </footer>
 </body>
-<script>
-    for (let i = 0; i < document.getElementsByTagName("body").length; i++) {
-        let text = document.getElementsByTagName("body")[i].innerHTML;
-        text = text.replace(/!H/gi, "<span style=\"color:tomato\">&#9829;</span>");
-        text = text.replace(/!D/gi, "<span style=\"color:orange\">&#9830;</span>");
-        text = text.replace(/!C/gi, "<span style=\"color:DarkSlateGray\">&#9827;</span>");
-        document.getElementsByTagName("body")[i].innerHTML = text.replace(/!S/gi, "<span style=\"color:black\">&#9824;</span>");
-    }
-    document.addEventListener('DOMContentLoaded', function() {
-        const tocList = document.getElementById("toc-list");
-        const headers = document.querySelectorAll('h2, h3, h4');
-        headers.forEach((header, index) => {
-            if (header.id === "") {
-                header.id = `header-${index}`;
-            }
-            if (header.id !== "") {
-                let upper = document.createElement('li');
-                const listItem = upper;
-                if (header.tagName === "H3" || header.tagName === "H4") {
-                    const ulist = document.createElement('ul');
-                    ulist.appendChild(upper);
-                    upper = ulist;
-                }
-                if (header.tagName === "H4") {
-                    const ulist = document.createElement('ul');
-                    ulist.appendChild(upper);
-                    upper = ulist;
-                }
-                listItem.innerHTML = `<a href="#${header.id}">${header.textContent}</a>`
-                tocList.appendChild(upper);
-            }
-            
-        });
-    });
-</script>
+<script src="replace_suit_signs.js"></script>
+<script src="gen_table_of_contents.js"></script>
 </html>
