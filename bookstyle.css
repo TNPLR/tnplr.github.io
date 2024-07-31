@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-size: 20px;
+}
+li {
+    padding: 5px;
+}
+nav {
+    font-family: "Taipei Sans SC Beta", sans-serif;
+    float: left;
+    width: 25%;
+    padding: 0px;
+    height: 100%;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    border: 0;
+    padding: 0px 16px;
+    background-color: #f1f1f1;
+}
+nav ul li a {
+    display: block;
+    color: #000;
+    width: 100%;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+nav ul li a:hover {
+    background-color: #555;
+    color: white;
+}
+p {
+    font-family: "游明朝 Light", serif;
+}
+header {
+    background-color: green;
+    padding: 20px;
+}
+h1 {
+    font-family: "Taipei Sans SC Beta", sans-serif;
+    font-weight: bold;
+    font-size: 36px;
+    color: white;
+}
+h2 {
+    font-family: "游明朝 Light", serif;
+    font-weight: bold;
+    font-size: 32px;
+}
+h3 {
+    font-family: "游明朝 Light", serif;
+    font-weight: bold;
+    font-size: 28px;
+}
+h4 {
+    font-family: "游明朝 Light", serif;
+    font-weight: bold;
+    font-size: 24px;
+}
+h6.backtotop {
+    font-family: "游明朝 Light", serif;
+    font-size: 20px;
+    text-align: center;
+}
+blockquote {
+    font-family: cursive;
+}
+table.bidtable {
+    width: 100%;
+    text-align: left;
+    font-family: sans-serif;
+    border-collapse: collapse;
+    border-top: 3px solid #04AA6D;
+    border-bottom: 3px solid #04AA6D;
+}
+table.bidtable td {
+    padding: 3px;
+    text-align: left;
+    vertical-align: top;
+}
+table.bidtable th {
+    background-color: #04AA6D;
+    color: white;
+    padding: 3px;
+    text-align: left;
+    border-bottom: 3px solid #04AA6D;
+}
+article {
+    float: left;
+    padding: 20px;
+    width: 75%;
+}
+footer {
+    text-align: center;
+    background-color: green;
+    padding: 20px;
+    color: white;
+}
+@media print {
+    nav {
+        display: none;
+    }
+    nav * {
+        display: none;
+    }
+    footer {
+        display: none;
+    }
+    footer * {
+        display: none;
+    }
+    article {
+        width: 100%;
+    }
+    h6 {
+        display: none;
+    }
+    a {
+        text-decoration: none;
+        color: #000;
+    }
+    table {
+        page-break-inside: avoid;
+    }
+}
+section::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+@media (max-width: 600px) {
+    nav, article {
+        width: 100%;
+        height: auto;
+    }
+    body {
+        font-size: 16px;
+    }
+}
