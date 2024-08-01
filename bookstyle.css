@@ -146,7 +146,7 @@ footer {
     }
     a {
         text-decoration: none;
-        color: #000;
+        color: inherit;
     }
     table {
         page-break-inside: avoid;
