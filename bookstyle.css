@@ -85,6 +85,9 @@ table {
     border-top: 3px solid mediumaquamarine;
     border-bottom: 3px solid mediumaquamarine;
 }
+table a {
+    color: inherit;
+}
 table td {
     padding: 3px;
     text-align: left;
