@@ -96,7 +96,11 @@ table.bidtable {
     border-top: 3px solid #04AA6D;
     border-bottom: 3px solid #04AA6D;
 }
-
+table td.open24 {
+    background-color: lightcyan;
+    text-align: center;
+    font-weight: bold;
+}
 table.bidtable th {
     background-color: #04AA6D;
     color: white;
