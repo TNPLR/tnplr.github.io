@@ -16,14 +16,15 @@ nav {
     width: 25%;
     padding: 0px;
     height: 100vh;
+    background-color: #f1f1f1;
 }
 
 nav ul {
     list-style-type: none;
     margin: 0;
     border: 0;
-    padding: 0px 16px;
-    background-color: #f1f1f1;
+    padding: 0;
+    padding-left: 16px;
 }
 nav ul li a {
     display: block;
