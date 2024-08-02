@@ -126,13 +126,20 @@ table {
 table a {
     color: inherit;
 }
+table tr {
+    padding: 3px;
+}
 table td {
     padding: 3px;
+    padding-left: 6px;
+    padding-right: 6px;
     text-align: left;
     vertical-align: top;
 }
 table th {
     padding: 3px;
+    padding-left: 6px;
+    padding-right: 6px;
     text-align: left;
     background-color: mediumaquamarine;
     color: white;
@@ -154,19 +161,48 @@ table.bidtable th {
 }
 table.competitive {
     table-layout: fixed;
-    border-bottom: 3px solid mediumspringgreen;
-    border-top: 3px solid mediumspringgreen;
+    border-top: 0;
+    border-bottom: 3px solid #8CCDE0;
     color: black;
 }
 table.competitive th {
-    border-bottom: 3px solid mediumspringgreen;
+    border-bottom: 0;
+}
+table.competitive td {
+    background-color: white;
+}
+table.competitive td:first-child {
+    background-color: #DFFFFF;
 }
 table.competitive th:nth-child(odd) {
-    background-color: mediumspringgreen;
+    background-color: #8CCDE0;
     color: black;
 }
-table.competitive th:nth-child(even) {
+table.defensive th:nth-child(even) {
+    background-color: #A1E9FF;
+    color: black;
+}
+table.defensive {
+    table-layout: fixed;
+    border-top: 0;
+    border-bottom: 3px solid #8FA6F0;
+    color: black;
+}
+table.defensive th {
+    border-bottom: 0;
+}
+table.defensive td {
     background-color: white;
+}
+table.defensive th:nth-child(odd) {
+    background-color: #BFA6F0;
+    color: black;
+}
+table.defensive td:first-child {
+    background-color: #FFF8FA;
+}
+table.defensive th:nth-child(even) {
+    background-color: #EFCCDE;
     color: black;
 }
 article {
