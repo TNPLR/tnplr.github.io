@@ -152,6 +152,23 @@ table.bidtable th {
     color: white;
     border-bottom: 3px solid #04AA6D;
 }
+table.competitive {
+    table-layout: fixed;
+    border-bottom: 3px solid mediumspringgreen;
+    border-top: 3px solid mediumspringgreen;
+    color: black;
+}
+table.competitive th {
+    border-bottom: 3px solid mediumspringgreen;
+}
+table.competitive th:nth-child(odd) {
+    background-color: mediumspringgreen;
+    color: black;
+}
+table.competitive th:nth-child(even) {
+    background-color: white;
+    color: black;
+}
 article {
     float: left;
     padding: 20px;
