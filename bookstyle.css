@@ -46,18 +46,20 @@ header {
     padding: 20px;
 }
 #horizontal-nav {
+    font-family: "Taipei Sans SC Beta", sans-serif;
     list-style-type: none;
     margin: 0;
-    border-top: 1px solid lightgray;
+    border-top: 2px solid lightgray;
+    border-bottom: 2px solid lightgray;
     padding: 0;
     overflow: hidden;
-    background-color: green;
+    background-color: white;
 }
 #horizontal-nav li {
     margin: 0;
     padding: 0;
     border: 0;
-    color: white;
+    color: black;
     float: left;
     border-right: 1px solid lightgray;
 }
@@ -73,7 +75,10 @@ header {
     text-decoration: none;
 }
 #horizontal-nav li a:hover {
-    background-color: darkgreen;
+    background-color: lightgray;
+}
+#horizontal-nav li a.active {
+    font-weight: bold;
 }
 h1 {
     font-family: "Taipei Sans SC Beta", sans-serif;
