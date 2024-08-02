@@ -40,8 +40,40 @@ p {
     font-family: "游明朝 Light", serif;
 }
 header {
+    font-family: "Taipei Sans SC Beta", sans-serif;
+    font-weight: bold;
     background-color: green;
     padding: 20px;
+}
+#horizontal-nav {
+    list-style-type: none;
+    margin: 0;
+    border-top: 1px solid lightgray;
+    padding: 0;
+    overflow: hidden;
+    background-color: green;
+}
+#horizontal-nav li {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    color: white;
+    float: left;
+    border-right: 1px solid lightgray;
+}
+#horizontal-nav li:last-child {
+    border-right: 0;
+}
+#horizontal-nav li a {
+    display: block;
+    padding: 8px;
+    text-align: center;
+    padding: 14px 16px;
+    color: inherit;
+    text-decoration: none;
+}
+#horizontal-nav li a:hover {
+    background-color: darkgreen;
 }
 h1 {
     font-family: "Taipei Sans SC Beta", sans-serif;
@@ -151,6 +183,9 @@ footer {
     table {
         page-break-inside: avoid;
     }
+}
+section {
+    clear: left;
 }
 section::after {
     content: "";
