@@ -1,7 +1,7 @@
 window.onscroll = function() {scrollcheck();};
 function scrollcheck() {
     const topbutton = document.getElementById("topbutton");
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
         topbutton.style.display = "block";
     } else {
         topbutton.style.display = "none";

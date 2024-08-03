@@ -250,6 +250,9 @@ footer {
     footer * {
         display: none;
     }
+    #topbutton {
+        display: none;
+    }
     article {
         width: 100%;
     }
