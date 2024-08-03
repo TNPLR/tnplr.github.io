@@ -227,9 +227,10 @@ footer {
     background-color: #04AA6D;
     color: white;
     cursor: pointer;
-    padding: 15px 18px;
+    padding: 15px 20px;
     border-radius: 36px;
     font-size: 36px;
+    text-align: center;
 }
 #topbutton:hover {
     border: 1px solid #04AA6D;
