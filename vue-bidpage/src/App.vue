@@ -5,10 +5,10 @@
   <button id="topbutton" v-on:click="goToTop" v-show="topbuttonshow"><img style="width: 28px;" src="/arrow_upward.svg" alt="up arrow"></button>
   <div>
         <ul id="horizontal-nav">
-            <li><router-link to="/bidding">未受競叫叫牌</router-link></li>
-            <li><router-link to="/interference">競叫</router-link></li>
-            <li><router-link to="/defense">防禦叫牌</router-link></li>
-            <li><router-link to="/signal">防禦信號</router-link></li>
+            <li><router-link to="/bidding" activeClass="active">未受競叫叫牌</router-link></li>
+            <li><router-link to="/interference" activeClass="active">競叫</router-link></li>
+            <li><router-link to="/defense" activeClass="active">防禦叫牌</router-link></li>
+            <li><router-link to="/signal" activeClass="active">防禦信號</router-link></li>
         </ul>
     </div>
   <section>
