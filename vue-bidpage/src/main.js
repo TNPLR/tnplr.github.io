@@ -11,7 +11,7 @@ const router = createRouter({
     history: createWebHistory(),
     redirect: { path: "/interference" },
     routes: [
-        { path: '/', redirect: '/interference' },
+        { path: '/', redirect: '/bidding' },
         { path: '/interference', component: Interference },
         { path: '/signal', component: Signal},
         { path: '/bidding', component: Bidding},
