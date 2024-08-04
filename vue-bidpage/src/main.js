@@ -9,7 +9,6 @@ import Defense from './components/defense.vue'
 
 const router = createRouter({
     history: createWebHistory(),
-    redirect: { path: "/interference" },
     routes: [
         { path: '/', redirect: '/bidding' },
         { path: '/interference', component: Interference },
