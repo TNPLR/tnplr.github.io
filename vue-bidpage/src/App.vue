@@ -327,4 +327,45 @@ section::after {
     clear: both;
     display: table;
 }
+@media print {
+    nav {
+        display: none;
+    }
+    nav * {
+        display: none;
+    }
+    footer {
+        display: none;
+    }
+    footer * {
+        display: none;
+    }
+    #topbutton {
+        display: none;
+    }
+    article {
+        width: 100%;
+    }
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+    table {
+        page-break-inside: avoid;
+    }
+}
+@media (max-width: 600px) {
+    nav, article {
+        width: 100%;
+        height: auto;
+    }
+    nav {
+        position: static;
+        overflow-y: auto;
+        float: left;
+    }
+    body {
+        font-size: 16px;
+    }
+}
 </style>
