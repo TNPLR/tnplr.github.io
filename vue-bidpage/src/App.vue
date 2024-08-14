@@ -9,6 +9,7 @@
             <li><router-link to="/interference" activeClass="active">競叫</router-link></li>
             <li><router-link to="/defense" activeClass="active">防禦叫牌</router-link></li>
             <li><router-link to="/signal" activeClass="active">防禦信號</router-link></li>
+            <li><router-link to="/natural" activeClass="active">自然制</router-link></li>
         </ul>
     </div>
   <section>
