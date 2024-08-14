@@ -7,6 +7,7 @@ import Signal from './components/signal.vue'
 import Bidding from './components/bidding.vue'
 import Defense from './components/defense.vue'
 import doubletonClub from './components/doubletonClub.vue'
+import Natural from './components/natural.vue'
 
 const router = createRouter({
     history: createWebHistory(),
@@ -17,6 +18,7 @@ const router = createRouter({
         { path: '/bidding', component: Bidding},
         { path: '/defense', component: Defense},
         { path: '/doubleton', component: doubletonClub},
+        { path: '/natural', component: Natural},
         { path: '/:pathMatch(.*)*', redirect: '/'},
     ]
 });
