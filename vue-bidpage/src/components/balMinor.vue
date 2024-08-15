@@ -45,6 +45,10 @@
                     <td>低花反序，邀請以上。</td>
                 </tr>
                 <tr>
+                    <td>2!D/!H/!S</td>
+                    <td>Soloway Jump Shift</td>
+                </tr>
+                <tr>
                     <td>2NT!</td>
                     <td>12-15點，平均牌型，迫叫成局。</td>
                 </tr>
@@ -239,8 +243,16 @@
                     <td>4張以上方塊，邀請以上力量。</td>
                 </tr>
                 <tr>
+                    <td>2!H/!S/3!C</td>
+                    <td>Soloway Jump Shift</td>
+                </tr>
+                <tr>
                     <td>2NT</td>
                     <td>10-11點，自然，邀請，不迫叫。</td>
+                </tr>
+                <tr>
+                    <td>3!D</td>
+                    <td>6-9, 4+!D</td>
                 </tr>
             </table>
         </div>
