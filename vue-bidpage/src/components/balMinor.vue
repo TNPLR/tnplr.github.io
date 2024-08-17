@@ -1,7 +1,7 @@
 <template>
     <article ref="Article">
         <div><h2>1!C：Balanced Club</h2>
-            <p>由於沒時間了，所以簡要寫。</p>
+            <p>由於沒時間了，所以簡要寫。後續目前研究中，參考澳洲MILNE-COUTTS的制度。</p>
             <table class="bidtable">
                 <tr>
                     <th colspan="2">低花開叫</th>
@@ -53,6 +53,7 @@
                     <td>12-15點，平均牌型，迫叫成局。</td>
                 </tr>
             </table>
+            <p>如果1!C開叫以後，答叫者的RHO（右敵家），做了一個Takeout Double，此時的處理方式與自然制類似。XX是10點以上。</p>
             <div><h3>1!C-1!D/!H：高花轉換</h3>
                 <p>接受轉換是有三張支持低限：平均牌或非平均牌且沒有其他合適叫品。其他叫品大多自然。再叫2!C，大多是6張，5張時通常是有4張方塊或紅心，在同伴的牌組短門的牌。</p>
                 <table class="bidtable">
@@ -111,7 +112,7 @@
                     </tr>
                     <tr>
                         <td colspan="2">1NT</td>
-                        <td>12-14點，平均或半平均牌型，沒有3張黑桃。</td>
+                        <td>12-14點，平均或半平均牌型，沒有3張黑桃。之後就有Two-way。</td>
                     </tr>
                     <tr>
                         <td colspan="2">2!C</td>
@@ -134,6 +135,42 @@
                         <td>16-18點，6張以上梅花，不迫叫。</td>
                     </tr>
                 </table>
+                <p>有時候在叫出轉換以後會被插叫（或Double），此時仍然使用Support (Re)double。</p>
+                <div><h4>接受轉換的後續</h4>
+                    <p>在這之後有XYZ可以使用。以1!C-1!D-1!H為例。可以當作一般自然制的1!C-1!H-1NT後續來思考。</p>
+                    <table class="bidtable">
+                        <tr>
+                            <th></th>
+                            <th colspan="2">1!C</th>
+                        </tr>
+                        <tr>
+                            <th>1!D</th>
+                            <th>1!H</th>
+                            <th>3張!H，低限不迫叫。</th>
+                        </tr>
+                        <tr>
+                            <td colspan="2">1!S</td>
+                            <td>4張以上黑桃，迫叫一圈。之後1NT是平均牌、2!C是6張梅花。</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">1NT</td>
+                            <td>10-11點，4張紅心，邀請，不迫叫。</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">2!C</td>
+                            <td>Puppet到2!D，除非是束叫2!D，否則是邀請。</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">2!D</td>
+                            <td>無聊的迫叫成局叫品，平均牌型叫2!H，否則自然叫出牌組。</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">2!H</td>
+                            <td>5張紅心，低限。</td>
+                        </tr>
+                    </table>
+                    <p>在2!C被轉換（puppet）到2!D以後，再叫2!S便是5張黑桃的邀請牌。</p>
+                </div>
             </div>
             <div><h3>1!C-1!S：1NT轉換</h3>
                 <p>開叫者應該預設同伴是低限的平均牌型。</p>
@@ -146,6 +183,11 @@
                     <tr>
                         <td colspan="2">1NT</td>
                         <td>接受轉換。</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>2!D</td>
+                        <td>5張以上方塊，低限束叫。</td>
                     </tr>
                     <tr>
                         <td></td>
