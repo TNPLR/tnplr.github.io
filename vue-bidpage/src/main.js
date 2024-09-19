@@ -13,6 +13,8 @@ import NaturalMajor from './components/naturalMajor.vue'
 
 import balMinor from './components/balMinor.vue'
 
+import Cmbc from './components/cmbc.vue'
+
 const router = createRouter({
     history: createWebHistory(),
     routes: [
@@ -23,6 +25,7 @@ const router = createRouter({
         { path: '/defense', component: Defense},
         { path: '/doubleton', component: doubletonClub},
         { path: '/natural', component: Natural},
+        { path: '/cmbc', component: Cmbc},
         //{ path: '/:pathMatch(.*)*', redirect: '/'},
     ]
 });

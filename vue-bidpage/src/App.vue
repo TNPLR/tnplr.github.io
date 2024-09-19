@@ -1,6 +1,6 @@
 <template>
   <header>
-    <h1 class="topic">Röle Sistemi</h1>
+    <h1 class="topic">{{ topic }}</h1>
   </header>
   <button id="topbutton" v-on:click="goToTop" v-show="topbuttonshow"><img style="width: 28px;" src="/arrow_upward.svg" alt="up arrow"></button>
   <div>
@@ -8,13 +8,14 @@
             <li class="dropdown">
                 <a href="javascript:void(0)" class="dropbtn">Relay制度</a>
                 <div class="dropdown-content">
-                    <router-link to="/relay" activeClass="active">未受競叫叫牌</router-link>
-                    <router-link to="/interference" activeClass="active">競叫</router-link>
-                    <router-link to="/defense" activeClass="active">防禦叫牌</router-link>
-                    <router-link to="/signal" activeClass="active">防禦信號</router-link>
+                    <router-link to="/relay">未受競叫叫牌</router-link>
+                    <router-link to="/interference">競叫</router-link>
+                    <router-link to="/defense">防禦叫牌</router-link>
+                    <router-link to="/signal">防禦信號</router-link>
                 </div>
             </li>
-            <li><router-link to="/natural" activeClass="active">自然制</router-link></li>
+            <li><router-link to="/natural">自然制</router-link></li>
+            <li><router-link to="/cmbc">CMBC 自然制</router-link></li>
         </ul>
     </div>
   <section>
@@ -26,7 +27,7 @@
     <router-view></router-view>
   </section>
   <footer>
-    不供商業使用。2028年製作。
+    僅供非商業橋牌教學使用。2024年製作。
   </footer>
 </template>
 
@@ -34,7 +35,8 @@
 export default {
   data() {
     return {
-      topbuttonshow: false
+      topbuttonshow: false,
+      topic: "Röle Sistemi"
     };
   },
   created () {
@@ -317,7 +319,7 @@ article {
 #horizontal-nav li a:hover, .dropdown:hover .dropbtn {
     background-color: lightgray;
 }
-#horizontal-nav li a.active {
+#horizontal-nav li a.router-link-active {
     font-weight: bold;
 }
 #horizontal-nav li.dropdown {
