@@ -29,17 +29,11 @@
 export default {
   data() {
     return {
-      message: 'Hello world!',
       topbuttonshow: false
     };
   },
   created () {
     window.addEventListener('scroll', this.scrollCheck)
-  },
-  computed: {
-    activePage() {
-      return 'interference';
-    }
   },
   methods: {
     goToTop() {
