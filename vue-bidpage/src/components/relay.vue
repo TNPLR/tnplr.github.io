@@ -3181,6 +3181,7 @@ export default {
   mounted() {
     this.$root.replaceSuitSigns(this.$refs.Article);
     this.$root.genTOC();
+    this.$root.$data.topic = "Röle Sistemi";
   }
 }
 </script>
