@@ -390,5 +390,8 @@ section::after {
     body {
         font-size: 16px;
     }
+    #horizontal-nav li, .dropdown-content {
+        width: 100%;
+    }
 }
 </style>
