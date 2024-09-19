@@ -18,7 +18,7 @@ import Cmbc from './components/cmbc.vue'
 const router = createRouter({
     history: createWebHistory(),
     routes: [
-        { path: '/', redirect: '/relay'},
+        { path: '/', redirect: '/cmbc'},
         { path: '/interference', component: Interference, meta: {title: '受干擾的叫牌'}},
         { path: '/signal', component: Signal, meta: {title: '防禦信號'}},
         { path: '/relay', component: Relay, meta: {title: 'Relay 制度'}},
@@ -26,7 +26,7 @@ const router = createRouter({
         { path: '/doubleton', component: doubletonClub},
         { path: '/natural', component: Natural},
         { path: '/cmbc', component: Cmbc, meta: {title: 'CMBC 自然制'}},
-        //{ path: '/:pathMatch(.*)*', redirect: '/'},
+        { path: '/:pathMatch(.*)*', redirect: '/'},
     ]
 });
 
