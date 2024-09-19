@@ -18,16 +18,24 @@ import Cmbc from './components/cmbc.vue'
 const router = createRouter({
     history: createWebHistory(),
     routes: [
-        { path: '/', redirect: '/relay' },
-        { path: '/interference', component: Interference },
-        { path: '/signal', component: Signal},
-        { path: '/relay', component: Relay},
-        { path: '/defense', component: Defense},
+        { path: '/', redirect: '/relay'},
+        { path: '/interference', component: Interference, meta: {title: '受干擾的叫牌'}},
+        { path: '/signal', component: Signal, meta: {title: '防禦信號'}},
+        { path: '/relay', component: Relay, meta: {title: 'Relay 制度'}},
+        { path: '/defense', component: Defense, meta: {title: '防禦叫牌'}},
         { path: '/doubleton', component: doubletonClub},
         { path: '/natural', component: Natural},
-        { path: '/cmbc', component: Cmbc},
+        { path: '/cmbc', component: Cmbc, meta: {title: 'CMBC 自然制'}},
         //{ path: '/:pathMatch(.*)*', redirect: '/'},
     ]
+});
+
+router.beforeEach((to) => {
+    const { title, description } = to.meta;
+    const defaultTitle = 'Relay 制度網';
+    const defaultDescription = '一個Relay制度的網站。';
+  
+    document.title = title || defaultTitle
 });
 
 const app = createApp(App)
