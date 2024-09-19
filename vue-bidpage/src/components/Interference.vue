@@ -74,7 +74,7 @@
     <p>由於各種對抗方法不斷推陳出新、五花八門、花樣百出，令人眼花撩亂，故我們原則上不對「特定」的制度設計對抗方法。對抗這些插叫的最佳心法便是假設開叫者是低限的平均牌型。
       如果對方是Double或是叫1!D，我們還是能夠繼續啟動relay。但叫到更上面以後，我們就沒辦法用relay了，取而代之是自然的叫牌。
     </p>
-    <table class="competitive">
+    <table class="competitive" style="table-layout: fixed;">
       <tr>
         <th>1!C</th>
         <th>Dbl.</th>
@@ -95,7 +95,7 @@
       </tr>
     </table>
     <p>當對方叫出1!D以後，也是用類似的方法，將負性的牌區分開來。</p>
-    <table class="competitive">
+    <table class="competitive" style="table-layout: fixed;">
       <tr>
         <th>1!C</th>
         <th>1!D</th>

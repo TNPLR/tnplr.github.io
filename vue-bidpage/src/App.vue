@@ -236,7 +236,6 @@ table.bidtable th {
     border-bottom: 3px solid #04AA6D;
 }
 table.competitive {
-    table-layout: fixed;
     border-top: 0;
     border-bottom: 3px solid #8CCDE0;
     color: black;
@@ -259,7 +258,6 @@ table.defensive th:nth-child(even) {
     color: black;
 }
 table.defensive {
-    table-layout: fixed;
     border-top: 0;
     border-bottom: 3px solid #8FA6F0;
     color: black;

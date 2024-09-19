@@ -29,3 +29,6 @@ vue-bidding/.vscode/*
 *.sw?
 
 *.tsbuildinfo
+
+test
+sed_table_to_htm
