@@ -1,6 +1,8 @@
 import { createApp } from 'vue'
 import { createRouter, createWebHistory } from 'vue-router'
 
+import "./assets/main.css";
+
 import App from './App.vue'
 import Interference from './components/Interference.vue'
 import Signal from './components/signal.vue'
