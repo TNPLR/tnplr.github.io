@@ -297,6 +297,369 @@
                 </table>
             </div>
         </div>
+        <div><h2>1NT開叫的後續</h2>
+            <p>這邊的1NT後續只是一個簡單的指引。</p>
+            <table class="bidtable" id="1NT">
+            <tr>
+                <th>1NT</th>
+                <th>15-17。平均牌型。</th>
+            </tr>
+            <tr>
+                <td><a href="#1NT-2C">2!C!</a></td>
+                <td>Stayman，有可能是5張黑桃的邀請牌。</td>
+            </tr>
+            <tr>
+                <td><a href="#1NT-2D">2!D!</a></td>
+                <td>轉換紅心</td>
+            </tr>
+            <tr>
+                <td><a href="#1NT-2H">2!H!</a></td>
+                <td>轉換黑桃</td>
+            </tr>
+            <tr>
+                <td>2NT</td>
+                <td>8-9點，邀請。</td>
+            </tr>
+            <tr>
+                <td>3NT</td>
+                <td>10-15點，束叫。</td>
+            </tr>
+            <tr>
+                <td>4!D</td>
+                <td>9點以上，6張以上紅心，轉換紅心。</td>
+            </tr>
+            <tr>
+                <td>4!H</td>
+                <td>9點以上，6張以上黑桃，轉換黑桃。</td>
+            </tr>
+            </table>
+        
+            <div><h4>2!C Stayman</h4>
+                <p>2!C的回答非常平常，而在這之後2!S都是5張黑桃的邀請。</p>
+                <table class="bidtable" id="1NT-2C">
+                    <tr>
+                        <th>1NT</th>
+                        <th>2!C</th>
+                        <th>Stayman</th>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><a href="#1NT-2C-2D">2!D</a></td>
+                        <td>沒有4張高花</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><a href="#1NT-2C-2H">2!H</a></td>
+                        <td>4張以上紅心，可能有4張黑桃</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><a href="#1NT-2C-2S">2!S</a></td>
+                        <td>4張以上黑桃，沒有4張紅心</td>
+                    </tr>
+                </table>
+                <p>2!D回答以後，2!H是4-5邀請，另外還有Smolen和Texas特約。</p>
+                <table class="bidtable" id="1NT-2C-2D">
+                    <tr>
+                        <th></th>
+                        <th>1NT</th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <th><a href="#1NT-2C">2!C</a></th>
+                        <th>2!D</th>
+                        <th>沒有4張高花</th>
+                    </tr>
+                    <tr>
+                        <td colspan="2">2!H</td>
+                        <td>5張紅心4張黑桃的邀請牌。</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">2!S</td>
+                        <td>5張黑桃，有或沒有4張紅心的邀請牌。</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">2NT</td>
+                        <td>邀請。</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">3!H!</td>
+                        <td>4張紅心，5張黑桃，迫叫成局。</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">3!S!</td>
+                        <td>4張黑桃，5張紅心，迫叫成局。</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">3NT</td>
+                        <td>束叫。</td>
+                    </tr>
+                </table>
+                <p>聽到有4張高花的回答以後，除了2!S是5張黑桃的邀請以外，其他叫品是自然。</p>
+                <table class="bidtable" id="1NT-2C-2H">
+                    <tr>
+                        <th></th>
+                        <th>1NT</th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <th><a href="#1NT-2C">2!C</a></th>
+                        <th>2!H</th>
+                        <th>4張以上紅心，可能有4張黑桃。</th>
+                    </tr>
+                    <tr>
+                        <td colspan="2">2!S</td>
+                        <td>5張黑桃的邀請牌，沒有4張紅心。</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">2NT</td>
+                        <td>邀請。有4張黑桃。</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">3!H</td>
+                        <td>4張紅心，邀請。</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">3NT</td>
+                        <td>束叫。</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">4!H</td>
+                        <td>束叫。</td>
+                    </tr>
+                    <tr id="1NT-2C-2S">
+                        <th></th>
+                        <th><a href="#1NT">1NT</a></th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <th><a href="#1NT-2C">2!C</a></th>
+                        <th>2!S</th>
+                        <th>4張以上黑桃，沒有4張紅心。</th>
+                    </tr>
+                    <tr>
+                        <td colspan="2">2NT</td>
+                        <td>邀請。有4張紅心。</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">3!S</td>
+                        <td>4張以上黑桃，邀請。</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">3NT</td>
+                        <td>束叫。</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">4!S</td>
+                        <td>束叫。</td>
+                    </tr>
+                </table>
+                
+                </div>
+            <div><h4>2!D/2!H Jacoby Transfer</h4>
+                <table class="bidtable" id="1NT-2D">
+                    <tr>
+                        <th><a href="#1NT">1NT</a></th>
+                        <th>2!D</th>
+                        <th>轉換紅心。</th>
+                    </tr>
+                    <tr>
+                        <td>2!H</td>
+                        <td>Pass</td>
+                        <td>束叫，5張紅心，未達邀請力量。</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>2NT</td>
+                        <td>5張紅心，邀請。</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>3!H</td>
+                        <td>6張以上紅心，邀請。</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>3NT</td>
+                        <td>5張紅心，迫叫成局。</td>
+                    </tr>
+                    <tr id="1NT-2H">
+                        <th><a href="#1NT">1NT</a></th>
+                        <th>2!H</th>
+                        <th>轉換黑桃。不是5張黑桃的邀請牌。</th>
+                    </tr>
+                    <tr>
+                        <td>2!S</td>
+                        <td>Pass</td>
+                        <td>束叫，5張黑桃，未達邀請力量。</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>2NT</td>
+                        <td>5張黑桃，邀請。</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>3!S</td>
+                        <td>6張以上黑桃，邀請。</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>3NT</td>
+                        <td>5張黑桃，迫叫成局。</td>
+                    </tr>
+                </table> 
+            </div>
+            <div><h4>小整理</h4>
+                <table>
+                    <tr>
+                        <th colspan="5">1NT首次答叫基本整理</th>
+                    </tr>
+                    <tr>
+                        <td>點力的範圍</td>
+                        <td>有六張以上高花</td>
+                        <td>有五張高花</td>
+                        <td>有四張高花</td>
+                        <td>其他</td>
+                    </tr>
+                    <tr>
+                        <td>0-7</td>
+                        <td>2!D/2!H</td>
+                        <td>2!D/2!H</td>
+                        <td>PASS</td>
+                        <td>PASS</td>
+                    </tr>
+                    <tr>
+                        <td>8-9</td>
+                        <td>2!D/2!H</td>
+                        <td>2!D/2!H</td>
+                        <td>2!C</td>
+                        <td>2NT</td>
+                    </tr>
+                    <tr>
+                        <td>10以上</td>
+                        <td>2!D/2!H或4!D/4!H</td>
+                        <td>2!D/2!H</td>
+                        <td>2!C</td>
+                        <td>3NT</td>
+                    </tr>
+                </table>
+                <p>基本的特約名稱，簡介如下表：</p>
+                <table>
+                    <tr>
+                        <th colspan="6">1NT首次答叫特約列表</th>
+                    </tr>
+                    <tr>
+                        <td>叫品</td>
+                        <td>名稱</td>
+                        <td colspan="4">適用牌型</td>
+                    </tr>
+                    <tr>
+                        <td>2!C</td>
+                        <td>Stayman Convention</td>
+                        <td colspan="4">邀請點力或以上（8+），有四張的高花</td>
+                    </tr>
+                    <tr>
+                        <td>2!D/2!H</td>
+                        <td>Jacoby Transfer</td>
+                        <td colspan="4">任意點力（0+），有五張或以上的高花</td>
+                    </tr>
+                    <tr>
+                        <td>4!D/4!H</td>
+                        <td>Texas Transfer</td>
+                        <td colspan="4">成局點力（10+），有六張以上的高花</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div><h2>敵方開叫以後</h2>
+            <p>坐在右邊的敵人開叫以後，情況變得比較複雜，但仍然還是可以瞭解的。</p>
+            <table class="defensive">
+                <tr>
+                    <th colspan="2">(1m)</th>
+                </tr>
+                <tr>
+                    <td>Dbl.</td>
+                    <td>Takeout
+                        <ul>
+                        <li> 除了開叫花色以外的各花色，都有至少3張支持。較不適合蓋叫的牌，12點以上。</li>
+                        <li>17點以上，任何牌型（除了有擋張的17-18平均牌）。</li>
+                    </ul></td>
+                </tr>
+                <tr>
+                    <td>1!D</td>
+                    <td>5張以上方塊，8點以上。</td>
+                </tr>
+                <tr>
+                    <td>1!H</td>
+                    <td>5張以上紅心，8點以上。</td>
+                </tr>
+                <tr>
+                    <td>1!S</td>
+                    <td>5張以上黑桃，8點以上。</td>
+                </tr>
+                <tr>
+                    <td>1NT</td>
+                    <td>(15)16-18點，類似平均牌型，敵方叫的花色有「擋張」。</td>
+                </tr>
+                <tr>
+                    <td>2!C</td>
+                    <td>1!D-2!C的情形，2!C是11點以上6張以上梅花，或13點以上，5張以上梅花。</td>
+                </tr>
+                <tr>
+                    <td>2m</td>
+                    <td>兩門高花5-5以上，10點以上。（Michaels）</td>
+                </tr>
+            </table>
+            <p>高花開叫之後的蓋叫，使用的東西很類似。</p>
+            <table class="defensive">
+                <tr>
+                    <th colspan="2">(1M)</th>
+                </tr>
+                <tr>
+                    <td>Dbl.</td>
+                    <td>Takeout
+                        <ul>
+                        <li> 除了開叫花色以外的各花色，都有至少3張支持。較不適合蓋叫的牌，12點以上。</li>
+                        <li>17點以上，任何牌型（除了有擋張的17-18平均牌）。</li>
+                    </ul></td>
+                </tr>
+                <tr>
+                    <td>1!S</td>
+                    <td>5張以上黑桃，8點以上。</td>
+                </tr>
+                <tr>
+                    <td>1NT</td>
+                    <td>(15)16-18點，類似平均牌型，敵方叫的花色有「擋張」。</td>
+                </tr>
+                <tr>
+                    <td>2!C/!D</td>
+                    <td>11點以上6張以上牌組，或13點以上，5張以上牌組。</td>
+                </tr>
+                <tr>
+                    <td>2!H</td>
+                    <td>1!S-2!H的情形，2!H是10點以上5張以上紅心。</td>
+                </tr>
+                <tr>
+                    <td>2M</td>
+                    <td>另一門高花以及一門低花5-5以上，10點以上。（Michaels）</td>
+                </tr>
+            </table>
+            <p>還有一個共用的叫品，Unusual 2NT。</p>
+            <table class="defensive">
+                <tr>
+                    <th colspan="2">(1m/1M)</th>
+                </tr>
+                <tr>
+                    <td>2NT</td>
+                    <td>兩門較低的未叫花色，5-5以上，10點以上。</td>
+                </tr>
+            </table>
+            <ul>
+                <li>蓋叫時的要求雖然是8個點，但並非所有8個點都蓋叫。我們蓋叫的兩個重要目標是指示首攻與找到適合的部分合約，因此，在牌組好的時候才建議8點蓋叫，否則應該在點力稍強的情況下才蓋叫。</li>
+                <li>1NT蓋叫的擋張，指的是在那個花色不會被直接吃到太多墩。</li>
+            </ul>
+            <div><h3>答叫者Pass以後，Advancer（第四家）的叫牌</h3>
+                <p>原則上叫出一線花色是迫叫，叫出二線花色不迫叫。叫對手的花色是強牌或對於同伴花色的好支持。</p>
+            </div>
+        </div>
     </article>
 </template>
 <script>
