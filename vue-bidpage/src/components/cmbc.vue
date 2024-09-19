@@ -296,6 +296,74 @@
                     </tr>
                 </table>
             </div>
+            <div><h3>被干擾以後的處理方法</h3>
+                <table class="competitive">
+                    <tr>
+                        <th>1m</th>
+                        <th>(X)</th>
+                        <th>Takeout double</th>
+                    </tr>
+                    <tr>
+                        <td colspan="2">XX</td>
+                        <td>10點以上的力量。通常是平均牌或支持同伴的花色，或想要懲罰對手。</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">1!D/!H/!S</td>
+                        <td>8點以上，4張以上的牌組，8點以上，迫叫一圈。</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">1NT</td>
+                        <td>8-10點，沒有特別可以叫的東西。</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">2!C</td>
+                        <td>1!D以後叫2!C，5張以上牌組，6-9點。</td>
+                    </tr>
+                </table>
+                <ul>
+                    <li>原則上一線新花迫叫，二線新花不迫叫</li>
+                </ul>
+                <table class="competitive">
+                    <tr>
+                        <th>1m</th>
+                        <th>(1!H)</th>
+                        <th>通常5張以上的紅心牌組，8點以上</th>
+                    </tr>
+                    <tr>
+                        <td colspan="2">X</td>
+                        <td>(Negative double) 4張!S，6點以上。</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">1!S</td>
+                        <td>5張!S，6點以上，迫叫一圈。</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">1NT</td>
+                        <td>8-9(10)點。</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">2om</td>
+                        <td>5張m，10點以上，迫叫一圈。</td>
+                    </tr>
+                    <tr>
+                        <th>1m</th>
+                        <th>(1!S)</th>
+                        <th>通常5張以上黑桃的牌組，8點以上</th>
+                    </tr>
+                    <tr>
+                        <td colspan="2">X</td>
+                        <td>(Negative double) 4張以上!H，8點以上。</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">2!H</td>
+                        <td>5張!H，10點以上，迫叫一圈。</td>
+                    </tr>
+                </table>
+                <ul>
+                    <li>Negative double通常表示另一門高花4張。但也可能是因為點力不足以叫出高花才使用（Negative double點力要求較低）。</li>
+                    <li>原則上新花迫叫，二線新花迫叫（邀請以上力量），三線新花迫叫成局。</li>
+                </ul>
+            </div>
         </div>
         <div><h2>1NT開叫的後續</h2>
             <p>這邊的1NT後續只是一個簡單的指引。</p>
