@@ -23,7 +23,7 @@ const router = createRouter({
         { path: '/defense', component: Defense},
         { path: '/doubleton', component: doubletonClub},
         { path: '/natural', component: Natural},
-        { path: '/:pathMatch(.*)*', redirect: '/'},
+        //{ path: '/:pathMatch(.*)*', redirect: '/'},
     ]
 });
 

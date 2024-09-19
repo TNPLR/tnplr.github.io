@@ -5,10 +5,15 @@
   <button id="topbutton" v-on:click="goToTop" v-show="topbuttonshow"><img style="width: 28px;" src="/arrow_upward.svg" alt="up arrow"></button>
   <div>
         <ul id="horizontal-nav">
-            <li><router-link to="/bidding" activeClass="active">未受競叫叫牌</router-link></li>
-            <li><router-link to="/interference" activeClass="active">競叫</router-link></li>
-            <li><router-link to="/defense" activeClass="active">防禦叫牌</router-link></li>
-            <li><router-link to="/signal" activeClass="active">防禦信號</router-link></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Relay制度</a>
+                <div class="dropdown-content">
+                    <router-link to="/relay" activeClass="active">未受競叫叫牌</router-link>
+                    <router-link to="/interference" activeClass="active">競叫</router-link>
+                    <router-link to="/defense" activeClass="active">防禦叫牌</router-link>
+                    <router-link to="/signal" activeClass="active">防禦信號</router-link>
+                </div>
+            </li>
             <li><router-link to="/natural" activeClass="active">自然制</router-link></li>
         </ul>
     </div>
@@ -293,6 +298,7 @@ article {
     margin: 0;
     padding: 0;
     border: 0;
+    min-width: 200px;
     color: black;
     float: left;
     border-right: 1px solid lightgray;
@@ -308,12 +314,34 @@ article {
     color: inherit;
     text-decoration: none;
 }
-#horizontal-nav li a:hover {
+#horizontal-nav li a:hover, .dropdown:hover .dropbtn {
     background-color: lightgray;
 }
 #horizontal-nav li a.active {
     font-weight: bold;
 }
+#horizontal-nav li.dropdown {
+    display: inline-block;
+}
+#horizontal-nav .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+#horizontal-nav .dropdown-content router-link {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+#horizontal-nav .dropdown:hover .dropdown-content {
+  display: block;
+}
+
 section {
     clear: left;
 }
