@@ -16,6 +16,7 @@
             </li>
             <li><router-link to="/natural">自然制</router-link></li>
             <li><router-link to="/cmbc">CMBC 自然制</router-link></li>
+            <li><a href="story.html">Story</a></li>
         </ul>
     </div>
   <section>
