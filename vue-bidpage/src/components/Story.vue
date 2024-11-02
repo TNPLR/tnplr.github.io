@@ -5,6 +5,8 @@
         <option v-for="q in questType">{{ q }}</option></select>
             題目：<select v-on:change="changeQuest()" v-model="selectedQuest">
         <option v-for="(q, index) in allStories[selectedQuestType]">{{ index+1 }}</option></select>
+        <button id="nextquest" v-show="selectedQuest > 1" v-on:click="selectedQuest--; changeQuest();">上一題</button>
+        <button id="nextquest" v-show="selectedQuest + 1 < allStories[selectedQuestType].length" v-on:click="selectedQuest++; changeQuest();">下一題</button>
     </h3>
     </header>
     <div class="story-grid">
@@ -170,6 +172,18 @@ export default {
 button {
     font-size: 30px;
     padding: 5px 0;
+}
+#lastquest {
+    font-family: "Taipei Sans SC Beta", sans-serif;
+    font-size: inherit;
+    padding: 5px;
+    margin: 0 10px;
+}
+#nextquest {
+    font-family: "Taipei Sans SC Beta", sans-serif;
+    font-size: inherit;
+    padding: 5px;
+    margin: 0 10px;
 }
 select {
     font-family: "游明朝 Light", serif;
