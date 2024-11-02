@@ -65,7 +65,7 @@ export default {
             selectedLevel: undefined,
             selectedQuestType: '開叫',
             selectedQuest: 1,
-            questType: ['開叫', '低花開叫的答叫', '高花開叫的答叫', '其他'],
+            questType: ['開叫', '低花開叫的答叫', '高花開叫的答叫', '1NT開叫的答叫','2NT開叫的答叫', '其他'],
             allStories: {
                 '開叫': [
                     {spades: "AQ93", hearts: "9", diamonds: "KJT3", clubs: "KJ74", auction: ['?'], answers: {'1C': '錯誤：同時有4張方塊的時候，方塊比較優先', '1D': '正確', '1S': '錯誤：開叫黑桃要有5張以上才行。'}, correct: '1D'},
@@ -123,6 +123,16 @@ export default {
                     {spades: 'A96', hearts: 'T9', diamonds: '98', clubs: 'AT9875', auction: ['1D', 'P', '?'], correct: '1NT', answers: {'1NT': '正確。6-9點，沒有4張高花', '2C': '錯誤。這個叫品要有12個點以上', }},
                     {spades: 'AKQ84', hearts: 'A8', diamonds: 'KQ8', clubs: '643', auction: ['1D', 'P', '?'], correct: '1S', answers: {'1S': '正確。5張黑桃優先叫出。沒有點力上限', }},
                     {spades: 'A74', hearts: 'KQT5', diamonds: 'J95', clubs: 'QT5', auction: ['1D', 'P', '?'], correct: '1H', answers: {'1H': '正確。此叫品保證4張紅心，6點以上，沒有點力上限', }},
+                    {spades: '3', hearts: 'QT83', diamonds: 'KJ984', clubs: 'AJ2', auction: ['1D', 'P', '?'], correct: '1H', answers: {'1H': '正確。4張高花優先', '2D': '錯誤。有5張高花要優先叫出', }},
+                    {spades: '965', hearts: 'Q8', diamonds: 'KJ', clubs: 'K97543', auction: ['1D', 'P', '?'], correct: '1NT', answers: {'1NT': '正確。6-9點，沒有4張高花', '2C': '錯誤。二蓋一要12點以上，是迫叫成局的牌', '2NT': '錯誤。10-11點才是叫2NT', }},
+                    {spades: '942', hearts: 'K953', diamonds: 'QT4', clubs: 'JT4', auction: ['1D', 'P', '?'], correct: '1H', answers: {'1H': '正確。4張紅心要優先叫出', '1NT': '錯誤。這是6-9點沒有4張高花', }},
+                    {spades: 'KJ53', hearts: 'KT', diamonds: 'K93', clubs: '5432', auction: ['1D', 'P', '?'], correct: '1S', answers: {'1S': '正確', '1NT': '錯誤。這是6-9點，沒有4張高花', '2NT': '錯誤。這是10-11點，沒有4張高花', }},
+                    {spades: 'QJT4', hearts: 'A4', diamonds: 'Q93', clubs: 'K642', auction: ['1D', 'P', '?'], correct: '1S', answers: {'1S': '正確，這個叫品沒有點力上限', }},
+                    {spades: 'KT653', hearts: 'QJ', diamonds: 'Q65', clubs: 'T86', auction: ['1D', 'P', '?'], correct: '1S', answers: {'1S': '正確', '1NT': '錯誤，有4張以上高花要先叫出', }},
+                    {spades: '9', hearts: '9754', diamonds: 'KJ64', clubs: '8654', auction: ['1D', 'P', '?'], correct: 'Pass', answers: {'Pass': '正確，沒有6個點不用答叫', }},
+                    {spades: 'T', hearts: 'AQ6', diamonds: 'AJ72', clubs: 'JT973', auction: ['1D', 'P', '?'], correct: '2D', answers: {'2D': '正確，11點以上，4張以上方塊', '2C': '也可以接受，但通常有支持會優先支持。12點以上，5張以上梅花', }},
+                    {spades: 'K8753', hearts: '4', diamonds: 'QJ53', clubs: 'K86', auction: ['1D', 'P', '?'], correct: '1S', answers: {'1S': '正確，有4張以上高花要優先叫出', '1NT': '錯誤。有4張以上高花要優先叫出', '3D': '錯誤。要有5張以上方塊才能叫', }},
+                    {spades: '7643', hearts: '752', diamonds: 'K83', clubs: 'KT8', auction: ['1D', 'P', '?'], correct: '1S', answers: {}},
                 ],
                 '高花開叫的答叫': [
                     {spades: 'AJ96432', hearts: '', diamonds: 'Q54', clubs: 'K97', auction: ['1H', 'P', '?'], correct: '1S', answers: {'1S': '正確。這個叫品保證4張黑桃，6點以上', }},{spades: 'A854', hearts: 'A75', diamonds: 'KT94', clubs: 'K9', auction: ['1H', 'P', '?'], correct: '1S', answers: {'1S': '正確，點力太強，不能直接支持紅心', '2H': '錯誤。這個叫品表示8-10點的紅心支持（通常3張）', '4H': '錯誤。這個叫品表示5張紅心的竄叫（低於開叫點力）'}},
@@ -134,10 +144,74 @@ export default {
                     {spades: 'AT6', hearts: 'QJ83', diamonds: '9', clubs: 'A8642', auction: ['1H', 'P', '?'], correct: '4D', answers: {'4D': '正確。這是Splinter叫品，表示低限的成局牌，叫的花色是短門。目標是找到27點的滿貫', }},
                     {spades: 'K742', hearts: 'A5', diamonds: 'J7632', clubs: '97', auction: ['1H', 'P', '?'], correct: '1S', answers: {'1S': '正確。此叫品保證6點以上，4張以上黑桃', '2D': '錯誤。這個是二蓋一迫叫成局，要有12個點', '2H': '錯誤。要有三張支持才能叫這個叫品', }},
                     {spades: 'KQ9862', hearts: 'T52', diamonds: '6', clubs: 'J97', auction: ['1D', 'P', '?'], correct: '1S', answers: {'1S': '正確，雖然有3張紅心支持，但因為不是8-10點的情形不能直接支持，如果沒有4張黑桃，就叫1NT迫叫', '1NT': '錯誤。可以表示4張黑桃的時候應該要優先表示', '2H': '錯誤。此叫品要8-10點', }},
+                    {spades: '64', hearts: 'Q3', diamonds: 'AJ83', clubs: 'AK976', auction: ['1H', 'P', '?'], correct: '2C', answers: {}},
+                    {spades: '753', hearts: 'AKJ3', diamonds: 'K654', clubs: 'KQ', auction: ['1H', 'P', '?'], correct: '2NT', answers: {}},
+                    {spades: 'KQ5', hearts: '6', diamonds: 'AKQT85', clubs: 'QT7', auction: ['1H', 'P', '?'], correct: '2D', answers: {}},
+                    {spades: 'K2', hearts: 'J9542', diamonds: '852', clubs: 'T75', auction: ['1H', 'P', '?'], correct: '4H', answers: {'4H': '正確。這是五張紅心的竄叫', }},
+                    {spades: 'Q974', hearts: 'J', diamonds: 'A85', clubs: 'KT983', auction: ['1H', 'P', '?'], correct: '1S', answers: {'2C': '錯誤。這要12個點以上才能叫', }},
+                    {spades: 'K97', hearts: 'AJ', diamonds: 'J2', clubs: 'Q75432', auction: ['1H', 'P', '?'], correct: '1NT', answers: {'2C': '錯誤。這要12點以上才能叫', }},
+                    {spades: 'Q42', hearts: '8', diamonds: 'T862', clubs: 'K8732', auction: ['1H', 'P', '?'], correct: 'Pass', answers: {}},
+                    {spades: 'KT873', hearts: 'K94', diamonds: 'T6', clubs: 'K98', auction: ['1H', 'P', '?'], correct: '1S', answers: {'1S': '正確，雖然是8-10點三張紅心支持，但也是可以先叫其他花色，尤其是這副牌比點力本身表示得更好', '2H': '一半正確。這是8-10點三張紅心支持，但因為這副牌有三張K，如果有黑桃配合會是很好的情形', }},
+                    {spades: 'K8', hearts: 'K54', diamonds: 'Q96', clubs: 'KQJ62', auction: ['1H', 'P', '?'], correct: '2C', answers: {'2C': '正確。先叫二蓋一迫叫成局以後，再支持紅心', }},
+                    {spades: '963', hearts: 'AQ7', diamonds: 'Q9532', clubs: 'A3', auction: ['1H', 'P', '?'], correct: '2D', answers: {'2D': '正確。先叫二蓋一迫叫成局以後，再支持紅心', }},
+                    {spades: 'AJ87', hearts: 'K9643', diamonds: '5', clubs: '652', auction: ['1H', 'P', '?'], correct: '4H', answers: {}},
+                    {spades: 'Q875', hearts: 'K4', diamonds: 'AJ43', clubs: 'Q65', auction: ['1S', 'P', '?'], correct: '2NT', answers: {'2NT': '正確。這個是Jacoby 2NT，4張以上高花支持，迫叫成局', '2D': '錯誤。有更好的叫品', }},
+                    {spades: 'Q3', hearts: 'K764', diamonds: 'T9642', clubs: 'K8', auction: ['1S', 'P', '?'], correct: '1NT', answers: {'1NT': '正確。迫叫1NT，用在高花開叫以後，沒有迫叫成局的大部分牌', }},
+                    {spades: 'A7', hearts: 'J953', diamonds: 'QT9875', clubs: 'Q', auction: ['1S', 'P', '?'], correct: '1NT', answers: {'1NT': '正確。迫叫1NT，用在高花開叫以後，沒有迫叫成局的大部分牌', }},
+                    {spades: 'K86', hearts: 'J72', diamonds: '964', clubs: 'K876', auction: ['1S', 'P', '?'], correct: '1NT', answers: {'1NT': '正確。迫叫1NT，用在高花開叫以後，沒有迫叫成局的大部分牌。在這裡是6-7點的三張支持', }},
+                    {spades: 'K', hearts: 'QJ', diamonds: 'KQ532', clubs: 'T9864', auction: ['1S', 'P', '?'], correct: '1NT', answers: {'1NT': '正確。迫叫1NT，用在高花開叫以後，沒有迫叫成局的大部分牌', }},
+                    {spades: '97', hearts: 'KQJT85', diamonds: 'A82', clubs: 'J3', auction: ['1S', 'P', '?'], correct: '2H', answers: {'2H': '正確。牌型很好，可以當作迫叫成局來叫', '1NT': '半對。由於牌型很好，可以當作迫叫成局叫牌', }},
+                    {spades: '98', hearts: 'AJ8762', diamonds: 'Q3', clubs: 'Q86', auction: ['1S', 'P', '?'], correct: '1NT', answers: {'1NT': '正確。迫叫1NT，用在高花開叫以後，沒有迫叫成局的大部分牌', }},
+                    {spades: 'JT974', hearts: 'T95', diamonds: 'KJ75', clubs: '7', auction: ['1S', 'P', '?'], correct: '4S', answers: {'4S': '正確。這是竄叫', }},
+                    {spades: '', hearts: 'KQT95', diamonds: '9643', clubs: 'QJT2', auction: ['1S', 'P', '?'], correct: '1NT', answers: {'1NT': '正確。迫叫1NT，用在高花開叫以後，沒有迫叫成局的大部分牌', '2H': '錯誤。二蓋一要有12點以上才能叫', }},
+                    {spades: 'A', hearts: '85', diamonds: 'QJ32', clubs: 'AJ9754', auction: ['1S', 'P', '?'], correct: '2C', answers: {}},
+                    {spades: 'J9862', hearts: '6', diamonds: 'AJT7', clubs: 'AJ7', auction: ['1S', 'P', '?'], correct: '4H', answers: {'4H': '正確，這個是低限迫叫成局，紅心短門，四張以上黑桃支持的Splinter特約', }},
+                ],
+                '1NT開叫的答叫': [
+                    {spades: 'AJ865', hearts: 'Q32', diamonds: '7', clubs: 'K972', auction: ['1NT', 'P', '?'], correct: '2H', answers: {'2H': '正確，轉換黑桃', }},
+                    {spades: '9852', hearts: 'AT', diamonds: 'T765', clubs: 'QJ7', auction: ['1NT', 'P', '?'], correct: 'Pass', answers: {}},
+                    {spades: '94', hearts: 'Q9832', diamonds: 'K7', clubs: 'KJ72', auction: ['1NT', 'P', '?'], correct: '2D', answers: {'2D': '正確，轉換紅心', }},
+                    {spades: 'Q54', hearts: 'AKQJ9873', diamonds: '', clubs: 'QJ', auction: ['1NT', 'P', '?'], correct: '2D', answers: {'2D': '正確，轉換紅心', }},
+                    {spades: 'KQ87', hearts: 'AK85', diamonds: 'T9', clubs: 'A74', auction: ['1NT', 'P', '?'], correct: '2C', answers: {'2C': '正確，問4張高花', }},
+                    {spades: 'Q9', hearts: 'AJT', diamonds: 'AQ74', clubs: 'QT42', auction: ['1NT', 'P', '?'], correct: '3NT', answers: {'4NT': '其實很接近邊緣，但理論上不能夠叫這個', }},
+                    {spades: '82', hearts: 'QT954', diamonds: 'AQT97', clubs: 'Q', auction: ['1NT', 'P', '?'], correct: '2D', answers: {'2D': '正確，轉換紅心', }},
+                    {spades: '4', hearts: 'QT963', diamonds: 'KQJ93', clubs: 'J4', auction: ['1NT', 'P', '?'], correct: '2D', answers: {}},
+                    {spades: 'A62', hearts: 'Q', diamonds: '7532', clubs: 'K8652', auction: ['1NT', 'P', '?'], correct: '2NT', answers: {'2NT': '正確。平均牌，邀請（對於15-17的1NT大約需要9點）', }},
+                    {spades: 'T', hearts: 'Q85', diamonds: 'KJT73', clubs: 'QJT8', auction: ['1NT', 'P', '?'], correct: '2NT', answers: {}},
+                    {spades: 'AJ63', hearts: '643', diamonds: 'QJ8', clubs: '542', auction: ['1NT', 'P', '?'], correct: 'Pass', answers: {}},
+                    {spades: 'T9742', hearts: 'KT873', diamonds: '', clubs: 'K54', auction: ['1NT', 'P', '?'], correct: '2C', answers: {'2C': '正確。正常Stayman要有邀請點力才能叫出，但這個情況是準備在同伴回答2D以後叫2H表示兩門高花的弱牌', '2D': '錯誤。有更好的叫品', '2H': '錯誤。有更好的叫品', }},
+                    {spades: 'T97', hearts: '42', diamonds: 'JT5', clubs: 'AKQ87', auction: ['1NT', 'P', '?'], correct: '3NT', answers: {}},
+                    {spades: 'J9842', hearts: '72', diamonds: 'AJ5', clubs: 'J43', auction: ['1NT', 'P', '?'], correct: '2H', answers: {}},
+                    {spades: 'QJ97', hearts: 'T84', diamonds: 'Q7', clubs: '9743', auction: ['1NT', 'P', '?'], correct: 'Pass', answers: {}},
+                    {spades: 'J9743', hearts: 'J985', diamonds: 'T', clubs: 'KT8', auction: ['1NT', 'P', '?'], correct: '2H', answers: {'2H': '正確。轉換黑桃，完全沒有點力下限。', }},
+                    {spades: '854', hearts: 'QJ42', diamonds: 'KJ9', clubs: '876', auction: ['1NT', 'P', '?'], correct: 'Pass', answers: {}},
+                    {spades: 'J', hearts: 'KJ4', diamonds: 'AJ87', clubs: 'KJT87', auction: ['1NT', 'P', '?'], correct: '3NT', answers: {}},
+                    {spades: 'K642', hearts: '963', diamonds: 'KQ986', clubs: 'J', auction: ['1NT', 'P', '?'], correct: '2C', answers: {'2C': '正確。4張黑桃，所以先用Stayman問高花', }},
+                    {spades: 'A83', hearts: 'AKT98', diamonds: 'T8', clubs: '985', auction: ['1NT', 'P', '?'], correct: '2D', answers: {}},
+                    {spades: 'AT973', hearts: '86', diamonds: 'J973', clubs: 'QJ', auction: ['1NT', 'P', '?'], correct: '2H', answers: {}},
+                ],
+                '2NT開叫的答叫': [
+                    {spades: 'QJ2', hearts: '742', diamonds: 'KT', clubs: 'AJ754', auction: ['2NT', 'P', '?'], correct: '3NT', answers: {}},
+                    {spades: 'Q9', hearts: 'J632', diamonds: '972', clubs: 'AT43', auction: ['2NT', 'P', '?'], correct: '3C', answers: {'3C': '正確。問高花', }},
+                    {spades: 'T962', hearts: '832', diamonds: 'T73', clubs: '952', auction: ['2NT', 'P', '?'], correct: 'Pass', answers: {}},
+                    {spades: '7543', hearts: '87643', diamonds: 'T863', clubs: '', auction: ['2NT', 'P', '?'], correct: '3D', answers: {}},
+                    {spades: 'Q4', hearts: 'T54', diamonds: 'J98', clubs: 'AQ985', auction: ['2NT', 'P', '?'], correct: '3NT', answers: {}},
+                    {spades: 'Q2', hearts: 'Q932', diamonds: 'K8', clubs: 'AQT93', auction: ['2NT', 'P', '?'], correct: '3C', answers: {'3C': '正確。先問4張高花，再決定要去哪一個滿貫', }},
+                    {spades: 'T52', hearts: 'AQ94', diamonds: '4', clubs: 'K9873', auction: ['2NT', 'P', '?'], correct: '3C', answers: {}},
+                    {spades: 'K85', hearts: '852', diamonds: 'QT65', clubs: 'T65', auction: ['2NT', 'P', '?'], correct: '3NT', answers: {}},
+                    {spades: 'J942', hearts: '4', diamonds: 'KQJ874', clubs: 'T9', auction: ['2NT', 'P', '?'], correct: '3C', answers: {}},
+                    {spades: '983', hearts: 'T873', diamonds: 'T8', clubs: '9765', auction: ['2NT', 'P', '?'], correct: 'Pass', answers: {}},
+                    {spades: 'Q8762', hearts: 'KJT6', diamonds: '75', clubs: '73', auction: ['2NT', 'P', '?'], correct: '3C', answers: {'3C': '正確。5-4高花或4-5高花，通常可以使用Smolen特約，但要依照和同伴的約定而定', }},
+                    {spades: 'T3', hearts: 'KJ84', diamonds: 'KJT94', clubs: '92', auction: ['2NT', 'P', '?'], correct: '3C', answers: {}},
+                    {spades: 'T953', hearts: '754', diamonds: 'JT4', clubs: '732', auction: ['2NT', 'P', '?'], correct: 'Pass', answers: {}},
+                    {spades: 'Q87643', hearts: '96', diamonds: 'Q62', clubs: '97', auction: ['2NT', 'P', '?'], correct: '4H', answers: {'4H': '正確。這個值得試成局。Texas轉換表示6張高花以上的牌', }},
+                    {spades: 'T32', hearts: '7', diamonds: 'K8752', clubs: 'QJ73', auction: ['2NT', 'P', '?'], correct: '3NT', answers: {}},
+                    {spades: 'KJ2', hearts: 'KJT952', diamonds: '53', clubs: 'J3', auction: ['2NT', 'P', '?'], correct: '4D', answers: {}},
+                    {spades: 'QJ98754', hearts: '2', diamonds: '752', clubs: '43', auction: ['2NT', 'P', '?'], correct: '4H', answers: {'4H': '正確。轉換黑桃，值得試一試成局', '3H': '半正確。但稍微有點保守', }},
                 ],
                 '其他': [
                     {spades: "AKQJT", hearts: "QJ65", diamonds: "32", clubs: "32", auction: ['1S','P','2H','P','?'], answers: {'3H': '這是正確的答案，有支持要優先叫出，尤其是在高花，不需要有多餘力量。'}, correct: '3H'},
-                    {spades: "AKT9", hearts: "AQ65", diamonds: "AJT9", clubs: "2", auction: ['1NT','P','2C','P','2S','P','3H','P','4D','P','4NT','P','5C','P','?'], answers: {'5D': '正確：詢問有無黑桃Q'}, correct: '5D'}
+                    {spades: "AKT9", hearts: "AQ65", diamonds: "AJT9", clubs: "2", auction: ['1NT','P','2C','P','2S','P','3H','P','4C','P','4NT','P','5C','P','?'], answers: {'5D': '正確：詢問有無黑桃Q'}, correct: '5D'}
                 ],
             }
         };
@@ -162,7 +236,7 @@ export default {
             this.Explanation[0] = bid;
             if (this.Quest.answers[bid] !== undefined) {
                 this.Explanation[1] = this.Quest.answers[bid];
-            } else if (this.Quest.answer === bid) {
+            } else if (this.Quest.correct === bid) {
                 this.Explanation[1] = "答案正確！";
             } else {
                 this.Explanation[1] = "答案錯誤，請再試試看！";
