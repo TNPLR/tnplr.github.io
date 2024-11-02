@@ -65,7 +65,11 @@ header {
     font-family: "Taipei Sans SC Beta", sans-serif;
     font-weight: bold;
     background-color: green;
-    padding: 20px;
+    padding: 3px 20px;
+}
+header a {
+    text-decoration: none;
+    color: inherit;
 }
 footer {
     text-align: center;

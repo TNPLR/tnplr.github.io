@@ -1,10 +1,9 @@
 <template>
     <header>
-        <h1 class="topic">互動式叫牌教學小教室</h1>
-    </header>
-    <h3>題目：<select v-on:change="changeQuest()" v-model="selectedQuest">
+        <h3 style="color: white; font-family: sans-serif;"><router-link to="/">叫牌練習區</router-link> 題目：<select v-on:change="changeQuest()" v-model="selectedQuest">
         <option v-for="(q, index) in allStories">{{ index+1 }}</option>
     </select></h3>
+    </header>
     <div class="story-grid">
         <div class="hand-box">
             <span style="color:black">&#9824;</span> {{ Quest.spades }}<br>
@@ -85,18 +84,26 @@ export default {
         },
     },
     mounted() {
+        this.$root.$data.showBook = false;
+        document.documentElement.style.overflow = 'hidden';
+    },
+    unmounted() {
+        this.$root.$data.showBook = true;
+        document.documentElement.style.overflow = 'hidden';
     }
 }
 </script>
 
 <style scoped>
 .story-grid {
+    width: 100%;
+    height: auto;
     display: grid;
     grid-template-columns: 40% 60%;
+    font-size: 25px;
 }
 .story-grid > div {
     text-align: left;
-    font-size: 30px;
     padding: 20px 0;
 }
 .bidding-grid {
