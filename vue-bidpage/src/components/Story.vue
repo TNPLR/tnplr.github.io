@@ -5,8 +5,9 @@
         <option v-for="q in questType">{{ q }}</option></select>
             題目：<select v-on:change="changeQuest()" v-model="selectedQuest">
         <option v-for="(q, index) in allStories[selectedQuestType]">{{ index+1 }}</option></select>
-        <button id="nextquest" v-bind:disabled="selectedQuest <= 1" v-on:click="selectedQuest--; changeQuest();">上一題</button>
-        <button id="nextquest" v-bind:disabled="selectedQuest >= allStories[selectedQuestType].length" v-on:click="selectedQuest++; changeQuest();">下一題</button>
+        <button class="questset" v-bind:disabled="selectedQuest <= 1" v-on:click="selectedQuest--; changeQuest();">上一題</button>
+        <button class="questset" v-bind:disabled="selectedQuest >= allStories[selectedQuestType].length" v-on:click="selectedQuest++; changeQuest();">下一題</button>
+        <button class="questset" v-on:click="showExplanation(Quest.correct)">公布答案</button>
     </h3>
     </header>
     <div class="story-grid">
@@ -67,36 +68,36 @@ export default {
             questType: ['開叫', '首次答叫', '其他'],
             allStories: {
                 '開叫': [
-                    {spades: "AQ93", hearts: "9", diamonds: "KJT3", clubs: "KJ74", auction: ['?'], answers: {'1C': '錯誤：同時有4張方塊的時候，方塊比較優先', '1D': '正確', '1S': '錯誤：開叫黑桃要有5張以上才行。'}},
-                    {spades: "AKQ", hearts: "94", diamonds: "AKJ6", clubs: "J975", auction: ['?'], answers: {'1C': '錯誤：同時有4張方塊的時候，方塊比較優先', '1D': '正確', '1S': '錯誤：開叫黑桃要有5張以上才行。'}},
-                    {spades: "A53", hearts: "Q8", diamonds: "AK53", clubs: "AK65", auction: ['?'], answers: {'1D': '錯誤：4張方塊本來應該叫這個叫品，但此時是平均牌，這個點力範圍有更好的叫品', '1NT': '錯誤：1NT是15-17點的平均牌型', '2NT': '正確，20-21點平均牌型叫2NT'}},
-                    {spades: "AKJ54", hearts: "AT52", diamonds: "K85", clubs: "A", auction: ['?'], answers: {'1S': '正確'}},
-                    {spades: "A6", hearts: "AKJ92", diamonds: "K85", clubs: "KQ4", auction: ['?'], answers: {'1H': '錯誤：這個點力範圍的平均牌型有更好的叫品', '2NT': '正確，即便有5張高花，20-21點平均牌型叫2NT'}},
-                    {spades: "Q974", hearts: "A975", diamonds: "K73", clubs: "A3", auction: ['?'], answers: {'1C': '正確：這是這個叫品最短的梅花長度。', '1D': '錯誤：方塊要有四張才能叫這個叫品'}},
-                    {spades: "AT5", hearts: "8732", diamonds: "K95", clubs: "KQ8", auction: ['?'], answers: {'1C': '正確', '1D': '錯誤：方塊要有四張才能叫這個叫品'}},
-                    {spades: "Q853", hearts: "AKJ", diamonds: "AKQ", clubs: "A74", auction: ['?'], answers: {'Pass': '錯誤：12點以上一定要開叫', '1C': '錯誤：這個點力範圍不能一線開叫。', '2C': '正確：22點以上的牌必從此叫品開始'}},
-                    {spades: "94", hearts: "9", diamonds: "JT2", clubs: "AKQJT65", auction: ['?'], answers: {'Pass': '錯誤：這個牌比想像中還要強', '1C': '錯誤：這個點力範圍不能一線開叫。', '2C': '錯誤：這個是代表力量很強，不是代表梅花', '3C': '錯誤：梅花太好了不行叫這個', '3NT': '正確：這是Gambling 3NT的標準牌，AKQ帶頭七張牌，沒有旁門大牌（A或K）'}},
-                    {spades: "AK7", hearts: "Q4", diamonds: "AJT843", clubs: "Q3", auction: ['?'], answers: {'Pass': '錯誤：12點以上一定要開叫', '1D': '有更好的叫品：這個點力範圍，而方塊沒有很堅強時，有更好的叫品。', '1NT': '正確：雖然不是平均牌，但這種「半平均牌」可以叫1NT。'}},
-                    {spades: "AK", hearts: "Q4", diamonds: "JT843", clubs: "AQT5", auction: ['?'], answers: {'Pass': '錯誤：12點以上一定要開叫', '1D': '有更好的叫品：這個點力範圍的5422牌型，而5張是低花時，有更好的叫品。', '1NT': '正確：雖然不是平均牌，但這種「半平均牌」可以叫1NT。'}},
-                    {spades: "AK32", hearts: "AJ63", diamonds: "K5", clubs: "J96", auction: ['?'], answers: {'1C': '錯誤：雖然我們打5542，但這樣的平均牌有更優先的叫品。', '1D': '錯誤：方塊開叫保證四張', '1H': '錯誤：高花開叫要有五張才行', '1S': '錯誤：高花開叫要有五張才行', '1NT': '正確：15-17平均牌型的牌原則上開叫1NT。'}},
-                    {spades: "", hearts: "", diamonds: "", clubs: "AKQJT98765432", auction: ['?'], answers: {'2C': '可以接受的答案，因為這是一個迫叫，但有更好的答案', '7C': '最好的答案，直接決定合約，避免同伴誤會。'}},
-                    {spades: "QJ32", hearts: "AJ63", diamonds: "K5", clubs: "J96", auction: ['?'], answers: {'1C': '正確：有12個點要開叫，由於我們打5542，所以這種牌只能開叫梅花。', '1D': '錯誤：方塊開叫保證四張', '1H': '錯誤：高花開叫要有五張才行', '1S': '錯誤：高花開叫要有五張才行'}},
+                    {spades: "AQ93", hearts: "9", diamonds: "KJT3", clubs: "KJ74", auction: ['?'], answers: {'1C': '錯誤：同時有4張方塊的時候，方塊比較優先', '1D': '正確', '1S': '錯誤：開叫黑桃要有5張以上才行。'}, correct: '1D'},
+                    {spades: "AKQ", hearts: "94", diamonds: "AKJ6", clubs: "J975", auction: ['?'], answers: {'1C': '錯誤：同時有4張方塊的時候，方塊比較優先', '1D': '正確', '1S': '錯誤：開叫黑桃要有5張以上才行。'}, correct: '1D'},
+                    {spades: "A53", hearts: "Q8", diamonds: "AK53", clubs: "AK65", auction: ['?'], answers: {'1D': '錯誤：4張方塊本來應該叫這個叫品，但此時是平均牌，這個點力範圍有更好的叫品', '1NT': '錯誤：1NT是15-17點的平均牌型', '2NT': '正確，20-21點平均牌型叫2NT'}, correct: '2NT'},
+                    {spades: "AKJ54", hearts: "AT52", diamonds: "K85", clubs: "A", auction: ['?'], answers: {'1S': '正確'}, correct: '1S'},
+                    {spades: "A6", hearts: "AKJ92", diamonds: "K85", clubs: "KQ4", auction: ['?'], answers: {'1H': '錯誤：這個點力範圍的平均牌型有更好的叫品', '2NT': '正確，即便有5張高花，20-21點平均牌型叫2NT'}, correct: '2NT'},
+                    {spades: "Q974", hearts: "A975", diamonds: "K73", clubs: "A3", auction: ['?'], answers: {'1C': '正確：這是這個叫品最短的梅花長度。', '1D': '錯誤：方塊要有四張才能叫這個叫品'}, correct: '1C'},
+                    {spades: "AT5", hearts: "8732", diamonds: "K95", clubs: "KQ8", auction: ['?'], answers: {'1C': '正確', '1D': '錯誤：方塊要有四張才能叫這個叫品'}, correct: '1C'},
+                    {spades: "Q853", hearts: "AKJ", diamonds: "AKQ", clubs: "A74", auction: ['?'], answers: {'Pass': '錯誤：12點以上一定要開叫', '1C': '錯誤：這個點力範圍不能一線開叫。', '2C': '正確：22點以上的牌必從此叫品開始'}, correct: '2C'},
+                    {spades: "94", hearts: "9", diamonds: "JT2", clubs: "AKQJT65", auction: ['?'], answers: {'Pass': '錯誤：這個牌比想像中還要強', '1C': '錯誤：這個點力範圍不能一線開叫。', '2C': '錯誤：這個是代表力量很強，不是代表梅花', '3C': '錯誤：梅花太好了不行叫這個', '3NT': '正確：這是Gambling 3NT的標準牌，AKQ帶頭七張牌，沒有旁門大牌（A或K）'}, correct: '3NT'},
+                    {spades: "AK7", hearts: "Q4", diamonds: "AJT843", clubs: "Q3", auction: ['?'], answers: {'Pass': '錯誤：12點以上一定要開叫', '1D': '有更好的叫品：這個點力範圍，而方塊沒有很堅強時，有更好的叫品。', '1NT': '正確：雖然不是平均牌，但這種「半平均牌」可以叫1NT。'}, correct: '1NT'},
+                    {spades: "AK", hearts: "Q4", diamonds: "JT843", clubs: "AQT5", auction: ['?'], answers: {'Pass': '錯誤：12點以上一定要開叫', '1D': '有更好的叫品：這個點力範圍的5422牌型，而5張是低花時，有更好的叫品。', '1NT': '正確：雖然不是平均牌，但這種「半平均牌」可以叫1NT。'}, correct: '1NT'},
+                    {spades: "AK32", hearts: "AJ63", diamonds: "K5", clubs: "J96", auction: ['?'], answers: {'1C': '錯誤：雖然我們打5542，但這樣的平均牌有更優先的叫品。', '1D': '錯誤：方塊開叫保證四張', '1H': '錯誤：高花開叫要有五張才行', '1S': '錯誤：高花開叫要有五張才行', '1NT': '正確：15-17平均牌型的牌原則上開叫1NT。'}, correct: '1NT'},
+                    {spades: "", hearts: "", diamonds: "", clubs: "AKQJT98765432", auction: ['?'], answers: {'2C': '可以接受的答案，因為這是一個迫叫，但有更好的答案', '7C': '最好的答案，直接決定合約，避免同伴誤會。'},correct: '7C'},
+                    {spades: "QJ32", hearts: "AJ63", diamonds: "K5", clubs: "J96", auction: ['?'], answers: {'1C': '正確：有12個點要開叫，由於我們打5542，所以這種牌只能開叫梅花。', '1D': '錯誤：方塊開叫保證四張', '1H': '錯誤：高花開叫要有五張才行', '1S': '錯誤：高花開叫要有五張才行'}, correct: '1C'},
                 ],
                 '首次答叫': [
-                    {spades: "T74", hearts: "AQJ", diamonds: "T2", clubs: "Q7542", auction: ['1C','P','?'], answers: {'3C': '錯誤：梅花要假設同伴是3張，要有6張才能叫這個叫品。', '1H': '錯誤：要有4張紅心才能叫。', '1NT': '正確，6-9(10)點，沒有4張高花。', '2C': '錯誤：這要有11點以上才能叫'}},
-                    {spades: "T8643", hearts: "865", diamonds: "A3", clubs: "J64", auction: ['1C','P','?'], answers: {'Pass': '錯誤：正常要6點才能答叫，但有一張A的時候，可以破例答叫。', '1S': '正確'}},
-                    {spades: "KQ84", hearts: "T", diamonds: "T92", clubs: "AJT62", auction: ['1C','P','?'], answers: {'Pass': '錯誤：6點以上一定要答叫。', '2C': '錯誤。這裡要高花優先。', '1S': '正確'}},
-                    {spades: "AK32", hearts: "7632", diamonds: "95", clubs: "976", auction: ['1C','P','?'], answers: {'Pass': '錯誤：6點以上一定要答叫。', '1H': '正確', '1S': '錯誤。兩門高花同時有4張，要叫紅心（不管有沒有大牌）'}},
-                    {spades: "JT82", hearts: "KQJ8", diamonds: "KJT83", clubs: "", auction: ['1C','P','?'], answers: {'Pass': '錯誤：6點以上一定要答叫。', '1D': '錯誤：沒有迫叫成局的力量時，高花優先答叫', '1H': '正確', '1S': '錯誤。兩門高花同時有4張，要叫紅心'}},
-                    {spades: "K865", hearts: "9", diamonds: "Q9876", clubs: "T96", auction: ['1C','P','?'], answers: {'Pass': '正確：6點以上一定要答叫，但5個好點也可以考慮叫牌。', '1S': '正確', '1D': '錯誤。沒有迫叫成局的力量時，高花優先答叫。'}},
-                    {spades: "2", hearts: "KT6", diamonds: "KJ96", clubs: "AKQ83", auction: ['1C','P','?'], answers: {'Pass': '錯誤：6點以上一定要答叫。', '2C': '錯誤：有更精準的叫品可以使用。', '3S': '正確。Splinter支持，5張以上梅花且黑桃短。'}},
-                    {spades: "82", hearts: "94", diamonds: "K42", clubs: "AK9642", auction: ['1C','P','?'], answers: {'Pass': '錯誤：6點以上一定要答叫。', '2C': '正確。這稱為低花反序，用在邀請力量以上的低花支持，且沒有4張高花時。', '3C': '錯誤。由於我們打低花反序，這個叫品的力量是6-9點左右'}},
-                    {spades: "JT7", hearts: "93", diamonds: "J4", clubs: "AQ6543", auction: ['1C','P','?'], answers: {'Pass': '錯誤：6點以上一定要答叫。', '3C': '正確，我們打低花反序，這個叫品的力量是6-9點左右，6張以上梅花', '1S': '錯誤。叫高花要有4張'}},
-                    {spades: "AKT9", hearts: "Q652", diamonds: "QJT9", clubs: "2", auction: ['1C','P','?'], answers: {'1D': '錯誤：迫叫成局的情形，長度一樣時，高花優先', '1H': '正確：高花優先叫，兩門高花都四張時，叫紅心。', '1S': '錯誤：兩門高花都四張時，優先叫紅心。'}}
+                    {spades: "T74", hearts: "AQJ", diamonds: "T2", clubs: "Q7542", auction: ['1C','P','?'], answers: {'3C': '錯誤：梅花要假設同伴是3張，要有6張才能叫這個叫品。', '1H': '錯誤：要有4張紅心才能叫。', '1NT': '正確，6-9(10)點，沒有4張高花。', '2C': '錯誤：這要有11點以上才能叫'}, correct: '1NT'},
+                    {spades: "T8643", hearts: "865", diamonds: "A3", clubs: "J64", auction: ['1C','P','?'], answers: {'Pass': '錯誤：正常要6點才能答叫，但有一張A的時候，可以破例答叫。', '1S': '正確'}, correct: '1S'},
+                    {spades: "KQ84", hearts: "T", diamonds: "T92", clubs: "AJT62", auction: ['1C','P','?'], answers: {'Pass': '錯誤：6點以上一定要答叫。', '2C': '錯誤。這裡要高花優先。', '1S': '正確'}, correct: '1S'},
+                    {spades: "AK32", hearts: "7632", diamonds: "95", clubs: "976", auction: ['1C','P','?'], answers: {'Pass': '錯誤：6點以上一定要答叫。', '1H': '正確', '1S': '錯誤。兩門高花同時有4張，要叫紅心（不管有沒有大牌）'}, correct: '1H'},
+                    {spades: "JT82", hearts: "KQJ8", diamonds: "KJT83", clubs: "", auction: ['1C','P','?'], answers: {'Pass': '錯誤：6點以上一定要答叫。', '1D': '錯誤：沒有迫叫成局的力量時，高花優先答叫', '1H': '正確', '1S': '錯誤。兩門高花同時有4張，要叫紅心'}, correct: '1H'},
+                    {spades: "K865", hearts: "9", diamonds: "Q9876", clubs: "T96", auction: ['1C','P','?'], answers: {'Pass': '正確：6點以上一定要答叫，但5個好點也可以考慮叫牌。', '1S': '正確', '1D': '錯誤。沒有迫叫成局的力量時，高花優先答叫。'}, correct: '1S'},
+                    {spades: "2", hearts: "KT6", diamonds: "KJ96", clubs: "AKQ83", auction: ['1C','P','?'], answers: {'Pass': '錯誤：6點以上一定要答叫。', '2C': '錯誤：有更精準的叫品可以使用。', '3S': '正確。Splinter支持，5張以上梅花且黑桃短。'}, correct: '3S'},
+                    {spades: "82", hearts: "94", diamonds: "K42", clubs: "AK9642", auction: ['1C','P','?'], answers: {'Pass': '錯誤：6點以上一定要答叫。', '2C': '正確。這稱為低花反序，用在邀請力量以上的低花支持，且沒有4張高花時。', '3C': '錯誤。由於我們打低花反序，這個叫品的力量是6-9點左右'}, correct: '2C'},
+                    {spades: "JT7", hearts: "93", diamonds: "J4", clubs: "AQ6543", auction: ['1C','P','?'], answers: {'Pass': '錯誤：6點以上一定要答叫。', '3C': '正確，我們打低花反序，這個叫品的力量是6-9點左右，6張以上梅花', '1S': '錯誤。叫高花要有4張'}, correct: '3C'},
+                    {spades: "AKT9", hearts: "Q652", diamonds: "QJT9", clubs: "2", auction: ['1C','P','?'], answers: {'1D': '錯誤：迫叫成局的情形，長度一樣時，高花優先', '1H': '正確：高花優先叫，兩門高花都四張時，叫紅心。', '1S': '錯誤：兩門高花都四張時，優先叫紅心。'}, correct: '1H'}
                 ],
                 '其他': [
-                    {spades: "AKQJT", hearts: "QJ65", diamonds: "32", clubs: "32", auction: ['1S','P','2H','P','?'], answers: {'3H': '這是正確的答案，有支持要優先叫出，尤其是在高花，不需要有多餘力量。'}},
-                    {spades: "AKT9", hearts: "AQ65", diamonds: "AJT9", clubs: "2", auction: ['1NT','P','2C','P','2S','P','3H','P','4D','P','4NT','P','5C','P','?'], answers: {'5D': '正確：詢問有無黑桃Q'}}
+                    {spades: "AKQJT", hearts: "QJ65", diamonds: "32", clubs: "32", auction: ['1S','P','2H','P','?'], answers: {'3H': '這是正確的答案，有支持要優先叫出，尤其是在高花，不需要有多餘力量。'}, correct: '3H'},
+                    {spades: "AKT9", hearts: "AQ65", diamonds: "AJT9", clubs: "2", auction: ['1NT','P','2C','P','2S','P','3H','P','4D','P','4NT','P','5C','P','?'], answers: {'5D': '正確：詢問有無黑桃Q'}, correct: '5D'}
                 ],
             }
         };
@@ -182,13 +183,7 @@ button {
     font-size: 30px;
     padding: 5px 0;
 }
-#lastquest {
-    font-family: "Taipei Sans SC Beta", sans-serif;
-    font-size: inherit;
-    padding: 5px;
-    margin: 0 10px;
-}
-#nextquest {
+.questset {
     font-family: "Taipei Sans SC Beta", sans-serif;
     font-size: inherit;
     padding: 5px;
