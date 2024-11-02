@@ -89,7 +89,7 @@ export default {
     },
     unmounted() {
         this.$root.$data.showBook = true;
-        document.documentElement.style.overflow = 'hidden';
+        document.documentElement.style.overflow = 'scroll';
     }
 }
 </script>
