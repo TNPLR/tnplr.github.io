@@ -65,7 +65,7 @@ export default {
             selectedLevel: undefined,
             selectedQuestType: '開叫',
             selectedQuest: 1,
-            questType: ['開叫', '首次答叫', '其他'],
+            questType: ['開叫', '低花開叫的答叫', '高花開叫的答叫', '其他'],
             allStories: {
                 '開叫': [
                     {spades: "AQ93", hearts: "9", diamonds: "KJT3", clubs: "KJ74", auction: ['?'], answers: {'1C': '錯誤：同時有4張方塊的時候，方塊比較優先', '1D': '正確', '1S': '錯誤：開叫黑桃要有5張以上才行。'}, correct: '1D'},
@@ -82,8 +82,25 @@ export default {
                     {spades: "AK32", hearts: "AJ63", diamonds: "K5", clubs: "J96", auction: ['?'], answers: {'1C': '錯誤：雖然我們打5542，但這樣的平均牌有更優先的叫品。', '1D': '錯誤：方塊開叫保證四張', '1H': '錯誤：高花開叫要有五張才行', '1S': '錯誤：高花開叫要有五張才行', '1NT': '正確：15-17平均牌型的牌原則上開叫1NT。'}, correct: '1NT'},
                     {spades: "", hearts: "", diamonds: "", clubs: "AKQJT98765432", auction: ['?'], answers: {'2C': '可以接受的答案，因為這是一個迫叫，但有更好的答案', '7C': '最好的答案，直接決定合約，避免同伴誤會。'},correct: '7C'},
                     {spades: "QJ32", hearts: "AJ63", diamonds: "K5", clubs: "J96", auction: ['?'], answers: {'1C': '正確：有12個點要開叫，由於我們打5542，所以這種牌只能開叫梅花。', '1D': '錯誤：方塊開叫保證四張', '1H': '錯誤：高花開叫要有五張才行', '1S': '錯誤：高花開叫要有五張才行'}, correct: '1C'},
+                    {spades: 'QJ43', hearts: 'AT', diamonds: 'KQT96', clubs: 'T7', auction: ['?'], correct: '1D', answers: {'1S': '錯誤：高花要五張才能叫出', '1D': '正確：原則上叫出最長的花色', }},
+                    {spades: 'KJ932', hearts: 'AQT', diamonds: '64', clubs: 'A92', auction: ['?'], correct: '1S', answers: {'1S': '正確：原則上五張高花是最重要的叫品', '1NT': '錯誤：要15-17點才能叫1NT', }},
+                    {spades: 'AQJ5', hearts: 'AK4', diamonds: 'AQ', clubs: 'T764', auction: ['?'], correct: '2NT', answers: {'2NT': '正確，20-21平均牌型', '1NT': '錯誤，這是15-17平均牌型', '1C': '錯誤，這個範圍的平均牌型有其他叫品', '1S': '錯誤，這個叫品要5張黑桃', }},
+                    {spades: 'QJ7', hearts: 'A43', diamonds: 'K43', clubs: 'Q862', auction: ['?'], correct: '1C', answers: {'1C': '正確，沒有其他可以叫的叫品', '1NT': '錯誤，這個叫品點力要15-17點', }},
+                    {spades: 'KQ765', hearts: 'A5', diamonds: '8754', clubs: 'AQ', auction: ['?'], correct: '1S', answers: {'1NT': '錯誤，這個是非平均牌，而5張的花色是高花，通常不會忽略掉', '1S': '正確，5張高花優先叫出', '1D': '錯誤，有一門5張高花，應該優先叫出', }},
+                    {spades: '3', hearts: 'AT987', diamonds: '5', clubs: 'AKQ965', auction: ['?'], correct: '1H', answers: {'1C': '錯誤，雖然梅花非常強，長度也更長，但因為點力不夠，因此以高花為優先', '1H': '正確，5張高花優先叫出', '2C': '錯誤，這個是代表強牌的叫品，不代表梅花', }},
+                    {spades: 'QJ4', hearts: 'KQ76', diamonds: 'Q95', clubs: 'AQ3', auction: ['?'], correct: '1NT', answers: {'1NT': '正確。15-17平均牌型', '1C': '錯誤。這個範圍的平均牌不能叫這個叫品', '1H': '錯誤。這個叫品保證5張紅心', }},
+                    {spades: 'J85', hearts: 'AT9', diamonds: 'KJ95', clubs: 'KJ9', auction: ['?'], correct: '1D', answers: {'1D': '正確。此叫品保證4張方塊', '1NT': '錯誤。雖然是平均牌型，但點力不是15-17點', '1C': '錯誤。方塊比梅花長，所以不行叫這個', }},
+                    {spades: 'AQT3', hearts: 'T84', diamonds: 'AT3', clubs: 'A73', auction: ['?'], correct: '1C', answers: {'1C': '正確。這個叫品保證2張梅花。因為其他叫品都不適合，所以叫此叫品', '1S': '錯誤。此叫品保證5張黑桃', '1NT': '錯誤。1NT要15-17點才行', }},
+                    {spades: 'QT42', hearts: 'KJ62', diamonds: 'Q53', clubs: 'A9', auction: ['?'], correct: '1C', answers: {'1C': '正確。這是這個叫品保證的最短梅花，也是唯一一個2張梅花的牌型', '1H': '錯誤。要五張紅心才能叫這個叫品', }},
+                    {spades: 'A4', hearts: 'AQ96', diamonds: 'K74', clubs: 'K964', auction: ['?'], correct: '1NT', answers: {'1NT': '正確。1NT是15-17平均牌型', '1C': '錯誤。這個範圍的平均牌型有其他叫品', '1H': '錯誤。這個叫品保證五張紅心以上', }},
+                    {spades: '', hearts: 'QT4', diamonds: 'KQT43', clubs: 'KQ864', auction: ['?'], correct: '1D', answers: {'1D': '正確。同時有兩門等長花色，叫比較高的那個花色', '1C': '錯誤。同時有兩門等長花色，叫比較高的那個花色', '2NT': '錯誤。2NT開叫是20-21平均牌型。蓋叫的2NT才是這樣的牌型', }},
+                    {spades: 'T32', hearts: 'AKJT9', diamonds: 'KQJ', clubs: '92', auction: ['?'], correct: '1H', answers: {'1H': '正確。此叫品保證5張紅心，也是我們最優先的叫品', '1NT': '錯誤。這個叫品是15-17點平均牌型', '2H': '錯誤。這個叫品是不到開叫點力的竄叫', }},
+                    {spades: 'QJ8643', hearts: 'AQ72', diamonds: 'K5', clubs: '7', auction: ['?'], correct: '1S', answers: {'1S': '正確。此叫品保證5張以上，6張當然很好', '1H': '錯誤。開叫應該要叫最長的花色，且此叫品保證5張紅心', }},
+                    {spades: 'KJ43', hearts: 'K4', diamonds: 'AQ762', clubs: 'K9', auction: ['?'], correct: '1NT', answers: {'1D': '不是最佳叫品，因為這種5張低花的半平均牌，不是很好叫，所以有更好的叫品可以使用', '1S': '錯誤。此叫品保證5張黑桃', '1NT': '正確。為了讓後續叫牌好叫，所以把這樣的牌當作1NT的牌型', }},
+                    {spades: 'KT932', hearts: 'Q93', diamonds: 'AKT', clubs: 'A4', auction: ['?'], correct: '1NT', answers: {'1S': '可以叫這個叫品，但不是我的正確答案。這副牌的黑桃品質普通，而且是平均牌型，也可以叫1NT', '1NT': '正確。5張普通高花的平均牌型，15-17點，建議叫1NT', }},
+                    {spades: 'J82', hearts: 'AT942', diamonds: 'T', clubs: 'AKQ3', auction: ['?'], correct: '1H', answers: {'1H': '正確。5張高花是優先叫品', '1C': '錯誤，雖然梅花有很多大牌，但張數才是叫牌的重點所在', }},
                 ],
-                '首次答叫': [
+                '低花開叫的答叫': [
                     {spades: "T74", hearts: "AQJ", diamonds: "T2", clubs: "Q7542", auction: ['1C','P','?'], answers: {'3C': '錯誤：梅花要假設同伴是3張，要有6張才能叫這個叫品。', '1H': '錯誤：要有4張紅心才能叫。', '1NT': '正確，6-9(10)點，沒有4張高花。', '2C': '錯誤：這要有11點以上才能叫'}, correct: '1NT'},
                     {spades: "T8643", hearts: "865", diamonds: "A3", clubs: "J64", auction: ['1C','P','?'], answers: {'Pass': '錯誤：正常要6點才能答叫，但有一張A的時候，可以破例答叫。', '1S': '正確'}, correct: '1S'},
                     {spades: "KQ84", hearts: "T", diamonds: "T92", clubs: "AJT62", auction: ['1C','P','?'], answers: {'Pass': '錯誤：6點以上一定要答叫。', '2C': '錯誤。這裡要高花優先。', '1S': '正確'}, correct: '1S'},
@@ -93,7 +110,30 @@ export default {
                     {spades: "2", hearts: "KT6", diamonds: "KJ96", clubs: "AKQ83", auction: ['1C','P','?'], answers: {'Pass': '錯誤：6點以上一定要答叫。', '2C': '錯誤：有更精準的叫品可以使用。', '3S': '正確。Splinter支持，5張以上梅花且黑桃短。'}, correct: '3S'},
                     {spades: "82", hearts: "94", diamonds: "K42", clubs: "AK9642", auction: ['1C','P','?'], answers: {'Pass': '錯誤：6點以上一定要答叫。', '2C': '正確。這稱為低花反序，用在邀請力量以上的低花支持，且沒有4張高花時。', '3C': '錯誤。由於我們打低花反序，這個叫品的力量是6-9點左右'}, correct: '2C'},
                     {spades: "JT7", hearts: "93", diamonds: "J4", clubs: "AQ6543", auction: ['1C','P','?'], answers: {'Pass': '錯誤：6點以上一定要答叫。', '3C': '正確，我們打低花反序，這個叫品的力量是6-9點左右，6張以上梅花', '1S': '錯誤。叫高花要有4張'}, correct: '3C'},
-                    {spades: "AKT9", hearts: "Q652", diamonds: "QJT9", clubs: "2", auction: ['1C','P','?'], answers: {'1D': '錯誤：迫叫成局的情形，長度一樣時，高花優先', '1H': '正確：高花優先叫，兩門高花都四張時，叫紅心。', '1S': '錯誤：兩門高花都四張時，優先叫紅心。'}, correct: '1H'}
+                    {spades: "AKT9", hearts: "Q652", diamonds: "QJT9", clubs: "2", auction: ['1C','P','?'], answers: {'1D': '錯誤：迫叫成局的情形，長度一樣時，高花優先', '1H': '正確：高花優先叫，兩門高花都四張時，叫紅心。', '1S': '錯誤：兩門高花都四張時，優先叫紅心。'}, correct: '1H'},
+                    {spades: 'AT6', hearts: 'AQ876', diamonds: 'K83', clubs: '97', auction: ['1C', 'P', '?'], correct: '1H', answers: {'1H': '正確。答叫保證4張紅心', 'Pass': '錯誤。6點以上一定要答叫', }},
+                    {spades: 'T7432', hearts: 'Q', diamonds: 'QJ6', clubs: '7643', auction: ['1C', 'P', '?'], correct: 'Pass', answers: {'Pass': '正確。不到6點的牌不一定要答叫，而這個點力很差，所以可以Pass', '1S': '錯誤。點力不到6個點，且不是好點，不必叫牌', '2C': '錯誤。這個叫品保證5張梅花，11個點以上', }},
+                    {spades: '5', hearts: '98764', diamonds: 'K765', clubs: 'T72', auction: ['1C', 'P', '?'], correct: 'Pass', answers: {'Pass': '正確。不到6個點可以直接Pass', }},
+                    {spades: 'T943', hearts: 'KJ97', diamonds: '2', clubs: 'AQT9', auction: ['1C', 'P', '?'], correct: '1H', answers: {'1H': '正確。4-4高花時先叫紅心', '1S': '錯誤。4-4高花先叫紅心', '2C': '錯誤。此叫品保證5張梅花，11個點', '1NT': '錯誤。有4張高花應該叫出。', }},
+                    {spades: 'Q54', hearts: 'KJ2', diamonds: 'T85', clubs: 'Q754', auction: ['1C', 'P', '?'], correct: '1NT', answers: {'1NT': '正確。6-9點，沒有4張高花', '3C': '錯誤。這個叫品要有6張梅花', }},
+                    {spades: 'QJT98', hearts: '643', diamonds: 'A753', clubs: '9', auction: ['1C', 'P', '?'], correct: '1S', answers: {'1S': '正確。4張高花以上，6點以上的叫品', '1D': '錯誤。這個叫品雖然保證4張方塊而已，但有更長的高花應該優先叫', }},
+                    {spades: 'AQ872', hearts: 'Q98', diamonds: 'KQ8', clubs: 'A6', auction: ['1D', 'P', '?'], correct: '1S', answers: {'1S': '正確，這個叫品保證4張黑桃，沒有點力上限', '1NT': '錯誤。答叫1NT是6-9點，沒有4張高花'}},
+                    {spades: 'A63', hearts: 'QJ', diamonds: 'QT', clubs: 'QJT954', auction: ['1D', 'P', '?'], correct: '2C', answers: {'2C': '正確。5張以上梅花，迫叫成局（二蓋一），表示12個點以上', '1NT': '錯誤。1NT是6-9點，沒有4張高花', '3C': '錯誤。BTU的制度沒有特別約定這個叫品，通常是梅花長牌組的邀請牌型', '3NT': '錯誤。雖然合約很可能停在3NT，但同伴點力沒有上限，還有探索滿貫的空間', }},
+                    {spades: 'K82', hearts: 'AJ876', diamonds: 'K4', clubs: 'J43', auction: ['1D', 'P', '?'], correct: '1H', answers: {'1H': '正確，優先叫出最長的花色，尤其是高花', }},
+                    {spades: 'A96', hearts: 'T9', diamonds: '98', clubs: 'AT9875', auction: ['1D', 'P', '?'], correct: '1NT', answers: {'1NT': '正確。6-9點，沒有4張高花', '2C': '錯誤。這個叫品要有12個點以上', }},
+                    {spades: 'AKQ84', hearts: 'A8', diamonds: 'KQ8', clubs: '643', auction: ['1D', 'P', '?'], correct: '1S', answers: {'1S': '正確。5張黑桃優先叫出。沒有點力上限', }},
+                    {spades: 'A74', hearts: 'KQT5', diamonds: 'J95', clubs: 'QT5', auction: ['1D', 'P', '?'], correct: '1H', answers: {'1H': '正確。此叫品保證4張紅心，6點以上，沒有點力上限', }},
+                ],
+                '高花開叫的答叫': [
+                    {spades: 'AJ96432', hearts: '', diamonds: 'Q54', clubs: 'K97', auction: ['1H', 'P', '?'], correct: '1S', answers: {'1S': '正確。這個叫品保證4張黑桃，6點以上', }},{spades: 'A854', hearts: 'A75', diamonds: 'KT94', clubs: 'K9', auction: ['1H', 'P', '?'], correct: '1S', answers: {'1S': '正確，點力太強，不能直接支持紅心', '2H': '錯誤。這個叫品表示8-10點的紅心支持（通常3張）', '4H': '錯誤。這個叫品表示5張紅心的竄叫（低於開叫點力）'}},
+                    {spades: 'K75', hearts: '943', diamonds: 'KJ865', clubs: '87', auction: ['1H', 'P', '?'], correct: '1NT', answers: {'1NT': '正確。6-7點三張支持要經過迫叫的1NT', '2H': '錯誤。的確應該優先支持紅心，但這代表8-10點的紅心', '2D': '錯誤。這個叫品要12點以上才能叫', }},
+                    {spades: '872', hearts: 'J96', diamonds: 'KT', clubs: 'J8743', auction: ['1H', 'P', '?'], correct: 'Pass', answers: {'Pass': '正確。6點以下不必答叫', '2H': '錯誤。這個支持要有8-10點', '1NT': '錯誤。6點以下不必答叫', }},
+                    {spades: 'AT7', hearts: '', diamonds: '83', clubs: 'AKQJ6532', auction: ['1H', 'P', '?'], correct: '2C', answers: {'2C': '正確。這個叫品表示12點以上，3張以上梅花', }},
+                    {spades: 'AQ', hearts: 'QT873', diamonds: '54', clubs: 'AK82', auction: ['1H', 'P', '?'], correct: '2NT', answers: {'2NT': '正確。這是Jacoby 2NT特約，表示4張以上王牌支持與12點以上', '4H': '錯誤。這個叫品是竄叫，不到開叫點力', '2C': '錯誤。這副牌的紅心更值得趕快支持', }},
+                    {spades: 'Q9', hearts: 'T3', diamonds: '62', clubs: 'AKT7543', auction: ['1H', 'P', '?'], correct: '1NT', answers: {'1NT': '正確。原則上沒有迫叫成局的點力都叫1NT', '2C': '錯誤。這個叫品要有12點以上', '2H': '錯誤。要有3張以上紅心才能支持', }},
+                    {spades: 'AT6', hearts: 'QJ83', diamonds: '9', clubs: 'A8642', auction: ['1H', 'P', '?'], correct: '4D', answers: {'4D': '正確。這是Splinter叫品，表示低限的成局牌，叫的花色是短門。目標是找到27點的滿貫', }},
+                    {spades: 'K742', hearts: 'A5', diamonds: 'J7632', clubs: '97', auction: ['1H', 'P', '?'], correct: '1S', answers: {'1S': '正確。此叫品保證6點以上，4張以上黑桃', '2D': '錯誤。這個是二蓋一迫叫成局，要有12個點', '2H': '錯誤。要有三張支持才能叫這個叫品', }},
+                    {spades: 'KQ9862', hearts: 'T52', diamonds: '6', clubs: 'J97', auction: ['1D', 'P', '?'], correct: '1S', answers: {'1S': '正確，雖然有3張紅心支持，但因為不是8-10點的情形不能直接支持，如果沒有4張黑桃，就叫1NT迫叫', '1NT': '錯誤。可以表示4張黑桃的時候應該要優先表示', '2H': '錯誤。此叫品要8-10點', }},
                 ],
                 '其他': [
                     {spades: "AKQJT", hearts: "QJ65", diamonds: "32", clubs: "32", auction: ['1S','P','2H','P','?'], answers: {'3H': '這是正確的答案，有支持要優先叫出，尤其是在高花，不需要有多餘力量。'}, correct: '3H'},
@@ -122,6 +162,8 @@ export default {
             this.Explanation[0] = bid;
             if (this.Quest.answers[bid] !== undefined) {
                 this.Explanation[1] = this.Quest.answers[bid];
+            } else if (this.Quest.answer === bid) {
+                this.Explanation[1] = "答案正確！";
             } else {
                 this.Explanation[1] = "答案錯誤，請再試試看！";
             }
