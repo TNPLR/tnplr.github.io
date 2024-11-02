@@ -83,6 +83,15 @@ export default {
                     {spades: "QJ32", hearts: "AJ63", diamonds: "K5", clubs: "J96", auction: ['?'], answers: {'1C': '正確：有12個點要開叫，由於我們打5542，所以這種牌只能開叫梅花。', '1D': '錯誤：方塊開叫保證四張', '1H': '錯誤：高花開叫要有五張才行', '1S': '錯誤：高花開叫要有五張才行'}},
                 ],
                 '首次答叫': [
+                    {spades: "T74", hearts: "AQJ", diamonds: "T2", clubs: "Q7542", auction: ['1C','P','?'], answers: {'3C': '錯誤：梅花要假設同伴是3張，要有6張才能叫這個叫品。', '1H': '錯誤：要有4張紅心才能叫。', '1NT': '正確，6-9(10)點，沒有4張高花。', '2C': '錯誤：這要有11點以上才能叫'}},
+                    {spades: "T8643", hearts: "865", diamonds: "A3", clubs: "J64", auction: ['1C','P','?'], answers: {'Pass': '錯誤：正常要6點才能答叫，但有一張A的時候，可以破例答叫。', '1S': '正確'}},
+                    {spades: "KQ84", hearts: "T", diamonds: "T92", clubs: "AJT62", auction: ['1C','P','?'], answers: {'Pass': '錯誤：6點以上一定要答叫。', '2C': '錯誤。這裡要高花優先。', '1S': '正確'}},
+                    {spades: "AK32", hearts: "7632", diamonds: "95", clubs: "976", auction: ['1C','P','?'], answers: {'Pass': '錯誤：6點以上一定要答叫。', '1H': '正確', '1S': '錯誤。兩門高花同時有4張，要叫紅心（不管有沒有大牌）'}},
+                    {spades: "JT82", hearts: "KQJ8", diamonds: "KJT83", clubs: "", auction: ['1C','P','?'], answers: {'Pass': '錯誤：6點以上一定要答叫。', '1D': '錯誤：沒有迫叫成局的力量時，高花優先答叫', '1H': '正確', '1S': '錯誤。兩門高花同時有4張，要叫紅心'}},
+                    {spades: "K865", hearts: "9", diamonds: "Q9876", clubs: "T96", auction: ['1C','P','?'], answers: {'Pass': '正確：6點以上一定要答叫，但5個好點也可以考慮叫牌。', '1S': '正確', '1D': '錯誤。沒有迫叫成局的力量時，高花優先答叫。'}},
+                    {spades: "2", hearts: "KT6", diamonds: "KJ96", clubs: "AKQ83", auction: ['1C','P','?'], answers: {'Pass': '錯誤：6點以上一定要答叫。', '2C': '錯誤：有更精準的叫品可以使用。', '3S': '正確。Splinter支持，5張以上梅花且黑桃短。'}},
+                    {spades: "82", hearts: "94", diamonds: "K42", clubs: "AK9642", auction: ['1C','P','?'], answers: {'Pass': '錯誤：6點以上一定要答叫。', '2C': '正確。這稱為低花反序，用在邀請力量以上的低花支持，且沒有4張高花時。', '3C': '錯誤。由於我們打低花反序，這個叫品的力量是6-9點左右'}},
+                    {spades: "JT7", hearts: "93", diamonds: "J4", clubs: "AQ6543", auction: ['1C','P','?'], answers: {'Pass': '錯誤：6點以上一定要答叫。', '3C': '正確，我們打低花反序，這個叫品的力量是6-9點左右，6張以上梅花', '1S': '錯誤。叫高花要有4張'}},
                     {spades: "AKT9", hearts: "Q652", diamonds: "QJT9", clubs: "2", auction: ['1C','P','?'], answers: {'1D': '錯誤：迫叫成局的情形，長度一樣時，高花優先', '1H': '正確：高花優先叫，兩門高花都四張時，叫紅心。', '1S': '錯誤：兩門高花都四張時，優先叫紅心。'}}
                 ],
                 '其他': [
