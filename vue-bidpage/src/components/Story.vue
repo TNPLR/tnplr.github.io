@@ -263,7 +263,9 @@ export default {
             }
         },
         changeQuest() {
-            this.Quest = this.allStories[this.selectedQuestType][this.selectedQuest-1]
+            this.Explanation[0] = "";
+            this.Explanation[1] = "";
+            this.Quest = this.allStories[this.selectedQuestType][this.selectedQuest-1];
         },
     },
     mounted() {
