@@ -214,7 +214,7 @@ export default {
                     {spades: 'QJ98754', hearts: '2', diamonds: '752', clubs: '43', auction: ['2NT', 'P', '?'], correct: '4H', answers: {'4H': '正確。轉換黑桃，值得試一試成局', '3H': '半正確。但稍微有點保守', }},
                 ],
                 '低花開叫的再叫': [
-                    {spades: 'AT7', hearts: 'AQJ3', diamonds: 'Q4', clubs: '8752', auction: ['1C', 'P', '1H', 'P'], correct: '2H', answers: {'2H': '正確。有四張紅心時可以優先支持', }},
+                    {spades: 'AT7', hearts: 'AQJ3', diamonds: 'Q4', clubs: '8752', auction: ['1C', 'P', '1H', 'P', '?'], correct: '2H', answers: {'2H': '正確。有四張紅心時可以優先支持', }},
                     {spades: 'KJ84', hearts: 'KQ', diamonds: 'Q4', clubs: 'JT543', auction: ['1C', 'P', '1H', 'P', '?'], correct: '1S', answers: {}},
                     {spades: 'KQT8', hearts: 'K654', diamonds: 'A9', clubs: 'J42', auction: ['1C', 'P', '1H', 'P', '?'], correct: '2H', answers: {}},
                     {spades: 'JT52', hearts: 'AK52', diamonds: '5', clubs: 'AQ93', auction: ['1C', 'P', '1H', 'P', '?'], correct: '2H', answers: {}},
