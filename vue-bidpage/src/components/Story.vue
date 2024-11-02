@@ -1,7 +1,7 @@
 <template>
     <header>
         <h3 style="color: white; font-family: sans-serif;"><router-link to="/">叫牌練習區</router-link>
-        題庫：<select v-on:change="changeQuest()" v-model="selectedQuestType">
+        題庫：<select v-on:change="selectedQuest = 1; changeQuest();" v-model="selectedQuestType">
         <option v-for="q in questType">{{ q }}</option></select>
             題目：<select v-on:change="changeQuest()" v-model="selectedQuest">
         <option v-for="(q, index) in allStories[selectedQuestType]">{{ index+1 }}</option></select>
