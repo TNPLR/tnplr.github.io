@@ -439,6 +439,182 @@
         "answers": {
           "1H": "正確。雖然點力沒有到12點，但紅心牌組很好，所以可以開叫"
         }
+      },
+      {
+        "spades": "AKJT874",
+        "hearts": "3",
+        "diamonds": "Q53",
+        "clubs": "T3",
+        "auction": [],
+        "correct": "4S",
+        "answers": {
+          "4S": "正確，點力集中在黑桃，大牌點而言沒有開叫點力，可以直接試成局",
+          "1S": "也可以，這個牌很強，有達到開叫的標準",
+          "Pass": "錯誤。這個牌太強了，應該要叫牌"
+        }
+      },
+      {
+        "spades": "KJ952",
+        "hearts": "A852",
+        "diamonds": "T2",
+        "clubs": "A5",
+        "auction": [],
+        "correct": "1S",
+        "answers": {
+          "1S": "正確。五張高花優先叫出"
+        }
+      },
+      {
+        "spades": "8",
+        "hearts": "AT82",
+        "diamonds": "KQ74",
+        "clubs": "QJ43",
+        "auction": [],
+        "correct": "1D",
+        "answers": {}
+      },
+      {
+        "spades": "J3",
+        "hearts": "AQJ8",
+        "diamonds": "Q2",
+        "clubs": "QJT76",
+        "auction": [],
+        "correct": "1C",
+        "answers": {}
+      },
+      {
+        "spades": "QJ5",
+        "hearts": "A",
+        "diamonds": "JT72",
+        "clubs": "KQ953",
+        "auction": [],
+        "correct": "1C",
+        "answers": {}
+      },
+      {
+        "spades": "AT98653",
+        "hearts": "QT2",
+        "diamonds": "82",
+        "clubs": "9",
+        "auction": [],
+        "correct": "3S",
+        "answers": {
+          "3S": "正確，可以用234定律來判斷竄叫"
+        }
+      },
+      {
+        "spades": "J93",
+        "hearts": "AKJ852",
+        "diamonds": "53",
+        "clubs": "Q8",
+        "auction": [],
+        "correct": "1H",
+        "answers": {}
+      },
+      {
+        "spades": "T2",
+        "hearts": "AK4",
+        "diamonds": "AK95",
+        "clubs": "J986",
+        "auction": [],
+        "correct": "1NT",
+        "answers": {}
+      },
+      {
+        "spades": "AT8",
+        "hearts": "AKQJ6",
+        "diamonds": "AJ2",
+        "clubs": "Q9",
+        "auction": [],
+        "correct": "2NT",
+        "answers": {
+          "1H": "錯誤。這個點力範圍的平均牌有更好叫品",
+          "1NT": "錯誤。這是15-17平均牌"
+        }
+      },
+      {
+        "spades": "J2",
+        "hearts": "AQ2",
+        "diamonds": "AKJ8",
+        "clubs": "KT93",
+        "auction": [],
+        "correct": "1D",
+        "answers": {
+          "1NT": "錯誤，這是15-17平均牌型",
+          "2NT": "錯誤，這是20-21平均牌型",
+          "1D": "正確。18-19平均牌型之後可以跳叫無王"
+        }
+      },
+      {
+        "spades": "AQ53",
+        "hearts": "KQ7",
+        "diamonds": "AT65",
+        "clubs": "85",
+        "auction": [],
+        "correct": "1NT",
+        "answers": {}
+      },
+      {
+        "spades": "KT",
+        "hearts": "KQ5",
+        "diamonds": "876",
+        "clubs": "AKJ86",
+        "auction": [],
+        "correct": "1NT",
+        "answers": {
+          "1C": "錯誤。雖然有五張低花，但這個點力範圍的平均牌型有更好的叫品"
+        }
+      },
+      {
+        "spades": "KT6",
+        "hearts": "JT7652",
+        "diamonds": "4",
+        "clubs": "A85",
+        "auction": [],
+        "correct": "2H",
+        "answers": {
+          "2H": "正確，可以參考234定律",
+          "Pass": "可以接受，因為紅心品質有點差"
+        }
+      },
+      {
+        "spades": "K6",
+        "hearts": "T82",
+        "diamonds": "873",
+        "clubs": "AKQ85",
+        "auction": [],
+        "correct": "1C",
+        "answers": {}
+      },
+      {
+        "spades": "JT7",
+        "hearts": "A6",
+        "diamonds": "842",
+        "clubs": "AK875",
+        "auction": [],
+        "correct": "1C",
+        "answers": {}
+      },
+      {
+        "spades": "AK943",
+        "hearts": "8763",
+        "diamonds": "AT8",
+        "clubs": "5",
+        "auction": [],
+        "correct": "1S",
+        "answers": {
+          "Pass": "錯誤。有兩張A一張K是很好的11點，況且還有5張黑桃4張紅心",
+          "1S": "正確，雖然只有11HCP，但力量其實比尋常的11HCP強"
+        }
+      },
+      {
+        "spades": "AK976",
+        "hearts": "QJT6",
+        "diamonds": "Q98",
+        "clubs": "5",
+        "auction": [],
+        "correct": "1S",
+        "answers": {}
       }
     ],
     "低花開叫的答叫": [
