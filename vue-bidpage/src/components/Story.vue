@@ -3,7 +3,7 @@
         <div class="storyopt">
             <router-link to="/">叫牌練習區</router-link>
         </div>
-        <div class="storyopt">
+        <div class="storyopt" id="qtypeopt">
             題庫：<select v-on:change="selectedQuest = 1; changeQuest();" v-model="selectedQuestType">
                 <option v-for="q in questType">{{ q }}</option></select>
         </div>
@@ -397,7 +397,7 @@ header {
     .headergrid {
         font-size: 14px;
         display: grid;
-        grid-template-columns: 40% 60%;
+        grid-template-columns: auto auto;
     }
     .story-grid {
         width: 100%;
@@ -428,11 +428,14 @@ header {
         display: none;
     }
     .storyopt {
-        font-size: 16px;
+        font-size: 14px;
         line-height: 50px;
     }
     .storyopt select {
-        font-size: 16px;
+        font-size: 14px;
+    }
+    #qtypeopt select {
+        font-size: 12px;
     }
     button {
         font-size: 16px;
