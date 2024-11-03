@@ -75,7 +75,7 @@ export default {
             selectedQuestType: '開叫',
             selectedQuest: 1,
             explanationColor: 'white',
-            questType: ['開叫', '低花開叫的答叫', '高花開叫的答叫', '1NT開叫的答叫','2NT開叫的答叫', '低花開叫的再叫', '其他'],
+            questType: ['開叫', '低花開叫的答叫', '高花開叫的答叫', '1NT開叫的答叫','2NT開叫的答叫', '低花開叫的再叫', '迫叫1NT後續','其他'],
             allStories: {
                 '開叫': [
                     {spades: "AQ93", hearts: "9", diamonds: "KJT3", clubs: "KJ74", auction: [], answers: {'1C': '錯誤：同時有4張方塊的時候，方塊比較優先', '1D': '正確', '1S': '錯誤：開叫黑桃要有5張以上才行。'}, correct: '1D'},
@@ -238,6 +238,18 @@ export default {
                     {spades: 'J974', hearts: 'T', diamonds: 'AT4', clubs: 'AKJ65', auction: ['1C', 'P', '1H', 'P', ], correct: '1S', answers: {}},
                     {spades: 'Q5', hearts: 'AK76', diamonds: 'T85', clubs: 'AT65', auction: ['1C', 'P', '1H', 'P', ], correct: '2H', answers: {}},
                     {spades: 'K92', hearts: 'Q53', diamonds: 'J6', clubs: 'AQ862', auction: ['1C', 'P', '1H', 'P', ], correct: '1NT', answers: {}},
+                ],
+                '迫叫1NT後續': [
+                    {spades: 'AK765', hearts: '643', diamonds: '6', clubs: 'AQ84', auction: ['1S', 'P', '1NT', 'P'], correct: '2C', answers: {'2C': '正確。三張以上的低花要叫出', 'Pass': '錯誤。迫叫1NT不能Pass掉', '2S': '錯誤。這個叫品需要6張黑桃', }},
+                    {spades: 'AQJ74', hearts: '84', diamonds: 'KQT2', clubs: '92', auction: ['1S', 'P', '1NT', 'P'], correct: '2D', answers: {'2D': '正確。叫出三張以上的低花', 'Pass': '錯誤。迫叫1NT不能Pass掉', '2S': '錯誤。這個叫品要六張以上黑桃', }},
+                    {spades: 'QT762', hearts: 'KQ7', diamonds: 'K64', clubs: 'Q9', auction: ['1S', 'P', '1NT', 'P'], correct: '2D', answers: {'Pass': '錯誤。迫叫1NT不能Pass掉', '2D': '正確。叫出三張以上低花', }},
+                    {spades: 'KQ9752', hearts: '872', diamonds: 'A8', clubs: 'KT', auction: ['1S', 'P', '1NT', 'P'], correct: '2S', answers: {'2S': '正確。這表示6張以上黑桃，12-15點', '3S': '錯誤，這個要有16-18點才能叫', 'Pass': '錯誤。迫叫1NT不能Pass掉', }},
+                    {spades: 'AQJ85', hearts: 'Q6', diamonds: 'T954', clubs: 'K6', auction: ['1S', 'P', '1NT', 'P'], correct: '2D', answers: {'2D': '正確。雖然品質不好，但這是正確的叫品', '2S': '錯誤。雖然黑桃很多大牌，但要六張才能這樣叫', 'Pass': '錯誤。迫叫1NT不能Pass掉', }},
+                    {spades: 'KQ932', hearts: 'A643', diamonds: 'Q', clubs: 'J53', auction: ['1S', 'P', '1NT', 'P'], correct: '2H', answers: {'2H': '正確。四張以上的紅心要優先叫出', 'Pass': '錯誤。迫叫1NT不能Pass掉', }},
+                    {spades: 'AJ863', hearts: 'AJ54', diamonds: 'KT2', clubs: '3', auction: ['1S', 'P', '1NT', 'P'], correct: '2H', answers: {'Pass': '錯誤。迫叫1NT不能Pass掉', '2H': '正確。四張以上的紅心要優先叫出', }},
+                    {spades: 'AQT97', hearts: 'J', diamonds: 'AT976', clubs: 'Q5', auction: ['1S', 'P', '1NT', 'P'], correct: '2D', answers: {'2D': '正確，自然叫出第二門牌組', '3D': '錯誤。這個叫品要19個點以上才能叫', 'Pass': '錯誤。迫叫1NT不能Pass掉', }},
+                    {spades: 'AQJ72', hearts: 'AT73', diamonds: 'AQ7', clubs: '2', auction: ['1S', 'P', '1NT', 'P'], correct: '2H', answers: {'2H': '正確。有四張紅心要優先叫出。這代表12-17點四張以上紅心', '3H': '錯誤。點力不足以叫這個。這要19點以上', 'Pass': '錯誤。迫叫1NT不能Pass掉', }},
+                    {spades: 'AKQ962', hearts: 'A8', diamonds: '43', clubs: 'Q73', auction: ['1S', 'P', '1NT', 'P'], correct: '3S', answers: {'3S': '正確。這可以當作16-18點六張黑桃來叫牌', '2S': '不是最好。這個牌的力量更強', 'Pass': '錯誤。迫叫1NT不能Pass掉', }},
                 ],
                 '其他': [
                     {spades: "AKQJT", hearts: "QJ65", diamonds: "32", clubs: "32", auction: ['1S','P','2H','P',], answers: {'3H': '這是正確的答案，有支持要優先叫出，尤其是在高花，不需要有多餘力量。'}, correct: '3H'},
