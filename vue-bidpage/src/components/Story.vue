@@ -397,7 +397,7 @@ header {
     .headergrid {
         font-size: 14px;
         display: grid;
-        grid-template-columns: auto auto;
+        grid-template-columns: 40% 60%;
     }
     .story-grid {
         width: 100%;
