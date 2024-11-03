@@ -58,8 +58,8 @@
             </div>
         </div>
         <div id="explanation">
-            <h3><span v-html="textAuction(Explanation[0])"></span></h3>
-            <p style="font-size: 24px;">{{ Explanation[1] }}</p>
+            <h3 ><span v-html="textAuction(Explanation[0])"></span></h3>
+            <p>{{ Explanation[1] }}</p>
         </div>
     </div>
 </template>
@@ -362,6 +362,9 @@ export default {
     grid-column: span 2;
     padding: 20px;
 }
+#explanation > p {
+    font-size: 20px;
+}
 .answer-grid {
     display: grid;
     grid-template-columns: 16% 14% 14% 14% 14% 14% 14%;
@@ -392,7 +395,7 @@ header {
         overflow: scroll;
     }
     .headergrid {
-        font-size: 16px;
+        font-size: 14px;
         display: grid;
         grid-template-columns: auto auto;
     }
@@ -418,6 +421,12 @@ header {
     #explanation {
         grid-row: 4;
     }
+    #explanation > p {
+        font-size: 16px;
+    }
+    #explanation > h3 {
+        display: none;
+    }
     .storyopt {
         font-size: 16px;
         line-height: 50px;
@@ -433,8 +442,12 @@ header {
         padding: 0 20px;
     }
     .questset {
+        font-size: 12px;
         padding: 2px;
         margin: 0 2px;
+    }
+    #explanation {
+        padding: 10px;
     }
 }
 </style>
