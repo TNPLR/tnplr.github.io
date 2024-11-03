@@ -392,6 +392,7 @@ header {
         overflow: scroll;
     }
     .headergrid {
+        font-size: 16px;
         display: grid;
         grid-template-columns: auto auto;
     }
@@ -425,8 +426,15 @@ header {
         font-size: 16px;
     }
     button {
-        font-size: 20px;
+        font-size: 16px;
         padding: 5px 0;
+    }
+    .header {
+        padding: 0 20px;
+    }
+    .questset {
+        padding: 2px;
+        margin: 0 2px;
     }
 }
 </style>
