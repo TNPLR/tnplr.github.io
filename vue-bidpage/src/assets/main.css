@@ -284,7 +284,7 @@ section::after {
         display: none;
     }
 }
-@media (max-width: 600px) {
+@media (max-width: 800px) {
     nav, article {
         width: 100%;
         height: auto;
