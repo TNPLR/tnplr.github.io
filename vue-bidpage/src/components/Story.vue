@@ -155,7 +155,7 @@ export default {
 .storyopt {
     font-family: "游明朝 Light", serif;
     font-weight: bold;
-    font-size: 28px;
+    font-size: large;
     line-height: 100px;
     color: white;
     float: left;
@@ -204,7 +204,8 @@ export default {
     grid-template-columns: 16% 14% 14% 14% 14% 14% 14%;
 }
 button {
-    font-size: 30px;
+    font-size: medium;
+    margin: 2px;
     padding: 5px 0;
 }
 .questset {
@@ -216,7 +217,7 @@ button {
 select {
     font-family: "游明朝 Light", serif;
     font-weight: bold;
-    font-size: 28px;
+    font-size: large;
 }
 header {
     font-family: "Taipei Sans SC Beta", sans-serif;
@@ -224,7 +225,7 @@ header {
     background-color: green;
     padding: 5px 20px;
 }
-@media (max-width: 800px) {
+@media (max-width: 900px) {
     #templategrid {
         overflow: scroll;
     }

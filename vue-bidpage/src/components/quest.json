@@ -2340,6 +2340,161 @@
         ],
         "correct": "1NT",
         "answers": {}
+      },
+      {
+        "spades": "T4",
+        "hearts": "K2",
+        "diamonds": "J983",
+        "clubs": "AKJ32",
+        "auction": [
+          "1C",
+          "P",
+          "1S",
+          "P"
+        ],
+        "correct": "1NT",
+        "answers": {
+          "1NT": "正確。這種牌型點力符合1NT，且是半平均。依照我的習慣不喜歡叫2C",
+          "2C": "有人是這樣叫的，不過這不是我的風格"
+        }
+      },
+      {
+        "spades": "K3",
+        "hearts": "AJ76",
+        "diamonds": "932",
+        "clubs": "KJT9",
+        "auction": [
+          "1C",
+          "P",
+          "1S",
+          "P"
+        ],
+        "correct": "1NT",
+        "answers": {
+          "1NT": "正確。12-14平均型，沒有黑桃支持",
+          "2H": "錯誤。點力、牌型都不能這樣叫"
+        }
+      },
+      {
+        "spades": "A84",
+        "hearts": "K86",
+        "diamonds": "653",
+        "clubs": "KQT4",
+        "auction": [
+          "1C",
+          "P",
+          "1S",
+          "P"
+        ],
+        "correct": "1NT",
+        "answers": {
+          "1NT": "正確。12-14平均牌型，沒有4張黑桃支持",
+          "2S": "錯誤。要有4張黑桃才能支持黑桃"
+        }
+      },
+      {
+        "spades": "A743",
+        "hearts": "AKT8",
+        "diamonds": "98",
+        "clubs": "J92",
+        "auction": [
+          "1C",
+          "P",
+          "1S",
+          "P"
+        ],
+        "correct": "2S",
+        "answers": {
+          "2S": "正確。這個叫品代表4張黑桃，12-14點"
+        }
+      },
+      {
+        "spades": "A642",
+        "hearts": "KJ8",
+        "diamonds": "AJ",
+        "clubs": "AQ83",
+        "auction": [
+          "1C",
+          "P",
+          "1S",
+          "P"
+        ],
+        "correct": "4S",
+        "answers": {
+          "4S": "正確。雖然設計上不是一個太好的叫品，但18-19平均牌型要透過這個叫品同時表達點力與支持",
+          "2NT": "錯誤。要優先支持黑桃",
+          "3S": "錯誤。這個大約是16-17點的四張黑桃"
+        }
+      },
+      {
+        "spades": "A5",
+        "hearts": "AK",
+        "diamonds": "K753",
+        "clubs": "KJT98",
+        "auction": [
+          "1C",
+          "P",
+          "1S",
+          "P"
+        ],
+        "correct": "2D",
+        "answers": {
+          "2D": "正確。這個是倒叫，要有16點以上才能叫出4張方塊",
+          "2C": "錯誤。有更自然的四張牌組可以叫出",
+          "2NT": "不能說錯很多，但有更自然的叫品可以使用"
+        }
+      },
+      {
+        "spades": "AT7",
+        "hearts": "AJT4",
+        "diamonds": "KQJ",
+        "clubs": "K98",
+        "auction": [
+          "1C",
+          "P",
+          "1S",
+          "P"
+        ],
+        "correct": "2NT",
+        "answers": {
+          "2NT": "正確。18-19點平均牌型，沒有4張黑桃支持",
+          "2H": "錯誤。這樣的叫法是5張梅花、4張紅心的非平均牌"
+        }
+      },
+      {
+        "spades": "7",
+        "hearts": "AK43",
+        "diamonds": "KJ5",
+        "clubs": "AKT94",
+        "auction": [
+          "1C",
+          "P",
+          "1S",
+          "P"
+        ],
+        "correct": "2H",
+        "answers": {
+          "2H": "正確，有16點以上，可以倒叫自然叫出四張紅心",
+          "2NT": "錯誤。這叫品是18-19平均牌型",
+          "3C": "錯誤，梅花要有六張才能叫這個叫品。另外，四張高花也比較優先"
+        }
+      },
+      {
+        "spades": "AJ8",
+        "hearts": "QJT8",
+        "diamonds": "Q75",
+        "clubs": "AKQ",
+        "auction": [
+          "1C",
+          "P",
+          "1S",
+          "P"
+        ],
+        "correct": "2NT",
+        "answers": {
+          "2NT": "正確。18-19平均牌型",
+          "2H": "錯誤。這個叫品是非平均牌的叫法"
+        }
       }
     ],
     "迫叫1NT後續": [
