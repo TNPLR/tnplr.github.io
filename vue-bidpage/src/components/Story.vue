@@ -30,9 +30,11 @@
                 <div class="seat_header" v-for="seat in seatHeader" :key="seat.name" v-bind:style="{ backgroundColor: seat.vulnerable ? 'Tomato' : 'mediumseagreen' }">
                     {{ seat.name }}
                 </div>
-                <div v-for="x in (Quest.board_num === undefined ? 0 : (Quest.board_num - 1) & 3)"></div>
-                <div v-for="text in Quest.auction"><span v-html="textAuction(text)"></span></div>
-                <div v-bind:style="{ 'background-color': explanationColor }"><span v-html="textAuction(Explanation[2])"></span></div>
+                <div v-for="x in (Quest.board_num - 1) & 3"></div>
+                <div class="auction_tip" v-bind:style="{backgroundColor: bid.explanation === '' ? '#e0fee0' : 'WhiteSmoke', borderColor: bid.alert ? 'red' : '#e0fee0'}" v-for="(bid, index) in Quest.auction" :key="index">
+                    <span v-html="textAuction(bid.name)">
+                    </span><span v-if="bid.explanation !== ''" class="auction_tip_text">{{ bid.explanation }}</span></div>
+                <div class="auction_tip" v-bind:style="{ 'background-color': explanationColor }"><span v-html="textAuction(Explanation[2])"></span></div>
             </div>
         </div>
         <div>
@@ -156,7 +158,7 @@ export default {
         explanationBidStyle(type) {
             switch (type) {
                 case 0:
-                    this.explanationColor = 'white';
+                    this.explanationColor = '#e0fee0';
                     break;
                 case 1:
                     this.explanationColor = 'Gainsboro';
@@ -172,13 +174,8 @@ export default {
             this.explanationBidStyle(0);
             this.Quest = this.allStories[this.selectedQuestType][this.selectedQuest-1];
             this.selectedLevel = undefined;
-
             // Set vulnerability
-            let cn = 0;
-            if (this.Quest.board_num !== undefined) {
-                cn = this.Quest.board_num;
-                cn = (cn - 1) & 0xF;
-            }
+            let cn = (this.Quest.board_num - 1) & 0xF;
             switch (cn) {
                 case 0:
                 case 7:
@@ -217,7 +214,6 @@ export default {
                     this.seatHeader[3].vulnerable = true;
                     break;
             }
-
             
             // Print correct bidding choices (by bridge rules)
             this.lockBidButton(this.Quest.auction)
@@ -325,7 +321,9 @@ export default {
 .bidding-grid {
     grid-row: span 3;
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: 25% 25% 25% 25%;
+    background-color: #e0fee0;
+    border-radius: 5px;
 }
 .bidding-grid > div {
     text-align: center;
@@ -371,6 +369,35 @@ header {
     padding: 5px 20px;
     background-color: green;
 }
+
+.auction_tip {
+    position: relative;
+    display: inline-block;
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: #e0fee0;
+    margin: 2px
+}
+
+.auction_tip .auction_tip_text {
+    visibility: hidden;
+    width: max-content;
+    max-width: 400px;
+    top: 70%;
+    background-color: khaki;
+    color: black;
+    text-align: left;
+    padding: 5px 5px;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+}
+
+.auction_tip:hover .auction_tip_text {
+    visibility: visible;
+}
+
 @media (max-width: 900px) {
     #templategrid {
         overflow: scroll;
