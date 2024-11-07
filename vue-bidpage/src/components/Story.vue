@@ -45,16 +45,16 @@
         </div>
         <div>
             <div class="answer-grid">
-                <button v-on:click="showExplanation('Pass')" style="grid-column: span 3;">Pass</button>
-                <button v-for="bid in ['X', 'XX']" v-on:click="showExplanation(bid)" style="grid-column: span 2;">{{ bid }}</button>
+                <button v-on:click="showExplanation('Pass')" v-bind:disabled="!bidbutton[0].display" style="grid-column: span 3;">Pass</button>
+                <button v-for="bid in bidbutton.slice(1, 3)" :key="bid.name" v-on:click="showExplanation(bid.name)" v-bind:disabled="!bid.display" style="grid-column: span 2;"><span v-html="textAuction(bid.name)"></span></button>
                 <button v-for="number in 7" v-on:click="selectedLevel = number">{{ number }}</button>
-                <button v-for="bid in ['1C','1D','1H','1S','1NT']" v-on:click="showExplanation(bid)" v-show="selectedLevel === 1"><span v-html="textAuction(bid)"></span></button>
-                <button v-for="bid in ['2C','2D','2H','2S','2NT']" v-on:click="showExplanation(bid)" v-show="selectedLevel === 2"><span v-html="textAuction(bid)"></span></button>
-                <button v-for="bid in ['3C','3D','3H','3S','3NT']" v-on:click="showExplanation(bid)" v-show="selectedLevel === 3"><span v-html="textAuction(bid)"></span></button>
-                <button v-for="bid in ['4C','4D','4H','4S','4NT']" v-on:click="showExplanation(bid)" v-show="selectedLevel === 4"><span v-html="textAuction(bid)"></span></button>
-                <button v-for="bid in ['5C','5D','5H','5S','5NT']" v-on:click="showExplanation(bid)" v-show="selectedLevel === 5"><span v-html="textAuction(bid)"></span></button>
-                <button v-for="bid in ['6C','6D','6H','6S','6NT']" v-on:click="showExplanation(bid)" v-show="selectedLevel === 6"><span v-html="textAuction(bid)"></span></button>
-                <button v-for="bid in ['7C','7D','7H','7S','7NT']" v-on:click="showExplanation(bid)" v-show="selectedLevel === 7"><span v-html="textAuction(bid)"></span></button>
+                <button v-for="bid in bidbutton.slice(3, 8)" :key="bid.name"  v-on:click="showExplanation(bid.name)" v-show="selectedLevel === 1" v-bind:disabled="!bid.display"><span v-html="textAuction(bid.name)"></span></button>
+                <button v-for="bid in bidbutton.slice(8, 13)" :key="bid.name"  v-on:click="showExplanation(bid.name)" v-show="selectedLevel === 2" v-bind:disabled="!bid.display"><span v-html="textAuction(bid.name)"></span></button>
+                <button v-for="bid in bidbutton.slice(13, 18)" :key="bid.name"  v-on:click="showExplanation(bid.name)" v-show="selectedLevel === 3" v-bind:disabled="!bid.display"><span v-html="textAuction(bid.name)"></span></button>
+                <button v-for="bid in bidbutton.slice(18, 23)" :key="bid.name"  v-on:click="showExplanation(bid.name)" v-show="selectedLevel === 4" v-bind:disabled="!bid.display"><span v-html="textAuction(bid.name)"></span></button>
+                <button v-for="bid in bidbutton.slice(23, 28)" :key="bid.name"  v-on:click="showExplanation(bid.name)" v-show="selectedLevel === 5" v-bind:disabled="!bid.display"><span v-html="textAuction(bid.name)"></span></button>
+                <button v-for="bid in bidbutton.slice(28, 33)" :key="bid.name"  v-on:click="showExplanation(bid.name)" v-show="selectedLevel === 6" v-bind:disabled="!bid.display"><span v-html="textAuction(bid.name)"></span></button>
+                <button v-for="bid in bidbutton.slice(33, 38)" :key="bid.name"  v-on:click="showExplanation(bid.name)" v-show="selectedLevel === 7" v-bind:disabled="!bid.display"><span v-html="textAuction(bid.name)"></span></button>
             </div>
         </div>
         <div id="explanation">
@@ -72,6 +72,46 @@ export default {
             // Quest is an object of question
             Quest: {},
             Explanation: ["", "", "?"],
+            bidbutton: [
+                {name: "Pass", display: true},
+                {name: "X", display: true},
+                {name: "XX", display: true},
+                {name: "1C", display: true},
+                {name: "1D", display: true},
+                {name: "1H", display: true},
+                {name: "1S", display: true},
+                {name: "1NT", display: true},
+                {name: "2C", display: true},
+                {name: "2D", display: true},
+                {name: "2H", display: true},
+                {name: "2S", display: true},
+                {name: "2NT", display: true},
+                {name: "3C", display: true},
+                {name: "3D", display: true},
+                {name: "3H", display: true},
+                {name: "3S", display: true},
+                {name: "3NT", display: true},
+                {name: "4C", display: true},
+                {name: "4D", display: true},
+                {name: "4H", display: true},
+                {name: "4S", display: true},
+                {name: "4NT", display: true},
+                {name: "5C", display: true},
+                {name: "5D", display: true},
+                {name: "5H", display: true},
+                {name: "5S", display: true},
+                {name: "5NT", display: true},
+                {name: "6C", display: true},
+                {name: "6D", display: true},
+                {name: "6H", display: true},
+                {name: "6S", display: true},
+                {name: "6NT", display: true},
+                {name: "7C", display: true},
+                {name: "7D", display: true},
+                {name: "7H", display: true},
+                {name: "7S", display: true},
+                {name: "7NT", display: true},
+            ],
             selectedLevel: undefined,
             selectedQuestType: '開叫',
             selectedQuest: 1,
@@ -130,7 +170,62 @@ export default {
             this.Explanation[2] = "?";
             this.explanationBidStyle(0);
             this.Quest = this.allStories[this.selectedQuestType][this.selectedQuest-1];
+            this.selectedLevel = undefined;
+            
+            // Print correct bidding choices (by bridge rules)
+            this.lockBidButton(this.Quest.auction)
         },
+        lockBidButton(auction) {
+            if (auction === undefined || auction.length == 0) {
+                this.bidbutton[1].display = false;
+                this.bidbutton[2].display = false;
+                return;
+            }
+            let tmp_auction = auction.slice().reverse();
+            // 1 is the previous bidder
+            let doubled = 0;
+            let redoubled = 0;
+            let maxbid_i = undefined;
+
+            let maxbid = undefined;
+            
+
+            for (let i = 0; i < tmp_auction.length; i++) {
+                if (tmp_auction[i] == "P") {
+                    continue;
+                }
+                if (tmp_auction[i] == "X") {
+                    doubled = i + 1;
+                    continue;
+                }
+                if (tmp_auction[i] == "XX") {
+                    redoubled = i + 1;
+                    continue
+                }
+                maxbid = tmp_auction[i];
+                maxbid_i = i + 1;
+                break;
+            }
+            if (maxbid === undefined) {
+                this.bidbutton[1].display = false;
+                this.bidbutton[2].display = false;
+                this.bidbutton.slice(3).forEach(bid => {bid.display = true;});
+                return;
+            }
+            let index = this.bidbutton.findIndex((bid) => {return bid.name == maxbid;});
+            this.bidbutton.slice(3, index + 1).forEach((b) => {b.display = false});
+            this.bidbutton.slice(index + 1).forEach(bid => {bid.display = true;});
+            if ((doubled & 1) === 1 && redoubled === 0) {
+                this.bidbutton[1].display = false;
+                this.bidbutton[2].display = true;
+            } else if ((maxbid_i & 1) === 1 && doubled === 0) {
+                this.bidbutton[1].display = true;
+                this.bidbutton[2].display = false;
+            } else {
+                this.bidbutton[1].display = false;
+                this.bidbutton[2].display = false;
+            }
+        }
     },
     mounted() {
         this.changeQuest();
