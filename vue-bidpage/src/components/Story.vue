@@ -34,7 +34,8 @@
                 <div class="auction_tip" v-bind:style="{backgroundColor: bid.explanation === '' ? '#e0fee0' : 'WhiteSmoke', borderColor: bid.alert ? 'red' : '#e0fee0'}" v-for="(bid, index) in Quest.auction" :key="index">
                     <span v-html="textAuction(bid.name)">
                     </span><span v-if="bid.explanation !== ''" class="auction_tip_text">{{ bid.explanation }}</span></div>
-                <div class="auction_tip" v-bind:style="{ 'background-color': explanationColor }"><span v-html="textAuction(Explanation[2])"></span></div>
+
+                    <div class="auction_tip" v-bind:style="{ 'background-color': explanationColor }"><span v-html="textAuction(Explanation[2])"></span></div>
             </div>
         </div>
         <div>
@@ -234,18 +235,18 @@ export default {
             let maxbid = undefined; 
 
             for (let i = 0; i < tmp_auction.length; i++) {
-                if (tmp_auction[i] == "P") {
+                if (tmp_auction[i].name == "P") {
                     continue;
                 }
-                if (tmp_auction[i] == "X") {
+                if (tmp_auction[i].name == "X") {
                     doubled = i + 1;
                     continue;
                 }
-                if (tmp_auction[i] == "XX") {
+                if (tmp_auction[i].name == "XX") {
                     redoubled = i + 1;
                     continue
                 }
-                maxbid = tmp_auction[i];
+                maxbid = tmp_auction[i].name;
                 maxbid_i = i + 1;
                 break;
             }
