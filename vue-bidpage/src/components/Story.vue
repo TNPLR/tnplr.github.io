@@ -27,18 +27,10 @@
         </div>
         <div class="auctiongrid">
             <div class="bidding-grid" ref="bidgrid">
-                <div class="header">
-                    North
+                <div class="seat_header" v-for="seat in seatHeader" :key="seat.name" v-bind:style="{ backgroundColor: seat.vulnerable ? 'Tomato' : 'mediumseagreen' }">
+                    {{ seat.name }}
                 </div>
-                <div class="header">
-                    East
-                </div>
-                <div class="header">
-                    South
-                </div>
-                <div class="header">
-                    West
-                </div>
+                <div v-for="x in (Quest.board_num === undefined ? 0 : (Quest.board_num - 1) & 3)"></div>
                 <div v-for="text in Quest.auction"><span v-html="textAuction(text)"></span></div>
                 <div v-bind:style="{ 'background-color': explanationColor }"><span v-html="textAuction(Explanation[2])"></span></div>
             </div>
@@ -114,6 +106,12 @@ export default {
                 {name: "7S", display: true},
                 {name: "7NT", display: true},
             ],
+            seatHeader: [
+                {name: "North", vulnerable: true},
+                {name: "East", vulnerable: false},
+                {name: "South", vulnerable: false},
+                {name: "West", vulnerable: false},
+            ],
             selectedLevel: undefined,
             minLevel: 1,
             selectedQuestType: '開叫',
@@ -174,6 +172,52 @@ export default {
             this.explanationBidStyle(0);
             this.Quest = this.allStories[this.selectedQuestType][this.selectedQuest-1];
             this.selectedLevel = undefined;
+
+            // Set vulnerability
+            let cn = 0;
+            if (this.Quest.board_num !== undefined) {
+                cn = this.Quest.board_num;
+                cn = (cn - 1) & 0xF;
+            }
+            switch (cn) {
+                case 0:
+                case 7:
+                case 10:
+                case 13:
+                    this.seatHeader[0].vulnerable = false;
+                    this.seatHeader[1].vulnerable = false;
+                    this.seatHeader[2].vulnerable = false;
+                    this.seatHeader[3].vulnerable = false;
+                    break;
+                case 1:
+                case 4:
+                case 11:
+                case 14:
+                    this.seatHeader[0].vulnerable = true;
+                    this.seatHeader[1].vulnerable = false;
+                    this.seatHeader[2].vulnerable = true;
+                    this.seatHeader[3].vulnerable = false;
+                    break;
+                case 2:
+                case 5:
+                case 8:
+                case 15:
+                    this.seatHeader[0].vulnerable = false;
+                    this.seatHeader[1].vulnerable = true;
+                    this.seatHeader[2].vulnerable = false;
+                    this.seatHeader[3].vulnerable = true;
+                    break;
+                case 3:
+                case 6:
+                case 9:
+                case 12:
+                    this.seatHeader[0].vulnerable = true;
+                    this.seatHeader[1].vulnerable = true;
+                    this.seatHeader[2].vulnerable = true;
+                    this.seatHeader[3].vulnerable = true;
+                    break;
+            }
+
             
             // Print correct bidding choices (by bridge rules)
             this.lockBidButton(this.Quest.auction)
@@ -289,8 +333,7 @@ export default {
     font-family: "Taipei Sans SC Beta", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: bold;
 }
-.bidding-grid > .header {
-    background-color: mediumseagreen;
+.bidding-grid > .seat_header {
     color: white;
     font-variant: small-caps;
 }
@@ -321,11 +364,12 @@ select {
     font-weight: bold;
     font-size: large;
 }
+
 header {
     font-family: "Taipei Sans SC Beta", sans-serif;
     font-weight: bold;
-    background-color: green;
     padding: 5px 20px;
+    background-color: green;
 }
 @media (max-width: 900px) {
     #templategrid {
