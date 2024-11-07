@@ -221,6 +221,7 @@ export default {
         },
         lockBidButton(auction) {
             if (auction === undefined || auction.length == 0) {
+                this.minLevel = 1;
                 this.bidbutton[1].display = false;
                 this.bidbutton[2].display = false;
                 this.bidbutton.slice(3).forEach(bid => {bid.display = true;});
