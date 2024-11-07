@@ -46,15 +46,17 @@
         <div>
             <div class="answer-grid">
                 <button v-on:click="showExplanation('Pass')" v-bind:disabled="!bidbutton[0].display" style="grid-column: span 3;">Pass</button>
-                <button v-for="bid in bidbutton.slice(1, 3)" :key="bid.name" v-on:click="showExplanation(bid.name)" v-bind:disabled="!bid.display" style="grid-column: span 2;"><span v-html="textAuction(bid.name)"></span></button>
-                <button v-for="number in 7" v-on:click="selectedLevel = number">{{ number }}</button>
-                <button v-for="bid in bidbutton.slice(3, 8)" :key="bid.name"  v-on:click="showExplanation(bid.name)" v-show="selectedLevel === 1" v-bind:disabled="!bid.display"><span v-html="textAuction(bid.name)"></span></button>
-                <button v-for="bid in bidbutton.slice(8, 13)" :key="bid.name"  v-on:click="showExplanation(bid.name)" v-show="selectedLevel === 2" v-bind:disabled="!bid.display"><span v-html="textAuction(bid.name)"></span></button>
-                <button v-for="bid in bidbutton.slice(13, 18)" :key="bid.name"  v-on:click="showExplanation(bid.name)" v-show="selectedLevel === 3" v-bind:disabled="!bid.display"><span v-html="textAuction(bid.name)"></span></button>
-                <button v-for="bid in bidbutton.slice(18, 23)" :key="bid.name"  v-on:click="showExplanation(bid.name)" v-show="selectedLevel === 4" v-bind:disabled="!bid.display"><span v-html="textAuction(bid.name)"></span></button>
-                <button v-for="bid in bidbutton.slice(23, 28)" :key="bid.name"  v-on:click="showExplanation(bid.name)" v-show="selectedLevel === 5" v-bind:disabled="!bid.display"><span v-html="textAuction(bid.name)"></span></button>
-                <button v-for="bid in bidbutton.slice(28, 33)" :key="bid.name"  v-on:click="showExplanation(bid.name)" v-show="selectedLevel === 6" v-bind:disabled="!bid.display"><span v-html="textAuction(bid.name)"></span></button>
-                <button v-for="bid in bidbutton.slice(33, 38)" :key="bid.name"  v-on:click="showExplanation(bid.name)" v-show="selectedLevel === 7" v-bind:disabled="!bid.display"><span v-html="textAuction(bid.name)"></span></button>
+                <button v-for="bid in bidbutton.slice(1, 3)" :key="bid.name" v-on:click="showExplanation(bid.name)" v-bind:style="{visibility: bid.display ? 'visible' : 'hidden'}" style="grid-column: span 2;"><span v-html="textAuction(bid.name)"></span></button>
+
+                <button v-for="number in 7" v-bind:style="{visibility: minLevel <= number ? 'visible' : 'hidden'}" v-on:click="selectedLevel = number">{{ number }}</button>
+
+                <button v-for="bid in bidbutton.slice(3, 8)" :key="bid.name"  v-on:click="showExplanation(bid.name)" v-show="selectedLevel === 1" v-bind:style="{visibility: bid.display ? 'visible' : 'hidden'}"><span v-html="textAuction(bid.name)"></span></button>
+                <button v-for="bid in bidbutton.slice(8, 13)" :key="bid.name"  v-on:click="showExplanation(bid.name)" v-show="selectedLevel === 2" v-bind:style="{visibility: bid.display ? 'visible' : 'hidden'}"><span v-html="textAuction(bid.name)"></span></button>
+                <button v-for="bid in bidbutton.slice(13, 18)" :key="bid.name"  v-on:click="showExplanation(bid.name)" v-show="selectedLevel === 3" v-bind:style="{visibility: bid.display ? 'visible' : 'hidden'}"><span v-html="textAuction(bid.name)"></span></button>
+                <button v-for="bid in bidbutton.slice(18, 23)" :key="bid.name"  v-on:click="showExplanation(bid.name)" v-show="selectedLevel === 4" v-bind:style="{visibility: bid.display ? 'visible' : 'hidden'}"><span v-html="textAuction(bid.name)"></span></button>
+                <button v-for="bid in bidbutton.slice(23, 28)" :key="bid.name"  v-on:click="showExplanation(bid.name)" v-show="selectedLevel === 5" v-bind:style="{visibility: bid.display ? 'visible' : 'hidden'}"><span v-html="textAuction(bid.name)"></span></button>
+                <button v-for="bid in bidbutton.slice(28, 33)" :key="bid.name"  v-on:click="showExplanation(bid.name)" v-show="selectedLevel === 6" v-bind:style="{visibility: bid.display ? 'visible' : 'hidden'}"><span v-html="textAuction(bid.name)"></span></button>
+                <button v-for="bid in bidbutton.slice(33, 38)" :key="bid.name"  v-on:click="showExplanation(bid.name)" v-show="selectedLevel === 7" v-bind:style="{visibility: bid.display ? 'visible' : 'hidden'}"><span v-html="textAuction(bid.name)"></span></button>
             </div>
         </div>
         <div id="explanation">
@@ -113,6 +115,7 @@ export default {
                 {name: "7NT", display: true},
             ],
             selectedLevel: undefined,
+            minLevel: 1,
             selectedQuestType: '開叫',
             selectedQuest: 1,
             explanationColor: 'white',
@@ -179,6 +182,7 @@ export default {
             if (auction === undefined || auction.length == 0) {
                 this.bidbutton[1].display = false;
                 this.bidbutton[2].display = false;
+                this.bidbutton.slice(3).forEach(bid => {bid.display = true;});
                 return;
             }
             let tmp_auction = auction.slice().reverse();
@@ -187,8 +191,7 @@ export default {
             let redoubled = 0;
             let maxbid_i = undefined;
 
-            let maxbid = undefined;
-            
+            let maxbid = undefined; 
 
             for (let i = 0; i < tmp_auction.length; i++) {
                 if (tmp_auction[i] == "P") {
@@ -207,6 +210,7 @@ export default {
                 break;
             }
             if (maxbid === undefined) {
+                this.minLevel = 1;
                 this.bidbutton[1].display = false;
                 this.bidbutton[2].display = false;
                 this.bidbutton.slice(3).forEach(bid => {bid.display = true;});
@@ -215,6 +219,9 @@ export default {
             let index = this.bidbutton.findIndex((bid) => {return bid.name == maxbid;});
             this.bidbutton.slice(3, index + 1).forEach((b) => {b.display = false});
             this.bidbutton.slice(index + 1).forEach(bid => {bid.display = true;});
+
+            this.minLevel = Math.floor((index - 2) / 5) + 1; // hide unneeded level
+
             if ((doubled & 1) === 1 && redoubled === 0) {
                 this.bidbutton[1].display = false;
                 this.bidbutton[2].display = true;
