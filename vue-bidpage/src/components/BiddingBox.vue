@@ -1,5 +1,6 @@
 <script setup>
-import { computed, ref, watch } from 'vue'
+import { onMounted, ref, watch } from 'vue'
+import textAuction from './textAuction.js';
 const showDouble = defineModel('showDouble', { default: true});
 const showReDouble = defineModel('showReDouble', { default: true});
 const selectedLevel = defineModel('selectedLevel', { default: undefined});
@@ -8,13 +9,13 @@ const props = defineProps({
     onClick: {
         type: Function,
         default() {
-            return () => 0;
+            return 0;
         }
     },
     showOnClick: {
         type: Function,
-        default() {
-            return bid => bid;
+        default(bid) {
+            return textAuction(bid);
         }
     },
 });
@@ -65,7 +66,6 @@ watch (maxHiddenBid, (newbid) => {
     bidbutton.value.slice(i+1).forEach(bid => {bid.display = true;});
     minLevel.value = Math.floor((i+1)/5+1);
 });
-
 </script>            
 
 

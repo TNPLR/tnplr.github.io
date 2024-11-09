@@ -1,56 +1,8 @@
-<template id="storytemplate">
-    <header class="headergrid">
-        <div class="storyopt">
-            <router-link to="/">叫牌練習區</router-link>
-        </div>
-        <div class="storyopt" id="qtypeopt">
-            題庫：<select id="questlib" v-on:change="selectedQuest = 1; changeQuest();" v-model="selectedQuestType">
-                <option v-for="q in questType">{{ q }}</option></select>
-        </div>
-        <div class="storyopt">
-            題目：<select id="questno" v-on:change="changeQuest()" v-model="selectedQuest">
-                <option v-for="(q, index) in allStories[selectedQuestType]">{{ index+1 }}</option></select>
-        </div>
-        <div class="storyopt">
-            <button class="questset" v-bind:disabled="selectedQuest <= 1" v-on:click="selectedQuest--; changeQuest();">上一題</button>
-            <button class="questset" v-bind:disabled="selectedQuest >= allStories[selectedQuestType].length" v-on:click="selectedQuest++; changeQuest();">下一題</button>
-            <button class="questset" v-on:click="showExplanation(Quest.correct)">公布答案</button>
-        </div>
-        <div style="clear: left;"></div>
-    </header>
-    <div class="story-grid">
-        <div class="hand-box">
-            <span style="color:black">&#9824;</span> {{ Quest.spades }} 
-            <span style="color:tomato">&#9829;</span> {{ Quest.hearts }} 
-            <span style="color:orange">&#9830;</span> {{ Quest.diamonds }} 
-            <span style="color:DarkSlateGray">&#9827;</span> {{ Quest.clubs }} 
-        </div>
-        <div class="auctiongrid">
-            <div class="bidding-grid" ref="bidgrid">
-                <div class="seat_header" v-for="seat in seatHeader" :key="seat.name" v-bind:style="{ backgroundColor: seat.vulnerable ? 'Tomato' : 'mediumseagreen' }">
-                    {{ seat.name }}
-                </div>
-                <div v-for="x in (Quest.board_num - 1) & 3"></div>
-                <div class="auction_tip" v-bind:style="{backgroundColor: bid.explanation === '' ? '#e0fee0' : 'WhiteSmoke', borderColor: bid.alert ? 'red' : '#e0fee0'}" v-for="(bid, index) in Quest.auction" :key="index">
-                    <span v-html="textAuction(bid.name)">
-                    </span><span v-if="bid.explanation !== ''" class="auction_tip_text">{{ bid.explanation }}</span></div>
-
-                    <div class="auction_tip" v-bind:style="{ 'background-color': explanationColor }"><span v-html="textAuction(Explanation[2])"></span></div>
-            </div>
-        </div>
-        <div>
-            <bidding-box v-bind:onClick="showExplanation" v-bind:showOnClick="textAuction" v-model:selectedLevel="selectedLevel" v-model:showDouble="showdouble" v-model:showReDouble="showredouble" v-model:maxHiddenBid="maxhiddenbid" ref="bbox"/>
-        </div>
-        <div id="explanation">
-            <h3 ><span v-html="textAuction(Explanation[0])"></span></h3>
-            <p>{{ Explanation[1] }}</p>
-        </div>
-    </div>
-</template>
-
 <script>
 import BiddingBox from "./BiddingBox.vue";
 import quest from "./quest.json"
+import exTextAuction from "./textAuction.js";
+import AuctionBox from "./AuctionBox.vue";
 export default {
     data() {
         return {
@@ -59,6 +11,7 @@ export default {
             Explanation: ["", "", "?"],
             showdouble: false,
             showredouble: false,
+            showBookLocal: this.showBook,
             maxhiddenbid: '',
             seatHeader: [
                 {name: "North", vulnerable: true},
@@ -69,20 +22,31 @@ export default {
             selectedLevel: undefined,
             selectedQuestType: '開叫',
             selectedQuest: 1,
-            explanationColor: 'white',
+            explanationType: 0,
             questType: ['開叫', '低花開叫的答叫', '高花開叫的答叫', '1NT開叫的答叫','2NT開叫的答叫', '低花開叫的再叫', '迫叫1NT後續','其他'],
             allStories: quest,
         };
     },
+    computed: {
+        explanationColor() {
+            switch (this.explanationType) {
+                case 0:
+                    return '#e0fee0';
+                case 1:
+                    return 'Gainsboro';
+                case 2:
+                    return 'Moccasin';
+                default:
+                    return '#e0fee0';
+            } 
+        }
+    },
+    components: {
+        BiddingBox,
+        AuctionBox
+    },
     methods: {
-        textAuction(bid) {
-            let text = bid;
-            text = text.replace(/([1-7])H/, "$1<span style=\"color:tomato\">&#9829;</span>");
-            text = text.replace(/([1-7])D/, "$1<span style=\"color:orange\">&#9830;</span>");
-            text = text.replace(/([1-7])C/, "$1<span style=\"color:DarkSlateGray\">&#9827;</span>");
-            text = text.replace(/([1-7])S/, "$1<span style=\"color:black\">&#9824;</span>");
-            return text;
-        },
+        textAuction: exTextAuction,
         replaceSuitSigns(ref) {
             let text = ref.innerHTML;
             text = text.replace(/!H/g, "<span style=\"color:tomato\">&#9829;</span>");
@@ -94,9 +58,9 @@ export default {
             this.Explanation[0] = bid;
             this.Explanation[2] = bid;
             if (this.Quest.correct === bid) {
-                this.explanationBidStyle(2);
+                this.explanationType = 2;
             } else {
-                this.explanationBidStyle(1);
+                this.explanationType = 1;
             }
             if (this.Quest.answers[bid] !== undefined) {
                 this.Explanation[1] = this.Quest.answers[bid];
@@ -106,23 +70,11 @@ export default {
                 this.Explanation[1] = "答案錯誤，請再試試看！";
             }
         },
-        explanationBidStyle(type) {
-            switch (type) {
-                case 0:
-                    this.explanationColor = '#e0fee0';
-                    break;
-                case 1:
-                    this.explanationColor = 'Gainsboro';
-                    break;
-                case 2:
-                    this.explanationColor = 'Moccasin';
-            }
-        },
         changeQuest() {
             this.Explanation[0] = "";
             this.Explanation[1] = "";
             this.Explanation[2] = "?";
-            this.explanationBidStyle(0);
+            this.explanationType = 0;
             this.Quest = this.allStories[this.selectedQuestType][this.selectedQuest-1];
             this.selectedLevel = undefined;
             // Set vulnerability
@@ -222,15 +174,53 @@ export default {
     },
     mounted() {
         this.changeQuest();
-        this.$root.$data.showBook = false;
         //document.documentElement.style.overflow = 'hidden';
     },
     unmounted() {
-        this.$root.$data.showBook = true;
         //document.documentElement.style.overflow = 'scroll';
     }
 }
 </script>
+
+<template id="storytemplate">
+    <header class="headergrid">
+        <div class="storyopt">
+            <router-link to="/">叫牌練習區</router-link>
+        </div>
+        <div class="storyopt" id="qtypeopt">
+            題庫：<select id="questlib" v-on:change="selectedQuest = 1; changeQuest();" v-model="selectedQuestType">
+                <option v-for="q in questType">{{ q }}</option></select>
+        </div>
+        <div class="storyopt">
+            題目：<select id="questno" v-on:change="changeQuest()" v-model="selectedQuest">
+                <option v-for="(q, index) in allStories[selectedQuestType]">{{ index+1 }}</option></select>
+        </div>
+        <div class="storyopt">
+            <button class="questset" v-bind:disabled="selectedQuest <= 1" v-on:click="selectedQuest--; changeQuest();">上一題</button>
+            <button class="questset" v-bind:disabled="selectedQuest >= allStories[selectedQuestType].length" v-on:click="selectedQuest++; changeQuest();">下一題</button>
+            <button class="questset" v-on:click="showExplanation(Quest.correct)">公布答案</button>
+        </div>
+        <div style="clear: left;"></div>
+    </header>
+    <div class="story-grid">
+        <div class="hand-box">
+            <span style="color:black">&#9824;</span> {{ Quest.spades }} 
+            <span style="color:tomato">&#9829;</span> {{ Quest.hearts }} 
+            <span style="color:orange">&#9830;</span> {{ Quest.diamonds }} 
+            <span style="color:DarkSlateGray">&#9827;</span> {{ Quest.clubs }} 
+        </div>
+        <div class="auctiongrid">
+            <auction-box v-model:board_num="Quest.board_num" v-model:auction="Quest.auction" v-model:lastBid="Explanation[2]" v-model:colorLastBid="explanationColor"/>
+        </div>
+        <div>
+            <bidding-box v-bind:onClick="showExplanation" v-bind:showOnClick="textAuction" v-model:selectedLevel="selectedLevel" v-model:showDouble="showdouble" v-model:showReDouble="showredouble" v-model:maxHiddenBid="maxhiddenbid" ref="bbox"/>
+        </div>
+        <div id="explanation">
+            <h3 ><span v-html="textAuction(Explanation[0])"></span></h3>
+            <p>{{ Explanation[1] }}</p>
+        </div>
+    </div>
+</template>
 
 <style scoped>
 #storytemplate {
@@ -288,10 +278,6 @@ export default {
 #explanation > p {
     font-size: 20px;
 }
-.answer-grid {
-    display: grid;
-    grid-template-columns: 16% 14% 14% 14% 14% 14% 14%;
-}
 button {
     font-size: medium;
     margin: 2px;
@@ -314,34 +300,6 @@ header {
     font-weight: bold;
     padding: 5px 20px;
     background-color: green;
-}
-
-.auction_tip {
-    position: relative;
-    display: inline-block;
-    border-radius: 3px;
-    border-style: solid;
-    border-width: 3px;
-    border-color: #e0fee0;
-    margin: 2px
-}
-
-.auction_tip .auction_tip_text {
-    visibility: hidden;
-    width: max-content;
-    max-width: 400px;
-    top: 70%;
-    background-color: khaki;
-    color: black;
-    text-align: left;
-    padding: 5px 5px;
-    border-radius: 6px;
-    position: absolute;
-    z-index: 1;
-}
-
-.auction_tip:hover .auction_tip_text {
-    visibility: visible;
 }
 
 @media (max-width: 900px) {
