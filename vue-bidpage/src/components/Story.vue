@@ -4,11 +4,11 @@
             <router-link to="/">叫牌練習區</router-link>
         </div>
         <div class="storyopt" id="qtypeopt">
-            題庫：<select v-on:change="selectedQuest = 1; changeQuest();" v-model="selectedQuestType">
+            題庫：<select id="questlib" v-on:change="selectedQuest = 1; changeQuest();" v-model="selectedQuestType">
                 <option v-for="q in questType">{{ q }}</option></select>
         </div>
         <div class="storyopt">
-            題目：<select v-on:change="changeQuest()" v-model="selectedQuest">
+            題目：<select id="questno" v-on:change="changeQuest()" v-model="selectedQuest">
                 <option v-for="(q, index) in allStories[selectedQuestType]">{{ index+1 }}</option></select>
         </div>
         <div class="storyopt">
