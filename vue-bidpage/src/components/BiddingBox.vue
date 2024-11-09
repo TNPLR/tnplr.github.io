@@ -91,7 +91,7 @@ watch (maxHiddenBid, (newbid) => {
 <style scoped>
 .answer-grid {
     display: grid;
-    grid-template-columns: 16% 14% 14% 14% 14% 14% 14%;
+    grid-template-columns: 15% 14% 14% 14% 14% 14% 15%;
 }
 button {
     font-size: medium;
