@@ -39,20 +39,7 @@
             </div>
         </div>
         <div>
-            <div class="answer-grid">
-                <button v-on:click="showExplanation('Pass')" v-bind:disabled="!bidbutton[0].display" style="grid-column: span 3;">Pass</button>
-                <button v-for="bid in bidbutton.slice(1, 3)" :key="bid.name" v-on:click="showExplanation(bid.name)" v-bind:style="{visibility: bid.display ? 'visible' : 'hidden'}" style="grid-column: span 2;"><span v-html="textAuction(bid.name)"></span></button>
-
-                <button v-for="number in 7" v-bind:style="{visibility: minLevel <= number ? 'visible' : 'hidden'}" v-on:click="selectedLevel = number">{{ number }}</button>
-
-                <button v-for="bid in bidbutton.slice(3, 8)" :key="bid.name"  v-on:click="showExplanation(bid.name)" v-show="selectedLevel === 1" v-bind:style="{visibility: bid.display ? 'visible' : 'hidden'}"><span v-html="textAuction(bid.name)"></span></button>
-                <button v-for="bid in bidbutton.slice(8, 13)" :key="bid.name"  v-on:click="showExplanation(bid.name)" v-show="selectedLevel === 2" v-bind:style="{visibility: bid.display ? 'visible' : 'hidden'}"><span v-html="textAuction(bid.name)"></span></button>
-                <button v-for="bid in bidbutton.slice(13, 18)" :key="bid.name"  v-on:click="showExplanation(bid.name)" v-show="selectedLevel === 3" v-bind:style="{visibility: bid.display ? 'visible' : 'hidden'}"><span v-html="textAuction(bid.name)"></span></button>
-                <button v-for="bid in bidbutton.slice(18, 23)" :key="bid.name"  v-on:click="showExplanation(bid.name)" v-show="selectedLevel === 4" v-bind:style="{visibility: bid.display ? 'visible' : 'hidden'}"><span v-html="textAuction(bid.name)"></span></button>
-                <button v-for="bid in bidbutton.slice(23, 28)" :key="bid.name"  v-on:click="showExplanation(bid.name)" v-show="selectedLevel === 5" v-bind:style="{visibility: bid.display ? 'visible' : 'hidden'}"><span v-html="textAuction(bid.name)"></span></button>
-                <button v-for="bid in bidbutton.slice(28, 33)" :key="bid.name"  v-on:click="showExplanation(bid.name)" v-show="selectedLevel === 6" v-bind:style="{visibility: bid.display ? 'visible' : 'hidden'}"><span v-html="textAuction(bid.name)"></span></button>
-                <button v-for="bid in bidbutton.slice(33, 38)" :key="bid.name"  v-on:click="showExplanation(bid.name)" v-show="selectedLevel === 7" v-bind:style="{visibility: bid.display ? 'visible' : 'hidden'}"><span v-html="textAuction(bid.name)"></span></button>
-            </div>
+            <bidding-box v-bind:onClick="showExplanation" v-bind:showOnClick="textAuction" v-model:selectedLevel="selectedLevel" v-model:showDouble="showdouble" v-model:showReDouble="showredouble" v-model:maxHiddenBid="maxhiddenbid" ref="bbox"/>
         </div>
         <div id="explanation">
             <h3 ><span v-html="textAuction(Explanation[0])"></span></h3>
@@ -62,6 +49,7 @@
 </template>
 
 <script>
+import BiddingBox from "./BiddingBox.vue";
 import quest from "./quest.json"
 export default {
     data() {
@@ -69,46 +57,9 @@ export default {
             // Quest is an object of question
             Quest: {},
             Explanation: ["", "", "?"],
-            bidbutton: [
-                {name: "Pass", display: true},
-                {name: "X", display: true},
-                {name: "XX", display: true},
-                {name: "1C", display: true},
-                {name: "1D", display: true},
-                {name: "1H", display: true},
-                {name: "1S", display: true},
-                {name: "1NT", display: true},
-                {name: "2C", display: true},
-                {name: "2D", display: true},
-                {name: "2H", display: true},
-                {name: "2S", display: true},
-                {name: "2NT", display: true},
-                {name: "3C", display: true},
-                {name: "3D", display: true},
-                {name: "3H", display: true},
-                {name: "3S", display: true},
-                {name: "3NT", display: true},
-                {name: "4C", display: true},
-                {name: "4D", display: true},
-                {name: "4H", display: true},
-                {name: "4S", display: true},
-                {name: "4NT", display: true},
-                {name: "5C", display: true},
-                {name: "5D", display: true},
-                {name: "5H", display: true},
-                {name: "5S", display: true},
-                {name: "5NT", display: true},
-                {name: "6C", display: true},
-                {name: "6D", display: true},
-                {name: "6H", display: true},
-                {name: "6S", display: true},
-                {name: "6NT", display: true},
-                {name: "7C", display: true},
-                {name: "7D", display: true},
-                {name: "7H", display: true},
-                {name: "7S", display: true},
-                {name: "7NT", display: true},
-            ],
+            showdouble: false,
+            showredouble: false,
+            maxhiddenbid: '',
             seatHeader: [
                 {name: "North", vulnerable: true},
                 {name: "East", vulnerable: false},
@@ -116,7 +67,6 @@ export default {
                 {name: "West", vulnerable: false},
             ],
             selectedLevel: undefined,
-            minLevel: 1,
             selectedQuestType: '開叫',
             selectedQuest: 1,
             explanationColor: 'white',
@@ -221,10 +171,9 @@ export default {
         },
         lockBidButton(auction) {
             if (auction === undefined || auction.length == 0) {
-                this.minLevel = 1;
-                this.bidbutton[1].display = false;
-                this.bidbutton[2].display = false;
-                this.bidbutton.slice(3).forEach(bid => {bid.display = true;});
+                this.maxhiddenbid = '';
+                this.showdouble = false;
+                this.showredouble = false;
                 return;
             }
             let tmp_auction = auction.slice().reverse();
@@ -252,27 +201,22 @@ export default {
                 break;
             }
             if (maxbid === undefined) {
-                this.minLevel = 1;
-                this.bidbutton[1].display = false;
-                this.bidbutton[2].display = false;
-                this.bidbutton.slice(3).forEach(bid => {bid.display = true;});
+                this.maxhiddenbid = '';
+                this.showdouble = false;
+                this.showredouble.display = false;
                 return;
             }
-            let index = this.bidbutton.findIndex((bid) => {return bid.name == maxbid;});
-            this.bidbutton.slice(3, index + 1).forEach((b) => {b.display = false});
-            this.bidbutton.slice(index + 1).forEach(bid => {bid.display = true;});
-
-            this.minLevel = Math.floor((index - 2) / 5) + 1; // hide unneeded level
+            this.maxhiddenbid = maxbid;
 
             if ((doubled & 1) === 1 && redoubled === 0) {
-                this.bidbutton[1].display = false;
-                this.bidbutton[2].display = true;
+                this.showdouble = false;
+                this.showredouble = true;
             } else if ((maxbid_i & 1) === 1 && doubled === 0) {
-                this.bidbutton[1].display = true;
-                this.bidbutton[2].display = false;
+                this.showdouble = true;
+                this.showredouble = false;
             } else {
-                this.bidbutton[1].display = false;
-                this.bidbutton[2].display = false;
+                this.showdouble = false;
+                this.showredouble = false;
             }
         }
     },

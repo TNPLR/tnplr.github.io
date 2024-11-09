@@ -17,7 +17,11 @@ import balMinor from './components/balMinor.vue'
 
 import Cmbc from './components/cmbc.vue'
 
+
+import BiddingBox from './components/BiddingBox.vue';
 import Story from './components/Story.vue';
+
+import QuestGen from './components/QuestGen.vue';
 
 const router = createRouter({
     history: createWebHistory(),
@@ -31,6 +35,7 @@ const router = createRouter({
         { path: '/natural', component: Natural},
         { path: '/cmbc', component: Cmbc, meta: {title: 'CMBC 自然制'}},
         { path: '/Story', component: Story, meta: {title: '叫牌練習'}},
+        { path: '/questgen', component: QuestGen, meta: {title: '叫牌題目生成'}},
         { path: '/:pathMatch(.*)*', redirect: '/'},
     ]
 });
@@ -43,9 +48,10 @@ router.beforeEach((to) => {
     document.title = title || defaultTitle
 });
 
-const app = createApp(App)
-app.use(router)
-app.component('natural-major', NaturalMajor)
-app.component('bal-minor', balMinor)
+const app = createApp(App);
+app.use(router);
+app.component('natural-major', NaturalMajor);
+app.component('bal-minor', balMinor);
+app.component('bidding-box', BiddingBox);
 
-app.mount('#app')
+app.mount('#app');
