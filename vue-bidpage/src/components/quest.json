@@ -2656,6 +2656,76 @@
       "correct": "2H",
       "answers": {},
       "board_num": 1
+    },
+    {
+      "spades": "J2",
+      "hearts": "KT97",
+      "diamonds": "A82",
+      "clubs": "Q985",
+      "auction": [
+        {
+          "name": "1NT",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "P",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "2C",
+          "explanation": "",
+          "alert": true
+        },
+        {
+          "name": "P",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "2H",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "P",
+          "explanation": "",
+          "alert": false
+        }
+      ],
+      "answers": {
+        "4H": "正確。有對到4-4高花，且有成局點力",
+        "3H": "錯誤。這個叫品是邀請成局，而這副牌力量更強",
+        "3NT": "錯誤。這代表四張黑桃"
+      },
+      "correct": "Pass",
+      "board_num": 1
+    },
+    {
+      "spades": "QT82",
+      "hearts": "54",
+      "diamonds": "J42",
+      "clubs": "AT95",
+      "auction": [
+        {
+          "name": "1NT",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "P",
+          "explanation": "",
+          "alert": false
+        }
+      ],
+      "answers": {
+        "Pass": "正確。7個點，沒有5張高花，就Pass",
+        "2C": "錯誤。這個叫品原則上要8-9個點以上",
+        "2NT": "錯誤。這個叫品要8-9點，沒有4張高花"
+      },
+      "correct": "Pass",
+      "board_num": 1
     }
   ],
   "2NT開叫的答叫": [
