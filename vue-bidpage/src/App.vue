@@ -1,45 +1,18 @@
-<template>
-  <header v-show="showBook">
-    <h1 class="topic"><router-link to="/">{{ topic }}</router-link></h1>
-  </header>
-  <button id="topbutton" v-on:click="goToTop" v-show="topbuttonshow"><img style="width: 28px;" src="/arrow_upward.svg" alt="up arrow"></button>
-  <div v-show="showBook">
-        <ul id="horizontal-nav">
-            <li class="dropdown">
-                <a href="javascript:void(0)" class="dropbtn">Relay制度</a>
-                <div class="dropdown-content">
-                    <router-link to="/relay">未受競叫叫牌</router-link>
-                    <router-link to="/interference">競叫</router-link>
-                    <router-link to="/defense">防禦叫牌</router-link>
-                    <router-link to="/signal">防禦信號</router-link>
-                </div>
-            </li>
-            <li><router-link to="/natural">自然制</router-link></li>
-            <li><router-link to="/cmbc">CMBC 自然制</router-link></li>
-            <li><router-link to="/story">練習區</router-link></li>
-        </ul>
-    </div>
-  <section>
-    <nav v-show="showBook">
-      <div>
-        <ul ref="tocList"></ul>
-      </div>
-    </nav>
-    <router-view></router-view>
-  </section>
-  <footer v-show="showBook">
-    僅供非商業橋牌教學使用。2024年製作。
-  </footer>
-</template>
-
 <script>
+import { computed } from 'vue';
+import { useRouter } from 'vue-router';
+
 export default {
   data() {
     return {
-      showBook: true,
       topbuttonshow: false,
       topic: "Röle Sistemi"
     };
+  },
+  computed: {
+    showBook() {
+      return this.$route.name !== 'story' && this.$route.name !== "questgen";
+    }
   },
   created () {
     window.addEventListener('scroll', this.scrollCheck)
@@ -92,5 +65,41 @@ export default {
   }
 }
 </script>
+
+<template>
+  <header v-show="showBook">
+    <h1 class="topic"><router-link to="/">{{ topic }}</router-link></h1>
+  </header>
+  <button id="topbutton" v-on:click="goToTop" v-show="topbuttonshow"><img style="width: 28px;" src="/arrow_upward.svg" alt="up arrow"></button>
+  <div v-show="showBook">
+        <ul id="horizontal-nav">
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Relay制度</a>
+                <div class="dropdown-content">
+                    <router-link to="/relay">未受競叫叫牌</router-link>
+                    <router-link to="/interference">競叫</router-link>
+                    <router-link to="/defense">防禦叫牌</router-link>
+                    <router-link to="/signal">防禦信號</router-link>
+                </div>
+            </li>
+            <li><router-link to="/natural">自然制</router-link></li>
+            <li><router-link to="/cmbc">CMBC 自然制</router-link></li>
+            <li><router-link to="/story">練習區</router-link></li>
+        </ul>
+    </div>
+  <section>
+    <nav v-show="showBook">
+      <div>
+        <ul ref="tocList"></ul>
+      </div>
+    </nav>
+    <router-view></router-view>
+  </section>
+  <footer v-show="showBook">
+    僅供非商業橋牌教學使用。2024年製作。
+  </footer>
+</template>
+
+
 <style>
 </style>

@@ -1,4 +1,12 @@
+<script setup>
+import { getCurrentInstance, onMounted } from "vue";
+import BiddingBox from "./BiddingBox.vue";
+</script>
+
 <template>
+    <header>
+        <h1 class="topic">QuestGen</h1>
+    </header>
     <form>
         <label for="spades"><span style="color:black">&#9824;</span></label>
         <input type="text" id="spades" name="spades">
