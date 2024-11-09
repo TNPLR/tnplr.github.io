@@ -1,5 +1,6 @@
 import { createApp } from 'vue'
 import { createRouter, createWebHistory } from 'vue-router'
+import VueCookies from 'vue-cookies'
 
 import "./assets/main.css";
 
@@ -48,6 +49,7 @@ router.beforeEach((to) => {
 
 const app = createApp(App);
 app.use(router);
+app.config.globalProperties.$cookies = VueCookies;
 app.component('natural-major', NaturalMajor);
 app.component('bal-minor', balMinor);
 app.mount('#app');
