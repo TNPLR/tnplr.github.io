@@ -9,16 +9,8 @@ export default {
             // Quest is an object of question
             Quest: {},
             Explanation: ["", "", "?"],
-            showdouble: false,
-            showredouble: false,
             showBookLocal: this.showBook,
             maxhiddenbid: '',
-            seatHeader: [
-                {name: "North", vulnerable: true},
-                {name: "East", vulnerable: false},
-                {name: "South", vulnerable: false},
-                {name: "West", vulnerable: false},
-            ],
             selectedLevel: undefined,
             selectedQuestType: '開叫',
             selectedQuest: 1,
@@ -77,102 +69,17 @@ export default {
             this.explanationType = 0;
             this.Quest = this.allStories[this.selectedQuestType][this.selectedQuest-1];
             this.selectedLevel = undefined;
-            // Set vulnerability
-            let cn = (this.Quest.board_num - 1) & 0xF;
-            switch (cn) {
-                case 0:
-                case 7:
-                case 10:
-                case 13:
-                    this.seatHeader[0].vulnerable = false;
-                    this.seatHeader[1].vulnerable = false;
-                    this.seatHeader[2].vulnerable = false;
-                    this.seatHeader[3].vulnerable = false;
-                    break;
-                case 1:
-                case 4:
-                case 11:
-                case 14:
-                    this.seatHeader[0].vulnerable = true;
-                    this.seatHeader[1].vulnerable = false;
-                    this.seatHeader[2].vulnerable = true;
-                    this.seatHeader[3].vulnerable = false;
-                    break;
-                case 2:
-                case 5:
-                case 8:
-                case 15:
-                    this.seatHeader[0].vulnerable = false;
-                    this.seatHeader[1].vulnerable = true;
-                    this.seatHeader[2].vulnerable = false;
-                    this.seatHeader[3].vulnerable = true;
-                    break;
-                case 3:
-                case 6:
-                case 9:
-                case 12:
-                    this.seatHeader[0].vulnerable = true;
-                    this.seatHeader[1].vulnerable = true;
-                    this.seatHeader[2].vulnerable = true;
-                    this.seatHeader[3].vulnerable = true;
-                    break;
-            }
-            
-            // Print correct bidding choices (by bridge rules)
-            this.lockBidButton(this.Quest.auction)
-        },
-        lockBidButton(auction) {
-            if (auction === undefined || auction.length == 0) {
-                this.maxhiddenbid = '';
-                this.showdouble = false;
-                this.showredouble = false;
-                return;
-            }
-            let tmp_auction = auction.slice().reverse();
-            // 1 is the previous bidder
-            let doubled = 0;
-            let redoubled = 0;
-            let maxbid_i = undefined;
-
-            let maxbid = undefined; 
-
-            for (let i = 0; i < tmp_auction.length; i++) {
-                if (tmp_auction[i].name == "P") {
-                    continue;
-                }
-                if (tmp_auction[i].name == "X") {
-                    doubled = i + 1;
-                    continue;
-                }
-                if (tmp_auction[i].name == "XX") {
-                    redoubled = i + 1;
-                    continue
-                }
-                maxbid = tmp_auction[i].name;
-                maxbid_i = i + 1;
-                break;
-            }
-            if (maxbid === undefined) {
-                this.maxhiddenbid = '';
-                this.showdouble = false;
-                this.showredouble.display = false;
-                return;
-            }
-            this.maxhiddenbid = maxbid;
-
-            if ((doubled & 1) === 1 && redoubled === 0) {
-                this.showdouble = false;
-                this.showredouble = true;
-            } else if ((maxbid_i & 1) === 1 && doubled === 0) {
-                this.showdouble = true;
-                this.showredouble = false;
-            } else {
-                this.showdouble = false;
-                this.showredouble = false;
-            }
+            this.$cookies.set("questtype", encodeURI(this.selectedQuestType), "7d");
+            this.$cookies.set("questnumber", this.selectedQuest, "7d");
         }
     },
     mounted() {
+        if (this.$cookies.isKey("questtype")) {
+            this.selectedQuestType = decodeURI(this.$cookies.get("questtype"))
+        }
+        if (this.$cookies.isKey("questnumber")) {
+            this.selectedQuest = this.$cookies.get("questnumber");
+        }
         this.changeQuest();
         //document.documentElement.style.overflow = 'hidden';
     },

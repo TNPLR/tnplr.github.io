@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "vue": "^3.4.29",
+    "vue-cookies": "^1.8.4",
     "vue-router": "^4.4.2"
   },
   "devDependencies": {
