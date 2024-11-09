@@ -62,7 +62,7 @@ export default {
             } else {
                 this.explanationType = 1;
             }
-            if (this.Quest.answers[bid] !== undefined) {
+            if (this.Quest.answers[bid] !== undefined && this.Quest.answers[bid] !== "") {
                 this.Explanation[1] = this.Quest.answers[bid];
             } else if (this.Quest.correct === bid) {
                 this.Explanation[1] = "答案正確！";
