@@ -4938,6 +4938,49 @@
         "Pass": "錯誤。這是迫叫，不能Pass"
       },
       "board_num": 1
+    },
+    {
+      "spades": "KJ986",
+      "hearts": "KT3",
+      "diamonds": "J952",
+      "clubs": "6",
+      "auction": [
+        {
+          "name": "1C",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "P",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "1S",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "P",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "1NT",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "P",
+          "explanation": "",
+          "alert": false
+        }
+      ],
+      "answers": {
+        "2S": ""
+      },
+      "correct": "2S",
+      "board_num": 1
     }
   ]
 }
