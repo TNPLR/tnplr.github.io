@@ -3958,6 +3958,40 @@
         "2H": "錯誤。這個叫品是非平均牌的叫法"
       },
       "board_num": 1
+    },
+    {
+      "spades": "AK87",
+      "hearts": "K76",
+      "diamonds": "J4",
+      "clubs": "J987",
+      "auction": [
+        {
+          "name": "1C",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "P",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "1S",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "P",
+          "explanation": "",
+          "alert": false
+        }
+      ],
+      "answers": {
+        "2S": "正確，四張高花要支持",
+        "1NT": "錯誤。要優先支持同伴高花"
+      },
+      "correct": "2S",
+      "board_num": 1
     }
   ],
   "迫叫1NT後續": [
