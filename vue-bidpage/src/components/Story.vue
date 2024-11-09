@@ -213,7 +213,7 @@ export default {
             <auction-box v-model:board_num="Quest.board_num" v-model:auction="Quest.auction" v-model:lastBid="Explanation[2]" v-model:colorLastBid="explanationColor"/>
         </div>
         <div>
-            <bidding-box v-bind:onClick="showExplanation" v-bind:showOnClick="textAuction" v-model:selectedLevel="selectedLevel" v-model:showDouble="showdouble" v-model:showReDouble="showredouble" v-model:maxHiddenBid="maxhiddenbid" ref="bbox"/>
+            <bidding-box v-bind:onClick="showExplanation" v-bind:showOnClick="textAuction" v-model:selectedLevel="selectedLevel" v-model:auction="Quest.auction" ref="bbox"/>
         </div>
         <div id="explanation">
             <h3 ><span v-html="textAuction(Explanation[0])"></span></h3>
