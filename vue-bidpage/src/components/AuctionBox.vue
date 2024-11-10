@@ -1,6 +1,7 @@
 <script setup>
 import { computed } from 'vue';
 import textAuction from './textAuction.js';
+import suitSign from './suitSign.js';
 
 const board_num = defineModel('board_num', {default: 1});
 const auction = defineModel('auction', {default: []});
@@ -63,7 +64,7 @@ const seatHeader = computed(() => {
         <div v-for="x in (board_num - 1) & 3"></div>
         <div class="auction_tip" v-bind:style="{backgroundColor: bid.explanation === '' ? '#e0fee0' : 'WhiteSmoke', borderColor: bid.alert ? 'red' : '#e0fee0'}" v-for="(bid, index) in auction" :key="index">
             <span v-html="textAuction(bid.name)">
-            </span><span v-if="bid.explanation !== ''" class="auction_tip_text">{{ bid.explanation }}</span>
+            </span><span v-if="bid.explanation !== ''" class="auction_tip_text" v-html="suitSign(bid.explanation)"></span>
         </div>
         <div class="auction_tip" v-bind:style="{ 'background-color': colorLastBid }">
             <span v-html="textAuction(lastBid)"></span>
@@ -104,7 +105,7 @@ const seatHeader = computed(() => {
     width: max-content;
     max-width: 400px;
     top: 70%;
-    background-color: khaki;
+    background-color: lemonchiffon;
     color: black;
     text-align: left;
     padding: 5px 5px;
