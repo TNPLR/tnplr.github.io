@@ -1,8 +1,9 @@
 <script>
 import BiddingBox from "./BiddingBox.vue";
-import quest from "./quest.json"
+import quest from "../json/quest.json"
 import exTextAuction from "./textAuction.js";
 import AuctionBox from "./AuctionBox.vue";
+import suitSign from "./suitSign";
 export default {
     data() {
         return {
@@ -15,7 +16,6 @@ export default {
             selectedQuestType: '開叫',
             selectedQuest: 1,
             explanationType: 0,
-            questType: ['開叫', '低花開叫的答叫', '高花開叫的答叫', '1NT開叫的答叫','2NT開叫的答叫', '低花開叫的再叫', '迫叫1NT後續','其他'],
             allStories: quest,
         };
     },
@@ -56,6 +56,7 @@ export default {
             }
             if (this.Quest.answers[bid] !== undefined && this.Quest.answers[bid] !== "") {
                 this.Explanation[1] = this.Quest.answers[bid];
+                this.Explanation[1] = suitSign(this.Explanation[1]);
             } else if (this.Quest.correct === bid) {
                 this.Explanation[1] = "答案正確！";
             } else {
@@ -96,7 +97,7 @@ export default {
         </div>
         <div class="storyopt" id="qtypeopt">
             題庫：<select id="questlib" v-on:change="selectedQuest = 1; changeQuest();" v-model="selectedQuestType">
-                <option v-for="q in questType">{{ q }}</option></select>
+                <option v-for="(x, key) in allStories">{{ key }}</option></select>
         </div>
         <div class="storyopt">
             題目：<select id="questno" v-on:change="changeQuest()" v-model="selectedQuest">
@@ -124,7 +125,7 @@ export default {
         </div>
         <div id="explanation">
             <h3 ><span v-html="textAuction(Explanation[0])"></span></h3>
-            <p>{{ Explanation[1] }}</p>
+            <p v-html="Explanation[1]"></p>
         </div>
     </div>
 </template>

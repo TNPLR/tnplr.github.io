@@ -1447,6 +1447,129 @@
       "correct": "1S",
       "answers": {},
       "board_num": 1
+    },
+    {
+      "spades": "KQ84",
+      "hearts": "T",
+      "diamonds": "T92",
+      "clubs": "AJT62",
+      "auction": [
+        {
+          "name": "1C",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "1H",
+          "explanation": "",
+          "alert": false
+        }
+      ],
+      "answers": {
+        "X": "正確。Negative Double，表示4張!S，6點以上",
+        "1S": "錯誤。1!S表示五張黑桃",
+        "2C": "錯誤。應優先表示高花"
+      },
+      "correct": "X",
+      "board_num": 1
+    },
+    {
+      "spades": "AK32",
+      "hearts": "Q632",
+      "diamonds": "95",
+      "clubs": "976",
+      "auction": [
+        {
+          "name": "1C",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "1D",
+          "explanation": "",
+          "alert": false
+        }
+      ],
+      "answers": {
+        "X": "正確。表示4-4以上的高花",
+        "1H": "錯誤。有更好的叫品",
+        "1S": "錯誤。有更好的叫品"
+      },
+      "correct": "X",
+      "board_num": 1
+    },
+    {
+      "spades": "AK32",
+      "hearts": "Q632",
+      "diamonds": "95",
+      "clubs": "976",
+      "auction": [
+        {
+          "name": "1C",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "1H",
+          "explanation": "",
+          "alert": false
+        }
+      ],
+      "answers": {
+        "X": "正確。表示4張黑桃",
+        "1S": "錯誤，這個叫品要有5張以上黑桃",
+        "1NT": "錯誤。有4張以上的黑桃要優先表示"
+      },
+      "correct": "X",
+      "board_num": 1
+    },
+    {
+      "spades": "A732",
+      "hearts": "KQ62",
+      "diamonds": "95",
+      "clubs": "976",
+      "auction": [
+        {
+          "name": "1C",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "1S",
+          "explanation": "",
+          "alert": false
+        }
+      ],
+      "answers": {
+        "X": "正確。Negative Double表示8點以上，4張以上紅心",
+        "2H": "錯誤。這表示5張以上紅心，10點以上"
+      },
+      "correct": "X",
+      "board_num": 1
+    },
+    {
+      "spades": "732",
+      "hearts": "AK974",
+      "diamonds": "63",
+      "clubs": "Q93",
+      "auction": [
+        {
+          "name": "1C",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "1S",
+          "explanation": "",
+          "alert": false
+        }
+      ],
+      "answers": {
+        "X": "正確。雖然有5張紅心，但2!H要10點以上才能叫，因此使用Negative Double",
+        "2H": "錯誤。這要10點以上才能叫"
+      },
+      "correct": "X",
+      "board_num": 1
     }
   ],
   "高花開叫的答叫": [
@@ -2725,6 +2848,30 @@
         "2NT": "錯誤。這個叫品要8-9點，沒有4張高花"
       },
       "correct": "Pass",
+      "board_num": 1
+    },
+    {
+      "spades": "A954",
+      "hearts": "Q93",
+      "diamonds": "K52",
+      "clubs": "K84",
+      "auction": [
+        {
+          "name": "1NT",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "P",
+          "explanation": "",
+          "alert": false
+        }
+      ],
+      "answers": {
+        "3NT": "",
+        "2C": "錯誤。4333的牌型，沒有王吃價值，不需要對高花"
+      },
+      "correct": "3NT",
       "board_num": 1
     }
   ],
@@ -4062,6 +4209,642 @@
       },
       "correct": "2S",
       "board_num": 1
+    },
+    {
+      "spades": "K86",
+      "hearts": "AK62",
+      "diamonds": "K875",
+      "clubs": "53",
+      "auction": [
+        {
+          "name": "1D",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "P",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "1S",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "P",
+          "explanation": "",
+          "alert": false
+        }
+      ],
+      "answers": {
+        "1NT": ""
+      },
+      "correct": "2NT",
+      "board_num": 1
+    },
+    {
+      "spades": "AK6",
+      "hearts": "J52",
+      "diamonds": "K864",
+      "clubs": "Q32",
+      "auction": [
+        {
+          "name": "1D",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "P",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "1S",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "P",
+          "explanation": "",
+          "alert": false
+        }
+      ],
+      "answers": {
+        "1NT": ""
+      },
+      "correct": "2NT",
+      "board_num": 1
+    },
+    {
+      "spades": "3",
+      "hearts": "AK52",
+      "diamonds": "AJ642",
+      "clubs": "654",
+      "auction": [
+        {
+          "name": "1D",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "P",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "1S",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "P",
+          "explanation": "",
+          "alert": false
+        }
+      ],
+      "answers": {
+        "2D": "正確。雖然只有5張!D，但不能叫2!H（倒叫要16點）",
+        "2H": "錯誤。這是倒叫，要16點以上",
+        "1NT": "事實上沒有錯很多，算是一種約定上的問題。因為這不是平均牌型"
+      },
+      "correct": "2NT",
+      "board_num": 1
+    },
+    {
+      "spades": "K4",
+      "hearts": "AQ3",
+      "diamonds": "AKJ9762",
+      "clubs": "6",
+      "auction": [
+        {
+          "name": "1D",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "P",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "1S",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "P",
+          "explanation": "",
+          "alert": false
+        }
+      ],
+      "answers": {
+        "3D": "正確。16-18，6張以上!D，沒有黑桃支持",
+        "2D": "錯誤，這是12-15點"
+      },
+      "correct": "2NT",
+      "board_num": 1
+    },
+    {
+      "spades": "K3",
+      "hearts": "KJ52",
+      "diamonds": "AK53",
+      "clubs": "KQ8",
+      "auction": [
+        {
+          "name": "1D",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "P",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "1S",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "P",
+          "explanation": "",
+          "alert": false
+        }
+      ],
+      "answers": {
+        "2NT": ""
+      },
+      "correct": "2NT",
+      "board_num": 1
+    }
+  ],
+  "1X-1Y-1Z": [
+    {
+      "spades": "KJ986",
+      "hearts": "KT3",
+      "diamonds": "J952",
+      "clubs": "6",
+      "auction": [
+        {
+          "name": "1C",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "P",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "1S",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "P",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "1NT",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "P",
+          "explanation": "",
+          "alert": false
+        }
+      ],
+      "answers": {
+        "2S": "",
+        "Pass": "錯誤，同伴至少有兩張黑桃，很有機會有3張，所以叫2!S較好。"
+      },
+      "correct": "2S",
+      "board_num": 1
+    },
+    {
+      "spades": "AT985",
+      "hearts": "AJ83",
+      "diamonds": "Q84",
+      "clubs": "2",
+      "auction": [
+        {
+          "name": "1C",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "P",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "1S",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "P",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "1NT",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "P",
+          "explanation": "",
+          "alert": false
+        }
+      ],
+      "answers": {
+        "2C": "正確，邀請力量的特約叫品",
+        "Pass": "錯誤。手牌有邀請力量，不能Pass",
+        "2NT": "錯誤。在這個制度中，邀請要叫2!C，而2NT是轉3!C用的特約叫品",
+        "2S": "錯誤。這是低限五張以上黑桃，不迫叫。"
+      },
+      "correct": "2C",
+      "board_num": 1
+    },
+    {
+      "spades": "T864",
+      "hearts": "753",
+      "diamonds": "AKT96",
+      "clubs": "4",
+      "auction": [
+        {
+          "name": "1D",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "P",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "1S",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "P",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "1NT",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "P",
+          "explanation": "",
+          "alert": false
+        }
+      ],
+      "answers": {
+        "2C": "正確，強制同伴叫2!D，再Pass掉。",
+        "Pass": "錯誤。有更好的叫品"
+      },
+      "correct": "2C",
+      "board_num": 1
+    },
+    {
+      "spades": "AKJ64",
+      "hearts": "T8",
+      "diamonds": "T97",
+      "clubs": "KQ4",
+      "auction": [
+        {
+          "name": "1C",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "P",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "1S",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "P",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "1NT",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "P",
+          "explanation": "",
+          "alert": false
+        }
+      ],
+      "answers": {
+        "2D": "正確。迫叫成局，同伴有3張!S時會優先叫出",
+        "2C": "錯誤，這是邀請力量的特約（這副牌力量更強）",
+        "2S": "錯誤，這是5張以上的黑桃，不迫叫（這副牌的力量強很多）",
+        "3NT": "錯誤，應該要對5-3配合的高花"
+      },
+      "correct": "2C",
+      "board_num": 1
+    },
+    {
+      "spades": "6",
+      "hearts": "AQ864",
+      "diamonds": "Q98",
+      "clubs": "K987",
+      "auction": [
+        {
+          "name": "1C",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "P",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "1H",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "P",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "1NT",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "P",
+          "explanation": "",
+          "alert": false
+        }
+      ],
+      "answers": {
+        "2C": "正確，準備要邀請",
+        "2H": "錯誤，這個是不迫叫的叫品"
+      },
+      "correct": "2C",
+      "board_num": 1
+    },
+    {
+      "spades": "6",
+      "hearts": "AQ864",
+      "diamonds": "Q98",
+      "clubs": "K987",
+      "auction": [
+        {
+          "name": "1C",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "P",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "1H",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "P",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "1NT",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "P",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "2C",
+          "explanation": "INV, or !D S/O",
+          "alert": true
+        },
+        {
+          "name": "P",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "2D",
+          "explanation": "Forced",
+          "alert": true
+        },
+        {
+          "name": "P",
+          "explanation": "",
+          "alert": false
+        }
+      ],
+      "answers": {
+        "2H": "正確，5張!H，邀請力量，不迫叫"
+      },
+      "correct": "2H",
+      "board_num": 1
+    },
+    {
+      "spades": "Q82",
+      "hearts": "AJ876",
+      "diamonds": "K4",
+      "clubs": "J43",
+      "auction": [
+        {
+          "name": "1D",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "P",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "1H",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "P",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "1NT",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "P",
+          "explanation": "",
+          "alert": false
+        }
+      ],
+      "answers": {
+        "2C": "正確，準備邀請",
+        "2H": "錯誤。這是5張以上紅心，不迫叫"
+      },
+      "correct": "3C",
+      "board_num": 1
+    },
+    {
+      "spades": "QJT98",
+      "hearts": "643",
+      "diamonds": "A753",
+      "clubs": "9",
+      "auction": [
+        {
+          "name": "1D",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "P",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "1S",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "P",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "1NT",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "P",
+          "explanation": "",
+          "alert": false
+        }
+      ],
+      "answers": {
+        "2C": "正確。強迫同伴轉2!D，並Pass掉",
+        "2S": "錯誤。此處已經有保證對到的花色，應該打那個合約就好",
+        "Pass": "錯誤。有更好的叫品"
+      },
+      "correct": "3C",
+      "board_num": 1
+    },
+    {
+      "spades": "AT6",
+      "hearts": "AQ876",
+      "diamonds": "K83",
+      "clubs": "97",
+      "auction": [
+        {
+          "name": "1D",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "P",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "1S",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "P",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "1NT",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "P",
+          "explanation": "",
+          "alert": false
+        }
+      ],
+      "answers": {
+        "2D": "正確。迫叫成局，希望同伴叫出3張!H"
+      },
+      "correct": "3C",
+      "board_num": 1
+    },
+    {
+      "spades": "AKT9",
+      "hearts": "Q652",
+      "diamonds": "QJT9",
+      "clubs": "2",
+      "auction": [
+        {
+          "name": "1D",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "P",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "1H",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "P",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "1S",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "P",
+          "explanation": "",
+          "alert": false
+        }
+      ],
+      "answers": {
+        "3C": "正確。Splinter，4張黑桃支持，單張梅花，迫叫成局",
+        "2C": "錯誤。這個叫品是迫叫成局，但有更好的叫品可表示黑桃支持",
+        "2S": "錯誤，這個叫品是低限的黑桃配合",
+        "3S": "錯誤，這個叫品是邀請力量",
+        "4S": "錯誤。有更精準的叫品可以使用"
+      },
+      "correct": "3C",
+      "board_num": 1
     }
   ],
   "迫叫1NT後續": [
@@ -4786,6 +5569,73 @@
         "2H": "錯誤。這個保證6張以上紅心"
       },
       "board_num": 1
+    },
+    {
+      "spades": "AJ6",
+      "hearts": "Q98654",
+      "diamonds": "K9",
+      "clubs": "K4",
+      "auction": [
+        {
+          "name": "1H",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "P",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "1NT",
+          "explanation": "",
+          "alert": true
+        },
+        {
+          "name": "P",
+          "explanation": "",
+          "alert": false
+        }
+      ],
+      "answers": {
+        "2H": ""
+      },
+      "correct": "2C",
+      "board_num": 1
+    },
+    {
+      "spades": "K32",
+      "hearts": "AKQT8",
+      "diamonds": "64",
+      "clubs": "J86",
+      "auction": [
+        {
+          "name": "1H",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "P",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "1NT",
+          "explanation": "",
+          "alert": true
+        },
+        {
+          "name": "P",
+          "explanation": "",
+          "alert": false
+        }
+      ],
+      "answers": {
+        "2C": "",
+        "2H": "錯誤，要有六張!H才能叫2!H"
+      },
+      "correct": "2C",
+      "board_num": 1
     }
   ],
   "其他": [
@@ -4937,49 +5787,6 @@
         "3C": "正確。三線叫出短門（三短四長）",
         "Pass": "錯誤。這是迫叫，不能Pass"
       },
-      "board_num": 1
-    },
-    {
-      "spades": "KJ986",
-      "hearts": "KT3",
-      "diamonds": "J952",
-      "clubs": "6",
-      "auction": [
-        {
-          "name": "1C",
-          "explanation": "",
-          "alert": false
-        },
-        {
-          "name": "P",
-          "explanation": "",
-          "alert": false
-        },
-        {
-          "name": "1S",
-          "explanation": "",
-          "alert": false
-        },
-        {
-          "name": "P",
-          "explanation": "",
-          "alert": false
-        },
-        {
-          "name": "1NT",
-          "explanation": "",
-          "alert": false
-        },
-        {
-          "name": "P",
-          "explanation": "",
-          "alert": false
-        }
-      ],
-      "answers": {
-        "2S": ""
-      },
-      "correct": "2S",
       "board_num": 1
     }
   ]
