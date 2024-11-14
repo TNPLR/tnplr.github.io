@@ -1,0 +1,29 @@
+    {
+      "spades": "8",
+      "hearts": "73",
+      "diamonds": "KT973",
+      "clubs": "AJT52",
+      "auction": [{
+          "name": "",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "1S",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "P",
+          "explanation": "",
+          "alert": false
+        }],
+      "answers": {},
+      "correct": "1NT",
+      "board_num": 1
+    },

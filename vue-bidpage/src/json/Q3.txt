@@ -1,0 +1,29 @@
+    {
+      "spades": "T4",
+      "hearts": "AQ6",
+      "diamonds": "A7642",
+      "clubs": "732",
+      "auction": [{
+          "name": "",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "1C",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "P",
+          "explanation": "",
+          "alert": false
+        }],
+      "answers": {},
+      "correct": "1D",
+      "board_num": 1
+    },
