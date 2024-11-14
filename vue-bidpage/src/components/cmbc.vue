@@ -728,6 +728,84 @@
                 <p>原則上叫出一線花色是迫叫，叫出二線花色不迫叫。叫對手的花色是強牌或對於同伴花色的好支持。</p>
             </div>
         </div>
+        <div><h2>防禦信號簡介</h2>
+            <p>所謂防禦信號是在防禦的時候，透過出不同的牌張，來提示同伴，以使其作出更正確的判斷。可能會有個疑惑是：我在做這些的時候莊家也會看到。的確，但莊家本來就在視野上有優勢，因為他在牌力量上通常佔優，而且可以同時控制兩副牌；而防禦方處在不明的狀態，且同伴間不一定在同一個頻道上。因此，信號幫助防禦方通常比較大，尤其是在每一副牌的前幾墩。因此，我們將介紹一些基本的信號方式。</p>
+            <p>在許多時候（尤其是一副牌剛開始的時候）我認為防禦信號最適合初學者的是首攻（或稱首引，即防禦者第一次出牌），其次是基本的信號種類與基本的使用時機。</p>
+            <p>要注意：不要為了打信號而蒙受立即損失，（在技術好的時候）也要避免過度提供信號幫助莊家。</p>
+            <div><h3>首攻</h3>
+                <p>首攻首先要選擇首攻的花色，這不在這個段落的討論範圍。當選擇完首攻的花色以後，除非有特別的理由，不然可以照著下列的方法攻出牌張。</p>
+                <h4>王牌合約有A的時候一律都攻和A一樣大的牌！</h4>
+                <h4>其他</h4>
+                <table>
+                    <tr>
+                        <th>牌型</th>
+                        <th>攻牌指引</th>
+                        <th>範例（粗體即為首攻牌張）</th>
+                    </tr>
+                    <tr>
+                        <td rowspan="3">連續大牌（二或三張連續，且最大牌至少是J（有些人會接受最大牌是10））</td>
+                        <td rowspan="3">出最大牌</td>
+                        <td><span style="font-weight: bold;">A</span>Kxx</td>
+                    </tr>
+                    <tr>
+                        <td><span style="font-weight: bold;">K</span>Qxx</td>
+                    </tr>
+                    <tr>
+                        <td><span style="font-weight: bold;">Q</span>Jxx</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">內部連續（一張大牌，中間間隔若干張，接下來有個連續大牌（10以上））</td>
+                        <td rowspan="2">出第二大牌（內部連續的最大牌）</td>
+                        <td>K<span style="font-weight: bold;">J</span>10x</td>
+                    </tr>
+                    <tr>
+                        <td>Q<span style="font-weight: bold;">10</span>9x</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="3">至少一張大牌（J以上）帶頭的3張以上牌組</td>
+                        <td rowspan="3">第四大牌，或第三大牌（只有三張時）</td>
+                        <td>Kxx<span style="font-weight: bold;">x</span>x</td>
+                    </tr>
+                    <tr>
+                        <td>Qxx<span style="font-weight: bold;">x</span></td>
+                    </tr>
+                    <tr>
+                        <td>Kx<span style="font-weight: bold;">x</span></td>
+                    </tr>
+                    <tr>
+                        <td rowspan="3">兩張的牌組</td>
+                        <td rowspan="3">最大張</td>
+                        <td><span style="font-weight: bold;">Q</span>7</td>
+                    </tr>
+                    <tr>
+                        <td><span style="font-weight: bold;">7</span>4</td>
+                    </tr>
+                    <tr>
+                        <td><span style="font-weight: bold;">A</span>2</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="3">三張以上小牌</td>
+                        <td rowspan="3">第二大張的牌張</td>
+                        <td>7<span style="font-weight: bold;">5</span>4</td>
+                    </tr>
+                    <tr>
+                        <td>9<span style="font-weight: bold;">8</span>42</td>
+                    </tr>
+                    <tr>
+                        <td>9<span style="font-weight: bold;">8</span>642</td>
+                    </tr>
+                </table>
+                <div><h4>首攻完以後（進階）</h4>
+                    <p>當首攻結束以後，如果下一次有機會出這個花色，且沒有要吃到該墩（例如沒有一定要出大牌時），且「出信號不會虧時」，可以信號同伴。在第一次出大牌的時候，第二次出原本的第四大牌（如果剩下兩張時出比較大的一張牌）。在第一次出大排第四張時，如果原本有第五張牌，出原本的第五大牌。如果原本是三張小牌的時候，出最大牌；四張以上小牌時，出原本的第四大牌。</p>
+                </div>
+            </div>
+            <div><h3>態度信號（小歡迎）</h3>
+                <p>我們信號的第一優先是歡迎信號。口訣是：小歡迎。在同伴攻出一門王牌以外的花色時，可以打信號時，如果希望同伴待會繼續攻這門花色，則跟出可以最小牌；如果希望同伴「換一門」時，則跟出可以負擔的最大牌。</p>
+            </div>
+            <div><h4>墊牌轉換</h4>
+                <p>當自己無法跟出花色時，要選擇丟掉一張不重要的牌。此時如果有得選擇，可以提示同伴自己想要同伴攻哪個花色。此時，從不想要的花色中，丟掉一張牌，丟掉大牌代表比較希望同伴攻比較高的花色；丟掉小牌代表希望同伴攻比較低的花色。</p>
+            </div>
+        </div>
     </article>
 </template>
 <script>
