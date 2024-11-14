@@ -24,6 +24,6 @@
           "alert": false
         }],
       "answers": {},
-      "correct": "2&diamondsuit;",
+      "correct": "2D",
       "board_num": 1
     },

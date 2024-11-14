@@ -24,6 +24,6 @@
           "alert": false
         }],
       "answers": {},
-      "correct": "3&clubs;",
+      "correct": "3C",
       "board_num": 1
     },

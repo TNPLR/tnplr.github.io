@@ -24,6 +24,6 @@
           "alert": false
         }],
       "answers": {},
-      "correct": "4&spades;",
+      "correct": "4S",
       "board_num": 1
     },
