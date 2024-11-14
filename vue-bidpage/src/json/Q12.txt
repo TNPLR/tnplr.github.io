@@ -1,0 +1,29 @@
+    {
+      "spades": "K8",
+      "hearts": "Q8743",
+      "diamonds": "9764",
+      "clubs": "54",
+      "auction": [{
+          "name": "",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "1H",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "X",
+          "explanation": "",
+          "alert": false
+        }],
+      "answers": {},
+      "correct": "4&hearts;",
+      "board_num": 1
+    },
