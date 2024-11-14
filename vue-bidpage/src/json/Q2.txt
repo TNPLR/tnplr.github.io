@@ -24,6 +24,6 @@
           "alert": false
         }],
       "answers": {},
-      "correct": "1&hearts;",
+      "correct": "1H",
       "board_num": 1
     },

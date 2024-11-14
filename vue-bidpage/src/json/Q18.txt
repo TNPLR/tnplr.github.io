@@ -44,6 +44,6 @@
           "alert": false
         }],
       "answers": {},
-      "correct": "3&spades;",
+      "correct": "3S",
       "board_num": 1
     },
