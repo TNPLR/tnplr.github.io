@@ -1,0 +1,49 @@
+    {
+      "spades": "K984",
+      "hearts": "AQ97",
+      "diamonds": "A6",
+      "clubs": "KT4",
+      "auction": [{
+          "name": "",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "P",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "1NT",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "P",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "2C",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "P",
+          "explanation": "",
+          "alert": false
+        }],
+      "answers": {},
+      "correct": "2H",
+      "board_num": 1
+    },

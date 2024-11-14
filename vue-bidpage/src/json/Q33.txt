@@ -1,0 +1,49 @@
+    {
+      "spades": "AQ72",
+      "hearts": "T76",
+      "diamonds": "AKQ",
+      "clubs": "K97",
+      "auction": [{
+          "name": "",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "P",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "1C",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "P",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "1S",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "P",
+          "explanation": "",
+          "alert": false
+        }],
+      "answers": {},
+      "correct": "4S",
+      "board_num": 1
+    },

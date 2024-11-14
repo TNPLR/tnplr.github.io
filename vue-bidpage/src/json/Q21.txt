@@ -1,0 +1,29 @@
+    {
+      "spades": "J",
+      "hearts": "QJT5",
+      "diamonds": "AK93",
+      "clubs": "KJ73",
+      "auction": [{
+          "name": "1D",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "P",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "1S",
+          "explanation": "",
+          "alert": false
+        },
+        {
+          "name": "P",
+          "explanation": "",
+          "alert": false
+        }],
+      "answers": {},
+      "correct": "2C",
+      "board_num": 1
+    },
