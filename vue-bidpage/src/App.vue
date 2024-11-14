@@ -38,23 +38,12 @@ export default {
         if (header.id === "") {
           header.id = `header-${index}`;
         }
-        if (header.id !== "") {
-          let upper = document.createElement('li');
-          const listItem = upper;
-          if (header.tagName === "H3" || header.tagName === "H4") {
-            const ulist = document.createElement('ul');
-            ulist.appendChild(upper);
-            upper = ulist;
-          }
-          if (header.tagName === "H4") {
-            const ulist = document.createElement('ul');
-            ulist.appendChild(upper);
-            upper = ulist;
-          }
-          listItem.innerHTML = `<a href="#${header.id}">${header.textContent}</a>`
-          tocList.appendChild(upper);
-        }
-      })
+        let listItem = document.createElement('a');
+        listItem.classList.add("toc" + header.tagName);
+        listItem.href = `#${header.id}`;
+        listItem.innerHTML = `${header.textContent}`
+        tocList.appendChild(listItem);
+      });
     },
   }
 }
