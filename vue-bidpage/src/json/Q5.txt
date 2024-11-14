@@ -1,0 +1,10 @@
+    {
+      "spades": "KQ",
+      "hearts": "873",
+      "diamonds": "AK5",
+      "clubs": "KQ752",
+      "auction": [],
+      "answers": {},
+      "correct": "1NT",
+      "board_num": 1
+    },
