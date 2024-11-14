@@ -1,4 +1,5 @@
 <script>
+import suitSign from './components/suitSign';
 export default {
   data() {
     return {
@@ -27,11 +28,7 @@ export default {
       }
     },
     replaceSuitSigns(ref) {
-      let text = ref.innerHTML;
-      text = text.replace(/!H/g, "<span style=\"color:tomato\">&#9829;</span>");
-      text = text.replace(/!D/g, "<span style=\"color:orange\">&#9830;</span>");
-      text = text.replace(/!C/g, "<span style=\"color:DarkSlateGray\">&#9827;</span>");
-      ref.innerHTML = text.replace(/!S/g, "<span style=\"color:black\">&#9824;</span>");
+      ref.innerHTML = suitSign(ref.innerHTML);
     },
     genTOC() {
       const tocList = this.$refs.tocList;
