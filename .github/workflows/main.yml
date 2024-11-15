@@ -38,6 +38,7 @@ jobs:
       uses: actions/download-artifact@v3
       with:
         name: nuxt-site
+        path: .output/public
     - name: Copy search html
       run: cp googlea408ee0fe30564ba.html .output/public
     - name: Deploy to GitHub Pages
