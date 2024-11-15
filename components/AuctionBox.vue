@@ -1,7 +1,6 @@
 <script setup>
-import { computed } from 'vue';
-import textAuction from './textAuction.js';
-import suitSign from './suitSign.js';
+import textAuction from '~/modules/textAuction';
+import suitSign from '~/modules/suitSign';
 
 const board_num = defineModel('board_num', {default: 1});
 const auction = defineModel('auction', {default: []});

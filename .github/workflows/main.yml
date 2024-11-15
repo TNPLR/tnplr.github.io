@@ -1,24 +1,38 @@
-name: deploy
+name: Deploy Nuxt 3 to GitHub Pages
+
 on:
   push:
     branches:
-      - master
+      - master # 觸發部署的分支
   pull_request:
     branches:
       - master
-  workflow_dispatch:
+
+permissions:
+  contents: write
+
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v2
-      - name: Install & Build
-        run: |
-          npm install
-          npm run build
-          cp dist/index.html dist/404.html
-      - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@releases/v4
-        with:
-          BRANCH: gh-pages
-          FOLDER: dist
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 18
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Build static site
+      run: npm run generate
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v4
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: .output/public
+        publish_branch: gh-pages

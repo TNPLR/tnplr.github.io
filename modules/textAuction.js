@@ -1,4 +1,7 @@
 function textAuction(bid) {
+    if (typeof bid !== "string") {
+        return "";
+    }
     let text = bid;
     text = text.replace(/([1-7])H/, "$1<span style=\"color:tomato\">&#9829;</span>");
     text = text.replace(/([1-7])D/, "$1<span style=\"color:orange\">&#9830;</span>");

@@ -1,93 +1,66 @@
-<script>
-import BiddingBox from "./BiddingBox.vue";
-import quest from "../json/quest.json"
-import exTextAuction from "./textAuction.js";
-import AuctionBox from "./AuctionBox.vue";
-import suitSign from "./suitSign";
-export default {
-    data() {
-        return {
-            // Quest is an object of question
-            Quest: {},
-            Explanation: ["", "", "?"],
-            showBookLocal: this.showBook,
-            maxhiddenbid: '',
-            selectedLevel: undefined,
-            selectedQuestType: '開叫',
-            selectedQuest: 1,
-            explanationType: 0,
-            allStories: quest,
-        };
-    },
-    computed: {
-        explanationColor() {
-            switch (this.explanationType) {
-                case 0:
-                    return '#e0fee0';
-                case 1:
-                    return 'Gainsboro';
-                case 2:
-                    return 'Moccasin';
-                default:
-                    return '#e0fee0';
-            } 
-        }
-    },
-    components: {
-        BiddingBox,
-        AuctionBox
-    },
-    methods: {
-        textAuction: exTextAuction,
-        replaceSuitSigns(ref) {
-            let text = ref.innerHTML;
-            text = text.replace(/!H/g, "<span style=\"color:tomato\">&#9829;</span>");
-            text = text.replace(/!D/g, "<span style=\"color:orange\">&#9830;</span>");
-            text = text.replace(/!C/g, "<span style=\"color:DarkSlateGray\">&#9827;</span>");
-            ref.innerHTML = text.replace(/!S/g, "<span style=\"color:black\">&#9824;</span>");
-        },
-        showExplanation(bid) {
-            this.Explanation[0] = bid;
-            this.Explanation[2] = bid;
-            if (this.Quest.correct === bid) {
-                this.explanationType = 2;
-            } else {
-                this.explanationType = 1;
-            }
-            if (this.Quest.answers[bid] !== undefined && this.Quest.answers[bid] !== "") {
-                this.Explanation[1] = this.Quest.answers[bid];
-                this.Explanation[1] = suitSign(this.Explanation[1]);
-            } else if (this.Quest.correct === bid) {
-                this.Explanation[1] = "答案正確！";
-            } else {
-                this.Explanation[1] = "答案錯誤，請再試試看！";
-            }
-        },
-        changeQuest() {
-            this.Explanation[0] = "";
-            this.Explanation[1] = "";
-            this.Explanation[2] = "?";
-            this.explanationType = 0;
-            this.Quest = this.allStories[this.selectedQuestType][this.selectedQuest-1];
-            this.selectedLevel = undefined;
-            this.$cookies.set("questtype", encodeURI(this.selectedQuestType), "7d");
-            this.$cookies.set("questnumber", this.selectedQuest, "7d");
-        }
-    },
-    mounted() {
-        if (this.$cookies.isKey("questtype")) {
-            this.selectedQuestType = decodeURI(this.$cookies.get("questtype"))
-        }
-        if (this.$cookies.isKey("questnumber")) {
-            this.selectedQuest = this.$cookies.get("questnumber");
-        }
-        this.changeQuest();
-        //document.documentElement.style.overflow = 'hidden';
-    },
-    unmounted() {
-        //document.documentElement.style.overflow = 'scroll';
+<script setup>
+import suitSign from "~/modules/suitSign";
+import textAuction from "~/modules/textAuction";
+import allStories from "~/modules/quest.json";
+
+definePageMeta({
+    layout: 'custom'
+});
+
+const Quest = ref({});
+const Explanation = ref(["", "", "?"]);
+const selectedLevel = ref(undefined);
+const selectedQuestType = ref('開叫');
+const selectedQuest = ref(1);
+//const selectedQuestType = useCookie('questtype');
+//const selectedQuest = useCookie('questnumber');
+const explanationType = ref(0);
+
+
+const explanationColor = computed(() => {
+    switch (explanationType.value) {
+        case 0:
+            return '#e0fee0';
+        case 1:
+            return 'Gainsboro';
+        case 2:
+            return 'Moccasin';
+        default:
+            return '#e0fee0';
+    }
+});
+
+function showExplanation(bid) {
+    Explanation.value[0] = bid;
+    Explanation.value[2] = bid;
+    if (Quest.value.correct === bid) {
+        explanationType.value = 2;
+    } else {
+        explanationType.value = 1;
+    }
+    if (Quest.value.answers[bid] !== undefined && Quest.value.answers[bid] !== "") {
+        Explanation.value[1] = Quest.value.answers[bid];
+        Explanation.value[1] = suitSign(Explanation.value[1]);
+    } else if (Quest.value.correct === bid) {
+        Explanation.value[1] = "答案正確！";
+    } else {
+        Explanation.value[1] = "答案錯誤，請再試試看！";
     }
 }
+
+function changeQuest() {
+    Explanation.value[0] = "";
+    Explanation.value[1] = "";
+    Explanation.value[2] = "?";
+    explanationType.value = 0;
+    Quest.value = allStories[selectedQuestType.value][selectedQuest.value-1];
+    selectedLevel.value = undefined;
+}
+
+onMounted(() => {
+    changeQuest();
+});
+
 </script>
 
 <template id="storytemplate">

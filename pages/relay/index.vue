@@ -21,52 +21,54 @@
       </ul>
       <p>接下來，所有的開叫叫品羅列於下，可以透過連結來快速查詢各個叫品的參考表格。</p>
       <table class="bidtable">
-        <tr>
-          <th colspan="2">第一家、第二家開叫</th>
-        </tr>
-        <tr>
-          <td><a href="#1C">1!C!</a></td>
-          <td>16點或升級的15點以上，任何牌型，迫叫一圈，且保證再叫</td>
-        </tr>
-        <tr>
-          <td><a href="#1D">1!D!</a></td>
-          <td><ins>10</ins>-15點，四張以上黑桃，沒有四張紅心，不迫叫。</td>
-        </tr>
-        <tr>
-          <td><a href="#1H">1!H!</a></td>
-          <td>11-15點，四張以上紅心，沒有四張黑桃，不迫叫。</td>
-        </tr>
-        <tr>
-          <td><a href="#1S">1!S!</a></td>
-          <td>11-15點，四張以上紅心與四張以上黑桃，不迫叫。</td>
-        </tr>
-        <tr>
-          <td><a href="#1NT">1NT!</a></td>
-          <td><ins>12</ins>-15點，沒有4張高花。平均或半平均牌，或5431牌型，不迫叫。</td>
-        </tr>
-        <tr>
-          <td><a href="#2C">2!C</a></td>
-          <td><ins>10-14</ins>點，5張以上梅花（通常6張以上），沒有4張高花，不迫叫。</td>
-        </tr>
-        <tr>
-          <td><a href="#2D">2!D</a></td>
-          <td><ins>10-14</ins>點，5張以上方塊（通常6張以上），沒有4張高花，不迫叫。</td>
-        </tr>
-        <tr>
-          <td><a href="#2H">2!H</a></td>
-          <td>6-9點，五張以上紅心，竄叫。</td>
-        </tr>
-        <tr>
-          <td><a href="#2S">2!S</a></td>
-          <td>6-9點，五張以上黑桃，竄叫。</td>
-        </tr>
-        <tr>
-          <td><a href="#2NT">2NT</a></td>
-          <td><ins>10-14</ins>點，5-5張以上低花，好牌組，不迫叫。</td>
-        </tr>
+        <tbody>
+          <tr>
+            <th colspan="2">第一家、第二家開叫</th>
+          </tr>
+          <tr>
+            <td><a href="#1C">1!C!</a></td>
+            <td>16點或升級的15點以上，任何牌型，迫叫一圈，且保證再叫</td>
+          </tr>
+          <tr>
+            <td><a href="#1D">1!D!</a></td>
+            <td><ins>10</ins>-15點，四張以上黑桃，沒有四張紅心，不迫叫。</td>
+          </tr>
+          <tr>
+            <td><a href="#1H">1!H!</a></td>
+            <td>11-15點，四張以上紅心，沒有四張黑桃，不迫叫。</td>
+          </tr>
+          <tr>
+            <td><a href="#1S">1!S!</a></td>
+            <td>11-15點，四張以上紅心與四張以上黑桃，不迫叫。</td>
+          </tr>
+          <tr>
+            <td><a href="#1NT">1NT!</a></td>
+            <td><ins>12</ins>-15點，沒有4張高花。平均或半平均牌，或5431牌型，不迫叫。</td>
+          </tr>
+          <tr>
+            <td><a href="#2C">2!C</a></td>
+            <td><ins>10-14</ins>點，5張以上梅花（通常6張以上），沒有4張高花，不迫叫。</td>
+          </tr>
+          <tr>
+            <td><a href="#2D">2!D</a></td>
+            <td><ins>10-14</ins>點，5張以上方塊（通常6張以上），沒有4張高花，不迫叫。</td>
+          </tr>
+          <tr>
+            <td><a href="#2H">2!H</a></td>
+            <td>6-9點，五張以上紅心，竄叫。</td>
+          </tr>
+          <tr>
+            <td><a href="#2S">2!S</a></td>
+            <td>6-9點，五張以上黑桃，竄叫。</td>
+          </tr>
+          <tr>
+            <td><a href="#2NT">2NT</a></td>
+            <td><ins>10-14</ins>點，5-5張以上低花，好牌組，不迫叫。</td>
+          </tr>
+        </tbody>
       </table>
       <p>同伴是Passed hand時，也就是坐第三家時，開叫有極大的不同。</p>
-      <table class="bidtable">
+      <table class="bidtable"><tbody>
         <tr>
           <th colspan="2">第三家開叫</th>
         </tr>
@@ -82,7 +84,7 @@
           <td><a href="#2S">2!S</a></td>
           <td>6-9點，五張以上黑桃，竄叫。</td>
         </tr>
-      </table>
+      </tbody></table>
     </div>
     <div><h2 id="partnership_bidding">第一家、第二家同伴的有限、建設性開叫與後續叫牌約定</h2>
       <p>
@@ -95,7 +97,7 @@
           在其他兩種開叫，是11-15點。1NT開叫點力範圍是12-15點，而2線的建設性開叫（2!C/!D/NT）是10-14點。
           16點以上（或升級的15點以上），開叫1!C，迫叫一圈。
         </p>
-        <table class="bidtable">
+        <table class="bidtable"><tbody>
           <tr>
             <th colspan="2">第一家、第二家建設性、有限開叫</th>
           </tr>
@@ -127,7 +129,7 @@
             <td><a href="#2NT">2NT</a></td>
             <td><ins>10-14</ins>點，5-5張以上低花，好牌組，不迫叫。</td>
           </tr>
-        </table>
+        </tbody></table>
         <p>
           在本章中，我們先討論「有限開叫」。所謂有限開叫，係指15點以下的牌型進行的開叫。
           本制度中，有限開叫的重點是高花開叫，所有叫品以四張高花為優先。
@@ -154,7 +156,7 @@
           在叫出一門牌組以後，單門牌組通常是從2!S以上的叫品開始表示。
           首先就要叫出短門的位置（花色），順序如同章首敘述的原則，由較高花色優先。下方的表格以黑桃為例。
         </p>
-        <table class="bidtable">
+        <table class="bidtable"><tbody>
           <tr>  
             <td>2!S</td>
             <td>一門牌組，高短門</td>
@@ -204,7 +206,7 @@
             <td>7303</td>
             <td></td>
           </tr>
-        </table>
+        </tbody></table>
         <p>
           由上表可以看出，進入單門牌組後的第一步是選擇短門的類型，再來是叫出牌型。如果不選擇短門類型，則表示是低短門。
           牌型是以「數字小」到「數字大」來排列。例如7231 &lt; 7321 &lt; 7330。
@@ -214,7 +216,7 @@
           表示兩門牌組，在兩門花色都叫出以後，首先要選擇類型。通常可以分為「較高花色較長」、「較低花色較長」、「5-5以上牌型」。
           分成三類以後，就可以叫出短門的類型，而後報出牌型。下表以黑桃、紅心為例。
         </p>
-        <table class="bidtable">
+        <table class="bidtable"><tbody>
           <tr>
             <td>2!H</td>
             <td>canapé</td>
@@ -269,7 +271,7 @@
             <td></td>
             <td>7420</td>
           </tr>
-        </table>
+        </tbody></table>
         <p>
           在上表中我們先介紹不是5-5的情形。如果是canapé牌型，先叫2!H，否則直接回答下一個問題，亦即短門類型。
           如果是高短門，則叫2NT，之後回答牌型；低短門，則直接回答牌型。而(5422)的牌型則由中間的3!C叫出。
@@ -278,7 +280,7 @@
         <p>
           5-5以上的牌型，牌型沒有分那麼多步驟叫出，以紅心黑桃為例，如下表。
         </p>
-        <table class="bidtable">
+        <table class="bidtable"><tbody>
           <tr>
             <th></th>
             <th>2!S</th>
@@ -321,13 +323,13 @@
             <td></td>
             <td>6520</td>
           </tr>
-        </table>
+        </tbody></table>
         <h4>Roman牌型（三門牌組）的表示</h4>
         <p>
           所謂Roman牌型，就是4441、5440類的牌型，也是在自然制之下很難叫的牌型，在Symmetric Relay中，也有為其特殊處理。
           一樣以紅心黑桃為例，示範Roman的Relay。
         </p>
-        <table class="bidtable">
+        <table class="bidtable"><tbody>
           <tr>
             <th></th>
             <th>2!D</th>
@@ -358,12 +360,12 @@
             <td>3!H</td>
             <td>5404</td>
           </tr>
-        </table>
+        </tbody></table>
         <h4>4張高花有限開叫的平均牌型表示</h4>
         <p>
           平均牌型通常是以2!C啟動。1!D/1!H 後續的平均牌型叫品是一模一樣的，以下以1!H開叫為例。
         </p>
-        <table class="bidtable">
+        <table class="bidtable"><tbody>
           <tr>
             <th></th>
             <th>1!H</th>
@@ -407,13 +409,13 @@
             <td>344<ins>2</ins></td>
             <td>353<ins>2</ins></td>
           </tr>
-        </table>
+        </tbody></table>
         <h4>1NT 後續的relay</h4>
         <p>
           在本制度第一、第二家開叫的1NT表示沒有4張高花的平均牌型或半平均牌型。甚至包含(13)(45)的這種牌型。
           也因此，必須特別學習一套relay。
         </p>
-        <table class="bidtable">
+        <table class="bidtable"><tbody>
           <tr>
             <th></th>
             <th>1NT</th>
@@ -462,14 +464,14 @@
             <td>3334</td>
             <td>3154</td>
           </tr>
-        </table>
+        </tbody></table>
         
       </div>
       <div id="major_opening"><h3>一門高花開叫</h3>
         <p>
           首先先介紹1!H開叫的後續：
         </p>
-        <table class="bidtable" id="1H">
+        <table class="bidtable" id="1H"><tbody>
           <tr>
             <th>1!H</th>
             <th>四張以上紅心，沒有四張黑桃，11-15點</th>
@@ -542,7 +544,7 @@
             <td>4!S</td>
             <td>大約8張黑桃的弱竄叫。</td>
           </tr>
-        </table>
+        </tbody></table>
         <p>
           在這個制度中，大部分迫叫成局的牌，都是由Relay出發，除了某些類型的王牌支持。
           迫叫成局的支持，如果是約13-15點之間，有短門，應該透過2NT尋找剩下三門27點的滿貫。
@@ -555,7 +557,7 @@
         <p>
           接下來，我們介紹1!D開叫，也就是黑桃開叫的後續。
         </p>
-        <table class="bidtable" id="1D">
+        <table class="bidtable" id="1D"><tbody>
           <tr>
             <th>1!D</th>
             <th>四張以上黑桃，沒有四張紅心，<ins>10</ins>-15點</th>
@@ -632,7 +634,7 @@
             <td>4!S</td>
             <td>4張黑桃支持的平均牌型，13-14，或(5)6張以上黑桃的竄叫。</td>
           </tr>
-        </table>
+        </tbody></table>
         <p>
           1!D的範圍比較大，因此答叫者如果手持平均牌型，就需要有較精密的邀請方法。而我們就使用1!H這個範圍詢問叫來限定範圍。
           對於6點到壞的10點牌，可以直接叫出1NT。對於好的10點牌到12點牌，可以用1!H範圍詢問叫，並邀請高限。對於13點以上的牌型，可以使用Relay邀請。
@@ -642,7 +644,7 @@
         </p>
         <div id="1D_range_probe">
           <h4>1!D-1!H 範圍詢問叫</h4>
-          <table class="bidtable" id="1D-1H">
+          <table class="bidtable" id="1D-1H"><tbody>
             <tr>
               <th><a href="#1D">1!D</a></th>
               <th>1!H!</th>
@@ -672,7 +674,7 @@
               <td colspan="2">3!C/!D</td>
               <td>4張黑桃，6張所叫的低花，高限。</td>
             </tr>
-          </table>
+          </tbody></table>
           <p>
             在示強以後，1NT後續有2!C Checkback，而其他高限叫品之後2NT是迫叫的詢問叫，而2線其他叫品不迫叫，三線叫品是邀請、不迫叫。
           </p>
@@ -683,7 +685,7 @@
         <div id="major_relay">
           <h4>一門高花Relay</h4>
           <p>大家在前面的 relay 基礎章節應該都有閱讀到基本的 relay 架構。此處將將其具體化。</p>
-          <table class="bidtable" id="1H-1S">
+          <table class="bidtable" id="1H-1S"><tbody>
             <tr>
               <th></th>
               <th><a href="#1H">1!H</a></th>
@@ -719,8 +721,8 @@
               <td>一門牌組。</td>
               <td>...</td>
             </tr>
-          </table>
-          <table class="bidtable" id="1D-1S">
+          </tbody></table>
+          <table class="bidtable" id="1D-1S"><tbody>
             <tr>
               <th></th>
               <th><a href="#1D">1!D</a></th>
@@ -756,7 +758,7 @@
               <td>一門牌組。</td>
               <td>...</td>
             </tr>
-          </table>
+          </tbody></table>
         </div>
         <div id="1NT_over_a_major">
           <h4>1!D/!H-1NT 後續</h4>
@@ -766,7 +768,7 @@
             故不應該像5張高花的自然制一樣修正回高花。
             Pass 2!C/2!D通常可以打到一個不錯的低花合約。
           </p>
-          <table class="bidtable" id="1H-1NT">
+          <table class="bidtable" id="1H-1NT"><tbody>
             <tr>
               <th><a href="#1H">1!H</a></th>
               <th>1NT</th>
@@ -807,22 +809,23 @@
               <td></td>
               <td>強的紅心牌組。</td>
             </tr>
-          </table>
+          </tbody></table>
         </div>
         <div id="negative_2-over-1">
           <h4>不迫叫的二蓋一</h4>
           <p>
             我們迫叫成局叫品與較平均的邀請牌，都經由relay進行，因此留下了二線的空間可以作為束叫使用。
-            這些叫品是輕微的建設性叫品，但也可能是要選擇一個比1線高花好的合約。開叫者的後續簡介如下：
+            這些叫品是輕微的建設性叫品，但也可能是要選擇一個比1線高花好的合約。開叫者的後續簡介如下：</p>
             <ul>
               <li>二線新花通常是 canap&eacute; 束叫</li>
               <li>2NT是15點高限，在IMP賽有身價的邀請</li>
               <li>支持一線是高限，邀請最高的點力。</li>
               <li>叫出已經否認的高花（另一門高花），表示高限、長高花牌組，與低花的支持</li>
             </ul>
+            <p>
             以1!H-2!C後續舉例。
           </p>
-          <table class="bidtable" id="1H-2C">
+          <table class="bidtable" id="1H-2C"><tbody>
             <tr>
               <th><a href="#1H">1!H</a></th>
               <th>2!C</th>
@@ -852,7 +855,7 @@
               <td colspan="2">3!H</td>
               <td>6張以上紅心，14-15，邀請，不迫叫</td>
             </tr>
-          </table>
+          </tbody></table>
         </div>
         <div><h4>2M 簡單加叫</h4>
           <p>由於制度設計的關係，簡單加叫中可能包含3張的支持，所以使用者可能常會打到7張高花的合約。
@@ -867,7 +870,7 @@
             <li>3!S是加強阻塞的性質。</li>
           </ul>
           <p>1!D-2!S後面不需要2NT的邀請，因為1!D的答叫人可以先用1!H詢問範圍，所以比較不會錯失15點對10點的成局。</p>
-          <table class="bidtable" id="1D-2S">
+          <table class="bidtable" id="1D-2S"><tbody>
             <tr>
               <th><a href="#1D">1!D</a></th>
               <th>2!S</th>
@@ -889,14 +892,14 @@
               <td colspan="2">3!S</td>
               <td>加強阻塞。</td>
             </tr>
-          </table>
+          </tbody></table>
         </div>
         <div id="2NT_raise">
           <h4>2NT Raise</h4>
           <p>
             一門高花開叫以後，2NT是邀請以上的4張以上支持，開叫者的再叫如下：
           </p>
-          <table class="bidtable" id="1H-2NT">
+          <table class="bidtable" id="1H-2NT"><tbody>
             <tr>
               <th><a href="#1H">1!H</a></th>
               <th>2NT!</th>
@@ -947,11 +950,11 @@
               <td></td>
               <td>梅花短門。</td>
             </tr>
-          </table>
+          </tbody></table>
           <p><a href="#1S">1!S!（兩高）</a>-2NT的叫品，是紅心支持，就如同1!H-2NT的後續。</p>
           <p>1!D-2NT的後續也很類似，但1!H的後續中，黑桃短門的邀請牌無法叫出，而1!D後續中，紅心短門的邀請牌可以叫出。
             前者無法叫出的設計原因是因為叫出黑桃短門會告知敵方有9張以上的黑桃配合。</p>
-          <table class="bidtable" id="1D-2NT">
+          <table class="bidtable" id="1D-2NT"><tbody>
             <tr>
               <th><a href="#1D">1!D</a></th>
               <th>2NT!</th>
@@ -1011,7 +1014,7 @@
               <td></td>
               <td>梅花短門。</td>
             </tr>
-          </table>
+          </tbody></table>
         </div>
         
       </div>
@@ -1019,7 +1022,7 @@
         <p>
           兩門高花的有限開叫，使用1!S叫品。這包括平均牌、短門在低花的Roman牌型與兩門高花的所有牌型。
         </p>
-        <table class="bidtable" id="1S">
+        <table class="bidtable" id="1S"><tbody>
           <tr>
             <th>1!S</th>
             <th>兩門高花（4-4以上），11-15點</th>
@@ -1064,7 +1067,7 @@
             <td>3!S</td>
             <td>Mixed</td>
           </tr>
-        </table>
+        </tbody></table>
         <p>
           由於叫1NT的答叫者幾乎都是平均牌型，有兩張高花的支持，因此開叫者可以以5張高花叫回2M合約。另外，答叫者如果拿3-3高花，也可以叫1NT，讓開叫者叫出5-3高花配合。
         </p>
@@ -1072,7 +1075,7 @@
           <p>
             兩門高花的Relay，後續要處理平均牌型、Roman牌型5-5以上的兩門和 canap&eacute; 牌型。
           </p>
-          <table class="bidtable" id="1S-2C">
+          <table class="bidtable" id="1S-2C"><tbody>
             <tr>
               <th></th>
               <th><a href="#1S">1!S</a></th>
@@ -1126,7 +1129,7 @@
               <td>6430</td>
               <td>5404</td>
             </tr>
-          </table>
+          </tbody></table>
         </div>
         
       </div>
@@ -1135,7 +1138,7 @@
           這個制度的1NT是一種「特殊型態」的弱無王（12-15點），特色是沒有四張高花，而且有可能有單張。
           可能包含的牌型包括低花的平均牌，2245、2254、1345、1354、3145、3154。
         </p>
-        <table class="bidtable" id="1NT">
+        <table class="bidtable" id="1NT"><tbody>
           <tr>
             <th>1NT</th>
             <th>12-15點，平均或半平均牌（22(54)或(31)(54)），沒有四張高花</th>
@@ -1160,10 +1163,10 @@
             <td>3!C/!D</td>
             <td>五張以上低花，阻塞叫</td>
           </tr>
-        </table>
+        </tbody></table>
         
         <div><h4>1NT-2!C Relay</h4>
-          <table class="bidtable" id="1NT-2C">
+          <table class="bidtable" id="1NT-2C"><tbody>
             <tr>
               <th></th>
               <th><a href="#1NT">1NT</a></th>
@@ -1225,7 +1228,7 @@
               <td>3145</td>
               <td></td>
             </tr>
-          </table>
+          </tbody></table>
           
         </div>
         <div><h4>Gladiator 與 2!D 叫品</h4>
@@ -1233,7 +1236,7 @@
             有時候會想要在有高花配合的時候才成局，而這就可以透過 Gladiator 空出來的叫品來邀請。
             而高花束叫的牌、平均邀請的牌、低花邀請的牌就透過2!D。
           </p>
-          <table class="bidtable" id="1NT-2D">
+          <table class="bidtable" id="1NT-2D"><tbody>
             <tr>
               <th><a href="#1NT">1NT</a></th>
               <th>2!D</th>
@@ -1259,7 +1262,7 @@
               <td>3!C/3!D</td>
               <td>6張低花，邀請</td>
             </tr>
-          </table>
+          </tbody></table>
         </div>
         
       </div>
@@ -1267,7 +1270,7 @@
         <p>
           一門低花的有限開叫使用2!C/2!D兩個叫品
         </p>
-        <table class="bidtable" id="2C">
+        <table class="bidtable" id="2C"><tbody>
           <tr>
             <th>2!C</th>
             <th>10-14點，5張以上梅花（通常6張以上），沒有4張高花，不迫叫。</th>
@@ -1296,8 +1299,8 @@
             <td>4!C</td>
             <td></td>
           </tr>
-        </table>
-        <table class="bidtable" id="2D">
+        </tbody></table>
+        <table class="bidtable" id="2D"><tbody>
           <tr>
             <th>2!D</th>
             <th>10-14點，5張以上方塊（通常6張以上），沒有4張高花，不迫叫。</th>
@@ -1326,11 +1329,11 @@
             <td>4!C</td>
             <td></td>
           </tr>
-        </table>
+        </tbody></table>
         
         <div><h4>低花Relay</h4>
           <p>兩個低花的後續relay非常相似，只是2!D-2!H<sup>R</sup>的relay需要往上移動一格。</p>
-          <table class="bidtable" id="2C-2D">
+          <table class="bidtable" id="2C-2D"><tbody>
             <tr>
               <th></th>
               <th><a href="#2C">2!C</a></th>
@@ -1351,8 +1354,8 @@
               <td>...</td>
               <td></td>
             </tr>
-          </table>
-          <table class="bidtable" id="2D-2H">
+          </tbody></table>
+          <table class="bidtable" id="2D-2H"><tbody>
             <tr>
               <th></th>
               <th><a href="#2D">2!D</a></th>
@@ -1373,7 +1376,7 @@
               <td>...</td>
               <td></td>
             </tr>
-          </table>
+          </tbody></table>
         </div>
         
       </div>
@@ -1381,7 +1384,7 @@
         <p>
           2NT是兩門低花的開叫，點力範圍是10-14點。
         </p>
-        <table class="bidtable" id="2NT">
+        <table class="bidtable" id="2NT"><tbody>
           <tr>
             <th>2NT</th>
             <th>10-14點，5張以上梅花（通常6張以上），沒有4張高花，不迫叫。</th>
@@ -1406,7 +1409,7 @@
             <td>4!C/!D</td>
             <td>邀請五線成局</td>
           </tr>
-        </table>
+        </tbody></table>
         
       </div>
     </div>
@@ -1429,7 +1432,7 @@
         1!C後續的relay主要需要注意的是，高花5332的牌型不是從平均牌型叫出，另外就是開叫者在第一輪relay過後破開relay是可以的，而第一輪relay只是F2NPR，
         意思是迫叫到2NT或一個Preference叫品，或是一個再叫（repeat）。
       </p>
-      <table class="bidtable" id="1C">
+      <table class="bidtable" id="1C"><tbody>
         <tr>
           <th>1!C</th>
           <th>(15)16點以上，任何牌型。</th>
@@ -1470,14 +1473,14 @@
           <td>2!S! 以上</td>
           <td>8點以上，梅花單門牌組，F2NPR</td>
         </tr>
-      </table>
+      </tbody></table>
       
       <div><h4>1!C-1!D 負性答叫的後續</h4>
         <p>曾經看過書籍說，1!D是對1!C的煞車，畢竟這個叫品就代表著兩邊不一定有成局的點力
           此時叫牌的重點便從成局、滿貫的區分變成了部分合約和成局的區分。
           在Symmetric Relay中，只有在開叫者極強的時候，才會繼續使用Relay，其他的情形則是盡量找到適當的合約停下。
         </p>
-        <table class="bidtable" id="1C-1D">
+        <table class="bidtable" id="1C-1D"><tbody>
           <tr>
             <th><a href="#1C">1!C</a></th>
             <th>1!D</th>
@@ -1527,9 +1530,9 @@
             <td colspan="2">3!H!</td>
             <td>5張黑桃，6張紅心。</td>
           </tr>
-        </table>
+        </tbody></table>
         <p>19點以上，可以叫1!H迫叫，而後續除了1!S是第二次的負性叫（0-4）以外，接下來繼續牌型Relay，不過叫品全部要上升兩格。</p>
-        <table class="bidtable" id="1C-1D-1H">
+        <table class="bidtable" id="1C-1D-1H"><tbody>
           <tr>
             <th></th>
             <th><a href="#1C">1!C</a></th>
@@ -1556,9 +1559,9 @@
             <td colspan="2">...</td>
             <td></td>
           </tr>
-        </table>
+        </tbody></table>
         <p>在第二次負性叫以後，除了2!C是迫叫以外，其他叫品都是不迫叫。</p>
-        <table class="bidtable" id="1C-1D-1H-1S">
+        <table class="bidtable" id="1C-1D-1H-1S"><tbody>
           <tr>
             <th><a href="#1C">1!C</a></th>
             <th><a href="#1C-1D">1!D</a></th>
@@ -1585,9 +1588,9 @@
             <td colspan="2">2NT</td>
             <td>22-23</td>
           </tr>
-        </table>
+        </tbody></table>
         <p>如果不是19點以上的牌，就有一套特別的叫品可以叫，大致上是自然叫品，只有2!C ASPRO比較特殊，是為了彌補1!H被當作人工叫品而設計出來的。</p>
-        <table class="bidtable" id="1C-1D-2C">
+        <table class="bidtable" id="1C-1D-2C"><tbody>
           <tr>
             <th></th>
             <th colspan="2"><a href="#1C">1!C</a></th>
@@ -1627,12 +1630,12 @@
             <td>3!D</td>
             <td>方塊 canap&eacute;，高限</td>
           </tr>
-        </table>
+        </tbody></table>
         
       </div>
       <div><h4>1!C 正性答叫的relay後續</h4>
         <p>這裡和前面的叫牌最大的不同是5332進到了這裡，也因此5332需要佔用一格空間，而7321與7231就不區分了。</p>
-        <table class="bidtable" id="1C-1H">
+        <table class="bidtable" id="1C-1H"><tbody>
           <tr>
             <th><a href="#1C">1!C</a></th>
             <th>1!H</th>
@@ -1704,9 +1707,9 @@
             <td>7330</td>
             <td>7411</td>
           </tr>
-        </table>
+        </tbody></table>
         <p>另外一個不同出現在1!C-2!C，這是平坦的牌型，帶一門四張高花。</p>
-        <table class="bidtable" id="1C-2C">
+        <table class="bidtable" id="1C-2C"><tbody>
           <tr>
             <th><a href="#1C">1!C</a></th>
             <th>2!C</th>
@@ -1751,9 +1754,9 @@
             <td>3424</td>
             <td></td>
           </tr>
-        </table>
+        </tbody></table>
         <p>1!C-2!D的後續很類似1NT後續，但不包含5431、5422的牌型</p>
-        <table class="bidtable" id="1C-2D">
+        <table class="bidtable" id="1C-2D"><tbody>
           <tr>
             <th><a href="#1C">1!C</a></th>
             <th>2!D</th>
@@ -1798,9 +1801,9 @@
             <td>3325</td>
             <td></td>
           </tr>
-        </table>
+        </tbody></table>
         <p>1!C-2!H是表示短高花的Roman牌型。</p>
-        <table class="bidtable" id="1C-2H">
+        <table class="bidtable" id="1C-2H"><tbody>
           <tr>
             <th><a href="#1C">1!C</a></th>
             <th>2!H</th>
@@ -1841,7 +1844,7 @@
             <td></td>
             <td>5044</td>
           </tr>
-        </table>
+        </tbody></table>
         
       </div>
     </div>
@@ -1861,7 +1864,7 @@
       <div><h3>Slam Point 詢問叫</h3>
         <p>在牌型已經完整問完以後，下一個relay是Slam Point詢問叫。回答的方式是由設計的最低SP開始往上，一格便是一個SP。</p>
         <p>計算最低設計SP的方法，是將保證的最低點力除以二，無條件捨去以後再加一。擁有11個SP的牌，除了AAAK可以升級成1!C開叫以外，本來就會超過16個點，所以有限開叫不會有11個以上的SP。</p>
-        <table>
+        <table><tbody>
           <tr>
             <th>HCP</th>
             <th>Slam Point</th>
@@ -1886,13 +1889,13 @@
             <td>5-7</td>
             <td>3-5</td>
           </tr>
-        </table>
+        </tbody></table>
         <p>有許多種決定是否詢問SP的方法。在經過牌型的考量以後，如果超過21個SP，則幾乎都有滿貫可以打。然而，更好的方法是計算最低設計SP+3的牌型，是否有滿貫的可能。如果有，則應該強烈考慮詢問SP。
           在制度的設計中，如果詢問人束叫時，被詢問人如果不是有限開叫的開叫人，拿著最低SP+4以上的SP時，應該要「復活」。在束叫以後，繼續叫牌依序表示最低SP+4、+5……以此類推。
           如果是點力無上限的被詢問人，如果曾表示一門6張以上高花或7張以上低花，則這些花色叫品是撤退的合約，「復活」應該要跳過這些叫品。
         </p>
         <p>接下來，我用一副2024年超級大專盃的牌局，來簡單示範。西家開叫，東家持以下的牌</p>
-        <table>
+        <table><tbody>
           <tr>
             <td colspan="4" style="text-align: center;">!S 96&emsp; !H QJ965 &emsp; !D Q65 &emsp; !C AK4</td>
           </tr>
@@ -1921,7 +1924,7 @@
             <td>4!C</td>
             <td colspan="2">7個Slam Point（8點以上時，最低是5個SP）。</td>
           </tr>
-        </table>
+        </tbody></table>
         <p>如果牌型是Relay中最高的牌型，則在3NT以下，都可以作為SP的回答。3NT匯市不能復活的最高SP，而依序往下排列（如果有空間），直到最低的叫品即是最低的幾個SP的範圍。
           如果回答是「平均牌型」或「半平均牌」時，且剩下2種未解析的牌型時，詢問者可以跳過一格，直接詢問SP。而後面的Denial Cue Bid的各門花色牌張數以最大的可能計算。
         </p>
@@ -1935,7 +1938,7 @@
           若第一次停下，除了數學上必然可以確定是0個或2個以上大牌外，停下是0張，跳過一步是2張大牌，跳過兩步是AKQ。
         </p>
         <p>我們繼續上一個例子的叫牌</p>
-        <table>
+        <table><tbody>
           <tr>
             <td colspan="4" style="text-align: center;">!S 96&emsp; !H QJ965 &emsp; !D Q65 &emsp; !C AK4</td>
           </tr>
@@ -1979,9 +1982,9 @@
             <td>5NT</td>
             <td colspan="2">紅心上有KQ、KJ或QJ，方塊只有一張大牌。</td>
           </tr>
-        </table>
+        </tbody></table>
         <p>我們再示範一個完整的範例。西家開叫，東家手持以下牌型</p>
-        <table>
+        <table><tbody>
           <tr>
             <td colspan="4" style="text-align: center;">!S AQT94&emsp; !H - &emsp; !D AK &emsp; !C Q86532</td>
           </tr>
@@ -2025,9 +2028,9 @@
             <td>5NT</td>
             <td colspan="2">梅花有一張大牌，黑桃牌組上有0/4+個SP。</td>
           </tr>
-        </table>
+        </tbody></table>
         <p>接下來再介紹一副範例。東家開叫。下方的例子要注意5!C的叫品沒有否認紅心的第二張大牌，因為規定最高的回答是加一線。</p>
-        <table>
+        <table><tbody>
           <tr>
             <td colspan="4" style="text-align: center;">!S Q6 &emsp; !H A8753 &emsp; !D Q83 &emsp; !C A72</td>
           </tr>
@@ -2076,9 +2079,9 @@
             <td>5NT</td>
             <td colspan="2">沒有第二張方塊大牌。</td>
           </tr>
-        </table>
+        </tbody></table>
         <p>接下來再提供一個範例，西家開叫，東家持以下手牌：</p>
-        <table>
+        <table><tbody>
           <tr>
             <td colspan="4" style="text-align: center;">!S AT98632 &emsp; !H 63 &emsp; !D 2 &emsp; !C 963</td>
           </tr>
@@ -2127,13 +2130,13 @@
             <td>6!C</td>
             <td colspan="2">方塊沒有A或K，黑桃沒有第二張大牌。</td>
           </tr>
-        </table>
+        </tbody></table>
         
       </div>
       <div><h3>Kontrols 詢問叫</h3>
         <p>Kontrols(Ks) 適合用在缺少控制的時候，此時比較需要知道的資訊是A或K，而不希望Q加進來干擾對於詢問叫答叫的判斷。</p>
         <p>計算最低設計Ks的方法，是將保證的SP除以二，無條件捨去。</p>
-        <table>
+        <table><tbody>
           <tr>
             <th>HCP</th>
             <th>Slam Point</th>
@@ -2164,10 +2167,10 @@
             <td>3-5</td>
             <td>1+</td>
           </tr>
-        </table>
+        </tbody></table>
         <p>回答完Kontrol以後，DCB一樣可以使用，而停下來則代表沒有大牌或同時有AK。</p>
         <p>Kontrols詢問叫是SP詢問的下一個叫品（不計算3NT），若SP詢問已經在4!D以上的叫品，此時沒有Kontrols詢問。。接下來提供一個範例，西家開叫，東家持以下手牌。下方的Kontrols詢問，因為要跳過3NT束叫，所以是用4!C問。</p>
-        <table>
+        <table><tbody>
           <tr>
             <td colspan="4" style="text-align: center;">!S K7&emsp; !H 9874 &emsp; !D K874 &emsp; !C AJ9</td>
           </tr>
@@ -2211,7 +2214,7 @@
             <td>6!C</td>
             <td colspan="2">有方塊A/K，有梅花A/K，有黑桃A/K，紅心沒有AK。</td>
           </tr>
-        </table>
+        </tbody></table>
       </div>
       
     </div>
@@ -2238,7 +2241,7 @@
       </ul>
       
       <div><h3>2線高花竄叫</h3>
-        <table class="bidtable" id="2H">
+        <table class="bidtable" id="2H"><tbody>
           <tr>
             <th>2!H</th>
             <th>5張以上紅心，6-9點，竄叫</th>
@@ -2263,9 +2266,9 @@
             <td>4!C!</td>
             <td>KCB</td>
           </tr>
-        </table>
+        </tbody></table>
         <p>黑桃與紅心的叫品原則相同。</p>
-        <table class="bidtable" id="2S">
+        <table class="bidtable" id="2S"><tbody>
           <tr>
             <th>2!S</th>
             <th>5張以上黑桃，6-9點，竄叫</th>
@@ -2286,11 +2289,11 @@
             <td>4!C!</td>
             <td>KCB</td>
           </tr>
-        </table>
+        </tbody></table>
         
         <div><h4>2M-2NT 詢問叫</h4>
           <p>由於經常性地5張開叫，因此要有辦法詢問出5張或6張以上的牌組，而這兩種牌型也要再分出強弱，因此使用以下修正的Ogust特約。</p>
-          <table class="bidtable" id="2H-2NT">
+          <table class="bidtable" id="2H-2NT"><tbody>
             <tr id="2S-2NT">
               <th><a href="#2H">2!H</a>/<a href="#2S">2!S</a></th>
               <th>2NT</th>
@@ -2316,7 +2319,7 @@
               <td colspan="2">3NT</td>
               <td>6張以上牌組，高限，有AKQ的牌組。</td>
             </tr>
-          </table>
+          </tbody></table>
           
         </div>
       </div>
@@ -2327,7 +2330,7 @@
         在第三、第四家的開叫中，我認為結構應該要傾向更有彈性，因此叫牌方法是精準制和藍梅花的部分結合。
         另外，由於記憶力的因素，叫品及後續應該盡量簡單、自然，避免消耗太多記憶力。
       </p>
-      <table class="bidtable" id="P">
+      <table class="bidtable" id="P"><tbody>
         <tr>
           <th colspan="2">第三家開叫</th>
         </tr>
@@ -2359,11 +2362,11 @@
           <td><a href="#P-2NT">2NT</a></td>
           <td>第三家無身價時，19-20，其餘情形20-21。平均或半平均牌。</td>
         </tr>
-      </table>
+      </tbody></table>
       <p>一線花色開叫的特約很相近，主要是答叫者叫1NT以後，此時的2NT（以及1!D-1NT-2!S）是Roman的牌型，高限。之後的任何叫品皆是束叫。
         Roman牌型要開叫的叫品，整理如下表。
       </p>
-      <table>
+      <table><tbody>
         <tr>
           <th></th>
           <th>低限開叫叫品</th>
@@ -2381,10 +2384,10 @@
         <tr>
           <td class="open24">1444</td><td>1!H</td><td>1!H</td>
         </tr>
-      </table>
+      </tbody></table>
       <div><h3>1!D 開叫及其後續</h3>
         <p>1!D開叫處理的牌型，即便在這個4張高花的制度中依然很多。也因此，必須要消耗一些記憶力來學習這個部分的內容。還好，由於制度設計者也不想記太多例外的東西，所以叫牌原則上很自然。</p>
-        <table class="bidtable" id="P-1D">
+        <table class="bidtable" id="P-1D"><tbody>
           <tr>
             <th><a href="#P">Pass</a></th>
             <th>1!D</th>
@@ -2422,9 +2425,9 @@
             <td colspan="2">3!D</td>
             <td>6張方塊以上，Mixed。</td>
           </tr>
-        </table>
+        </tbody></table>
         <p>1!D-1!H的後續如下。</p>
-        <table class="bidtable" id="P-1D-1H">
+        <table class="bidtable" id="P-1D-1H"><tbody>
           <tr>
             <th></th>
             <th><a href="#P">Pass</a></th>
@@ -2455,9 +2458,9 @@
             <td colspan="2">2!H</td>
             <td>3張以上紅心支持。</td>
           </tr>
-        </table>
+        </tbody></table>
         <p>1!D-1NT的後續也非常自然。</p>
-        <table class="bidtable" id="P-1D-1NT">
+        <table class="bidtable" id="P-1D-1NT"><tbody>
           <tr>
             <th></th>
             <th><a href="#P">Pass</a></th>
@@ -2488,12 +2491,12 @@
             <td colspan="2">2NT!</td>
             <td>4441，高限。後續叫品是束叫</td>
           </tr>
-        </table>
+        </tbody></table>
         <p>這後面完全自然，除了1!D-1NT-2!S/NT以外，沒有任何人為迫叫</p>
         
       </div>
       <div><h3>1M 開叫及其後續</h3>
-        <table class="bidtable" id="P-1H">
+        <table class="bidtable" id="P-1H"><tbody>
           <tr>
             <th><a href="#P">Pass</a></th>
             <th>1!H</th>
@@ -2531,9 +2534,9 @@
             <td colspan="2">3!H</td>
             <td>Mixed</td>
           </tr>
-        </table>
+        </tbody></table>
         <p>1!S的開叫後續也非常相似。</p>
-        <table class="bidtable" id="P-1S">
+        <table class="bidtable" id="P-1S"><tbody>
           <tr>
             <th><a href="#P">Pass</a></th>
             <th>1!S</th>
@@ -2571,9 +2574,9 @@
             <td colspan="2">3!S</td>
             <td>Mixed</td>
           </tr>
-        </table>
+        </tbody></table>
         <div><h4>1M-1NT-2NT! Roman牌型</h4>
-          <table class="bidtable" id="P-1H-1NT-2NT">
+          <table class="bidtable" id="P-1H-1NT-2NT"><tbody>
             <tr id="P-1S-1NT-2NT">
               <th><a href="#P">Pass</a></th>
               <th><a href="#P-1H">1!H</a>/<a href="#P-1S">1!S</a></th>
@@ -2588,11 +2591,11 @@
               <td colspan="2">3!C/!D/!H/!S</td>
               <td>束叫</td>
             </tr>
-          </table>
+          </tbody></table>
         </div>
         <div><h4>1M-2M 後續</h4>
           <p>在這後面我們打Kokish 3-way Game Try，詳細如下表</p>
-          <table class="bidtable" id="P-1H-2H">
+          <table class="bidtable" id="P-1H-2H"><tbody>
             <tr>
               <th></th>
               <th><a href="#P">Pass</a></th>
@@ -2637,12 +2640,12 @@
               <td colspan="2">3!S</td>
               <td>要求2張王牌大牌的邀請。</td>
             </tr>
-          </table>
+          </tbody></table>
         </div>
       </div>
       <div><h3>1NT 開叫及其後續</h3>
         <p>1NT開叫的後續原則上可以使用自己打自然制的愛用制度。這裡提供的1NT開叫後續稍微精密一些，2!C是Stayman、2!D/!H是Jacoby Transfer、2!S是邀請或轉換梅花、2NT是Puppet Stayman、3!C是轉換方塊等等。</p>
-        <table class="bidtable" id="P-1NT">
+        <table class="bidtable" id="P-1NT"><tbody>
           <tr>
             <th><a href="#P">Pass</a></th>
             <th>1NT</th>
@@ -2672,11 +2675,11 @@
             <td colspan="2">3!C!</td>
             <td>轉換方塊，後續Pass是束叫，叫出新花是短門，迫叫成局。</td>
           </tr>
-        </table>
+        </tbody></table>
         
         <div><h4>2!C Stayman</h4>
           <p>2!C的回答非常平常，而在這之後2!S都是5張黑桃的邀請。</p>
-          <table class="bidtable" id="P-1NT-2C">
+          <table class="bidtable" id="P-1NT-2C"><tbody>
             <tr>
               <th></th>
               <th><a href="#P">Pass</a></th>
@@ -2699,9 +2702,9 @@
               <td colspan="2"><a href="#P-1NT-2C-2S">2!S</a></td>
               <td>4張以上黑桃，沒有4張紅心</td>
             </tr>
-          </table>
+          </tbody></table>
           <p>2!D回答以後，2!H是4-5邀請，另外還有Smolen和Texas特約。</p>
-          <table class="bidtable" id="P-1NT-2C-2D">
+          <table class="bidtable" id="P-1NT-2C-2D"><tbody>
             <tr>
               <th><a href="#P">Pass</a></th>
               <th><a href="#P-1NT">1NT</a></th>
@@ -2744,9 +2747,9 @@
               <td colspan="2">4!H!</td>
               <td>6張黑桃，4張紅心，轉換黑桃。</td>
             </tr>
-          </table>
+          </tbody></table>
           <p>聽到有4張高花的回答以後，除了2!S是5張黑桃的邀請以外，其他叫品是自然。</p>
-          <table class="bidtable" id="P-1NT-2C-2H">
+          <table class="bidtable" id="P-1NT-2C-2H"><tbody>
             <tr>
               <th><a href="#P">Pass</a></th>
               <th><a href="#P-1NT">1NT</a></th>
@@ -2803,14 +2806,14 @@
               <td colspan="2">4!S</td>
               <td>束叫。</td>
             </tr>
-          </table>
+          </tbody></table>
           
         </div>
         <div><h4>2!D/2!H Jacoby Transfer</h4>
           <p>這個的後續中，由於沒有邀請牌，且由於同伴已經Pass過，大部分的情況下都是要束叫的牌，所以不需要Super-accept。
             另外，轉換到紅心以後的邀請牌，透過下一節敘述的特約來邀請。而黑桃的邀請牌，則是透過Stayman來進行。
           </p>
-          <table class="bidtable" id="P-1NT-2D">
+          <table class="bidtable" id="P-1NT-2D"><tbody>
             <tr>
               <th></th>
               <th><a href="#P">Pass</a></th>
@@ -2901,10 +2904,10 @@
               <td>3NT</td>
               <td>5張黑桃，迫叫成局，如果5-3配合時，傾向打3NT。</td>
             </tr>
-          </table>
+          </tbody></table>
           <div><h5>Range Ask</h5>
             <p>在轉換紅心以後，2!S是Range Ask，邀請以上的力量。開叫者依照紅心的張數以及力量有四級的回答。</p>
-            <table class="bidtable" id="P-1NT-2D-2H-2S">
+            <table class="bidtable" id="P-1NT-2D-2H-2S"><tbody>
               <tr>
                 <th></th>
                 <th><a href="#P">Pass</a></th>
@@ -2936,7 +2939,7 @@
                 <td colspan="2">3!H!</td>
                 <td>3張以上紅心，低限牌，束叫</td>
               </tr>
-            </table>
+            </tbody></table>
           </div>
           
         </div>
@@ -2944,7 +2947,7 @@
           <p>這個叫品的使用情境是在沒有四張高花的平均邀請牌，或是長梅花（6張以上）的束叫，或是梅花的牌組有滿貫興趣（極少）。
             開叫者首先要先決定是低限和高限，分別叫2NT與3!C。
           </p>
-          <table class="bidtable" id="P-1NT-2S">
+          <table class="bidtable" id="P-1NT-2S"><tbody>
             <tr>
               <th></th>
               <th><a href="#P">Pass</a></th>
@@ -2998,12 +3001,12 @@
               <td>3NT</td>
               <td>邀請牌力，束叫。</td>
             </tr>
-          </table>
+          </tbody></table>
           
         </div>
         <div><h4>2NT Puppet Stayman</h4>
           <p>這個叫品的使用情境是迫叫成局的手牌，有3張以上高花想要對5-3高花，或是有一門4張高花的時候使用。</p>
-          <table class="bidtable" id="P-1NT-2NT">
+          <table class="bidtable" id="P-1NT-2NT"><tbody>
             <tr>
               <th></th>
               <th><a href="#P">Pass</a></th>
@@ -3032,13 +3035,13 @@
               <td colspan="2">3!H/!S</td>
               <td>5張!H/!S。接下來由答叫人選擇合約。</td>
             </tr>
-          </table>
+          </tbody></table>
           
         </div>
       </div>
       <div><h3>2!C 開叫及其後續</h3>
         <p>身為已經Pass過的同伴，如果沒有太值得叫牌的情形，就可以直接Pass 2!C的叫品。2!C的後續因為沒有迫叫成局的牌，因此大幅簡化了後續，只有2!D和2NT是特約。</p>
-        <table class="bidtable" id="P-2C">
+        <table class="bidtable" id="P-2C"><tbody>
           <tr>
             <th><a href="#P">Pass</a></th>
             <th>2!C</th>
@@ -3068,13 +3071,13 @@
             <td colspan="2">3!C</td>
             <td>3張以上梅花支持，6-8點。</td>
           </tr>
-        </table>
+        </tbody></table>
         <p>2!C-2!D之後，開叫者原則上是回答4張高花，這種情況下是迫叫一圈；如果沒有4張高花，高限半平均牌時叫2NT，而低限則叫3!C，3NT也是束叫。</p>
         
       </div>
       <div><h3>2NT 開叫及其後續</h3>
         <p>2NT的點力範圍依照身價有所不同。在第三家無身價時是19-20，其他情形是20-21。2NT開叫的後續原則上可以和自然制的2NT開叫後續使用一樣的制度。接下來是我們的制度供參考。</p>
-        <table class="bidtable" id="P-2NT">
+        <table class="bidtable" id="P-2NT"><tbody>
           <tr>
             <th><a href="#P">Pass</a></th>
             <th>2NT</th>
@@ -3108,11 +3111,11 @@
             <td colspan="2">4!D!/!H!</td>
             <td>轉換!H/!S</td>
           </tr>
-        </table>
+        </tbody></table>
         
         <div><h4>2NT-3!C Muppet Stayman</h4>
           <p>Muppet Stayman的設計重點是要能夠找到5張高花與4張高花，且在開叫人沒有4張高花的時候，還能夠找到5-3的黑桃配合。</p>
-          <table class="bidtable" id="P-2NT-3C">
+          <table class="bidtable" id="P-2NT-3C"><tbody>
             <tr>
               <th></th>
               <th><a href="#P">Pass</a></th>
@@ -3169,21 +3172,23 @@
               <td colspan="2">3NT!</td>
               <td>5張紅心。接下來叫4!D轉換紅心。</td>
             </tr>
-          </table>
+          </tbody></table>
         </div>
       </div>
     </div>
   </article>
 </template>
 
-<script>
-export default {
-  mounted() {
-    this.$root.replaceSuitSigns(this.$refs.Article);
-    this.$root.genTOC();
-    this.$root.$data.topic = "Röle Sistemi";
-  }
-}
-</script>
+<script setup>
+import replaceSuitSigns from '~/modules/replaceSuitSigns';
+import genTOC from '~/modules/genTOC';
+const article = useTemplateRef('Article');
+const toc = useState('toc');
 
+onMounted(() => {
+  replaceSuitSigns(article.value);
+  genTOC(toc);
+  //this.$root.$data.topic = "Röle Sistemi";
+});
+</script>
 <style></style>
