@@ -1,8 +1,11 @@
 <script setup>
-import { computed, ref } from "vue";
-import BiddingBox from "./BiddingBox.vue";
-import AuctionBox from "./AuctionBox.vue";
-import textAuction from "./textAuction";
+import BiddingBox from "~/components/BiddingBox.vue";
+import AuctionBox from "~/components/AuctionBox.vue";
+import textAuction from "~/modules/textAuction";
+
+definePageMeta({
+    layout: 'custom'
+});
 
 function copy() {
     navigator.clipboard.writeText(questJson.value).then(() => {
@@ -130,7 +133,7 @@ const cardCount = computed(() => {
         </div>
         <div>
             <label for="boardNum">牌號：</label>
-            <input v-model="board_num" type="number" id="boardNum" name="boardNum" min="1" value="1">
+            <input v-model="board_num" type="number" id="boardNum" name="boardNum" min="1">
         </div>
         <div>
             <input id="auctionEnter" name="answerMode" type="radio" v-model="answerMode" v-bind:value="false"><label for="auctionEnter">輸入叫序</label>
