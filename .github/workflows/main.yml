@@ -1,38 +1,23 @@
-# REF: https://nuxt.com/deploy/github-pages
-# https://github.com/actions/deploy-pages#usage
-name: Deploy to GitHub Pages
+name: deploy
 on:
-  workflow_dispatch:
   push:
     branches:
-      - main
+      - develop
+  pull_request:
+    branches:
+      - develop
+  workflow_dispatch:
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - run: corepack enable
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v2
+      - name: Install & Build
+        run: |
+          npm install
+          npm run generate
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@releases/v4
         with:
-          node-version: "20"
-      # Pick your own package manager and build script
-      - run: npm install
-      - run: npx nuxt build --preset github_pages
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./.output/public
-  # Deployment job
-  deploy:
-    # Add a dependency to the build job
-    needs: build
-    # Deploy to the github_pages environment
-    environment:
-      name: github_pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    # Specify runner + deployment step
-    runs-on: ubuntu-latest
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+          BRANCH: gh-pages
+          FOLDER: dist
