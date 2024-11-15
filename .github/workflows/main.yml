@@ -14,9 +14,9 @@ jobs:
       - uses: actions/checkout@v2
       - name: Install & Build
         run: |
-          cp dist/index.html dist/404.html
           npm install
           npm run build
+          cp dist/index.html dist/404.html
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@releases/v4
         with:
