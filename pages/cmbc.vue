@@ -808,14 +808,17 @@
         </div>
     </article>
 </template>
-<script>
-export default {
-  mounted() {
-    this.$root.replaceSuitSigns(this.$refs.Article);
-    this.$root.genTOC();
-    this.$root.$data.topic = "Tự Nhiên Chế";
-  }
-}
+<script setup>
+import replaceSuitSigns from '~/modules/replaceSuitSigns';
+import genTOC from '~/modules/genTOC';
+const article = useTemplateRef('Article');
+const toc = useState('toc');
+
+onMounted(() => {
+  replaceSuitSigns(article.value);
+  genTOC(toc);
+  //this.$root.$data.topic = "Röle Sistemi";
+});
 </script>
 <style scoped>
 

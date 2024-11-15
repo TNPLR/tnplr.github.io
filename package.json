@@ -1,20 +1,17 @@
 {
-  "name": "vue-bidpage",
-  "version": "0.0.0",
+  "name": "nuxt-app",
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "vue": "^3.4.29",
-    "vue-cookies": "^1.8.4",
-    "vue-router": "^4.4.2"
-  },
-  "devDependencies": {
-    "@vitejs/plugin-vue": "^5.0.5",
-    "vite": "^5.3.1"
+    "nuxt": "^3.14.159",
+    "vue": "latest",
+    "vue-router": "latest"
   }
 }
