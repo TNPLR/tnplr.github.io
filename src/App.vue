@@ -1,5 +1,6 @@
 <script>
 import suitSign from './components/suitSign';
+import { computed, ref } from 'vue';
 export default {
   data() {
     return {
