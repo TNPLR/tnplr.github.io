@@ -4,6 +4,7 @@ import textAuction from "~/modules/textAuction";
 import allStories from "~/modules/quest.json";
 
 definePageMeta({
+    title: '叫牌練習區',
     layout: 'custom'
 });
 
@@ -15,6 +16,7 @@ const selectedQuest = ref(1);
 //const selectedQuestType = useCookie('questtype');
 //const selectedQuest = useCookie('questnumber');
 const explanationType = ref(0);
+const title = useState('title');
 
 
 const explanationColor = computed(() => {
@@ -58,6 +60,7 @@ function changeQuest() {
 }
 
 onMounted(() => {
+    title.value = "自然制練習區";
     changeQuest();
 });
 
@@ -66,7 +69,7 @@ onMounted(() => {
 <template id="storytemplate">
     <header class="headergrid">
         <div class="storyopt">
-            <router-link to="/">叫牌練習區</router-link>
+            <NuxtLink to="/">叫牌練習區</NuxtLink>
         </div>
         <div class="storyopt" id="qtypeopt">
             題庫：<select id="questlib" v-on:change="selectedQuest = 1; changeQuest();" v-model="selectedQuestType">

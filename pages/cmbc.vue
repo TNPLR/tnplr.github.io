@@ -811,12 +811,16 @@
 <script setup>
 import replaceSuitSigns from '~/modules/replaceSuitSigns';
 import genTOC from '~/modules/genTOC';
+
 const article = useTemplateRef('Article');
 const toc = useState('toc');
+
+const title = useState('title');
 
 onMounted(() => {
   replaceSuitSigns(article.value);
   genTOC(toc);
+  title.value = "CMBC 自然制";
   //this.$root.$data.topic = "Röle Sistemi";
 });
 </script>

@@ -3184,8 +3184,10 @@ import replaceSuitSigns from '~/modules/replaceSuitSigns';
 import genTOC from '~/modules/genTOC';
 const article = useTemplateRef('Article');
 const toc = useState('toc');
+const title = useState('title');
 
 onMounted(() => {
+  title.value = "Relay 制度";
   replaceSuitSigns(article.value);
   genTOC(toc);
   //this.$root.$data.topic = "Röle Sistemi";

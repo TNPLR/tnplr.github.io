@@ -3,6 +3,7 @@ import BiddingBox from "~/components/BiddingBox.vue";
 import AuctionBox from "~/components/AuctionBox.vue";
 import textAuction from "~/modules/textAuction";
 
+
 definePageMeta({
     layout: 'custom'
 });
@@ -108,11 +109,16 @@ const hcp = computed(() => {
 const cardCount = computed(() => {
     return spades.value.length + hearts.value.length + diamonds.value.length + clubs.value.length;
 });
+
+const title = useState('title');
+onMounted(() => {
+    title.value = "Quest生成器";
+});
 </script>
 
 <template>
     <header>
-        <h1 class="topic">QuestGen</h1>
+        <h1 class="topic"><NuxtLink to="/">QuestGen</NuxtLink></h1>
     </header>
     <div class="maingrid">
         <div>
