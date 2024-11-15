@@ -3,7 +3,7 @@ name: Deploy Nuxt 3 to GitHub Pages
 on:
   push:
     branches:
-      - develop # 觸發部署的分支
+      - master # 觸發部署的分支
 
 permissions:
   contents: write
