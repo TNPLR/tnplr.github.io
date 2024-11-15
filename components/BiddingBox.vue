@@ -1,6 +1,5 @@
 <script setup>
-import { onMounted, ref, watch } from 'vue'
-import textAuction from './textAuction.js';
+import textAuction from '~/modules/textAuction';
 const showDouble = ref(false);
 const showReDouble = ref(false);
 const showAlert = defineModel('showAlert', {default: false});
