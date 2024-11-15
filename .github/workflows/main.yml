@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - master # 觸發部署的分支
+  pull_request:
+    branches:
+      - master
 
 permissions:
   contents: write
