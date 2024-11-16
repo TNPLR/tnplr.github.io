@@ -1,8 +1,4 @@
-interface TocElement {
-    name: string,
-    class: string,
-    text: string
-}
+import type { TocElement } from "../type/type";
 
 function genTOC(toc: Ref<TocElement[]>) {
     if (!process.client) {

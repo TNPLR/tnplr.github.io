@@ -1,20 +1,21 @@
-<script setup>
+<script setup lang="ts">
 import BiddingBox from "~/components/BiddingBox.vue";
 import AuctionBox from "~/components/AuctionBox.vue";
 import textAuction from "~/modules/textAuction";
+import type { Call, Quest } from "~/type/type";
 
 
 definePageMeta({
     layout: 'custom'
 });
 
-function copy() {
+function copy() :void {
     navigator.clipboard.writeText(questJson.value).then(() => {
         copySuccess.value = true;
     });
 }
 
-function pushAuction(bid) {
+function pushAuction(bid: string) :void {
     if (bid === "Pass") {
         bid = "P";
     }
@@ -23,7 +24,7 @@ function pushAuction(bid) {
     alert.value = false;
 }
 
-function pushExplanation(bid) {
+function pushExplanation(bid: string) :void {
     if (Object.keys(explanation.value).length === 0) {
         answer.value = bid;
     }
@@ -31,28 +32,28 @@ function pushExplanation(bid) {
     input_text.value = "";
 }
 
-function auctionClicked(bid) {
+function auctionClicked(bid: string) :void {
     if (answerMode.value) {
         pushExplanation(bid);
     } else {
         pushAuction(bid);
     }
 }
-function clearAuction() {
+function clearAuction() :void {
     auction.value = [];
 }
-function deleteBid() {
+function deleteBid() :void {
     auction.value.pop();
 }
-function summitQuest() {
-    let quest = {
+function summitQuest() :void {
+    let quest: Quest = {
         spades: spades.value,
         hearts: hearts.value,
         diamonds: diamonds.value,
         clubs: clubs.value,
         auction: auction.value,
         answers: explanation.value,
-        correct: answer,
+        correct: answer.value,
         board_num: board_num.value
     };
     questList.value.push(quest);
@@ -65,7 +66,7 @@ function summitQuest() {
     clubs.value = "";
 }
 
-function computeSuitHCP(suit) {
+function computeSuitHCP(suit: string) :number {
     let sum = 0;
     for (let i = 0; i < suit.length; ++i) {
         switch (suit[i]) {
@@ -92,10 +93,10 @@ const answerMode = ref(false);
 const input_text = ref("");
 const alert = ref(false);
 const board_num = ref(1);
-const auction = ref([]);
+const auction = ref<Call[]>([]);
 const answer = ref("");
-const explanation = ref({});
-const questList = ref([]);
+const explanation = ref<{[index: string]: string}>({});
+const questList = ref<Quest[]>([]);
 const spades = ref("");
 const hearts = ref("");
 const diamonds = ref("");
@@ -155,10 +156,10 @@ onMounted(() => {
     <auction-box v-model:auction="auction" v-model:board_num="board_num"/>
     <h3>Answer: <span v-html="textAuction(answer)"></span></h3>
     <div class="maingrid" v-for="(exp, key) in explanation" :key="key">
-        <span v-html="textAuction(key)"></span>
-        <input type="text" v-model="explanation[key]" :id="key">
+        <span v-html="textAuction(key.toString())"></span>
+        <input type="text" v-model="explanation[key]" :id="key.toString()">
         <button @click="delete explanation[key]">Delete</button>
-        <button @click="answer = key">Set as answer</button>
+        <button @click="answer = key.toString()">Set as answer</button>
     </div>
     <div class="secondgrid">
         <button @click="summitQuest">新增題目</button>

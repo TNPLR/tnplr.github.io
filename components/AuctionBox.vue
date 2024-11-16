@@ -1,11 +1,13 @@
-<script setup>
+<script setup lang="ts">
+import type { Call } from '~/type/type';
 import textAuction from '~/modules/textAuction';
 import suitSign from '~/modules/suitSign';
 
-const board_num = defineModel('board_num', {default: 1});
-const auction = defineModel('auction', {default: []});
-const lastBid = defineModel('lastBid', {default: "?"});
-const colorLastBid = defineModel('colorLastBid', {default: "#e0fee0"});
+const board_num = defineModel<number>('board_num', {default: 1});
+const auction = defineModel<Call[]>('auction', {default: []});
+const lastBid = defineModel<string>('lastBid', {default: "?"});
+const colorLastBid = defineModel<string>('colorLastBid', {default: "#e0fee0"});
+
 const seatHeader = computed(() => {
     let ret = [
         {name: "North", vulnerable: false},
@@ -61,7 +63,7 @@ const seatHeader = computed(() => {
             {{ seat.name }}
         </div>
         <div v-for="x in (board_num - 1) & 3"></div>
-        <div class="auction_tip" v-bind:style="{backgroundColor: bid.explanation === '' ? '#e0fee0' : 'WhiteSmoke', borderColor: bid.alert ? 'red' : '#e0fee0'}" v-for="(bid, index) in auction" :key="index">
+        <div class="auction_tip" v-for="(bid, index) in auction" v-bind:style="{backgroundColor: bid.explanation === '' ? '#e0fee0' : 'WhiteSmoke', borderColor: bid.alert ? 'red' : '#e0fee0'}" :key="index">
             <span v-html="textAuction(bid.name)">
             </span><span v-if="bid.explanation !== ''" class="auction_tip_text" v-html="suitSign(bid.explanation)"></span>
         </div>
