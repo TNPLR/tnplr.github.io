@@ -7059,7 +7059,8 @@
       ],
       "answers": {},
       "correct": "3D",
-      "board_num": 1
+      "board_num": 1,
+      "description": "本題使用Transfer Lebensohl"
     },
     {
       "spades": "JT",

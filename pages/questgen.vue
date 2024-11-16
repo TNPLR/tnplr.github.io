@@ -2,7 +2,7 @@
 import BiddingBox from "~/components/BiddingBox.vue";
 import AuctionBox from "~/components/AuctionBox.vue";
 import textAuction from "~/modules/textAuction";
-import type { Call, Quest, QuestLib } from "~/type/type";
+import type { Call, NameOfCall, Quest, QuestLib } from "~/type/type";
 import quest from "~/modules/quest.json";
 
 
@@ -25,7 +25,7 @@ function pushAuction(bid: string) :void {
     alert.value = false;
 }
 
-function pushExplanation(bid: string) :void {
+function pushExplanation(bid: NameOfCall) :void {
     if (Object.keys(explanation.value).length === 0) {
         answer.value = bid;
     }
@@ -33,7 +33,7 @@ function pushExplanation(bid: string) :void {
     input_text.value = "";
 }
 
-function auctionClicked(bid: string) :void {
+function auctionClicked(bid: NameOfCall) :void {
     if (answerMode.value) {
         pushExplanation(bid);
     } else {
@@ -47,6 +47,9 @@ function deleteBid() :void {
     auction.value.pop();
 }
 function summitQuest() :void {
+    if (answer.value === undefined) {
+        answer.value = "1C";
+    }
     let quest: Quest = {
         spades: spades.value,
         hearts: hearts.value,
@@ -108,12 +111,12 @@ const input_text = ref("");
 const alert = ref(false);
 const board_num = ref(1);
 const auction = ref<Call[]>([]);
-const answer = ref("");
+const answer = ref<NameOfCall | undefined>();
 const explanation = ref<{[index: string]: string}>({});
 const questList = ref<Quest[]>([]);
 
 const selectedQuestType = ref("開叫");
-const allStories = ref<QuestLib>(quest);
+const allStories = ref<QuestLib>(quest as QuestLib);
 
 const spades = ref("");
 const hearts = ref("");
@@ -175,12 +178,12 @@ onMounted(() => {
     </div>
     <bidding-box v-bind:on-click="auctionClicked" showAlert="true" showInput="true" v-model:inputText="input_text" v-model:alert="alert" v-model:auction="auction"/>
     <auction-box v-model:auction="auction" v-model:board_num="board_num"/>
-    <h3>Answer: <span v-html="textAuction(answer)"></span></h3>
+    <h3>Answer: <span v-html="textAuction(answer as NameOfCall)"></span></h3>
     <div class="maingrid" v-for="(exp, key) in explanation" :key="key">
         <span v-html="textAuction(key.toString())"></span>
         <input type="text" v-model="explanation[key]" :id="key.toString()">
         <button @click="delete explanation[key]">Delete</button>
-        <button @click="answer = key.toString()">Set as answer</button>
+        <button @click="answer = key.toString() as NameOfCall">Set as answer</button>
     </div>
     <div class="secondgrid">
         <button @click="summitQuest">新增題目</button>
