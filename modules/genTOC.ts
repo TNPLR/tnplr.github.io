@@ -1,4 +1,10 @@
-function genTOC(toc) {
+interface TocElement {
+    name: string,
+    class: string,
+    text: string
+}
+
+function genTOC(toc: Ref<TocElement[]>) {
     if (!process.client) {
         return;
     }
@@ -8,7 +14,7 @@ function genTOC(toc) {
         if (header.id === "") {
           header.id = `header-${index}`;
         }
-        toc.value.push({"name": header.id, "class": "toc" + header.tagName, "text": header.textContent});
+        toc.value.push({"name": header.id, "class": "toc" + header.tagName, "text": typeof header.textContent === "string" ? header.textContent : ""});
     });
 }
 
