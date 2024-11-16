@@ -12,41 +12,43 @@
           <li>有內部的連續大牌，除非王牌合約而外部大牌是A，攻第二張內部的連續大牌。</li>
         </ul>
         <table>
-          <tr>
-            <th>攻出牌張</th>
-            <th>王牌合約</th>
-            <th>無王合約</th>
-          </tr>
-          <tr>
-            <td><b>A</b></td>
-            <td>AKx(+), AQ(+), AJ(+), Ax(+)</td>
-            <td>AKx(+)</td>
-          </tr>
-          <tr>
-            <td><b>K</b></td>
-            <td>AK, KQ(+), Kx</td>
-            <td>AK, KQ(+), Kx</td>
-          </tr>
-          <tr>
-            <td><b>Q</b></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td><b>J</b></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td><b>10</b></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td><b>9</b></td>
-            <td></td>
-            <td></td>
-          </tr>
+          <tbody>
+            <tr>
+              <th>攻出牌張</th>
+              <th>王牌合約</th>
+              <th>無王合約</th>
+            </tr>
+            <tr>
+              <td><b>A</b></td>
+              <td>AKx(+), AQ(+), AJ(+), Ax(+)</td>
+              <td>AKx(+)</td>
+            </tr>
+            <tr>
+              <td><b>K</b></td>
+              <td>AK, KQ(+), Kx</td>
+              <td>AK, KQ(+), Kx</td>
+            </tr>
+            <tr>
+              <td><b>Q</b></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><b>J</b></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><b>10</b></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><b>9</b></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
         </table>
       </div>
       <div><h3>王牌合約的首攻</h3>
