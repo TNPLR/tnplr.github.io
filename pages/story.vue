@@ -14,7 +14,7 @@ const Explanation = ref(["", "", "?"]);
 const selectedLevel = ref<number | undefined>(undefined);
 const selectedQuestType = ref<keyof typeof allStories>('開叫');
 const selectedQuest = ref(1);
-const qtCookie = useCookie<keyof typeof allStories>('questtype');
+const qtCookie = useCookie<keyof typeof allStories | string | undefined>('questtype');
 const qCookie = useCookie<number>('questnumber');
 const explanationType = ref(0);
 const title = useState('title');
@@ -65,9 +65,9 @@ function changeQuest() {
 }
 
 onMounted(() => {
-    if (qtCookie.value !== undefined) {
-        selectedQuestType.value = qtCookie.value;
-        if (qCookie.value !== undefined) {
+    if (qtCookie.value !== undefined && qtCookie.value in allStories) {
+        selectedQuestType.value = qtCookie.value as keyof typeof allStories;
+        if (typeof qCookie.value === "number" && qCookie.value < allStories[selectedQuestType.value].length) {
             selectedQuest.value = qCookie.value;
         }
     }
