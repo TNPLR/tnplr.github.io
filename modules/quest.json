@@ -677,6 +677,20 @@
       "answers": {},
       "correct": "1NT",
       "board_num": 1
+    },
+    {
+      "spades": "8",
+      "hearts": "54",
+      "diamonds": "T93",
+      "clubs": "AKJ9865",
+      "auction": [],
+      "answers": {
+        "3C": "正確。竄叫",
+        "Pass": "錯誤。有點太保守了，這牌應該可以竄叫",
+        "2C": "錯誤。這是強牌的叫品"
+      },
+      "correct": "3C",
+      "board_num": 1
     }
   ],
   "低花開叫的答叫": [

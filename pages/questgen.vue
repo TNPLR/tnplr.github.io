@@ -2,7 +2,8 @@
 import BiddingBox from "~/components/BiddingBox.vue";
 import AuctionBox from "~/components/AuctionBox.vue";
 import textAuction from "~/modules/textAuction";
-import type { Call, Quest } from "~/type/type";
+import type { Call, Quest, QuestLib } from "~/type/type";
+import quest from "~/modules/quest.json";
 
 
 definePageMeta({
@@ -56,6 +57,7 @@ function summitQuest() :void {
         correct: answer.value,
         board_num: board_num.value
     };
+    allStories.value[selectedQuestType.value].push(quest);
     questList.value.push(quest);
     answerMode.value = false;
     clearAuction();
@@ -89,6 +91,18 @@ function computeSuitHCP(suit: string) :number {
     return sum;
 }
 
+function download() :void {
+    let text = JSON.stringify(allStories.value, null, 2)
+    let filename = "download.json";
+    let element = document.createElement('a');
+    element.setAttribute('href', 'data:application/json;charset=utf-8,' + encodeURIComponent(text));
+    element.setAttribute('download', filename);
+    element.style.display = 'none';
+    document.body.appendChild(element);
+    element.click();
+	document.body.removeChild(element);
+}
+
 const answerMode = ref(false);
 const input_text = ref("");
 const alert = ref(false);
@@ -97,6 +111,10 @@ const auction = ref<Call[]>([]);
 const answer = ref("");
 const explanation = ref<{[index: string]: string}>({});
 const questList = ref<Quest[]>([]);
+
+const selectedQuestType = ref("開叫");
+const allStories = ref<QuestLib>(quest);
+
 const spades = ref("");
 const hearts = ref("");
 const diamonds = ref("");
@@ -120,6 +138,9 @@ onMounted(() => {
 <template>
     <header>
         <h1 class="topic"><NuxtLink to="/">QuestGen</NuxtLink></h1>
+        題庫：<select id="questlib" v-model="selectedQuestType">
+            <option v-for="(x, key) in allStories">{{ key }}</option></select>
+        <button @click="download">下載題目</button>
     </header>
     <div class="maingrid">
         <div>
