@@ -1,6 +1,6 @@
-<script setup>
+<script setup lang="ts">
 
-const title = useState('title', () => "Relay教學網");
+const title = useState<string>('title', () => "Relay教學網");
 </script>
 
 <template>
