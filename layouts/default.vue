@@ -1,6 +1,6 @@
 <script setup>
 const topbuttonshow = ref(false);
-const topic = ref("Röle Sistemi");
+const topic = useState('topic', () => "Röle Sistemi")
 
 const toc = useState('toc');
 function goToTop() {
