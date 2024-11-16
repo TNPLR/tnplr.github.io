@@ -13,8 +13,8 @@ const Explanation = ref(["", "", "?"]);
 const selectedLevel = ref(undefined);
 const selectedQuestType = ref('開叫');
 const selectedQuest = ref(1);
-//const selectedQuestType = useCookie('questtype');
-//const selectedQuest = useCookie('questnumber');
+const qtCookie = useCookie('questtype');
+const qCookie = useCookie('questnumber');
 const explanationType = ref(0);
 const title = useState('title');
 
@@ -56,10 +56,20 @@ function changeQuest() {
     Explanation.value[2] = "?";
     explanationType.value = 0;
     Quest.value = allStories[selectedQuestType.value][selectedQuest.value-1];
+
+    qtCookie.value = selectedQuestType.value;
+    qCookie.value = selectedQuest.value;
+
     selectedLevel.value = undefined;
 }
 
 onMounted(() => {
+    if (qtCookie.value !== undefined) {
+        selectedQuestType.value = qtCookie.value;
+        if (qCookie.value !== undefined) {
+            selectedQuest.value = qCookie.value;
+        }
+    }
     title.value = "自然制練習區";
     changeQuest();
 });
