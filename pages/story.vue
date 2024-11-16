@@ -1,20 +1,21 @@
-<script setup>
+<script setup lang="ts">
 import suitSign from "~/modules/suitSign";
 import textAuction from "~/modules/textAuction";
 import allStories from "~/modules/quest.json";
+import type { NameOfCall, Quest } from "~/type/type";
 
 definePageMeta({
     title: '叫牌練習區',
     layout: 'custom'
 });
 
-const Quest = ref({});
+const quest = ref<Quest>(allStories["開叫"][0] as Quest);
 const Explanation = ref(["", "", "?"]);
-const selectedLevel = ref(undefined);
-const selectedQuestType = ref('開叫');
+const selectedLevel = ref<number | undefined>(undefined);
+const selectedQuestType = ref<keyof typeof allStories>('開叫');
 const selectedQuest = ref(1);
-const qtCookie = useCookie('questtype');
-const qCookie = useCookie('questnumber');
+const qtCookie = useCookie<keyof typeof allStories>('questtype');
+const qCookie = useCookie<number>('questnumber');
 const explanationType = ref(0);
 const title = useState('title');
 
@@ -32,18 +33,18 @@ const explanationColor = computed(() => {
     }
 });
 
-function showExplanation(bid) {
+function showExplanation(bid: NameOfCall) {
     Explanation.value[0] = bid;
     Explanation.value[2] = bid;
-    if (Quest.value.correct === bid) {
+    if (quest.value.correct === bid) {
         explanationType.value = 2;
     } else {
         explanationType.value = 1;
     }
-    if (Quest.value.answers[bid] !== undefined && Quest.value.answers[bid] !== "") {
-        Explanation.value[1] = Quest.value.answers[bid];
+    if (quest.value.answers[bid] !== undefined && quest.value.answers[bid] !== "") {
+        Explanation.value[1] = quest.value.answers[bid];
         Explanation.value[1] = suitSign(Explanation.value[1]);
-    } else if (Quest.value.correct === bid) {
+    } else if (quest.value.correct === bid) {
         Explanation.value[1] = "答案正確！";
     } else {
         Explanation.value[1] = "答案錯誤，請再試試看！";
@@ -55,7 +56,7 @@ function changeQuest() {
     Explanation.value[1] = "";
     Explanation.value[2] = "?";
     explanationType.value = 0;
-    Quest.value = allStories[selectedQuestType.value][selectedQuest.value-1];
+    quest.value = allStories[selectedQuestType.value][selectedQuest.value-1] as Quest;
 
     qtCookie.value = selectedQuestType.value;
     qCookie.value = selectedQuest.value;
@@ -92,22 +93,25 @@ onMounted(() => {
         <div class="storyopt">
             <button class="questset" v-bind:disabled="selectedQuest <= 1" v-on:click="selectedQuest--; changeQuest();">上一題</button>
             <button class="questset" v-bind:disabled="selectedQuest >= allStories[selectedQuestType].length" v-on:click="selectedQuest++; changeQuest();">下一題</button>
-            <button class="questset" v-on:click="showExplanation(Quest.correct)">公布答案</button>
+            <button class="questset" v-on:click="showExplanation(quest.correct)">公布答案</button>
         </div>
         <div style="clear: left;"></div>
     </header>
     <div class="story-grid">
         <div class="hand-box">
-            <span style="color:black">&#9824;</span> {{ Quest.spades }} 
-            <span style="color:tomato">&#9829;</span> {{ Quest.hearts }} 
-            <span style="color:orange">&#9830;</span> {{ Quest.diamonds }} 
-            <span style="color:DarkSlateGray">&#9827;</span> {{ Quest.clubs }} 
+            <span style="color:black">&#9824;</span> {{ quest.spades }} 
+            <span style="color:tomato">&#9829;</span> {{ quest.hearts }} 
+            <span style="color:orange">&#9830;</span> {{ quest.diamonds }} 
+            <span style="color:DarkSlateGray">&#9827;</span> {{ quest.clubs }} 
         </div>
         <div class="auctiongrid">
-            <auction-box v-model:board_num="Quest.board_num" v-model:auction="Quest.auction" v-model:lastBid="Explanation[2]" v-model:colorLastBid="explanationColor"/>
+            <auction-box v-model:board_num="quest.board_num" v-model:auction="quest.auction" v-model:lastBid="Explanation[2]" v-model:colorLastBid="explanationColor"/>
         </div>
         <div>
-            <bidding-box v-bind:onClick="showExplanation" v-bind:showOnClick="textAuction" v-model:selectedLevel="selectedLevel" v-model:auction="Quest.auction" ref="bbox"/>
+            <p>{{ typeof quest.description === "string" ? quest.description : "" }}</p>
+        </div>
+        <div>
+            <bidding-box v-bind:onClick="showExplanation" v-bind:showOnClick="textAuction" v-model:selectedLevel="selectedLevel" v-model:auction="quest.auction" ref="bbox"/>
         </div>
         <div id="explanation">
             <h3 ><span v-html="textAuction(Explanation[0])"></span></h3>
@@ -138,7 +142,7 @@ onMounted(() => {
     height: auto;
     display: grid;
     grid-template-columns: 45% 55%;
-    grid-template-rows: auto auto auto;
+    grid-template-rows: auto auto auto auto;
     font-size: 25px;
 }
 .story-grid > div {
@@ -146,7 +150,7 @@ onMounted(() => {
     padding: 20px 0;
 }
 .auctiongrid {
-    grid-row: span 2;
+    grid-row: span 3;
 }
 .bidding-grid {
     grid-row: span 3;
