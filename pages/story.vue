@@ -9,15 +9,19 @@ definePageMeta({
     layout: 'custom'
 });
 
-const quest = ref<Quest>(allStories["開叫"][0] as Quest);
+const quest = ref<Quest>(allStories[0]["quests"][0] as Quest);
 const Explanation = ref(["", "", "?"]);
 const selectedLevel = ref<number | undefined>(undefined);
-const selectedQuestType = ref<keyof typeof allStories>('開叫');
+const selectedQuestType = ref("開叫");
 const selectedQuest = ref(1);
 const qtCookie = useCookie<keyof typeof allStories | string | undefined>('questtype');
 const qCookie = useCookie<number>('questnumber');
 const explanationType = ref(0);
 const title = useState('title');
+
+const selectedQuestTypeIndex = computed(() => {
+    return allStories.findIndex(x => x.name === selectedQuestType.value);
+});
 
 
 const explanationColor = computed(() => {
@@ -56,7 +60,7 @@ function changeQuest() {
     Explanation.value[1] = "";
     Explanation.value[2] = "?";
     explanationType.value = 0;
-    quest.value = allStories[selectedQuestType.value][selectedQuest.value-1] as Quest;
+    quest.value = allStories[selectedQuestTypeIndex.value]["quests"][selectedQuest.value-1] as Quest;
 
     qtCookie.value = selectedQuestType.value;
     qCookie.value = selectedQuest.value;
@@ -66,8 +70,9 @@ function changeQuest() {
 
 onMounted(() => {
     if (qtCookie.value !== undefined && qtCookie.value in allStories) {
-        selectedQuestType.value = qtCookie.value as keyof typeof allStories;
-        if (typeof qCookie.value === "number" && qCookie.value < allStories[selectedQuestType.value].length) {
+        selectedQuestType.value = qtCookie.value as string;
+        const questtypeindex = allStories.findIndex(x => x.name === selectedQuestType.value);
+        if (typeof qCookie.value === "number" && qCookie.value < allStories[questtypeindex].quests.length) {
             selectedQuest.value = qCookie.value;
         }
     }
@@ -84,15 +89,15 @@ onMounted(() => {
         </div>
         <div class="storyopt" id="qtypeopt">
             題庫：<select id="questlib" v-on:change="selectedQuest = 1; changeQuest();" v-model="selectedQuestType">
-                <option v-for="(x, key) in allStories">{{ key }}</option></select>
+                <option v-for="x in allStories">{{ x.name }}</option></select>
         </div>
         <div class="storyopt">
             題目：<select id="questno" v-on:change="changeQuest()" v-model="selectedQuest">
-                <option v-for="(q, index) in allStories[selectedQuestType]">{{ index+1 }}</option></select>
+                <option v-for="(q, index) in allStories[selectedQuestTypeIndex].quests">{{ index+1 }}</option></select>
         </div>
         <div class="storyopt">
             <button class="questset" v-bind:disabled="selectedQuest <= 1" v-on:click="selectedQuest--; changeQuest();">上一題</button>
-            <button class="questset" v-bind:disabled="selectedQuest >= allStories[selectedQuestType].length" v-on:click="selectedQuest++; changeQuest();">下一題</button>
+            <button class="questset" v-bind:disabled="selectedQuest >= allStories[selectedQuestTypeIndex].quests.length" v-on:click="selectedQuest++; changeQuest();">下一題</button>
             <button class="questset" v-on:click="showExplanation(quest.correct)">公布答案</button>
         </div>
         <div style="clear: left;"></div>
