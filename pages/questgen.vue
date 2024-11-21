@@ -60,7 +60,8 @@ function summitQuest() :void {
         correct: answer.value,
         board_num: board_num.value
     };
-    allStories.value[selectedQuestType.value].push(quest);
+
+    allStories.value.find((x) => x.name === selectedQuestType.value)?.quests.push(quest);
     questList.value.push(quest);
     answerMode.value = false;
     clearAuction();
@@ -116,6 +117,7 @@ const explanation = ref<{[index: string]: string}>({});
 const questList = ref<Quest[]>([]);
 
 const selectedQuestType = ref("開叫");
+
 const allStories = ref<QuestLib>(quest as QuestLib);
 
 const spades = ref("");
@@ -142,7 +144,7 @@ onMounted(() => {
     <header>
         <h1 class="topic"><NuxtLink to="/">QuestGen</NuxtLink></h1>
         題庫：<select id="questlib" v-model="selectedQuestType">
-            <option v-for="(x, key) in allStories">{{ key }}</option></select>
+            <option v-for="x in allStories">{{ x.name }}</option></select>
         <button @click="download">下載題目</button>
     </header>
     <div class="maingrid">
