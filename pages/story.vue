@@ -69,11 +69,13 @@ function changeQuest() {
 }
 
 onMounted(() => {
-    if (qtCookie.value !== undefined && qtCookie.value in allStories) {
-        selectedQuestType.value = qtCookie.value as string;
+    if (qtCookie.value !== undefined) {
         const questtypeindex = allStories.findIndex(x => x.name === selectedQuestType.value);
-        if (typeof qCookie.value === "number" && qCookie.value < allStories[questtypeindex].quests.length) {
-            selectedQuest.value = qCookie.value;
+        if (questtypeindex !== -1) {
+            selectedQuestType.value = qtCookie.value as string;
+            if (typeof qCookie.value === "number" && qCookie.value < allStories[questtypeindex].quests.length) {
+                selectedQuest.value = qCookie.value;
+            }
         }
     }
     title.value = "自然制練習區";
