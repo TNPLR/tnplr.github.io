@@ -46,8 +46,13 @@ onUnmounted(() => {
                     <NuxtLink to="/signal">防禦信號</NuxtLink>
                 </div>
             </li>
-            <li><NuxtLink to="/natural">自然制</NuxtLink></li>
-            <li><NuxtLink to="/cmbc">CMBC 自然制</NuxtLink></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">自然制</a>
+                <div class="dropdown-content">
+                    <NuxtLink to="/cmbc">CMBC自然制</NuxtLink>
+                    <NuxtLink to="/natural">特殊自然制</NuxtLink>
+                </div>
+            </li>
             <li><NuxtLink to="/story">練習區</NuxtLink></li>
         </ul>
     </div>
