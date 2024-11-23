@@ -3185,9 +3185,11 @@ import genTOC from '~/modules/genTOC';
 const article = useTemplateRef('Article');
 const toc = useState('toc');
 const title = useState('title');
+const topic = useState('topic');
 
 onMounted(() => {
   title.value = "Relay 制度";
+  topic.value = "Röle Sistemi";
   replaceSuitSigns(article.value);
   genTOC(toc);
   //this.$root.$data.topic = "Röle Sistemi";
