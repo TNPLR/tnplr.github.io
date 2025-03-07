@@ -331,10 +331,14 @@
                         </ul>
                     </li>
                 </ul>
+                <div><h4>再叫1NT以後：1m-1M-1NT</h4>
+                    <p>參閱<a href="#after-weak1NT">1m-1M-1NT</a></p>
+                </div>
+                <div><h4>叫出三門花色以後</h4>
+                    <p>原則上的約定請參閱<a href="#fourthsuitF">第四新花迫叫及相關叫品</a>。</p>
+                </div>
             </div>
-            <div><h3>再叫1NT以後：1m-1M-1NT</h3>
-                參閱<a href="#after-weak1NT">1m-1M-1NT</a>
-            </div>
+            
             <div><h3>反序低花</h3>
                 <p>這個叫品也是個特約叫品，主要是把傳統的2線和3線反過來叫（變成2線強、3線弱）。基於高花優先以及方便後續的設計，叫出這個叫品（1m-2m / 1m-3m）不能有4張高花。
                 </p>
@@ -560,6 +564,50 @@
                         </tbody>
                     </table>
                 </div>
+            </div>
+            <div id="fourthsuitF"><h3>第四新花迫叫及相關叫品</h3>
+                <p>在一線花色開叫以後，答叫者在一線叫出新花，而開叫者簡單叫出新花（非倒叫），此時即有第四新花迫叫等叫品。</p>
+                <p>此時最重要的特約是第四新花迫叫成局。其他叫品都還算容易記憶：</p>
+                <ul>
+                    <li>1NT = 自然束叫要打。</li>
+                    <li>2線非新花 = 束叫</li>
+                    <li>2NT = 邀請成局</li>
+                    <li>3線非新花 = 邀請成局</li>
+                    <li>2線或3線簡單叫第四新花 = 迫叫成局</li>
+                    <li>跳叫前項的第四新花 = Splinter</li>
+                </ul>
+                <p>1!C-1!D-1!H的後續，1!S表示黑桃，迫叫一圈。2!S才是第四新花迫叫成局。如果後續開叫者叫1NT時，答叫者的後續如下表：</p>
+                <table class="bidtable" id="1C-1D-1H-1S-1NT">
+                    <tbody>
+                        <tr>
+                            <th></th>
+                            <th>1!C</th>
+                            <th></th>
+                        </tr>
+                        <tr>
+                            <th>1!D</th>
+                            <th>1!H</th>
+                            <th></th>
+                        </tr>
+                        <tr>
+                            <th>1!S</th>
+                            <th>1NT</th>
+                            <th>沒有配合。</th>
+                        </tr>
+                        <tr>
+                            <td colspan="2">2!C/!D</td>
+                            <td>邀請成局。</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">2!S!</td>
+                            <td>人工的迫叫成局。</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">3!C/!D</td>
+                            <td>迫叫成局。</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
         <div><h2>1NT開叫的後續</h2>
