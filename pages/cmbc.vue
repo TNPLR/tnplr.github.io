@@ -26,8 +26,8 @@
                         <td>15-17，平均牌型，沒有5張高花。</td>
                     </tr>
                     <tr>
-                        <td>2!C</td>
-                        <td>強牌迫叫。</td>
+                        <td><a href="#2C">2!C</a></td>
+                        <td>強牌迫叫。22點以上或8.5個贏墩以上。</td>
                     </tr>
                     <tr>
                         <td>2NT</td>
@@ -103,7 +103,7 @@
                         <td>6-9(10)點，沒有一門4張以上的!H或!S。</td>
                     </tr>
                     <tr>
-                        <td>2!C</td>
+                        <td><a href="#1C-2C">2!C!</a></td>
                         <td>11點以上。5張以上梅花支持，沒有4張以上高花。邀請，迫叫到3!C。</td>
                     </tr>
                     <tr>
@@ -136,7 +136,7 @@
                         <td>12點以上，迫叫成局。5張以上梅花牌組。</td>
                     </tr>
                     <tr>
-                        <td>2!D</td>
+                        <td><a href="#1D-2D">2!D!</a></td>
                         <td>11點以上。4張以上方塊支持，沒有4張以上高花。邀請，迫叫到3!D。</td>
                     </tr>
                     <tr>
@@ -166,6 +166,78 @@
                 <li>選擇叫高花時，若有兩門以上4張高花時，叫張數較多的花色。張數一樣多時，皆為4張時叫1!H；皆為5張或以上時，叫1!S。</li>
                 <li>無叫品可叫時（不能叫4張高花，不能叫低花反序，不能叫出沒叫過的低花時），依照點力叫NT的叫品</li>
             </ul>
+            <div><h5>遇到競叫的處理方法</h5>
+                <table class="competitive">
+                    <tbody>
+                        <tr>
+                            <th>1m</th>
+                            <th>(X)</th>
+                            <th>Takeout double</th>
+                        </tr>
+                        <tr>
+                            <td colspan="2">XX</td>
+                            <td>10點以上的力量。通常是平均牌或支持同伴的花色，或想要懲罰對手。</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">1!D/!H/!S</td>
+                            <td>8點以上，4張以上的牌組，8點以上，迫叫一圈。</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">1NT</td>
+                            <td>8-10點，沒有特別可以叫的東西。</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">2!C</td>
+                            <td>1!D以後叫2!C，5張以上牌組，6-9點。</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <ul>
+                    <li>原則上一線新花迫叫，二線新花不迫叫</li>
+                </ul>
+                <table class="competitive">
+                    <tbody>
+                        <tr>
+                            <th>1m</th>
+                            <th>(1!H)</th>
+                            <th>通常5張以上的紅心牌組，8點以上</th>
+                        </tr>
+                        <tr>
+                            <td colspan="2">X</td>
+                            <td>(Negative double) 4張!S，6點以上。</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">1!S</td>
+                            <td>5張!S，6點以上，迫叫一圈。</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">1NT</td>
+                            <td>8-9(10)點。</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">2om</td>
+                            <td>5張m，10點以上，迫叫一圈。</td>
+                        </tr>
+                        <tr>
+                            <th>1m</th>
+                            <th>(1!S)</th>
+                            <th>通常5張以上黑桃的牌組，8點以上</th>
+                        </tr>
+                        <tr>
+                            <td colspan="2">X</td>
+                            <td>(Negative double) 4張以上!H，8點以上。</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">2!H</td>
+                            <td>5張!H，10點以上，迫叫一圈。</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <ul>
+                    <li>Negative double通常表示另一門高花4張。但也可能是因為點力不足以叫出高花才使用（Negative double點力要求較低）。</li>
+                    <li>原則上新花迫叫，二線新花迫叫（邀請以上力量），三線新花迫叫成局。</li>
+                </ul>
+            </div>
             <div><h3>答叫高花以後：1m-1M</h3>
                 <table class="bidtable" id="1C-1H">
                     <tbody>
@@ -266,83 +338,94 @@
             <div><h3>反序低花</h3>
                 <p>這個叫品也是個特約叫品，主要是把傳統的2線和3線反過來叫（變成2線強、3線弱）。基於高花優先以及方便後續的設計，叫出這個叫品（1m-2m / 1m-3m）不能有4張高花。
                 </p>
-                <h5>張數與點力</h5>
-                <p>使用Inverted Minor特約的1m-2m叫品時，對於方塊保證有4張（基於方塊3張很少見），對於梅花保證有5張（除了3=3=3=4的牌形，可以只有4張）。</p>
-                <p>點力上，需要有10點以上。</p>
-            </div>
-            <div><h3>被干擾以後的處理方法</h3>
-                <table class="competitive">
-                    <tbody>
-                        <tr>
-                            <th>1m</th>
-                            <th>(X)</th>
-                            <th>Takeout double</th>
-                        </tr>
-                        <tr>
-                            <td colspan="2">XX</td>
-                            <td>10點以上的力量。通常是平均牌或支持同伴的花色，或想要懲罰對手。</td>
-                        </tr>
-                        <tr>
-                            <td colspan="2">1!D/!H/!S</td>
-                            <td>8點以上，4張以上的牌組，8點以上，迫叫一圈。</td>
-                        </tr>
-                        <tr>
-                            <td colspan="2">1NT</td>
-                            <td>8-10點，沒有特別可以叫的東西。</td>
-                        </tr>
-                        <tr>
-                            <td colspan="2">2!C</td>
-                            <td>1!D以後叫2!C，5張以上牌組，6-9點。</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <ul>
-                    <li>原則上一線新花迫叫，二線新花不迫叫</li>
-                </ul>
-                <table class="competitive">
-                    <tbody>
-                        <tr>
-                            <th>1m</th>
-                            <th>(1!H)</th>
-                            <th>通常5張以上的紅心牌組，8點以上</th>
-                        </tr>
-                        <tr>
-                            <td colspan="2">X</td>
-                            <td>(Negative double) 4張!S，6點以上。</td>
-                        </tr>
-                        <tr>
-                            <td colspan="2">1!S</td>
-                            <td>5張!S，6點以上，迫叫一圈。</td>
-                        </tr>
-                        <tr>
-                            <td colspan="2">1NT</td>
-                            <td>8-9(10)點。</td>
-                        </tr>
-                        <tr>
-                            <td colspan="2">2om</td>
-                            <td>5張m，10點以上，迫叫一圈。</td>
-                        </tr>
-                        <tr>
-                            <th>1m</th>
-                            <th>(1!S)</th>
-                            <th>通常5張以上黑桃的牌組，8點以上</th>
-                        </tr>
-                        <tr>
-                            <td colspan="2">X</td>
-                            <td>(Negative double) 4張以上!H，8點以上。</td>
-                        </tr>
-                        <tr>
-                            <td colspan="2">2!H</td>
-                            <td>5張!H，10點以上，迫叫一圈。</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <ul>
-                    <li>Negative double通常表示另一門高花4張。但也可能是因為點力不足以叫出高花才使用（Negative double點力要求較低）。</li>
-                    <li>原則上新花迫叫，二線新花迫叫（邀請以上力量），三線新花迫叫成局。</li>
-                </ul>
+                <div><h4>1m-2m後續</h4>
+                    <p>使用Inverted Minor特約的1m-2m叫品時，對於方塊保證有4張（基於方塊3張很少見），對於梅花保證有5張（除了3=3=3=4的牌形，可以只有4張）。</p>
+                    <p>點力上，需要有10點以上。迫叫到3m，不可停在2NT。後續可以特別注意高花擋張，不必擔心低花。</p>
+                    <p>15點以上有Splinter可以叫，而不到15點的好牌，有短門時，可以避著短門的花色叫牌，以隱含未叫的短門與有限的力量，此時迫叫到3NT或4m。</p>
+                    <table class="bidtable" id="1C-2C">
+                        <tbody>
+                            <tr>
+                                <th><a href="#1C">1!C</a></th>
+                                <th>2!C!</th>
+                                <th>5張以上梅花，10點以上，迫叫到3!C。</th>
+                            </tr>
+                            <tr>
+                                <td colspan="2">2!H</td>
+                                <td>紅心擋張，黑桃沒有擋張。</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">2!S</td>
+                                <td>黑桃擋張，紅心沒有擋張。</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">2NT</td>
+                                <td>不是真的最低限，有高花擋張，迫叫一圈。</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">3!C</td>
+                                <td>真的低限，12點。</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">3!H!/3!S!</td>
+                                <td>15點以上，短門。通常有較長的王牌，有低花成局或滿貫興趣。</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">3NT</td>
+                                <td>18-19平均牌形，沒有滿貫興趣（王牌較差、較短）。</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">4!C</td>
+                                <td>Roman Keycard Blackwood (1403)。</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>當開叫者再叫2NT以後，答叫者的3線高花表示短門，而3!m表示最低限的牌，3NT表示比最低限稍好的牌。至於低花的迫叫成局，在2NT或2M後面，可以叫另一門低花表示，在此情形下，答叫者沒有短門。</p>
+                    <p>至於方塊的後續很類似。</p>
+                    <table class="bidtable" id="1D-2D">
+                        <tbody>
+                            <tr>
+                                <th><a href="#1D">1!D</a></th>
+                                <th>2!D!</th>
+                                <th>4張以上方塊，10點以上，迫叫到3!D。</th>
+                            </tr>
+                            <tr>
+                                <td colspan="2">2!H</td>
+                                <td>紅心擋張，黑桃沒有擋張。</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">2!S</td>
+                                <td>黑桃擋張，紅心沒有擋張。</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">2NT</td>
+                                <td>不是真的最低限，有高花擋張，迫叫一圈。</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">3!C</td>
+                                <td>自然長梅花的非平均牌。</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">3!D</td>
+                                <td>真的低限，12點。</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">3!H!/3!S!</td>
+                                <td>15點以上，短門。通常有較長的王牌，有低花成局或滿貫興趣。</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">3NT</td>
+                                <td>18-19平均牌形，沒有滿貫興趣（王牌較差、較短）。</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">4!D</td>
+                                <td>Roman Keycard Blackwood (1403)。</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
+        <NaturalMajor></NaturalMajor>
         <div><h2>一線花色開叫的共通後續</h2>
             <div id="after-weak1NT"><h3>1m-1M-1NT</h3>
                 <p>這個叫序表示12-14平均牌型，是一個非常常見的叫品。之後我們社團採用新低花迫叫（New Minor Forcing）特約。這個特約對於現在來說，已經稍微有點過時，然而學習簡單，維持叫牌的自然本性，是這個特約的優勢。</p>
@@ -522,7 +605,7 @@
             <p>邀請力量手牌，有五張以上高花，全部由轉換啟動。之後再叫一個「未達成局之不迫叫叫品」，即2NT（五張高花時）或三線同一門高花（六張以上高花時）。</p>
             <p>邀請力量手牌，有四張高花時，為詢問同伴的四張高花，應由2!C開始。而後叫2NT（未支持時）或回應（支持）同伴的高花到三線。</p>
             <p>其他手牌，除了特殊的制度以外，直接叫2NT。</p>
-            <div><h4>2!C Stayman</h4>
+            <div><h3>2!C Stayman</h3>
                 <p>2!C的回答非常平常，而在這之後2!S都是5張黑桃的邀請。</p>
                 <table class="bidtable" id="1NT-2C">
                     <tbody>
@@ -647,7 +730,7 @@
                 </table>
                 
                 </div>
-            <div><h4>2!D/2!H Jacoby Transfer</h4>
+            <div><h3>2!D/2!H Jacoby Transfer</h3>
                 <table class="bidtable" id="1NT-2D">
                     <tbody>
                         <tr>
@@ -703,7 +786,7 @@
                     </tbody>
                 </table>
             </div>
-            <div><h4>小整理</h4>
+            <div><h3>小整理</h3>
                 <table>
                     <thead>
                         <tr>
@@ -772,7 +855,7 @@
                     </tbody>
                 </table>
             </div>
-            <div><h4>滿貫目標叫牌</h4>
+            <div><h3>滿貫目標叫牌</h3>
                 <table class="bidtable" id="1NT">
                     <tbody>
                     <tr>
@@ -856,6 +939,68 @@
                     </tr>
                 </tbody>
             </table>
+        </div>
+        <div><h2>2!C後續</h2>
+            <p>後續主要參考Bridge world standard 2017。基本上，在2!C以後，主要都是回答2!D。2!D以外的回答都要是很好的牌組與較強的點力。</p>
+            <table class="bidtable" id="2C">
+                <tbody>
+                    <tr>
+                        <th>2!C</th>
+                        <th>強牌迫叫。</th>
+                    </tr>
+                    <tr>
+                        <td><a href="#2C-2D">2!D!</a></td>
+                        <td>等待。</td>
+                    </tr>
+                    <tr>
+                        <td>2!H/2!S</td>
+                        <td>8點以上，六張以上牌組或五張牌組帶三張中的兩張大牌。</td>
+                    </tr>
+                    <tr>
+                        <td>2NT</td>
+                        <td>8點以上，適合主打無王合約。</td>
+                    </tr>
+                    <tr>
+                        <td>3!C/3!D</td>
+                        <td>8點以上，六張以上牌組或五張牌組帶三張中的兩張大牌。通常要更好一點。</td>
+                    </tr>
+                    <tr>
+                        <td>3!H/!S</td>
+                        <td>8點以上，一失墩的牌組。</td>
+                    </tr>
+                    <tr>
+                        <td>4!C/!D</td>
+                        <td>8點以上，一失墩的牌組。</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>在2!D以後，開叫者叫出2!H以外的叫品是自然叫品，2!H則是Birthright（Kokish relay），強迫答叫者叫2!S，而後開叫者的2NT是迫叫成局的平均牌形，而其他叫品則是表示紅心與該叫品表達的牌形。</p>
+            <table class="bidtable" id="2C-2D">
+                <tbody>
+                    <tr>
+                        <th><a href="#2C">2!C</a></th>
+                        <th>2!D</th>
+                        <th>等待。</th>
+                    </tr>
+                    <tr>
+                        <td colspan="2">2!H!</td>
+                        <td>Birthright（Kokish Relay）強迫答叫者叫2!S。紅心或迫叫成局的平均牌形</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">2!S</td>
+                        <td>自然，五張以上黑桃。</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">2NT</td>
+                        <td>22-24平均牌形。後續接2NT後續。</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">3!C/3!D</td>
+                        <td>自然，五張以上黑桃。</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>在2!C-2!D後面，開叫者簡單叫了一個自然牌組以後，答叫者叫3!D以下最便宜的低花，表示手牌極弱（後續開叫者再叫三線高花不迫叫）。跳叫新花是Splinter（表示支持與短門），跳叫支持表示力量集中於王牌。</p>
         </div>
         <div><h2>Negative Doubles</h2>
             <!-- TODO: Explanation of Negative doubles -->

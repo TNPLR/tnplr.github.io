@@ -1,6 +1,6 @@
 <template>
     <article ref="Article">
-        <div><h2>自然制：高花開叫</h2>
+        <div><h2>高花開叫與其後續</h2>
             <p>這是一個五張高花開叫的制度，也因此高花開叫先天上就與低花開叫有所不同。所以，在高花開叫的這個部分，我們便設計一套簡易的制度來使用。在基本的架構上，採用的是Bridge World Standard 2017 的方案（可能是1980年代的產物）。在某些後續採用 Mike Lawrence 介紹的方法。</p>
             <table class="bidtable">
                 <tbody>
