@@ -22,7 +22,7 @@ jobs:
         run: npm ci
 
       - name: Build Nuxt.js static site
-        run: npm run build
+        run: npm run generate
 
       - name: Deploy to GitHub Pages
         if: success()
