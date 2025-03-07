@@ -1,0 +1,32 @@
+name: Deploy Nuxt.js to GitHub Pages
+
+on:
+  push:
+    branches:
+      - develop  # 只有 main 分支推送時才觸發
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18  # 確保符合你的 Nuxt.js 版本
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build Nuxt.js static site
+        run: npm run build
+
+      - name: Deploy to GitHub Pages
+        if: success()
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist  # Nuxt 產出的靜態檔案
