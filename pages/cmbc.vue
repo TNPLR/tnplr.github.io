@@ -261,54 +261,14 @@
                 </ul>
             </div>
             <div><h3>再叫1NT以後：1m-1M-1NT</h3>
-                <table class="bidtable">
-                    <tbody>
-                        <tr>
-                            <th></th>
-                            <th colspan="2">1m</th>
-                        </tr>
-                        <tr>
-                            <th>1M</th>
-                            <th>1NT</th>
-                            <th>沒有4張M支持，12-14平均牌型。</th>
-                        </tr>
-                        <tr>
-                            <td colspan="2">2m</td>
-                            <td>建議打2m合約，低限的點力。</td>
-                        </tr>
-                        <tr>
-                            <td colspan="2">2om</td>
-                            <td>「新低花迫叫」邀請以上，迫叫一圈。</td>
-                        </tr>
-                        <tr>
-                            <td colspan="2">2M</td>
-                            <td>5張以上的高花，6-9點。</td>
-                        </tr>
-                        <tr>
-                            <td colspan="2">2oM</td>
-                            <td><ul>
-                                <li>如果是!S：4張以上!S，12點以上，迫叫成局。</li>
-                                <li>如果是!H：5張!S，4張以上!H，6-9點不迫叫。</li>
-                            </ul></td>
-                        </tr>
-                        <tr>
-                            <td colspan="2">2NT</td>
-                            <td>偏向平均牌型，10-11點，邀請。</td>
-                        </tr>
-                        <tr>
-                            <td colspan="2">3m</td>
-                            <td>足夠張數的低花支持，10-11點，邀請。</td>
-                        </tr>
-                        <tr>
-                            <td colspan="2">3M</td>
-                            <td>6張以上高花支持，10-11點，邀請。</td>
-                        </tr>
-                        <tr>
-                            <td colspan="2">3NT</td>
-                            <td>12-17(18)點。</td>
-                        </tr>
-                    </tbody>
-                </table>
+                參閱<a href="#after-weak1NT">1m-1M-1NT</a>
+            </div>
+            <div><h3>反序低花</h3>
+                <p>這個叫品也是個特約叫品，主要是把傳統的2線和3線反過來叫（變成2線強、3線弱）。基於高花優先以及方便後續的設計，叫出這個叫品（1m-2m / 1m-3m）不能有4張高花。
+                </p>
+                <h5>張數與點力</h5>
+                <p>使用Inverted Minor特約的1m-2m叫品時，對於方塊保證有4張（基於方塊3張很少見），對於梅花保證有5張（除了3=3=3=4的牌形，可以只有4張）。</p>
+                <p>點力上，需要有10點以上。</p>
             </div>
             <div><h3>被干擾以後的處理方法</h3>
                 <table class="competitive">
@@ -381,6 +341,142 @@
                     <li>Negative double通常表示另一門高花4張。但也可能是因為點力不足以叫出高花才使用（Negative double點力要求較低）。</li>
                     <li>原則上新花迫叫，二線新花迫叫（邀請以上力量），三線新花迫叫成局。</li>
                 </ul>
+            </div>
+        </div>
+        <div><h2>一線花色開叫的共通後續</h2>
+            <div id="after-weak1NT"><h3>1m-1M-1NT</h3>
+                <p>這個叫序表示12-14平均牌型，是一個非常常見的叫品。之後我們社團採用新低花迫叫（New Minor Forcing）特約。這個特約對於現在來說，已經稍微有點過時，然而學習簡單，維持叫牌的自然本性，是這個特約的優勢。</p>
+                <p>在本章，我們先介紹自然的後續叫品，再介紹新低花迫叫特約。</p>
+                <p>自然的後續，基本上三線已經叫過的花色都是邀請。二線叫過的花色都是束叫。</p>
+                <table class="bidtable">
+                    <tbody>
+                        <tr>
+                            <th></th>
+                            <th colspan="2">1m</th>
+                        </tr>
+                        <tr>
+                            <th>1M</th>
+                            <th>1NT</th>
+                            <th>沒有4張M支持，12-14平均牌型。</th>
+                        </tr>
+                        <tr>
+                            <td colspan="2">2m</td>
+                            <td>建議打2m合約，低限的點力。</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">2om</td>
+                            <td>「新低花迫叫」邀請以上，迫叫一圈。</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">2M</td>
+                            <td>5張以上的高花，6-9點。</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">2oM</td>
+                            <td><ul>
+                                <li>如果是!S：4張以上!S，12點以上，迫叫成局。</li>
+                                <li>如果是!H：5張!S，4張以上!H，6-9點不迫叫。</li>
+                            </ul></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">2NT</td>
+                            <td>偏向平均牌型，10-11點，邀請。</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">3m</td>
+                            <td>足夠張數的低花支持，10-11點，邀請。</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">3M</td>
+                            <td>6張以上高花支持，10-11點，邀請。</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">3NT</td>
+                            <td>12-17(18)點。</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>以1!D-1!S-1NT為例。</p>
+                <table class="bidtable" id="1D-1S-1NT">
+                    <tbody>
+                        <tr>
+                            <th></th>
+                            <th>1!D</th>
+                            <th></th>
+                        </tr>
+                        <tr>
+                            <th>1!S</th>
+                            <th>1NT</th>
+                            <th>12-14平均牌形，沒有四張黑桃。</th>
+                        </tr>
+                        <tr>
+                            <td ref="#1D-1S-1NT-2C" colspan="2">2!C!</td>
+                            <td>新低花迫叫，邀請以上</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">2!D</td>
+                            <td>束叫（4張以上方塊）</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">2!H</td>
+                            <td>束叫（4以上紅心），開叫者可叫回2!S</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">2!S</td>
+                            <td>束叫（5張以上黑桃）</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">2NT</td>
+                            <td>邀請（11點），沒有5張黑桃。</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">3!C</td>
+                            <td>4張以上梅花，迫叫成局</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">3!D</td>
+                            <td>4張以上方塊，邀請成局</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">3!S</td>
+                            <td>6張以上紅心，邀請成局</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">3NT</td>
+                            <td>束叫。</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div><h4>新低花迫叫</h4>
+                    <p>新低花迫叫要有邀請以上的點力才能叫出，沒有上限。其後續叫牌先以配合高花為主要目標。</p>
+                    <p>新低花迫叫後續，最優先的叫品是3張的高花配合，其次是4張的另一門高花，其他牌形可以叫最低的非高花叫品（2!C之後叫2!D、2!D之後叫2NT）。</p>
+                    <table class="bidtable" id="1D-1S-1NT-2C">
+                        <tbody>
+                            <tr>
+                                <th>1!D</th>
+                                <th>1!S</th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <th>1NT</th>
+                                <th>2!C!</th>
+                                <th>新低花迫叫</th>
+                            </tr>
+                            <tr>
+                                <td colspan="2">2!D</td>
+                                <td>沒有三張黑桃，沒有四張紅心</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">2!H</td>
+                                <td>四張紅心，沒有三張黑桃</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">2!S</td>
+                                <td>三張黑桃</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
         <div><h2>1NT開叫的後續</h2>
