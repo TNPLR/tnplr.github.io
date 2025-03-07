@@ -3,7 +3,10 @@ name: Deploy Nuxt.js to GitHub Pages
 on:
   push:
     branches:
-      - develop  # 只有 main 分支推送時才觸發
+      - master  # 只有 main 分支推送時才觸發
+  pull_request:
+    branches:
+      - master
 
 jobs:
   build:
