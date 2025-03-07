@@ -1,1 +1,0 @@
-import{s as i}from"./CGjyGTaE.js";function a(n){n.innerHTML=i(n.innerHTML)}function u(n){n.value=[],document.querySelectorAll("h2, h3, h4").forEach((t,e)=>{t.id===""&&(t.id=`header-${e}`),n.value.push({name:t.id,class:"toc"+t.tagName,text:typeof t.textContent=="string"?t.textContent:""})})}export{u as g,a as r};
