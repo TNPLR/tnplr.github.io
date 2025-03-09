@@ -617,6 +617,10 @@
                     </tbody>
                 </table>
             </div>
+            <div><h3>Support Doubles & Redoubles</h3>
+                <p>在1X-(??)-1Y-(X)或1X-(??)-1Y-(插叫)，如果插叫低於2!H時，此時有Support (Re)doubles的使用。這個叫品表示三張的支持。</p>
+                <p>例如1!D-(Pass)-1!H-(1!S)時，手持三張紅心時，可叫X表示之。</p>
+            </div>
         </div>
         <div><h2>1NT開叫的後續</h2>
             <p>這邊的1NT後續只是一個簡單的指引。</p>
