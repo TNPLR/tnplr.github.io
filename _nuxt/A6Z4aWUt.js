@@ -1,1 +1,0 @@
-import{_ as r}from"./DlAUqK2U.js";import{c as o,a as n,F as t,o as s}from"./DYMIHFua.js";const l={};function a(c,e){return s(),o(t,null,[e[0]||(e[0]=n("h2",null,"Precision Club",-1)),e[1]||(e[1]=n("p",null,"精準制，相關資料準備中",-1))],64)}const m=r(l,[["render",a]]);export{m as default};
