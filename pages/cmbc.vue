@@ -1243,6 +1243,34 @@
                 <div><h4>首攻完以後（進階）</h4>
                     <p>當首攻結束以後，如果下一次有機會出這個花色，且沒有要吃到該墩（例如沒有一定要出大牌時），且「出信號不會虧時」，可以信號同伴。在第一次出大牌的時候，第二次出原本的第四大牌（如果剩下兩張時出比較大的一張牌）。在第一次出大排第四張時，如果原本有第五張牌，出原本的第五大牌。如果原本是三張小牌的時候，出最大牌；四張以上小牌時，出原本的第四大牌。</p>
                 </div>
+                <table style="font-size: larger;">
+                <tbody>
+                    <tr>
+                        <th>沒大牌</th>
+                        <th>有大牌</th>
+                    </tr>
+                    <tr>
+                        <td><SignalShow text="xx" x="0" y="1"></SignalShow></td>
+                        <td><SignalShow text="Hx" x="0" y="1"></SignalShow></td>
+                    </tr>
+                    <tr>
+                        <td><SignalShow text="xxx" x="1" y="0"></SignalShow></td>
+                        <td><SignalShow text="Hxx" x="2" y="1"></SignalShow></td>
+                    </tr>
+                    <tr>
+                        <td><SignalShow text="xxxx" x="1" y="3"></SignalShow></td>
+                        <td><SignalShow text="Hxxx" x="3" y="2"></SignalShow></td>
+                    </tr>
+                    <tr>
+                        <td><SignalShow text="xxxxx" x="1" y="0"></SignalShow></td>
+                        <td><SignalShow text="Hxxxx" x="3" y="4"></SignalShow></td>
+                    </tr>
+                    <tr>
+                        <td><SignalShow text="xxxxxx" x="1" y="5"></SignalShow></td>
+                        <td><SignalShow text="Hxxxxx" x="3" y="5"></SignalShow></td>
+                    </tr>
+                </tbody>
+            </table>
             </div>
             <div><h3>態度信號（小歡迎）</h3>
                 <p>我們信號的第一優先是歡迎信號。口訣是：小歡迎。在同伴攻出一門王牌以外的花色時，可以打信號時，如果希望同伴待會繼續攻這門花色，則跟出可以最小牌；如果希望同伴「換一門」時，則跟出可以負擔的最大牌。</p>
