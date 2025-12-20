@@ -53,6 +53,12 @@ onUnmounted(() => {
                     <NuxtLink to="/natural">特殊自然制</NuxtLink>
                 </div>
             </li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">競叫主題</a>
+                <div class="dropdown-content">
+                    <NuxtLink to="/double_topics">有關於Double</NuxtLink>
+                </div>
+            </li>
             <li><NuxtLink to="/story">練習區</NuxtLink></li>
         </ul>
     </div>
