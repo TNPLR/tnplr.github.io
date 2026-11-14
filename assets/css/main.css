@@ -24,6 +24,40 @@ nav ul {
     padding: 0;
     padding-left: 16px;
 }
+.toc-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    min-height: 51px;
+    padding: 14px 16px;
+    border: 0;
+    background-color: white;
+    color: #000;
+    font: inherit;
+    cursor: pointer;
+}
+.toc-toggle-icon {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 24px;
+}
+.toc-toggle-icon > span {
+    display: block;
+    height: 2px;
+    background-color: currentColor;
+}
+.toc-toggle:hover {
+    background-color: #ddd;
+}
+.toc-toggle:focus-visible {
+    outline: 3px solid green;
+    outline-offset: -3px;
+}
+.toc-collapsed > article {
+    width: 100%;
+}
 nav ul > a {
     display: block;
     color: #000;
@@ -218,6 +252,10 @@ article {
 }
 #horizontal-nav li:last-child {
     border-right: 0;
+}
+#horizontal-nav li.toc-toggle-item {
+    width: auto;
+    min-width: 0;
 }
 #horizontal-nav li a {
     display: block;
