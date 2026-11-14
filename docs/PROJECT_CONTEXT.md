@@ -35,7 +35,7 @@ README 仍引用不存在的 `vue-bidpage/src/components`，不能作為現行�
 | --- | --- |
 | `/` | 無 `pages/index.vue`；由 `routeRules` 設定導向 `/cmbc`。 |
 | `/cmbc` | `pages/cmbc.vue`：CMBC 自然制。 |
-| `/beginner` | `pages/beginner.vue`：前六次社課的新手講義，包含叫牌思考方法、牌例解析、開叫及術語速查；自然制選單提供入口。高花答叫參照 `naturalMajor.vue` 的迫叫 1NT／二蓋一架構。 |
+| `/beginner` | `pages/beginner.vue`：前七次社課的新手講義，包含叫牌思考方法、牌例解析、開叫及術語速查；自然制選單提供入口。高花答叫參照 `naturalMajor.vue` 的迫叫 1NT／二蓋一架構。 |
 | `/natural` | `pages/natural.vue`：特殊自然制，組合 `balMinor`、`naturalMajor`。 |
 | `/relay` | `pages/relay/index.vue`：Relay 制度主文。 |
 | `/relay/interference` | Relay 競叫。 |
@@ -65,6 +65,8 @@ README 仍引用不存在的 `vue-bidpage/src/components`，不能作為現行�
 新手講義已以 Node 24 執行 `npm run generate`，確認 `.output/public/beginner/index.html` 產生；本機 Chromium 驗證直接載入、標題、花色轉換、目錄錨點、連至 CMBC 再由選單返回、390px 正文閱讀及列印分頁規則，並輸出 PDF，未收到 pageerror。十六組手牌已核對十三張及大牌點。另觀察到既有選單在滑鼠展開後切至手機寬度會超出視窗，未於本次文章新增中修改；尚未驗證線上部署及實體列印。
 
 後續將講義點力統一為阿拉伯數字，並將第二課擴充為低花／1NT、高花、2NT、2♣ 四節共十三題。修正原首題牌型為 4333；全篇二十五組手牌重新檢查張數、同門無重複牌、大牌點及所列牌型，第二課另依 CMBC 開叫條件核對答案，靜態產生通過。本次文字修訂未重跑瀏覽器檢查。
+
+新手講義新增第三課「高花開叫後的答叫」，後續課次順延為七課；包含支持分流、迫叫 1NT、二蓋一、Jacoby 2NT、Splinter 與八題牌例。原高花答叫介紹移入第三課，第六課保留對照練習作複習。以本站約定為主，附 BWS 2017 參考連結並區分其半迫叫 1NT。本次核對八題的十三張、同門無重複牌與大牌點，以及七課標題、課程連結、唯一 ID 與頁內錨點；Node 24 靜態產生通過。本機 Chromium 驗證直接載入、七課目錄目標、第三課跳轉、花色轉換、390px 正文無橫向溢出及列印分頁規則，並檢視手機截圖，未收到 pageerror；未驗證線上部署。
 
 ## 題庫、練習與編輯流程
 
