@@ -1,6 +1,5 @@
 <script setup>
 const topbuttonshow = ref(false);
-const topic = useState('topic', () => "Röle Sistemi")
 
 const toc = useState('toc');
 function goToTop() {
@@ -32,7 +31,7 @@ onUnmounted(() => {
 
 <template>
   <header>
-    <h1 class="topic"><NuxtLink to="/">{{ topic }}</NuxtLink></h1>
+    <h1 class="topic"><NuxtLink to="/">CMBC 醫橋橋牌教學</NuxtLink></h1>
   </header>
   <button id="topbutton" v-on:click="goToTop" v-show="topbuttonshow"><img style="width: 28px;" src="/arrow_upward.svg" alt="up arrow"></button>
   <div>
@@ -49,6 +48,7 @@ onUnmounted(() => {
             <li class="dropdown">
                 <a href="javascript:void(0)" class="dropbtn">自然制</a>
                 <div class="dropdown-content">
+                    <NuxtLink to="/beginner">新手教學</NuxtLink>
                     <NuxtLink to="/cmbc">CMBC自然制</NuxtLink>
                     <NuxtLink to="/natural">特殊自然制</NuxtLink>
                 </div>
