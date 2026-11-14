@@ -1,5 +1,5 @@
 # 叫牌教學網站
-# Bidding tutorial
+# Bidding tutorial and teaching webpage
 This site aims to bridge players or learners in Taiwan, so the site is mainly written in Mandarin.
 
 ## 開發與建置
