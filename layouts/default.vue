@@ -34,7 +34,7 @@ onUnmounted(() => {
   <header>
     <h1 class="topic"><NuxtLink to="/">{{ topic }}</NuxtLink></h1>
   </header>
-  <button id="topbutton" v-on:click="goToTop" v-show="topbuttonshow"><img style="width: 28px;" src="public/arrow_upward.svg" alt="up arrow"></button>
+  <button id="topbutton" v-on:click="goToTop" v-show="topbuttonshow"><img style="width: 28px;" src="/arrow_upward.svg" alt="up arrow"></button>
   <div>
         <ul id="horizontal-nav">
             <li class="dropdown">
