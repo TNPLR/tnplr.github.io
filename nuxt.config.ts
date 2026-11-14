@@ -11,6 +11,15 @@ export default defineNuxtConfig({
   devtools: { enabled: false },
   app: {
     head: {
+      script: [
+        { async: true, src: 'https://www.googletagmanager.com/gtag/js?id=G-CF4PHZ3M6F' },
+        {
+          innerHTML: `window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-CF4PHZ3M6F');`
+        }
+      ],
       link: [
         { rel: 'icon', type: 'image/png', href: '/favicon.png' }
       ]
