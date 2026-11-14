@@ -1,1 +1,0 @@
-function r(e){if(typeof e!="string")return"";let a=e.replace(/!H/g,'<span style="color:tomato">&#9829;</span>');return a=a.replace(/!D/g,'<span style="color:orange">&#9830;</span>'),a=a.replace(/!C/g,'<span style="color:DarkSlateGray">&#9827;</span>'),a=a.replace(/!S/g,'<span style="color:black">&#9824;</span>'),a}export{r as s};

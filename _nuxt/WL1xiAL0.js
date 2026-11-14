@@ -1,0 +1,1 @@
+import"./DhZfZzC3.js";import{v as e}from"./BsIQXNwF.js";var t=e({__name:`bidtablegen`,setup(e){return(e,t)=>null}});export{t as default};
