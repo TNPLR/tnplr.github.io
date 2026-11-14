@@ -3,10 +3,13 @@ name: Deploy Nuxt.js to GitHub Pages
 on:
   push:
     branches:
-      - master  # 只有 main 分支推送時才觸發
+      - master
   pull_request:
     branches:
       - master
+
+permissions:
+  contents: read
 
 jobs:
   build:
@@ -19,7 +22,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 18  # 確保符合你的 Nuxt.js 版本
+          node-version-file: .nvmrc
 
       - name: Install dependencies
         run: npm ci
@@ -27,10 +30,38 @@ jobs:
       - name: Build Nuxt.js static site
         run: npm run generate
 
+      - name: Upload static site
+        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+        uses: actions/upload-artifact@v4
+        with:
+          name: static-site
+          path: ./.output/public
+          include-hidden-files: true
+          if-no-files-found: error
+
+  deploy:
+    needs: build
+    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    concurrency:
+      group: gh-pages-publish
+      cancel-in-progress: false
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Download static site
+        uses: actions/download-artifact@v4
+        with:
+          name: static-site
+          path: ./.output/public
+
       - name: Deploy to GitHub Pages
-        if: success()
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist  # Nuxt 產出的靜態檔案
+          publish_dir: ./.output/public  # Nuxt 產出的靜態檔案
           keep_files: false

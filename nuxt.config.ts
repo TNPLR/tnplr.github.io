@@ -1,5 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  srcDir: '.',
   compatibilityDate: '2024-04-03',
   ssr: false,
   nitro: {
@@ -7,7 +8,7 @@ export default defineNuxtConfig({
       routes: ['/cmbc', '/relay']
     }
   },
-  devtools: { enabled: true },
+  devtools: { enabled: false },
   app: {
     head: {
       link: [
