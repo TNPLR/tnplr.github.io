@@ -1,0 +1,1 @@
+import{t as e}from"./CJbnEjvE.js";function t(t){t.innerHTML=e(t.innerHTML)}export{t};
