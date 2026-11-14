@@ -1,6 +1,6 @@
 <script setup>
 const topbuttonshow = ref(false);
-const topic = useState('topic', () => "Röle Sistemi")
+const tocExpanded = ref(true);
 
 const toc = useState('toc');
 function goToTop() {
@@ -32,11 +32,24 @@ onUnmounted(() => {
 
 <template>
   <header>
-    <h1 class="topic"><NuxtLink to="/">{{ topic }}</NuxtLink></h1>
+    <h1 class="topic"><NuxtLink to="/">CMBC 醫橋橋牌教學</NuxtLink></h1>
   </header>
   <button id="topbutton" v-on:click="goToTop" v-show="topbuttonshow"><img style="width: 28px;" src="/arrow_upward.svg" alt="up arrow"></button>
   <div>
         <ul id="horizontal-nav">
+            <li class="toc-toggle-item">
+                <button
+                    type="button"
+                    class="toc-toggle"
+                    :aria-label="tocExpanded ? '隱藏目錄' : '顯示目錄'"
+                    :title="tocExpanded ? '隱藏目錄' : '顯示目錄'"
+                    :aria-expanded="tocExpanded"
+                    aria-controls="article-toc"
+                    @click="tocExpanded = !tocExpanded"
+                >
+                    <span aria-hidden="true" class="toc-toggle-icon"><span></span><span></span><span></span></span>
+                </button>
+            </li>
             <li class="dropdown">
                 <a href="javascript:void(0)" class="dropbtn">Relay制度</a>
                 <div class="dropdown-content">
@@ -49,6 +62,7 @@ onUnmounted(() => {
             <li class="dropdown">
                 <a href="javascript:void(0)" class="dropbtn">自然制</a>
                 <div class="dropdown-content">
+                    <NuxtLink to="/beginner">新手教學</NuxtLink>
                     <NuxtLink to="/cmbc">CMBC自然制</NuxtLink>
                     <NuxtLink to="/natural">特殊自然制</NuxtLink>
                 </div>
@@ -63,9 +77,9 @@ onUnmounted(() => {
             <li><NuxtLink to="/story">練習區</NuxtLink></li>
         </ul>
     </div>
-  <section>
-    <nav>
-      <div>
+  <section :class="{ 'toc-collapsed': !tocExpanded }">
+    <nav v-show="tocExpanded" id="article-toc" class="article-toc" aria-label="文章目錄">
+      <div id="article-toc-list">
         <ul ref="tocList">
           <a v-for="x in toc" :class="x.class" :href="'#'+x.name">{{ x.text }}</a>
         </ul>

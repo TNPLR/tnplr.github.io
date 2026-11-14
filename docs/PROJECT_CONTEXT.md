@@ -35,6 +35,7 @@ README 仍引用不存在的 `vue-bidpage/src/components`，不能作為現行�
 | --- | --- |
 | `/` | 無 `pages/index.vue`；由 `routeRules` 設定導向 `/cmbc`。 |
 | `/cmbc` | `pages/cmbc.vue`：CMBC 自然制。 |
+| `/beginner` | `pages/beginner.vue`：前六次社課的新手講義，包含叫牌思考方法、牌例解析、開叫及術語速查；自然制選單提供入口。高花答叫參照 `naturalMajor.vue` 的迫叫 1NT／二蓋一架構。 |
 | `/natural` | `pages/natural.vue`：特殊自然制，組合 `balMinor`、`naturalMajor`。 |
 | `/relay` | `pages/relay/index.vue`：Relay 制度主文。 |
 | `/relay/interference` | Relay 競叫。 |
@@ -55,7 +56,15 @@ README 仍引用不存在的 `vue-bidpage/src/components`，不能作為現行�
 3. `genTOC()` 掃描整個 document 的 `h2`、`h3`、`h4`，為缺少 ID 的標題加上 `header-${index}`，寫入 `useState('toc')`。
 4. 預設 layout 讀取 `toc` 生成錨點導覽，讀取 `topic` 顯示頁首；`app.vue` 讀取 `title` 設定文件標題。
 
+預設 layout 的文章目錄預設展開，可用上方選單列最左側的三條橫線按鈕切換；按鈕的無障礙名稱與提示文字依狀態顯示「隱藏目錄／顯示目錄」。收合時文章改用全寬；手機版維持目錄在文章上方，列印時隱藏目錄及選單列。展開狀態僅保存在 layout 的記憶體中，重新載入會恢復展開。
+
 `title`、`topic`、`toc` 是跨頁共用狀態，並非每個頁面都重新設定全部欄位。`/natural` 的文章子元件也各自執行花色轉換與目錄生成。
+
+`/beginner` 使用固定標題 ID，掛載後僅掃描自身文章的 h2、h3、h4 產生目錄，並沿用花色轉換工具。頁面採靜態講義及原生站內連結，沒有新增題庫或互動作答狀態；局部樣式補充手機閱讀字級與列印時各課分頁。
+
+新手講義已以 Node 24 執行 `npm run generate`，確認 `.output/public/beginner/index.html` 產生；本機 Chromium 驗證直接載入、標題、花色轉換、目錄錨點、連至 CMBC 再由選單返回、390px 正文閱讀及列印分頁規則，並輸出 PDF，未收到 pageerror。十六組手牌已核對十三張及大牌點。另觀察到既有選單在滑鼠展開後切至手機寬度會超出視窗，未於本次文章新增中修改；尚未驗證線上部署及實體列印。
+
+後續將講義點力統一為阿拉伯數字，並將第二課擴充為低花／1NT、高花、2NT、2♣ 四節共十三題。修正原首題牌型為 4333；全篇二十五組手牌重新檢查張數、同門無重複牌、大牌點及所列牌型，第二課另依 CMBC 開叫條件核對答案，靜態產生通過。本次文字修訂未重跑瀏覽器檢查。
 
 ## 題庫、練習與編輯流程
 
