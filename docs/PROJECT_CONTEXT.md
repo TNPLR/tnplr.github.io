@@ -15,7 +15,8 @@
 
 | 位置 | 責任 |
 | --- | --- |
-| `app.vue` | 以 `NuxtLayout` 包住 `NuxtPage`，讀取共用標題，加入 Google Analytics。 |
+| `app.vue` | 以 `NuxtLayout` 包住 `NuxtPage`，讀取共用標題。 |
+| `nuxt.config.ts` | 全站 head 載入 Google tag（`G-CF4PHZ3M6F`），初始化 `dataLayer` 與 `gtag`；實際事件接收須於部署後在 GA 驗證。 |
 | `pages/` | 檔案路由、教學文章、練習及產生器。 |
 | `layouts/default.vue` | 頁首、導覽選單、文章目錄、回頂端按鈕與頁尾。 |
 | `layouts/custom.vue` | 僅輸出 slot，讓工具與練習頁自行排版。 |
