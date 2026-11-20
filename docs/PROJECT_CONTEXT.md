@@ -24,7 +24,7 @@
 | `modules/` | 一般工具函式與 JSON 題庫，並非已註冊的 Nuxt 模組。 |
 | `type/type.ts` | `Call`、`NameOfCall`、`Quest`、`QuestLib`、`TocElement` 等型別。 |
 | `assets/css/main.css` | 全站、手機版與列印樣式。 |
-| `public/` | favicon、回頂端箭頭及目前空白的 robots.txt；檔案由網站根路徑提供。 |
+| `public/` | favicon、回頂端箭頭、`sitemap.xml` 及宣告 sitemap 網址的 `robots.txt`；檔案由網站根路徑提供。 |
 | `.github/workflows/deploy.yml` | 安裝、靜態產生及 Pages 發布。 |
 
 README 仍引用不存在的 `vue-bidpage/src/components`，不能作為現行路徑依據。
@@ -48,6 +48,8 @@ README 仍引用不存在的 `vue-bidpage/src/components`，不能作為現行�
 | `/precision`、`/precision/precision1nt` | 精準制文章雛形。 |
 
 預設選單提供 Relay、自然制、競叫及練習入口，未列出 Precision 或產生器。檔案存在形成路由，不表示已加入選單，也不表示已確認其靜態部署行為。
+
+`public/sitemap.xml` 手動維護，收錄預設選單中的教學與練習頁。網址使用 `https://tnplr.github.io` 及 GitHub Pages 的結尾斜線。新增、移除或更名公開教學頁時，請同步更新 sitemap。
 
 ## 文章與狀態資料流
 
