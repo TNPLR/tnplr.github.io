@@ -96,15 +96,15 @@ README 仍引用不存在的 `vue-bidpage/src/components`，不能作為現行�
 
 目前沒有 test、lint、typecheck script 或測試框架設定；安裝 vue-tsc 不等於 CI 已執行型別檢查。根目錄與 server 的 tsconfig 分別繼承 `.nuxt` 生成的設定。
 
-部署 workflow 在推送 `master` 或對 `master` 開 PR 時執行。`build` job 使用 Ubuntu、由 `.nvmrc` 指定 Node 24、checkout v4、setup-node v4，依序執行 `npm ci` 與 `npm run generate`，僅有 `contents: read` 權限。只有 `master` 的 push 會上傳 `.output/public` 為 `static-site` artifact（含隱藏檔），並在 build 成功後啟動 `deploy` job。部署 job 下載同一個 workflow run 的產物，以 `contents: write` 權限讓 `peaceiris/actions-gh-pages@v4` 使用 `GITHUB_TOKEN` 發布到預設 `gh-pages` 分支，`keep_files: false`。PR 不上傳發布產物、不執行部署 job；發布 job 以 `gh-pages-publish` concurrency group 避免同時寫入發布分支。
+部署 workflow 在推送 `master` 或對 `master` 開 PR 時執行。`build` job 在 Ubuntu 上依 `.nvmrc` 設定 Node 24，執行 `npm ci` 與 `npm run generate`，使用 `contents: read` 權限。只有 `master` 的 push 會用 `actions/upload-pages-artifact@v3` 上傳 `.output/public`，再由 `actions/deploy-pages@v4` 直接發布。部署 job 使用 `pages: write` 與 `id-token: write` 權限、`github-pages` 環境和 `gh-pages-publish` 並行群組。PR 僅執行建置。GitHub Pages 的發布來源須設定為 GitHub Actions。
 
-本次 Nuxt 4 遷移已在 Node 24.22.3 執行 `npm ci` 與 `npm run generate`，確認輸出 `.output/public` 及 16 個預先產生的路徑（含 fallback HTML）。GitHub Pages 後台的發布來源、實際 Token 寫入權限與線上部署仍未驗證。
+本次 Nuxt 4 遷移已在 Node 24.22.3 執行 `npm ci` 與 `npm run generate`，確認輸出 `.output/public` 及 16 個預先產生的路徑（含 fallback HTML）。GitHub Pages 後台的發布來源與新版 workflow 的線上部署仍待驗證。
 
 ## 已知風險與後續驗證重點
 
 以下為原始碼觀察，並非本次已修正項目：
 
-1. **發布環境**：已限制為 `master` push 且建置成功後才部署；GitHub 後台需確認 Pages 使用 `gh-pages` 根目錄、分支保護與組織政策允許發布。workflow 的權限宣告不代表線上部署已成功。
+1. **發布環境**：已限制為 `master` push 且建置成功後才部署；GitHub 後台需確認 Pages 的發布來源為 GitHub Actions，且 `github-pages` 環境允許 `master` 發布。workflow 的權限宣告不代表線上部署已成功。
 2. **Cookie 還原**：`story.vue` 用目前選取類別而非 Cookie 類別查索引，題號驗證缺少正整數下界，且 `< length` 排除最後一題，可能形成無效索引。
 3. **初始叫牌限制**：`BiddingBox` watcher 沒有 immediate，首次載入已有叫序時尚未初始化限制。
 4. **題目驗證**：產生器顯示牌張數但未阻擋無效手牌；未選答案時預設 1C，新增後未重設 answer。型別斷言不能驗證 JSON 的實際資料。
