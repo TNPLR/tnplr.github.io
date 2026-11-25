@@ -59,6 +59,7 @@
             <option value="correct">答對次數最少</option>
             <option value="attempts">作答次數最少</option>
             <option value="sequential">依題號順序</option>
+            <option value="review">考前複習</option>
           </select>
         </div>
         <form id="jump" class="row">
@@ -69,7 +70,8 @@
         <dl id="total" class="stats" aria-label="累計作答"></dl>
         <p id="storage-status" class="muted" role="status"></p>
       </div>
-      <article class="card" aria-labelledby="stem">
+      <p id="review-status" class="card" role="status" hidden></p>
+      <article id="question-card" class="card" aria-labelledby="stem">
         <p id="number" class="muted"></p>
         <h2 id="stem" tabindex="-1"></h2>
         <p id="question-stats" class="muted"></p>
@@ -167,12 +169,19 @@
         return group;
       });
       byId('total').replaceChildren(...groups);
+      if (!session.current) return;
       const count = session.progress[session.current.id] ?? emptyCount;
       byId('question-stats').textContent = `本題作答 ${count.attempts} 次 · 答對 ${count.correct} 次 · 答錯 ${count.incorrect} 次`;
     }
 
     function pickNextQuestion() {
       const mode = byId('mode').value;
+      if (mode === 'review') {
+        const mistakes = (question) => session.progress[question.id]?.incorrect ?? 0;
+        return session.questions
+          .filter((question) => mistakes(question) > 0 && !session.reviewed.has(question.id))
+          .sort((a, b) => mistakes(b) - mistakes(a) || a.id - b.id)[0];
+      }
       if (mode === 'sequential') {
         const index = session.questions.indexOf(session.current);
         return session.questions[index + 1] ?? session.questions[0];
@@ -187,6 +196,16 @@
     function drawQuestion(question = pickNextQuestion()) {
       session.current = question;
       session.answered = false;
+      byId('question-card').hidden = !question;
+      byId('review-status').hidden = Boolean(question);
+      byId('review-status').textContent = question ? '' : session.reviewed.size
+        ? '本輪考前複習完成。切換出題方式後，可再開始一輪。'
+        : '目前沒有答錯過的題目可複習。';
+      if (!question) {
+        showStats();
+        byId('mode').focus();
+        return;
+      }
       byId('question-id').value = question.id;
       byId('number').textContent = `原題第 ${question.id} 題 · 題庫共 ${session.questions.length} 題`;
       byId('stem').textContent = question.stem;
@@ -214,6 +233,7 @@
       const active = session;
       if (!active || active.answered) return;
       active.answered = true;
+      if (byId('mode').value === 'review') active.reviewed.add(active.current.id);
       byId('mode').disabled = true;
       byId('jump').querySelector('button').disabled = true;
       const question = active.current;
@@ -297,9 +317,10 @@
         }
         if (attempt !== generation) return;
         questions.sort((a, b) => a.id - b.id);
-        session = { key, questions, progress, current: null, answered: false };
+        session = { key, questions, progress, current: null, answered: false, reviewed: new Set() };
         byId('question-id').replaceChildren(...questions.map(({ id }) => new Option(`第 ${id} 題`, id)));
         byId('jump').querySelector('button').disabled = false;
+        byId('jump').hidden = false;
         byId('login-status').textContent = '';
         byId('storage-status').textContent = storageMessage;
         byId('login').hidden = true;
@@ -326,13 +347,18 @@
 
     byId('mode').addEventListener('change', () => {
       if (!session) return;
-      if (byId('mode').value === 'sequential') drawQuestion(session.questions[0]);
+      const mode = byId('mode').value;
+      byId('jump').hidden = mode === 'review';
+      if (mode === 'review') {
+        session.reviewed.clear();
+        drawQuestion();
+      } else if (mode === 'sequential') drawQuestion(session.questions[0]);
       else if (!session.answered) drawQuestion();
       else updateNextLabel();
     });
     byId('jump').addEventListener('submit', (event) => {
       event.preventDefault();
-      if (!session || byId('mode').disabled) return;
+      if (!session || byId('mode').disabled || byId('mode').value === 'review') return;
       const id = Number(byId('question-id').value);
       const question = session.questions.find((entry) => entry.id === id);
       if (question) drawQuestion(question);
