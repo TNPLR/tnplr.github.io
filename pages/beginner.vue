@@ -93,49 +93,7 @@
             </table>
             <p>可記為：「<b>先辨強牌，再看高花；平均分段，其餘長門。</b>」其中 20–21 點平均牌先歸入 2NT，不因有五張高花而改作一般高花開叫。</p>
             <h3 id="lesson-2-practice">牌例與練習</h3>
-            <p>下列各題均假設此前無人開叫，且每手均為十三張，依 !S／!H／!D／!C 排列。作答時宜先算大牌點，再數四門張數，最後依開叫的判斷次序選擇叫品；可先遮住右欄，待自行判斷後，再核對解析。</p>
-            <h4 id="opening-minor-practice">一、低花與 1NT 開叫</h4>
-            <table>
-                <thead><tr><th scope="col">手牌</th><th scope="col">判斷與開叫</th></tr></thead>
-                <tbody>
-                    <tr><td>!S AQ7　!H K84　!D KJ62　!C Q93</td><td>15 點，4333，無五張高花，開叫 1NT。四張方塊不妨礙平均牌依點力開叫 NT。</td></tr>
-                    <tr><td>!S KJ84　!H AQ73　!D K62　!C 93</td><td>13 點，4432，兩門高花都只有四張，方塊也不足四張，故開叫 1!C。此例梅花僅兩張。</td></tr>
-                    <tr><td>!S AQ7　!H K84　!D AK62　!C Q93</td><td>18 點，4333，先開叫 1!D；不能因為比 15–17 點更強，就逕開 1NT，亦未達 2NT 的範圍。</td></tr>
-                </tbody>
-            </table>
-            <h4 id="opening-major-practice">二、高花開叫：先長後高</h4>
-            <p>一般開叫力量下，有五張高花時，應先檢查高花開叫。兩門高花同時符合條件，先叫較長者；同長則先黑桃。平均牌型本身，並不足以構成 1NT 開叫的理由。</p>
-            <table>
-                <thead><tr><th scope="col">手牌</th><th scope="col">判斷與開叫</th></tr></thead>
-                <tbody>
-                    <tr><td>!S AKJ73　!H Q84　!D K62　!C 93</td><td>13 點，5332，五張黑桃，開叫 1!S。雖為平均牌型，仍應依高花條件開叫。</td></tr>
-                    <tr><td>!S AQ4　!H KJ873　!D K62　!C 93</td><td>13 點，5332，五張紅心，開叫 1!H；不能因黑桃有 AQ，就忽略張數而開叫黑桃。</td></tr>
-                    <tr><td>!S KJ873　!H AQ962　!D K6　!C 3</td><td>13 點，5521，兩門高花同為五張，先開叫 1!S。所比較者是長度，不是單門大牌點的高低。</td></tr>
-                    <tr><td>!S KJ873　!H AQ9642　!D K　!C 3</td><td>13 點，6511，紅心六張、黑桃五張，先開叫 1!H。先長後高，並非只要兩門都有五張就一概先黑桃。</td></tr>
-                </tbody>
-            </table>
-            <h4 id="opening-2nt-practice">三、2NT 開叫：20–21 點平均牌</h4>
-            <p>2NT 的點力範圍僅 20–21 點，且可以有五張高花。故應先辨明此一範圍，再決定是否依一般高花開叫處理。</p>
-            <table>
-                <thead><tr><th scope="col">手牌</th><th scope="col">判斷與開叫</th></tr></thead>
-                <tbody>
-                    <tr><td>!S AQ7　!H AK4　!D KJ62　!C K93</td><td>20 點，4333，開叫 2NT。點力位於本叫品的下限，仍已符合條件。</td></tr>
-                    <tr><td>!S AK7　!H AQ4　!D AQ62　!C Q93</td><td>21 點，4333，開叫 2NT。雖已接近強牌開叫門檻，仍未達 22 點。</td></tr>
-                    <tr><td>!S AKJ73　!H AQ4　!D K62　!C K9</td><td>20 點，5332，開叫 2NT。此時可以有五張黑桃，與 1NT 開叫不含五張高花的條件不同。</td></tr>
-                </tbody>
-            </table>
-            <h4 id="opening-2c-practice">四、2!C 開叫：先辨強牌</h4>
-            <p>達 22 點以上時，應先依強牌條件開叫 2!C，不再逕按長門開叫一線花色。2!C 是人工強牌叫品，不保證梅花長度；以下各題先採大牌點即可明確判斷，贏墩型強牌另由教師補充。</p>
-            <table>
-                <thead><tr><th scope="col">手牌</th><th scope="col">判斷與開叫</th></tr></thead>
-                <tbody>
-                    <tr><td>!S AK7　!H AQ4　!D AK62　!C Q93</td><td>22 點，4333，開叫 2!C。與前節 21 點牌相比，已越過 2NT 的上限。</td></tr>
-                    <tr><td>!S AKQ73　!H AK4　!D A62　!C K9</td><td>23 點，5332，開叫 2!C。即使有五張黑桃，仍先表示強牌，不能只看長度而開叫 1!S。</td></tr>
-                    <tr><td>!S AKQJ73　!H AK4　!D A6　!C K9</td><td>24 點，6322，開叫 2!C。此牌不是本文所定義的平均牌型，但已符合強牌點力條件；梅花雖僅兩張，亦不影響此叫品。</td></tr>
-                </tbody>
-            </table>
-            <p>核對答案時，宜逐一說明「點力是否達強牌門檻、是否符合 NT 範圍、是否有五張高花」。先依次排除，便不易因看到長門或大牌，而跳過應優先判斷的條件。</p>
-            <p><b>打牌練習：</b>將莊家與夢家的同門大牌合併觀察。例如一手 AK，另一手 QJ，該門雖有四張大牌，兩手卻各僅兩張，至多只能取兩墩。故計算贏墩須看張數與出牌次序，不能只數大牌的枚數。</p>
+            <ShortQuiz title="你會怎麼開叫？" :questions="openingQuestions" :auction-mode="1" />
         </div>
 
         <div class="lesson">
@@ -204,6 +162,8 @@
                     <tr><td>!S 84　!H KJ973　!D Q62　!C Q94</td><td><b>1NT。</b>8 點，雖有五張紅心，仍不足以答二蓋一的 2!H。</td></tr>
                 </tbody>
             </table>
+            <ShortQuiz title="同伴開叫 1♥，你會怎麼答叫？" :questions="heartResponseQuestions" :auction-mode="2" />
+            <ShortQuiz title="同伴開叫 1♠，你會怎麼答叫？" :questions="spadeResponseQuestions" :auction-mode="2" />
             <p><b>打牌練習：</b>選一副五三高花配合的牌，攤牌後先觀察王牌張數與可能失墩。若夢家有短門，討論能否以夢家的王牌將吃莊家的失墩，以及是否應先保留王牌再處理短門。</p>
         </div>
 
@@ -223,6 +183,7 @@
                     <tr><td>1!D－2!C</td><td>12 點以上，5 張以上梅花，迫叫成局；弱牌不能只因梅花長便如此答叫。</td></tr>
                 </tbody>
             </table>
+            <ShortQuiz title="同伴開叫低花，你會怎麼答叫？" :questions="minorResponseQuestions" />
             <h3 id="inverted-minors">低花反序：弱的叫得多，強的叫得少</h3>
             <p>沒有四張高花而有低花支持時，本制度採反序低花。二線支持為邀請以上，三線支持則為較弱的牌。這個的制度設計是為了善用較足夠的叫牌空間，確認適不適合打3NT。不能套用「跳得愈高就愈強」的印象。</p>
             <table class="bidtable">
@@ -392,10 +353,520 @@
 </template>
 
 <script setup lang="ts">
+import ShortQuiz from '~/components/shortQuiz.vue';
 import replaceSuitSigns from '~/modules/replaceSuitSigns';
-import type { TocElement } from '~/type/type';
+import type { Quest, TocElement } from '~/type/type';
+
+const openingQuestions: Quest[] = [
+    {
+        spades: 'AQ7', hearts: 'K84', diamonds: 'KJ62', clubs: 'Q93',
+        board_num: 3, auction: [], correct: '1NT',
+        answers: {
+            '1D': '再想想。15–17 點平均牌沒有五張高花，應優先開叫 1NT。',
+            '1NT': '答對了。15 點，4333，無五張高花，開叫 1NT。四張方塊不妨礙平均牌依點力開叫 NT。',
+            '2NT': '再想想。2NT 需要 20–21 點。',
+        },
+    },
+    {
+        spades: 'KJ84', hearts: 'AQ73', diamonds: 'K62', clubs: '93',
+        board_num: 3, auction: [], correct: '1C',
+        answers: {
+            '1C': '答對了。13 點，4432，兩門高花都只有四張，方塊也不足四張，故開叫 1!C。此例梅花僅兩張。',
+            '1D': '再想想。方塊只有三張，未達 1!D 開叫所需的四張。',
+            '1H': '再想想。紅心只有四張，未達 1!H 開叫所需的五張。',
+        },
+    },
+    {
+        spades: 'AQ7', hearts: 'K84', diamonds: 'AK62', clubs: 'Q93',
+        board_num: 3, auction: [], correct: '1D',
+        answers: {
+            '1D': '答對了。18 點，4333，先開叫 1!D；不能因為比 15–17 點更強，就逕開 1NT，亦未達 2NT 的範圍。',
+            '1NT': '再想想。18 點超過 1NT 的 15–17 點範圍。',
+            '2NT': '再想想。18 點未達 2NT 所需的 20–21 點。',
+        },
+    },
+    {
+        spades: 'AKJ73', hearts: 'Q84', diamonds: 'K62', clubs: '93',
+        board_num: 3, auction: [], correct: '1S',
+        answers: {
+            '1D': '再想想。方塊只有三張，而且本手已有五張黑桃。',
+            '1NT': '再想想。本手有五張黑桃，且只有 13 點，應開叫 1!S。',
+            '1S': '答對了。13 點，5332，五張黑桃，開叫 1!S。雖為平均牌型，仍應依高花條件開叫。',
+        },
+    },
+    {
+        spades: 'AQ4', hearts: 'KJ873', diamonds: 'K62', clubs: '93',
+        board_num: 3, auction: [], correct: '1H',
+        answers: {
+            '1H': '答對了。13 點，5332，五張紅心，開叫 1!H；不能因黑桃有 AQ，就忽略張數而開叫黑桃。',
+            '1NT': '再想想。本手有五張紅心，且只有 13 點，應開叫 1!H。',
+            '1S': '再想想。黑桃只有三張，紅心有五張，應開叫 1!H。',
+        },
+    },
+    {
+        spades: 'KJ873', hearts: 'AQ962', diamonds: 'K6', clubs: '3',
+        board_num: 3, auction: [], correct: '1S',
+        answers: {
+            '1H': '再想想。兩門高花同為五張，應先開叫 1!S。',
+            '1NT': '再想想。5521 有單張，且 13 點未達 1NT 的點力範圍。',
+            '1S': '答對了。13 點，5521，兩門高花同為五張，先開叫 1!S。所比較者是長度，不是單門大牌點的高低。',
+        },
+    },
+    {
+        spades: 'KJ873', hearts: 'AQ9642', diamonds: 'K', clubs: '3',
+        board_num: 3, auction: [], correct: '1H',
+        answers: {
+            '1H': '答對了。13 點，6511，紅心六張、黑桃五張，先開叫 1!H。先長後高，並非只要兩門都有五張就一概先黑桃。',
+            '1NT': '再想想。6511 有單張，且 13 點未達 1NT 的點力範圍。',
+            '1S': '再想想。紅心比黑桃長一張，應先開叫 1!H。',
+        },
+    },
+    {
+        spades: 'AQ7', hearts: 'AK4', diamonds: 'KJ62', clubs: 'K93',
+        board_num: 3, auction: [], correct: '2NT',
+        answers: {
+            '1D': '再想想。20 點平均牌應優先開叫 2NT。',
+            '2C': '再想想。20 點未達 2!C 的 22 點門檻。',
+            '2NT': '答對了。20 點，4333，開叫 2NT。點力位於本叫品的下限，仍已符合條件。',
+        },
+    },
+    {
+        spades: 'AK7', hearts: 'AQ4', diamonds: 'AQ62', clubs: 'Q93',
+        board_num: 3, auction: [], correct: '2NT',
+        answers: {
+            '1D': '再想想。21 點平均牌應優先開叫 2NT。',
+            '2C': '再想想。21 點未達 2!C 的 22 點門檻。',
+            '2NT': '答對了。21 點，4333，開叫 2NT。雖已接近強牌開叫門檻，仍未達 22 點。',
+        },
+    },
+    {
+        spades: 'AKJ73', hearts: 'AQ4', diamonds: 'K62', clubs: 'K9',
+        board_num: 3, auction: [], correct: '2NT',
+        answers: {
+            '1S': '再想想。20 點平均牌即使有五張黑桃，仍應開叫 2NT。',
+            '2C': '再想想。20 點未達 2!C 的 22 點門檻。',
+            '2NT': '答對了。20 點，5332，開叫 2NT。此時可以有五張黑桃，與 1NT 開叫不含五張高花的條件不同。',
+        },
+    },
+    {
+        spades: 'AK7', hearts: 'AQ4', diamonds: 'AK62', clubs: 'Q93',
+        board_num: 3, auction: [], correct: '2C',
+        answers: {
+            '1D': '再想想。22 點已達強牌門檻，應優先開叫 2!C。',
+            '2C': '答對了。22 點，4333，開叫 2!C。與前節 21 點牌相比，已越過 2NT 的上限。',
+            '2NT': '再想想。22 點超過 2NT 的 21 點上限。',
+        },
+    },
+    {
+        spades: 'AKQ73', hearts: 'AK4', diamonds: 'A62', clubs: 'K9',
+        board_num: 3, auction: [], correct: '2C',
+        answers: {
+            '1S': '再想想。23 點已達強牌門檻，應優先開叫 2!C。',
+            '2C': '答對了。23 點，5332，開叫 2!C。即使有五張黑桃，仍先表示強牌，不能只看長度而開叫 1!S。',
+            '2NT': '再想想。23 點超過 2NT 的 21 點上限。',
+        },
+    },
+    {
+        spades: 'AKQJ73', hearts: 'AK4', diamonds: 'A6', clubs: 'K9',
+        board_num: 3, auction: [], correct: '2C',
+        answers: {
+            '1S': '再想想。24 點已達強牌門檻，應優先開叫 2!C。',
+            '2C': '答對了。24 點，6322，開叫 2!C。此牌不是本文所定義的平均牌型，但已符合強牌點力條件；梅花雖僅兩張，亦不影響此叫品。',
+            '2NT': '再想想。本手有 24 點，且 6322 不屬於平均牌型。',
+        },
+    },
+];
+
+const heartResponseAuction = [
+    { name: '1H', explanation: '', alert: false },
+    { name: 'P', explanation: '', alert: false },
+];
+
+const heartResponseQuestions: Quest[] = [
+    {
+        spades: 'KJ84', hearts: '72', diamonds: 'Q62', clubs: '9543',
+        board_num: 1, auction: heartResponseAuction, correct: '1S',
+        answers: {
+            '1S': '答對了。四張黑桃且有 6 點，可在一線叫黑桃，迫叫一圈。',
+            '1NT': '再想想。可以先在一線介紹四張黑桃。',
+            'Pass': '再想想。已有 6 點，也有合適的一線答叫。',
+        },
+    },
+    {
+        spades: 'K74', hearts: 'Q83', diamonds: 'J52', clubs: '9762',
+        board_num: 1, auction: heartResponseAuction, correct: '1NT',
+        answers: {
+            '1NT': '答對了。三張紅心支持、6 點，先迫叫 1NT；同伴若低限再叫 2!C，可回到 2!H。',
+            '2H': '再想想。三張支持、6 點應先經過 1NT。',
+            'Pass': '再想想。有 6 點及三張紅心支持，可以答叫。',
+        },
+    },
+    {
+        spades: 'Q76', hearts: 'KJ84', diamonds: '852', clubs: '963',
+        board_num: 1, auction: heartResponseAuction, correct: '2H',
+        answers: {
+            '2H': '答對了。四張紅心支持、6 點，直接加叫 2!H，同伴可以 Pass。',
+            '1NT': '再想想。四張支持已足以直接加叫。',
+            '3H': '再想想。直接三線加叫需要邀請力量。',
+        },
+    },
+    {
+        spades: 'A76', hearts: 'Q83', diamonds: 'Q52', clubs: '9762',
+        board_num: 1, auction: heartResponseAuction, correct: '2H',
+        answers: {
+            '2H': '答對了。三張紅心支持、8 點，直接加叫 2!H，不迫叫。',
+            '1NT': '再想想。三張支持達到 8 點，可以直接加叫。',
+            '3H': '再想想。直接 3!H 需要四張以上支持及邀請力量。',
+        },
+    },
+    {
+        spades: 'K76', hearts: 'A83', diamonds: 'Q52', clubs: 'J962',
+        board_num: 1, auction: heartResponseAuction, correct: '1NT',
+        answers: {
+            '1NT': '答對了。恰好三張紅心支持、10 點；先迫叫 1NT，若同伴低限再叫 2!C，可跳叫 3!H 邀請。',
+            '2H': '再想想。直接 2!H 會低估本手的邀請力量。',
+            '3H': '再想想。直接 3!H 保證四張以上紅心。',
+        },
+    },
+    {
+        spades: 'Q76', hearts: 'KJ84', diamonds: 'A52', clubs: '963',
+        board_num: 1, auction: heartResponseAuction, correct: '3H',
+        answers: {
+            '3H': '答對了。四張紅心支持、10 點，直接跳加叫 3!H 邀請，同伴可以 Pass。',
+            '2H': '再想想。本手有邀請力量。',
+            '2NT': '再想想。Jacoby 2NT 需要至少 12 點。',
+        },
+    },
+    {
+        spades: 'K76', hearts: 'AQ84', diamonds: 'K52', clubs: 'J63',
+        board_num: 1, auction: heartResponseAuction, correct: '2NT',
+        answers: {
+            '2NT': '答對了。四張紅心支持、13 點，且無單張或缺門，用 Jacoby 2NT 迫叫成局。',
+            '3H': '再想想。直接 3!H 只是邀請。',
+            '4H': '再想想。直接 4!H 主要用於五張以上支持的弱牌。',
+        },
+    },
+    {
+        spades: 'K76', hearts: 'A83', diamonds: 'AQJ52', clubs: '96',
+        board_num: 1, auction: heartResponseAuction, correct: '2D',
+        answers: {
+            '2D': '答對了。五張方塊、14 點，先以二蓋一迫叫成局，下一輪再表示三張紅心支持。',
+            '2H': '再想想。本手已有成局力量。',
+            '2NT': '再想想。Jacoby 2NT 需要四張以上支持。',
+        },
+    },
+    {
+        spades: 'QJ9874', hearts: '72', diamonds: '952', clubs: '63',
+        board_num: 1, auction: heartResponseAuction, correct: '2S',
+        answers: {
+            '2S': '答對了。六張黑桃、3 點，且無紅心配合，跳答 2!S 是弱竄叫。',
+            '1S': '再想想。自然答叫 1!S 通常需要至少 6 點。',
+            '1NT': '再想想。迫叫 1NT 通常需要至少 6 點。',
+        },
+    },
+    {
+        spades: 'K74', hearts: '83', diamonds: 'J952', clubs: '8762',
+        board_num: 1, auction: heartResponseAuction, correct: 'Pass',
+        answers: {
+            'Pass': '答對了。只有 4 點，兩張紅心，沒有適合弱竄叫的長門，可以 Pass。',
+            '1NT': '再想想。4 點低於迫叫 1NT 的基本範圍。',
+            '2H': '再想想。只有兩張紅心，未達支持所需張數。',
+        },
+    },
+];
+
+const spadeResponseAuction = [
+    { name: '1S', explanation: '', alert: false },
+    { name: 'P', explanation: '', alert: false },
+];
+
+const spadeResponseQuestions: Quest[] = [
+    {
+        spades: 'K83', hearts: 'Q74', diamonds: '852', clubs: 'J962',
+        board_num: 1, auction: spadeResponseAuction, correct: '1NT',
+        answers: {
+            '1NT': '答對了。三張黑桃支持、6 點，先迫叫 1NT；同伴若低限再叫 2!C，可回到 2!S。',
+            '2S': '再想想。三張支持、6 點應先經過 1NT。',
+            '3S': '再想想。直接 3!S 需要四張以上支持及邀請力量。',
+        },
+    },
+    {
+        spades: 'J873', hearts: 'A62', diamonds: 'Q52', clubs: '963',
+        board_num: 1, auction: spadeResponseAuction, correct: '2S',
+        answers: {
+            '2S': '答對了。四張黑桃支持、7 點，直接加叫 2!S，不迫叫。',
+            '1NT': '再想想。四張支持已足以直接加叫。',
+            '3S': '再想想。7 點未達邀請範圍。',
+        },
+    },
+    {
+        spades: 'A83', hearts: 'J74', diamonds: 'K52', clubs: 'J962',
+        board_num: 1, auction: spadeResponseAuction, correct: '2S',
+        answers: {
+            '2S': '答對了。三張黑桃支持、9 點，直接加叫 2!S，同伴可以 Pass。',
+            '1NT': '再想想。三張支持、9 點可以直接加叫。',
+            '3S': '再想想。直接三線加叫需要四張以上支持。',
+        },
+    },
+    {
+        spades: 'K83', hearts: 'A74', diamonds: 'K52', clubs: 'J962',
+        board_num: 1, auction: spadeResponseAuction, correct: '1NT',
+        answers: {
+            '1NT': '答對了。三張黑桃支持、11 點；先迫叫 1NT，若同伴低限再叫 2!C，可跳叫 3!S 邀請。',
+            '2S': '再想想。本手的力量足以邀請。',
+            '3S': '再想想。直接 3!S 保證四張以上支持。',
+        },
+    },
+    {
+        spades: 'Q873', hearts: 'K62', diamonds: 'AJ5', clubs: 'J63',
+        board_num: 1, auction: spadeResponseAuction, correct: '3S',
+        answers: {
+            '3S': '答對了。四張黑桃支持、11 點且無短門，直接跳加叫 3!S 邀請，不迫叫。',
+            '2S': '再想想。本手有邀請力量。',
+            '2NT': '再想想。Jacoby 2NT 需要至少 12 點。',
+        },
+    },
+    {
+        spades: 'AQ83', hearts: 'K74', diamonds: 'Q52', clubs: 'J96',
+        board_num: 1, auction: spadeResponseAuction, correct: '2NT',
+        answers: {
+            '2NT': '答對了。四張黑桃支持、12 點且無短門，用 Jacoby 2NT 迫叫成局。',
+            '3S': '再想想。3!S 只表示邀請。',
+            '4S': '再想想。直接 4!S 主要用於五張以上支持的弱牌。',
+        },
+    },
+    {
+        spades: '83', hearts: 'KQJ74', diamonds: 'Q52', clubs: '962',
+        board_num: 1, auction: spadeResponseAuction, correct: '1NT',
+        answers: {
+            '1NT': '答對了。五張紅心但只有 8 點，先答迫叫一圈的 1NT。',
+            '2H': '再想想。五張紅心符合長度，但二蓋一還需要成局力量。',
+            '2S': '再想想。只有兩張黑桃，不能直接支持。',
+        },
+    },
+    {
+        spades: '83', hearts: 'AQJ74', diamonds: 'K52', clubs: 'Q96',
+        board_num: 1, auction: spadeResponseAuction, correct: '2H',
+        answers: {
+            '2H': '答對了。五張紅心、12 點，答 2!H 二蓋一，迫叫成局。',
+            '1NT': '再想想。本手已達二蓋一門檻，可立即描述紅心。',
+            '2S': '再想想。只有兩張黑桃，不能直接支持。',
+        },
+    },
+    {
+        spades: 'K83', hearts: 'A74', diamonds: '52', clubs: 'AQ962',
+        board_num: 1, auction: spadeResponseAuction, correct: '2C',
+        answers: {
+            '2C': '答對了。五張梅花、13 點，先以 2!C 二蓋一迫叫成局，再表示三張黑桃支持。',
+            '2S': '再想想。本手已有成局力量。',
+            '2NT': '再想想。Jacoby 2NT 需要四張以上黑桃支持。',
+        },
+    },
+    {
+        spades: 'KJ873', hearts: 'A74', diamonds: '2', clubs: 'K962',
+        board_num: 1, auction: spadeResponseAuction, correct: '4D',
+        answers: {
+            '4D': '答對了。五張黑桃支持、11 點，方塊單張，跳叫 4!D 是 Splinter，迫叫成局。',
+            '3S': '再想想。本手符合短門支持叫的條件，可以直接指出方塊單張。',
+            '4S': '再想想。直接 4!S 主要用於阻塞，會省略有用的短門資訊。',
+        },
+    },
+];
 
 const article = useTemplateRef<HTMLElement>('Article');
+const clubResponseAuction = [
+    { name: '1C', explanation: '', alert: false },
+    { name: 'P', explanation: '', alert: false },
+];
+
+const diamondResponseAuction = [
+    { name: '1D', explanation: '', alert: false },
+    { name: 'P', explanation: '', alert: false },
+];
+
+const minorResponseQuestions: Quest[] = [
+    {
+        spades: 'Q83', hearts: 'KJ74', diamonds: 'Q962', clubs: '84',
+        board_num: 1, auction: clubResponseAuction, correct: '1H',
+        answers: {
+            '1H': '答對了。8 點，四張紅心可在一線答叫，迫叫一圈。',
+            '1D': '再想想。方塊和紅心同為四張，這手未達成局力量，先找高花。',
+            '1NT': '再想想。應先在一線介紹四張以上高花。',
+        },
+    },
+    {
+        spades: 'KJ84', hearts: 'Q72', diamonds: 'J62', clubs: '943',
+        board_num: 1, auction: diamondResponseAuction, correct: '1S',
+        answers: {
+            '1S': '答對了。7 點，四張黑桃可在一線答叫，迫叫一圈。',
+            '1NT': '再想想。有四張黑桃，應先在一線介紹黑桃。',
+            '2NT': '再想想。可在一線介紹高花，優先找高花配合。',
+        },
+    },
+    {
+        spades: 'QJ8', hearts: 'K73', diamonds: '62', clubs: 'Q9843',
+        board_num: 1, auction: diamondResponseAuction, correct: '1NT',
+        answers: {
+            '1NT': '答對了。8 點，沒有四張高花，也只有兩張方塊，答自然 1NT。',
+            '2C': '再想想。五張梅花符合張數，但點力未達二蓋一所需的 12 點。',
+            '2NT': '再想想。這手只有 8 點，未達邀請範圍。',
+        },
+    },
+    {
+        spades: 'KJ8', hearts: 'Q73', diamonds: 'A62', clubs: 'J943',
+        board_num: 1, auction: clubResponseAuction, correct: '2NT',
+        answers: {
+            '2NT': '答對了。11 點，兩門高花各三張，答自然 2NT 邀請成局。',
+            '1NT': '再想想。這手已達本課的 2NT 邀請範圍。',
+            'Pass': '再想想。已達邀請成局的點力。',
+        },
+    },
+    {
+        spades: 'A84', hearts: 'K7', diamonds: 'Q62', clubs: 'KJ943',
+        board_num: 1, auction: diamondResponseAuction, correct: '2C',
+        answers: {
+            '2C': '答對了。13 點，五張梅花且已達成局力量，答 2!C 迫叫成局。',
+            '2NT': '再想想。這手已有成局力量，且可用 2!C 介紹五張梅花。',
+            '1NT': '再想想。已達二蓋一的點力與梅花張數。',
+        },
+    },
+    {
+        spades: 'K842', hearts: 'QJ73', diamonds: 'Q62', clubs: '94',
+        board_num: 1, auction: clubResponseAuction, correct: '1H',
+        answers: {
+            '1H': '答對了。8 點，兩門高花都是四張，先答紅心。',
+            '1S': '再想想。兩門高花同為四張時，先答較低的一線紅心。',
+            '1NT': '再想想。應先在一線介紹四張以上高花。',
+        },
+    },
+    {
+        spades: 'QJ84', hearts: 'K9763', diamonds: 'J2', clubs: '94',
+        board_num: 1, auction: diamondResponseAuction, correct: '1H',
+        answers: {
+            '1H': '答對了。7 點，兩門高花都能在一線答叫，先叫較長的五張紅心。',
+            '1S': '再想想。黑桃只有四張，先介紹較長的紅心。',
+            '1NT': '再想想。應先在一線介紹四張以上高花。',
+        },
+    },
+    {
+        spades: 'Q8', hearts: 'KJ7', diamonds: '62', clubs: 'QJ9843',
+        board_num: 1, auction: diamondResponseAuction, correct: '1NT',
+        answers: {
+            '1NT': '答對了。9 點，六張梅花、無四張高花，先答自然 1NT。',
+            '2C': '再想想。六張梅花也仍須至少 12 點才能在 1!D 後答 2!C。',
+            '2NT': '再想想。這手只有 9 點，未達邀請範圍。',
+        },
+    },
+    {
+        spades: 'K83', hearts: 'QJ7', diamonds: 'K62', clubs: 'Q943',
+        board_num: 1, auction: diamondResponseAuction, correct: '2NT',
+        answers: {
+            '2NT': '答對了。11 點，沒有四張高花，僅三張方塊，答自然 2NT 邀請成局。',
+            '2D': '再想想。反序加叫 2!D 需要至少四張方塊支持。',
+            '1NT': '再想想。已有 11 點，應作成局邀請。',
+        },
+    },
+    {
+        spades: 'K84', hearts: 'Q73', diamonds: '62', clubs: 'AK943',
+        board_num: 1, auction: diamondResponseAuction, correct: '2C',
+        answers: {
+            '2C': '答對了。12 點，五張梅花且已達 12 點，答 2!C 迫叫成局。',
+            '1NT': '再想想。點力已足以用二蓋一介紹五張梅花。',
+            '2NT': '再想想。已有成局力量，且可介紹梅花。',
+        },
+    },
+    {
+        spades: 'KJ84', hearts: 'Q973', diamonds: 'A62', clubs: '94',
+        board_num: 1, auction: clubResponseAuction, correct: '1H',
+        answers: {
+            '1H': '答對了。10 點，兩門高花都是四張，先答紅心。',
+            '1S': '再想想。兩門高花同為四張時應先叫紅心。',
+            '1NT': '再想想。應先在一線介紹四張以上高花。',
+        },
+    },
+    {
+        spades: 'KJ842', hearts: 'QJ973', diamonds: '62', clubs: '4',
+        board_num: 1, auction: clubResponseAuction, correct: '1S',
+        answers: {
+            '1S': '答對了。7 點，兩門高花同為五張，先答黑桃。',
+            '1H': '再想想。兩門高花同為五張時，依本制度先答黑桃。',
+            '1NT': '再想想。應先在一線介紹四張以上高花。',
+        },
+    },
+    {
+        spades: 'Q83', hearts: 'KJ7', diamonds: 'J62', clubs: '9843',
+        board_num: 1, auction: clubResponseAuction, correct: '1NT',
+        answers: {
+            '1NT': '答對了。7 點，沒有四張高花，方塊也只有三張，答自然 1NT。',
+            '1D': '再想想。自然 1!D 通常需要四張以上方塊，這手只有三張。',
+            '2NT': '再想想。這手只有 7 點，未達邀請範圍。',
+        },
+    },
+    {
+        spades: 'KJ8', hearts: 'Q73', diamonds: '62', clubs: 'AJ943',
+        board_num: 1, auction: diamondResponseAuction, correct: '2NT',
+        answers: {
+            '2NT': '答對了。11 點，五張梅花、無四張高花，答自然 2NT 邀請成局。',
+            '2C': '再想想。梅花雖有五張，但二蓋一仍須至少 12 點。',
+            '1NT': '再想想。已有 11 點，應作成局邀請。',
+        },
+    },
+    {
+        spades: 'A8', hearts: 'Q73', diamonds: 'K2', clubs: 'KJ9843',
+        board_num: 1, auction: diamondResponseAuction, correct: '2C',
+        answers: {
+            '2C': '答對了。13 點，六張梅花且有成局力量，答 2!C 迫叫成局。',
+            '2NT': '再想想。已有成局力量，可先用 2!C 介紹六張梅花。',
+            '1NT': '再想想。已達二蓋一的點力與梅花張數。',
+        },
+    },
+    {
+        spades: 'KJ84', hearts: 'Q73', diamonds: 'QJ962', clubs: '4',
+        board_num: 1, auction: clubResponseAuction, correct: '1S',
+        answers: {
+            '1S': '答對了。9 點，未達成局力量，雖有五張方塊，仍先介紹四張黑桃。',
+            '1D': '再想想。這手有四張高花且未達 12 點，先找黑桃配合。',
+            '1NT': '再想想。應先在一線介紹四張以上高花。',
+        },
+    },
+    {
+        spades: 'KJ84', hearts: 'Q73', diamonds: '62', clubs: 'Q943',
+        board_num: 1, auction: diamondResponseAuction, correct: '1S',
+        answers: {
+            '1S': '答對了。8 點，四張黑桃可在一線答叫，迫叫一圈。',
+            '1NT': '再想想。有四張黑桃，應優先叫一線高花。',
+            '2NT': '再想想。可在一線介紹高花，優先找高花配合。',
+        },
+    },
+    {
+        spades: 'Q83', hearts: 'KJ7', diamonds: 'Q62', clubs: '9843',
+        board_num: 1, auction: diamondResponseAuction, correct: '1NT',
+        answers: {
+            '1NT': '答對了。8 點，沒有四張高花，也沒有更合適的花色答叫，答自然 1NT。',
+            '2NT': '再想想。本課的自然 2NT 邀請通常需要 10–11 點。',
+            'Pass': '再想想。已有 8 點，同伴開叫後應答叫。',
+        },
+    },
+    {
+        spades: 'A83', hearts: 'KJ7', diamonds: 'Q62', clubs: '9843',
+        board_num: 1, auction: clubResponseAuction, correct: '2NT',
+        answers: {
+            '2NT': '答對了。10 點，沒有四張高花，梅花只有四張，答自然 2NT 邀請成局。',
+            '2C': '再想想。反序加叫 2!C 需要至少五張梅花支持。',
+            '1NT': '再想想。已有 10 點，應作成局邀請。',
+        },
+    },
+    {
+        spades: 'Q84', hearts: 'K7', diamonds: '62', clubs: 'AQJ943',
+        board_num: 1, auction: diamondResponseAuction, correct: '2C',
+        answers: {
+            '2C': '答對了。12 點，六張梅花且已達 12 點，答 2!C 迫叫成局。',
+            '1NT': '再想想。已達成局力量，而且有六張梅花可用 2!C 表達。',
+            '2NT': '再想想。已有成局力量，且可介紹梅花。',
+        },
+    },
+];
+
 const toc = useState<TocElement[]>('toc', () => []);
 const title = useState('title');
 const topic = useState('topic');

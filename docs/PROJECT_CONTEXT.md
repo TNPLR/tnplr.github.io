@@ -56,7 +56,7 @@ README 仍引用不存在的 `vue-bidpage/src/components`，不能作為現行�
 ## 文章與狀態資料流
 
 1. 頁面通常以 `<article ref="Article">` 包住文章，使用預設 layout。
-2. `onMounted` 呼叫 `replaceSuitSigns(article.value)`；它透過 `suitSign()` 將 `!C`、`!D`、`!H`、`!S` 轉為花色 HTML，再重設文章 `innerHTML`。
+2. `onMounted` 呼叫 `replaceSuitSigns(article.value)`；它透過 `suitSign()` 將 `!C`、`!D`、`!H`、`!S` 轉為花色 HTML，僅替換含花色標記的文字節點，略過自行處理花色的小測驗。
 3. `genTOC()` 掃描整個 document 的 `h2`、`h3`、`h4`，為缺少 ID 的標題加上 `header-${index}`，寫入 `useState('toc')`。
 4. 預設 layout 讀取 `toc` 生成錨點導覽，讀取 `topic` 顯示頁首；`app.vue` 讀取 `title` 設定文件標題。
 
@@ -78,6 +78,8 @@ README 仍引用不存在的 `vue-bidpage/src/components`，不能作為現行�
 
 每題包含四門手牌字串、`auction`、`answers`、`correct`、`board_num`，另可有 `description`。叫序元素包含 `name`、`explanation`、`alert`；叫序 Pass 使用 `P`，答案叫品型別使用 `Pass`。
 
+- `shortQuiz.vue` 可透過 `<ShortQuiz title="開叫練習" :questions="questions" />` 插入教學正文，接受 `Quest[]`。建議每題提供 3～5 個含解說的叫品。選答後即顯示該叫品的解說。
+- `ShortQuiz` 的 `auction-mode` 接受數字 `1`（隱藏叫牌框）、`2`（在題目列表上方共用第一題的牌號與叫序）或 `3`（逐題顯示，預設）。`/beginner` 使用模式 `1`。
 - `story.vue` 依類別與題號選題；以 `questtype`、`questnumber` Cookie 記住選擇，沒有完整作答歷史。
 - `AuctionBox.vue` 依牌號呈現發牌位置與身價，顯示叫序、Alert 邊框、解釋及最後答案。
 - `BiddingBox.vue` 提供階層、花色、Pass、Double、Redouble，依叫序 watcher 更新可用叫品，透過 callback 與多個 `v-model` 連接父頁。
@@ -108,7 +110,7 @@ README 仍引用不存在的 `vue-bidpage/src/components`，不能作為現行�
 2. **Cookie 還原**：`story.vue` 用目前選取類別而非 Cookie 類別查索引，題號驗證缺少正整數下界，且 `< length` 排除最後一題，可能形成無效索引。
 3. **初始叫牌限制**：`BiddingBox` watcher 沒有 immediate，首次載入已有叫序時尚未初始化限制。
 4. **題目驗證**：產生器顯示牌張數但未阻擋無效手牌；未選答案時預設 1C，新增後未重設 answer。型別斷言不能驗證 JSON 的實際資料。
-5. **DOM 與 HTML**：整篇 innerHTML 重寫可能干擾 Vue 子元件更新；v-html 與轉換工具未清理外部 HTML，未來接受投稿時需明確定義信任邊界。
+5. **DOM 與 HTML**：v-html 與解說格式化工具未清理外部 HTML，未來接受投稿時需明確定義信任邊界。
 6. **跨頁與錨點**：topic 可能沿用前頁，部分標題沿用 CMBC；順序式標題 ID 會隨文章插入內容改變，目錄掃描也未限制於單一文章。
 7. **資源路徑**：Nuxt 4 遷移已將回頂端圖示改為 `/arrow_upward.svg`，以通過新版建置工具解析；Google 驗證 HTML 位於 repository 根目錄，未見複製至輸出的設定。
 8. **維護與閱讀**：長篇 Vue 文章、重複掛載邏輯、hover 導覽及說明均需留意；不要在無授權的文件任務中一併修改。
