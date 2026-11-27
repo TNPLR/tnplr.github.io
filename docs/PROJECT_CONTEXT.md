@@ -24,7 +24,7 @@
 | `modules/` | 一般工具函式與 JSON 題庫，並非已註冊的 Nuxt 模組。 |
 | `type/type.ts` | `Call`、`NameOfCall`、`Quest`、`QuestLib`、`TocElement` 等型別。 |
 | `assets/css/main.css` | 全站、手機版與列印樣式。 |
-| `public/` | favicon、回頂端箭頭、`sitemap.xml`、`sitemap.txt` 及宣告 XML sitemap 網址的 `robots.txt`；檔案由網站根路徑提供。 |
+| `public/` | favicon、回頂端箭頭、Google Search Console 的 HTML 驗證檔、`sitemap.xml`、`sitemap.txt` 及宣告 XML sitemap 網址的 `robots.txt`；檔案由網站根路徑提供。 |
 | `.github/workflows/deploy.yml` | 安裝、靜態產生及 Pages 發布。 |
 
 README 仍引用不存在的 `vue-bidpage/src/components`，不能作為現行路徑依據。
@@ -112,7 +112,7 @@ README 仍引用不存在的 `vue-bidpage/src/components`，不能作為現行�
 4. **題目驗證**：產生器顯示牌張數但未阻擋無效手牌；未選答案時預設 1C，新增後未重設 answer。型別斷言不能驗證 JSON 的實際資料。
 5. **DOM 與 HTML**：v-html 與解說格式化工具未清理外部 HTML，未來接受投稿時需明確定義信任邊界。
 6. **跨頁與錨點**：topic 可能沿用前頁，部分標題沿用 CMBC；順序式標題 ID 會隨文章插入內容改變，目錄掃描也未限制於單一文章。
-7. **資源路徑**：Nuxt 4 遷移已將回頂端圖示改為 `/arrow_upward.svg`，以通過新版建置工具解析；Google 驗證 HTML 位於 repository 根目錄，未見複製至輸出的設定。
+7. **資源路徑**：Nuxt 4 遷移已將回頂端圖示改為 `/arrow_upward.svg`，以通過新版建置工具解析。
 8. **維護與閱讀**：長篇 Vue 文章、重複掛載邏輯、hover 導覽及說明均需留意；不要在無授權的文件任務中一併修改。
 
 功能修改時優先核對首次進入、換題、異常 Cookie、Double／Redouble、題庫匯出、跨頁標題、文章錨點、手機與列印版。部署修改另需檢查靜態產物與深層路由。橋牌內容審核不在本次遷移範圍。
