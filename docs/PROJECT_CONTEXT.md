@@ -64,6 +64,8 @@ README 仍引用不存在的 `vue-bidpage/src/components`，不能作為現行�
 
 `title`、`topic`、`toc` 是跨頁共用狀態，並非每個頁面都重新設定全部欄位。`/natural` 的文章子元件也各自執行花色轉換與目錄生成。
 
+`/cmbc` 和 `/beginner` 在花色轉換後，以 `utils/markGlossaryTerms.ts` 掃描正文。兩頁的說明框與 `/cmbc` 術語表共用 `utils/cmbcGlossary.ts` 的定義。以 h2、h3、h4 為分界，每節只標記各術語第一次出現的位置，括號內的別名與主詞合併計算。滑鼠或啟用術語按鈕時，共用元件 `GlossaryPopup.vue` 透過 Vue Teleport 掛到 `body`。列印版保留原有術語表，隱藏互動底線和說明框。
+
 `/beginner` 使用固定標題 ID，掛載後僅掃描自身文章的 h2、h3、h4 產生目錄，並沿用花色轉換工具。頁面採靜態講義及原生站內連結，沒有新增題庫或互動作答狀態；局部樣式補充手機閱讀字級與列印時各課分頁。
 
 新手講義已以 Node 24 執行 `npm run generate`，確認 `.output/public/beginner/index.html` 產生；本機 Chromium 驗證直接載入、標題、花色轉換、目錄錨點、連至 CMBC 再由選單返回、390px 正文閱讀及列印分頁規則，並輸出 PDF，未收到 pageerror。十六組手牌已核對十三張及大牌點。另觀察到既有選單在滑鼠展開後切至手機寬度會超出視窗，未於本次文章新增中修改；尚未驗證線上部署及實體列印。

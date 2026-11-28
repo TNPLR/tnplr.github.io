@@ -1,25 +1,14 @@
 <template>
     <article ref="Article">
         <div><h2>前言</h2>
+            <p><NuxtLink to="/beginner">新手教學</NuxtLink></p>
             <p>橋牌是一個打牌和叫牌都很重要的遊戲。對我而言，叫牌又是特別地引人入勝。叫牌的規則很少，大概只有花色與NT的大小順序、不能叫超過7線，Double、Redouble等等的簡易規則。本文介紹的是「約定」，不是「規則」。原則上，想怎麼約定都行，而本文是提供學習者（尤其是臺大醫學院橋藝社社員）一個入門用的制度，簡單而強大，提供一個良好的基礎，並希望讀者能喜歡上橋牌這個遊戲。</p>
-            <div><h3>術語</h3>
+            <div data-glossary-definitions><h3>術語</h3>
                 <dl>
-                    <dt><strong>叫品、線、墩</strong></dt>
-                    <dd>像 1!H、3NT 這樣的叫品，由線位和花色（或無王，NT）組成。一輪（稱為一墩）每人各出一張牌。如果 1!H 成為最後的合約，紅心就是王牌，莊家一方至少要拿 6 + 1 = 7 墩。</dd>
-                    <dt><strong>高花、低花</strong></dt>
-                    <dd>紅心（!H）和黑桃（!S）叫高花，梅花（!C）和方塊（!D）叫低花。同一線的叫品由低到高依序為 !C、!D、!H、!S、NT。</dd>
-                    <dt><strong>點</strong></dt>
-                    <dd>用來估計手牌的力量。常用的稱為大牌點（High card point，HCP）A 算 4 點、K 算 3 點、Q 算 2 點、J 算 1 點，其餘牌算 0 點。把手上 13 張牌的點數加起來，就是該牌總大牌點。</dd>
-                    <dt><strong>平均牌（平均牌型）</strong></dt>
-                    <dd>四門花色的張數由多到少排列為 4-3-3-3、4-4-3-2 或 5-3-3-2 的手牌。即一手牌中，最少張數的花色有至少兩張牌，且只有一門以下的花色只有兩張牌。</dd>
-                    <dt><strong>開叫、答叫</strong></dt>
-                    <dd>全桌第一個叫出的花色或無王叫品稱為開叫。開叫後，開叫人的同伴在第一次輪到自己時所作的叫牌，若選擇繼續叫，就稱為答叫。例如 1!C－（Pass）－1!H，1!C 是開叫，1!H 是答叫。</dd>
-                    <dt><strong>成局</strong></dt>
-                    <dd>在未加倍時，最低的成局合約是 3NT、4!H、4!S、5!C 和 5!D，分別需要拿到 9、10、10、11 和 11 墩。</dd>
-                    <dt><strong>迫叫</strong></dt>
-                    <dd>依雙方約定要求同伴繼續叫牌。對手 Pass 時，「迫叫一圈」表示同伴下一輪須再叫，「迫叫成局」表示雙方須繼續叫到成局。</dd>
-                    <dt><strong>邀請</strong></dt>
-                    <dd>請同伴依牌力決定是否繼續往上叫。例如 1NT 開叫後答叫 2NT 邀請成局，開叫人可以用較好的牌叫 3NT，或用較弱的牌 Pass，停在 2NT。</dd>
+                    <template v-for="entry in cmbcGlossary" :key="entry.terms">
+                        <dt><strong>{{ entry.terms }}</strong></dt>
+                        <dd>{{ entry.definition }}</dd>
+                    </template>
                 </dl>
             </div>
             <div><h3>叫牌表記的說明</h3>
@@ -52,7 +41,7 @@
                         <td>15-17，平均牌型，沒有5張高花。</td>
                     </tr>
                     <tr>
-                        <td><a href="#2C!">2!C</a></td>
+                        <td><a href="#2C">2!C!</a></td>
                         <td>強牌迫叫。22點以上或8.5個贏墩以上。</td>
                     </tr>
                     <tr>
@@ -79,7 +68,7 @@
             <table class="bidtable">
                 <tbody>
                     <tr>
-                        <th colspan="2">竄叫（又稱阻塞叫，即擾亂性叫牌）</th>
+                        <th colspan="2">竄叫</th>
                     </tr>
                     <tr>
                         <td>2!D/<a href="#2H">!H</a>/!S</td>
@@ -1308,11 +1297,13 @@
                 <p>當自己無法跟出花色時，要選擇丟掉一張不重要的牌。此時如果有得選擇，可以提示同伴自己想要同伴攻哪個花色。此時，從不想要的花色中，丟掉一張牌，丟掉大牌代表比較希望同伴攻比較高的花色；丟掉小牌代表希望同伴攻比較低的花色。</p>
             </div>
         </div>
+        <GlossaryPopup :article="article" />
     </article>
 </template>
-<script setup>
+<script setup lang="ts">
 import replaceSuitSigns from '~/modules/replaceSuitSigns';
 import genTOC from '~/modules/genTOC';
+import { cmbcGlossary } from '~/utils/cmbcGlossary';
 
 const article = useTemplateRef('Article');
 const toc = useState('toc');
@@ -1321,12 +1312,10 @@ const title = useState('title');
 const topic = useState('topic');
 
 onMounted(() => {
+  if (!article.value) return;
   replaceSuitSigns(article.value);
   genTOC(toc);
   topic.value = "Tự Nhiên Chế";
   title.value = "CMBC 自然制";
 });
 </script>
-<style scoped>
-
-</style>
