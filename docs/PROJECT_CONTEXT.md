@@ -20,7 +20,7 @@
 | `pages/` | 檔案路由、教學文章、練習及產生器。 |
 | `layouts/default.vue` | 頁首、導覽選單、文章目錄、回頂端按鈕與頁尾。 |
 | `layouts/custom.vue` | 僅輸出 slot，讓工具與練習頁自行排版。 |
-| `components/` | 叫牌輸入、叫序顯示、信號標記及自然制文章區塊。 |
+| `components/` | 叫牌輸入、叫序顯示、信號標記及自然制文章區塊。文章可用 `InfoBox.vue` 呈現補充資訊。 |
 | `modules/` | 一般工具函式與 JSON 題庫，並非已註冊的 Nuxt 模組。 |
 | `type/type.ts` | `Call`、`NameOfCall`、`Quest`、`QuestLib`、`TocElement` 等型別。 |
 | `assets/css/main.css` | 全站、手機版與列印樣式。 |
